@@ -1,4 +1,9 @@
 # Byte-compiled / optimized / DLL files
+# Local development and browser QA artifacts
+node_modules/
+work/
+_site/
+
 __pycache__/
 *.py[codz]
 *$py.class

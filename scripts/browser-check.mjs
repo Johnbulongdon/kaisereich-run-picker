@@ -1,0 +1,148 @@
+// Optional end-to-end QA. Install Playwright separately; the app has no dependencies.
+import { createRequire } from 'node:module';
+import assert from 'node:assert/strict';
+import { mkdtemp, mkdir, readFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+
+const require = createRequire(import.meta.url);
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const url = process.env.APP_URL || 'http://127.0.0.1:4173/kaisereich-run-picker/';
+const launch = { headless: true, ...(process.env.BROWSER_CHANNEL ? { channel: process.env.BROWSER_CHANNEL } : {}) };
+const profile = await mkdtemp(join(tmpdir(), 'kr-picker-qa-'));
+const output = process.env.QA_OUTPUT || 'work/qa';
+await mkdir(output, { recursive: true });
+const key = 'kaiserreich-run-picker.progress';
+const errors = [];
+let context;
+let browser;
+let checks = 0;
+function check(value, message) { assert.ok(value, message); checks++; console.log(`PASS ${message}`); }
+async function saved(page) { return page.evaluate(key => JSON.parse(localStorage.getItem(key))?.progress ?? {}, key); }
+async function go(page, view) { await page.locator(`nav a[href="#${view}"]`).click(); await page.locator(`#${view}`).waitFor({ state: 'visible' }); }
+async function upload(page, data) {
+  await page.locator('#import-file').setInputFiles({ name: 'save.json', mimeType: 'application/json', buffer: Buffer.from(typeof data === 'string' ? data : JSON.stringify(data)) });
+  await page.waitForFunction(() => document.getElementById('import-file').value === '');
+}
+try {
+  context = await chromium.launchPersistentContext(profile, { ...launch, viewport: { width: 1440, height: 1000 } });
+  let page = context.pages()[0];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  const responses = [];
+  page.on('response', response => responses.push({ url: response.url(), status: response.status() }));
+  await page.goto(url);
+  await page.locator('#application').waitFor({ state: 'visible' });
+  check((await page.locator('#eligible-count').innerText()).includes('5 eligible'), 'sample database loads at the project subpath');
+  for (const asset of ['/css/style.css', '/js/app.js', '/data/paths.json']) check(responses.some(item => item.url.endsWith(asset) && item.status === 200), `${asset} loads`);
+  await page.locator('#country').selectOption('ARG');
+  await page.locator('#spin-path').click();
+  check(await page.locator('#result-country').innerText() === 'Argentina', 'country to path maintains the selected country');
+  await page.locator('#start-run').click();
+  check(Object.values(await saved(page)).includes('played'), 'Start run saves Played');
+  await page.reload();
+  await go(page, 'checklist');
+  check(await page.locator('.path-row').count() === 5, 'checklist displays every active path');
+  check((await page.locator('[data-path-id]').evaluateAll(elements => elements.map(element => element.value))).includes('played'), 'progress survives refresh');
+  await page.locator('#search').fill('Carles');
+  check(await page.locator('.path-row').count() === 1, 'accent-insensitive checklist search');
+  await page.locator('#status-ARG_CARLES').selectOption('completed');
+  check((await saved(page)).ARG_CARLES === 'completed', 'manual checklist changes persist');
+  await go(page, 'progress');
+  check(await page.locator('#completion-percent').innerText() === '20.0%', 'dashboard computes completion percentage');
+  await go(page, 'picker');
+  await page.locator('#exclude-completed').check();
+  await page.locator('#country').selectOption('ARG');
+  await page.locator('#spin-path').click();
+  check((await page.locator('#result-path').innerText()).includes('Ramírez'), 'completed path is excluded from the draw');
+  await page.locator('#status-filter').selectOption('completed');
+  check(await page.locator('#result-country').innerText() === 'No paths match.', 'conflicting filters show a useful empty state');
+  check(await page.locator('#spin-both').isDisabled(), 'empty pools disable the draw');
+  await page.locator('#clear-filters').click();
+  await page.locator('input[value="ideology"]').check();
+  check(await page.locator('#spin-both').isDisabled(), 'Path to Country requires an ideology');
+  await page.locator('#ideology').selectOption('Social Democrat');
+  await page.locator('#spin-both').click();
+  check(await page.locator('#result-country').innerText() === 'Liangguang', 'Path to Country uses the actual path ideology');
+  await page.locator('input[value="random"]').check();
+  await page.locator('#ideology').selectOption('Social Conservative');
+  await page.locator('#region').selectOption('North America');
+  await page.locator('#spin-both').click();
+  check((await page.locator('#result-path').innerText()).includes('Manion'), 'Fully Random honors combined region and ideology filters');
+  await go(page, 'progress');
+  const downloadPromise = page.waitForEvent('download');
+  await page.locator('#export').click();
+  const download = await downloadPromise;
+  const exported = JSON.parse(await readFile(await download.path(), 'utf8'));
+  check(exported.progress.ARG_CARLES === 'completed' && exported.schemaVersion === 1, 'export produces a valid save download');
+  await upload(page, { schemaVersion: 1, progress: { GXC_FEDERALIST_SOCDEM: 'completed', REMOVED_PATH: 'played' } });
+  check((await saved(page)).REMOVED_PATH === 'played', 'import preserves unknown IDs');
+  check((await saved(page)).ARG_CARLES === 'completed', 'import merges without erasing unrelated progress');
+  check((await page.locator('#unknown-count').innerText()).includes('1 saved path'), 'unknown paths are explained');
+  const beforeInvalid = await saved(page);
+  await upload(page, '{not json');
+  check(JSON.stringify(await saved(page)) === JSON.stringify(beforeInvalid), 'malformed import leaves progress unchanged');
+  check((await page.locator('#announcement').innerText()).includes('not appear to be a valid'), 'malformed import has a readable error');
+  await page.locator('#reset').click();
+  await page.getByRole('button', { name: 'Cancel', exact: true }).click();
+  check((await saved(page)).ARG_CARLES === 'completed', 'reset cancellation keeps progress');
+  await page.locator('#reset').click();
+  await page.locator('#reset-dialog button[value="reset"]').click();
+  await page.waitForFunction(key => localStorage.getItem(key) === null, key);
+  check(Object.keys(await saved(page)).length === 0, 'confirmed reset erases progress');
+  await upload(page, { schemaVersion: 1, progress: { ARG_CARLES: 'completed' } });
+  await page.locator('#reset').click();
+  await page.keyboard.press('Escape');
+  check((await saved(page)).ARG_CARLES === 'completed', 'Escape after a previous confirmed reset never erases data');
+  await context.close();
+  context = await chromium.launchPersistentContext(profile, { ...launch, viewport: { width: 1440, height: 1000 } });
+  page = context.pages()[0];
+  await page.goto(url + '#progress');
+  await page.locator('#application').waitFor({ state: 'visible' });
+  check(await page.locator('#completion-percent').innerText() === '20.0%', 'localStorage survives an actual browser restart');
+  await page.reload();
+  check(await page.locator('#progress').isVisible(), 'hash navigation survives refresh under the project subpath');
+  await go(page, 'picker');
+  await page.locator('#country').selectOption('ARG');
+  await page.locator('#spin-path').click();
+  await page.screenshot({ path: join(output, 'desktop.png'), fullPage: true, animations: 'disabled' });
+  for (const width of [320, 390, 768, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const view of ['picker', 'checklist', 'progress', 'about']) {
+      await go(page, view);
+      check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${view} has no horizontal overflow at ${width}px`);
+    }
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+  await go(page, 'picker');
+  await page.screenshot({ path: join(output, 'mobile.png'), fullPage: true, animations: 'disabled' });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.locator('#spin-both').click();
+  check(await page.locator('#result-card').evaluate(element => getComputedStyle(element).animationName) === 'none', 'reduced motion disables reveal animation');
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.evaluate(() => document.documentElement.style.fontSize = '32px');
+  check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '200% text size remains within the viewport');
+  await context.close(); context = null;
+
+  browser = await chromium.launch(launch);
+  const denied = await browser.newContext();
+  await denied.addInitScript(() => Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Access denied', 'SecurityError'); } }));
+  const deniedPage = await denied.newPage();
+  await deniedPage.goto(url);
+  await deniedPage.locator('#application').waitFor({ state: 'visible' });
+  await deniedPage.locator('#spin-both').click();
+  await deniedPage.locator('#start-run').click();
+  check((await deniedPage.locator('#storage-warning').innerText()).includes('cannot be saved'), 'blocked storage warns and keeps the app usable');
+  await denied.close();
+  const broken = await browser.newPage();
+  await broken.route('**/data/paths.json', route => route.fulfill({ status: 500, body: 'unavailable' }));
+  await broken.goto(url);
+  await broken.locator('#load-error').waitFor({ state: 'visible' });
+  check(await broken.locator('#application').isHidden(), 'data load failure shows recovery instructions');
+  await broken.close();
+  check(errors.length === 0, `no console or uncaught errors in normal use (${errors.join(', ')})`);
+  console.log(`All ${checks} browser checks passed. Screenshots: ${output}. Temporary QA profile: ${profile}`);
+} finally {
+  await context?.close();
+  await browser?.close();
+}
