@@ -22,7 +22,8 @@
           "category": "Nationalist",
           "notes": "Carlés retains power and leads the Patriotic League.",
           "sourceKey": "RULE_OPTION_ARG_PATH_NATPOP",
-          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "shortName": "Liga Patriótica"
         },
         {
           "id": "ARG_GOU",
@@ -31,9 +32,11 @@
           "category": "Military",
           "notes": "Ramírez establishes the GOU military junta. Foreign-policy variants are grouped into this political path.",
           "sourceKey": "RULE_OPTION_ARG_PATH_RAMIREZ_PATAUT",
-          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "shortName": "GOU Junta"
         }
-      ]
+      ],
+      "flag": "./assets/flags/ARG.png"
     },
     {
       "tag": "GXC",
@@ -48,9 +51,11 @@
           "category": "Federalist",
           "notes": "Unify China as independent Federalist Liangguang, then pursue Zhang Junmai's Democratic Socialist electoral route. This is a post-unification path, not the starting government.",
           "sourceKey": "RULE_OPTION_GXC_UPC_PATH_FIRST_SOCDEM",
-          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "shortName": "Federalists"
         }
-      ]
+      ],
+      "flag": "./assets/flags/GXC.png"
     },
     {
       "tag": "CAN",
@@ -65,7 +70,8 @@
           "category": "Parliamentary",
           "notes": "The Liberals win the 1936 election. The party can move toward Social Liberalism after the Weltkrieg; the filter describes its initial political phase.",
           "sourceKey": "RULE_OPTION_CAN_PATH_MARLIB",
-          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "shortName": "Liberals"
         },
         {
           "id": "CAN_CONSERVATIVES",
@@ -74,9 +80,33 @@
           "category": "Parliamentary",
           "notes": "The moderate Conservatives win the 1936 election.",
           "sourceKey": "RULE_OPTION_CAN_PATH_SOCCON",
-          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "shortName": "Conservatives"
         }
-      ]
+      ],
+      "flag": "./assets/flags/CAN.png"
     }
-  ]
+  ],
+  "ideologies": {
+    "National Populist": {
+      "color": "#005321",
+      "icon": "./assets/ideologies/national_populist.png"
+    },
+    "Paternal Autocrat": {
+      "color": "#1d1d1b",
+      "icon": "./assets/ideologies/paternal_autocrat.png"
+    },
+    "Social Democrat": {
+      "color": "#c71748",
+      "icon": "./assets/ideologies/social_democrat.png"
+    },
+    "Market Liberal": {
+      "color": "#ffed00",
+      "icon": "./assets/ideologies/market_liberal.png"
+    },
+    "Social Conservative": {
+      "color": "#005d95",
+      "icon": "./assets/ideologies/social_conservative.png"
+    }
+  }
 }

@@ -9,12 +9,12 @@ A free, static country + political path randomizer and personal completion track
 - **Country → Path:** choose or spin an eligible country, then spin one of its paths.
 - **Path → Country:** choose an ideology, then draw a matching country–path record.
 - **Fully random / Randomize both:** equal probability for each eligible country–path combination.
-- **Interactive selection wheel:** equal slices for eligible countries or paths, a fixed pointer, and a slowing spin that lands on the chosen result. The center button also works with the keyboard; reduced-motion users get an immediate result. Changing filters cancels a pending spin.
+- **Interactive selection wheel:** nation flags and ideology emblems on equal eligible slices, a fixed pointer, and a visible 3.4-second slowing spin. The center button also works with the keyboard. Choose **Instant result · no motion** to skip the spin. Changing filters cancels a pending spin.
 - Region, ideology and progress filters; independent exclusions for Played and Completed.
 - Searchable checklist and manual Unplayed / Played / Completed statuses.
 - Dynamic completion counts and percentage.
 - Browser-local persistence, JSON export/import, and confirmed reset.
-- Responsive interface, keyboard controls, visible focus states and reduced-motion support.
+- Dark charcoal/muted-gold interface, official ideology colors, keyboard controls and visible focus states. Decorative reveals respect reduced motion; the explicit wheel animation selector controls the spin independently.
 
 There is no build step, runtime dependency, account, backend, analytics, application cookie or paid service. Node is **only an optional development/test tool**, never a production server requirement.
 
@@ -81,6 +81,7 @@ If localStorage fails, the app explains that changes are session-only and can st
 ```text
 index.html                    Accessible views and controls
 css/style.css                 Responsive strategy-document styling
+assets/                       Official nation flags and ideology emblems, with attribution
 js/app.js                     DOM rendering and interaction orchestration
 js/picker.js                  Data validation, filtering, random selection, search
 js/tracker.js                 Status transitions and progress summaries
@@ -135,6 +136,6 @@ An upstream extraction assistant, full data coverage and cloud sync remain outsi
 
 ## License and attribution
 
-The repository’s existing [MIT License](LICENSE) is preserved. Kaiserreich names and referenced source material belong to their respective owners. The interface uses system fonts and original CSS/SVG decoration; no copyrighted game artwork is bundled.
+The repository’s existing [MIT License](LICENSE) is preserved for application code. Kaiserreich flags and ideology emblems are bundled at the owner's request and remain the property of their respective creators; they are **not** relicensed under MIT. See [asset attribution](assets/ATTRIBUTION.md) for exact upstream sources. Flags identify the starting nation rather than every later government. The interface uses system fonts and original CSS/SVG decoration.
 
 **This is an unofficial community project and is not affiliated with or endorsed by the Kaiserreich development team or Paradox Interactive.**

@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html favicon.svg .nojekyll _site/
-          cp -R css js data _site/
+          cp -R css js data assets _site/
           rm _site/data/README.md
       - uses: actions/upload-pages-artifact@v4
         with:

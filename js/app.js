@@ -12,10 +12,11 @@ let spinning = false, spinToken = 0;
 
 function wheelItems(kind) {
   const eligible = pool();
-  if (kind === 'country') return countriesIn(eligible).map(country => ({ ...country, id: country.tag, label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
+  if (kind === 'country') return countriesIn(eligible).map(country => ({ ...country, id: country.tag, flag: eligible.find(path => path.tag === country.tag).flag, color: '#30373e', label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
   return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry) : eligible)
-    .map((path, index) => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: `${path.tag} / ${String(index + 1).padStart(2, '0')}` }));
+    .map(path => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: path.shortName || path.tag }));
 }
+function assetUrl(path) { return /^\.\/assets\/[\w/-]+\.png$/.test(path ?? '') ? new URL('../' + path.slice(2), import.meta.url).href : ''; }
 function defaultSpinKind() { return mode === 'country' ? (selectedCountry ? 'path' : 'country') : 'both'; }
 function renderWheel(kind = defaultSpinKind()) {
   const entries = wheelItems(kind);
@@ -89,6 +90,12 @@ function refreshEligibility(preserveWheel = false) {
 }
 
 function renderResult() {
+  const nation = result || records.find(path => path.tag === selectedCountry);
+  $('result-heraldry').hidden = !nation?.flag;
+  if (nation?.flag) { $('result-flag').src = nation.flag; $('result-flag').alt = `${nation.country} starting-country flag`; }
+  $('result-emblem').hidden = !result?.icon;
+  if (result?.icon) { $('result-emblem').src = result.icon; $('result-emblem').alt = `${result.ideology} emblem`; }
+  $('result-ideology').style.borderColor = result?.color || '';
   $('result-actions').hidden = !result;
   $('result-ideology').hidden = !result;
   $('result-notes').hidden = !result?.notes;
@@ -131,7 +138,7 @@ async function spin(kind) {
   $('wheel-button-label').textContent = '…';
   $('wheel-caption').textContent = 'Drawing your next campaign…';
   announce('Spinning the selection wheel.');
-  const landed = await wheel.spin(entries.indexOf(chosen), matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const landed = await wheel.spin(entries.indexOf(chosen), $('spin-motion').value === 'off');
   if (!landed || token !== spinToken) return;
   spinning = false;
   $('result-card').removeAttribute('aria-busy');
@@ -181,6 +188,10 @@ function renderChecklist() {
     for (const path of visible.filter(item => item.tag === country.tag)) {
       const row = node('div', undefined, 'path-row');
       const info = node('div');
+      const imagery = node('div', undefined, 'checklist-heraldry');
+      if (path.flag) { const flag = node('img'); flag.src = path.flag; flag.alt = `${path.country} flag`; imagery.append(flag); }
+      if (path.icon) { const emblem = node('img'); emblem.src = path.icon; emblem.alt = `${path.ideology} emblem`; imagery.append(emblem); }
+      info.append(imagery);
       info.append(node('h3', path.name), node('p', `${path.ideology} · ${path.region}`), node('p', path.notes ?? ''));
       const url = safeSource(path.source);
       if (url) { const link = node('a', 'View official source ↗'); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; info.append(link); }
@@ -229,7 +240,7 @@ async function init() {
     const response = await fetch(new URL('../data/paths.json', import.meta.url));
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     const data = readDataset(await response.json());
-    records = data.records;
+    records = data.records.map(path => ({ ...path, flag: assetUrl(path.flag), icon: assetUrl(data.ideologies[path.ideology]?.icon), color: /^#[0-9a-f]{6}$/i.test(data.ideologies[path.ideology]?.color ?? '') ? data.ideologies[path.ideology].color : '#30373e' }));
     const saved = storage.load();
     progress = saved.progress;
     protectCorruptSave = saved.corrupt;
@@ -251,6 +262,7 @@ async function init() {
 }
 
 function bindEvents() {
+  $('spin-motion').addEventListener('change', () => { if (spinning) { cancelSpin(); refreshEligibility(); renderResult(); announce('Animation setting changed. Spin again when ready.'); } });
   window.addEventListener('hashchange', () => route(true));
   for (const id of ['region', 'ideology', 'status-filter', 'exclude-completed', 'exclude-played']) {
     $(id).addEventListener('change', () => { result = null; refreshEligibility(); renderResult(); });

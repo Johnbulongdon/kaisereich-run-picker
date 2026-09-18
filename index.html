@@ -42,6 +42,7 @@
             <fieldset class="modes"><legend class="sr-only">Picker mode</legend><label><input type="radio" name="mode" value="country" checked><span>Country → Path</span></label><label><input type="radio" name="mode" value="ideology"><span>Path → Country</span></label><label><input type="radio" name="mode" value="random"><span>Fully random</span></label></fieldset>
             <div class="mode-controls"><div id="country-control"><label for="country">Choose a country, or spin below</label><select id="country"><option value="">Let fate choose</option></select></div><p id="mode-help">Pick a country first, then discover one of its eligible paths.</p></div>
             <div class="spin-actions"><button id="spin-country">Spin country</button><button id="spin-path" disabled>Spin path</button><button id="spin-both" class="primary">Randomize both <span aria-hidden="true">↻</span></button></div>
+            <div class="motion-controls"><label for="spin-motion">Wheel animation</label><select id="spin-motion"><option value="on">Animated spin</option><option value="off">Instant result · no motion</option></select></div>
             <article class="result-card" id="result-card" aria-labelledby="result-country">
               <div class="result-top"><span class="eyebrow">CAMPAIGN ASSIGNMENT</span><span id="result-tag" class="tag">—</span></div>
               <div class="assignment-body">
@@ -54,6 +55,7 @@
                   <figcaption id="wheel-caption">Spin the wheel. Find your next campaign.</figcaption>
                 </figure>
                 <div class="result-details" id="result-details">
+              <div id="result-heraldry" class="result-heraldry" hidden><img id="result-flag" class="nation-flag" alt=""><img id="result-emblem" class="ideology-emblem" alt="" hidden></div>
               <p id="result-region" class="eyebrow">THE WORLD AWAITS</p><h2 id="result-country">A new history<br>starts here.</h2>
               <p id="result-path">Spin to discover your next campaign.</p><p id="result-ideology" class="ideology-chip" hidden></p><p id="result-notes" class="result-notes" hidden></p>
               <div id="result-actions" class="result-actions" hidden><button id="start-run" class="primary">Start run</button><div><label for="result-status">Run status</label><select id="result-status"><option value="unplayed">○ Unplayed</option><option value="played">◐ Played</option><option value="completed">✓ Completed</option></select></div></div>
@@ -82,7 +84,7 @@
         <h2>A small, curated beginning</h2><p id="about-sample"></p><p>It is an incomplete sample, not a list of every route in those countries or the full mod. Each path links to the official source in the checklist. Some paths require unification or later elections; read the result notes before starting.</p><p id="data-version"></p>
         <h2>How the draw works</h2><p>Fully random and Randomize both give every eligible country–path combination an equal chance. Spin country chooses equally among eligible countries; Spin path then chooses equally among that country’s eligible paths. Path → Country uses your selected ideology and draws equally among matching path records.</p>
         <h2>Your progress, your browser</h2><p>Start run marks a path Played. Completed always requires your choice. No accounts, cookies, analytics or external database are used by this application. Progress stays in localStorage on this browser and website address, unless you export it. Private browsing or clearing site data may remove it.</p>
-        <h2>Independent and open source</h2><p>An unofficial community project, not affiliated with or endorsed by the Kaiserreich development team or Paradox Interactive. No game artwork is used. Application code is available under the repository’s MIT license; referenced Kaiserreich material remains with its respective owners.</p><a class="text-link" href="https://github.com/Johnbulongdon/kaisereich-run-picker">Source code & contribution guide ↗</a>
+        <h2>Independent and open source</h2><p>An unofficial community project, not affiliated with or endorsed by the Kaiserreich development team or Paradox Interactive. Flags and ideology emblems come from the official Kaiserreich source; they remain the property of their respective creators and are not covered by this app’s MIT code license. Flags identify the starting nation, not every possible later government.</p><a class="text-link" href="https://github.com/Johnbulongdon/kaisereich-run-picker">Source code & contribution guide ↗</a>
       </section>
     </div>
   </main>

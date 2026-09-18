@@ -1,5 +1,4 @@
 const NS = 'http://www.w3.org/2000/svg';
-const COLORS = ['#376b69', '#bd9250', '#234a50', '#7b5144', '#697956', '#536981'];
 
 // Segment zero starts at twelve o'clock; the pointer stays fixed there.
 export function landingRotation(index, count, current = 0) {
@@ -27,7 +26,8 @@ export class SelectionWheel {
     this.svg = svg;
     this.legend = legend;
     this.rotation = 0;
-    this.animation = null;
+    this.frame = null;
+    this.resolveSpin = null;
     this.entries = [];
   }
 
@@ -47,23 +47,31 @@ export class SelectionWheel {
       const segment = entries.length === 1
         ? svgNode('circle', { cx: 200, cy: 200, r: 176 })
         : svgNode('path', { d: `M200 200 L${start.join(' ')} A176 176 0 ${step > 180 ? 1 : 0} 1 ${end.join(' ')} Z` });
-      segment.setAttribute('fill', COLORS[index % COLORS.length]);
+      segment.setAttribute('fill', entry.color || '#30373e');
       segment.setAttribute('stroke', '#d8bf83');
       segment.setAttribute('stroke-width', '1');
       segment.dataset.entryId = entry.id;
       segment.append(svgNode('title', {}, entry.label));
       this.rotor.append(segment);
       const angle = (index + 0.5) * step;
-      const [x, y] = point(angle, 119);
+      const [x, y] = point(angle, 140);
       // Dense future datasets retain a complete legend instead of unreadable labels.
       if (entries.length <= 16) {
-        this.rotor.append(svgNode('text', { x, y, transform: `rotate(${angle > 90 && angle < 270 ? angle + 180 : angle}, ${x}, ${y})`, class: 'wheel-label', 'text-anchor': 'middle', 'dominant-baseline': 'middle' }, entry.shortLabel));
+        const text = svgNode('text', { x, y, transform: `rotate(${angle}, ${x}, ${y})`, class: 'wheel-label', 'text-anchor': 'middle', 'dominant-baseline': 'middle' }, entry.shortLabel);
+        text.style.fill = entry.color === '#ffed00' ? '#171b20' : '#fff9e9';
+        this.rotor.append(text);
+        const [ix, iy] = point(angle, 100);
+        const art = svgNode('g', { transform: `translate(${ix} ${iy}) rotate(${angle})` });
+        if (entry.flag) art.append(svgNode('image', { href: entry.flag, x: entry.icon ? -44 : -28, y: -18, width: 56, height: 36 }));
+        if (entry.icon) art.append(svgNode('image', { href: entry.icon, x: 13, y: -22, width: 44, height: 44 }));
+        this.rotor.append(art);
       }
       const item = document.createElement('li');
       item.dataset.entryId = entry.id;
       const number = document.createElement('span');
       number.className = 'wheel-key';
-      number.style.backgroundColor = COLORS[index % COLORS.length];
+      number.style.backgroundColor = entry.color || '#30373e';
+      number.style.color = entry.color === '#ffed00' ? '#171b20' : '#fff9e9';
       number.textContent = String(index + 1).padStart(2, '0');
       item.append(number, document.createTextNode(entry.label));
       this.legend.append(item);
@@ -78,23 +86,32 @@ export class SelectionWheel {
 
   async spin(index, reducedMotion = false) {
     const target = landingRotation(index, this.entries.length, this.rotation);
-    const animation = this.rotor.animate(
-      [{ transform: `rotate(${this.rotation}deg)` }, { transform: `rotate(${target}deg)` }],
-      { duration: reducedMotion ? 0 : 2100, easing: 'cubic-bezier(.12,.65,.12,1)', fill: 'forwards' }
-    );
-    this.animation = animation;
-    try { await animation.finished; }
-    catch { return false; }
-    if (this.animation !== animation) return false;
-    animation.cancel();
-    this.animation = null;
-    this.land(index, target);
-    return true;
+    if (reducedMotion) { this.land(index, target); return true; }
+    const start = performance.now();
+    const from = this.rotation;
+    // Animate SVG geometry directly so the visible spin does not depend on
+    // CSS animation settings or a browser's Web Animations playback policy.
+    return new Promise(resolve => {
+      this.resolveSpin = resolve;
+      const tick = now => {
+        const elapsed = Math.min((now - start) / 3400, 1);
+        const eased = 1 - Math.pow(1 - elapsed, 3);
+        this.rotor.setAttribute('transform', `rotate(${from + (target - from) * eased} 200 200)`);
+        if (elapsed < 1) this.frame = requestAnimationFrame(tick);
+        else {
+          this.frame = null;
+          this.resolveSpin = null;
+          this.land(index, target);
+          resolve(true);
+        }
+      };
+      this.frame = requestAnimationFrame(tick);
+    });
   }
 
   land(index, target = landingRotation(index, this.entries.length, this.rotation)) {
     this.rotation = target;
-    this.rotor.style.transform = `rotate(${target}deg)`;
+    this.rotor.setAttribute('transform', `rotate(${target} 200 200)`);
     this.svg.dataset.selectedId = this.entries[index].id;
     [...this.legend.children].forEach((item, position) => {
       if (position === index) item.setAttribute('aria-current', 'true');
@@ -103,8 +120,10 @@ export class SelectionWheel {
   }
 
   cancel() {
-    this.animation?.cancel();
-    this.animation = null;
+    if (this.frame !== null) cancelAnimationFrame(this.frame);
+    this.frame = null;
+    this.resolveSpin?.(false);
+    this.resolveSpin = null;
     delete this.svg.dataset.selectedId;
   }
 }

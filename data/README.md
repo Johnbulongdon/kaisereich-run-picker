@@ -7,8 +7,9 @@ Current coverage: **3 countries, 5 paths**, checked against Kaiserreich **1.6.4*
 Top level:
 
 - `metadata`: `schemaVersion`, `kaiserreichVersion`, `lastUpdated`, `sample`, `upstreamCommit`, `source`, `notes`.
-- `countries`: array of country records, each with `tag`, `country`, `region`, `startingCountry`, `paths` and optional `enabled`.
-- Each path: stable `id`, display `name`, `ideology`, `category`, optional `notes`, `source`, `sourceKey` and `enabled`.
+- `countries`: array of country records, each with `tag`, `country`, `region`, `startingCountry`, `paths`, optional local `flag` PNG path and `enabled`.
+- Each path: stable `id`, display `name`, `ideology`, `category`, optional `shortName` for the wheel, `notes`, `source`, `sourceKey`, `flag` override and `enabled`.
+- `ideologies`: a display-name-keyed map of exact upstream hex `color` values and local `icon` PNG paths. All optional image paths must be inside `./assets/`. Missing visual metadata falls back to labels and a neutral slice.
 
 IDs use uppercase letters, digits and underscores. Preserve IDs across renames. The app uses the ID only for progress, not display names. IDs must be globally unique; duplicates reject the database to avoid ambiguous saves. Disabled and invalid records are omitted from draws, checklist and completion totals. An empty/unsupported database shows a recoverable load error. Unknown saved IDs survive dataset changes and exports.
 

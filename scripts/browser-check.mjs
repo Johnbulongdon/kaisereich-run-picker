@@ -40,6 +40,11 @@ try {
   await page.locator('#wheel-spin').focus();
   await page.keyboard.press('Enter');
   check(await page.locator('#spin-both').isDisabled(), 'repeat draws are disabled while the wheel spins');
+  const firstRotation = await page.locator('.wheel-rotor').getAttribute('transform');
+  await page.waitForTimeout(350);
+  const secondRotation = await page.locator('.wheel-rotor').getAttribute('transform');
+  check(firstRotation !== secondRotation && await page.locator('#result-card').getAttribute('aria-busy') === 'true', 'wheel visibly rotates over time before revealing a result');
+  check(await page.locator('#selection-wheel image').count() === 3, 'country wheel displays actual nation flags');
   await waitForSpin(page);
   check(await page.locator('#selection-wheel').getAttribute('data-selected-id') === await page.locator('#result-tag').innerText(), 'keyboard wheel spin lands on the selected country');
   await page.locator('#wheel-spin').click();
@@ -55,6 +60,8 @@ try {
   await page.locator('#spin-path').click();
   await waitForSpin(page);
   check(await page.locator('#result-country').innerText() === 'Argentina', 'country to path maintains the selected country');
+  check(await page.locator('#result-flag').evaluate(image => image.complete && image.naturalWidth > 0), 'result nation flag loads');
+  check(await page.locator('#result-emblem').evaluate(image => image.complete && image.naturalWidth > 0), 'result ideology emblem loads');
   await page.locator('#start-run').click();
   check(Object.values(await saved(page)).includes('played'), 'Start run saves Played');
   check((await page.locator('#selection-wheel').getAttribute('data-selected-id')).includes('_'), 'saving run status keeps the wheel aligned with the selected path');
@@ -139,8 +146,11 @@ try {
   await go(page, 'picker');
   await page.screenshot({ path: join(output, 'mobile.png'), fullPage: true, animations: 'disabled' });
   await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.locator('#spin-motion').selectOption('off');
+  const instantStarted = Date.now();
   await page.locator('#spin-both').click();
   await waitForSpin(page);
+  check(Date.now() - instantStarted < 1500, 'explicit no-motion control reveals a result immediately');
   check(await page.locator('#result-card').evaluate(element => getComputedStyle(element).animationName) === 'none', 'reduced motion disables reveal animation');
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.evaluate(() => document.documentElement.style.fontSize = '32px');

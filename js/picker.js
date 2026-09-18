@@ -20,11 +20,11 @@ export function readDataset(data) {
       }
       if (ids.has(path.id)) throw new Error(`Duplicate path ID: ${path.id}`);
       ids.add(path.id);
-      records.push({ ...path, tag: country.tag, country: country.country, region: country.region });
+      records.push({ ...path, tag: country.tag, country: country.country, region: country.region, flag: path.flag ?? country.flag });
     }
   }
   if (!records.length) throw new Error('No valid paths in the database.');
-  return { records, skipped, metadata: data.metadata };
+  return { records, skipped, metadata: data.metadata, ideologies: data.ideologies ?? {} };
 }
 
 export function eligiblePaths(records, progress = {}, filters = {}) {
