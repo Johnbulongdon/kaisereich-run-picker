@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "schemaVersion": 1,
+    "kaiserreichVersion": "1.6.4 — sample only",
+    "lastUpdated": "2026-09-18",
+    "sample": true,
+    "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
+    "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+    "notes": "Five curated examples, not a complete country or path list. Ideology describes the featured political phase; some routes change ideology later."
+  },
+  "countries": [
+    {
+      "tag": "ARG",
+      "country": "Argentina",
+      "region": "South America",
+      "startingCountry": true,
+      "paths": [
+        {
+          "id": "ARG_CARLES",
+          "name": "Manuel Carlés / Liga Patriótica",
+          "ideology": "National Populist",
+          "category": "Nationalist",
+          "notes": "Carlés retains power and leads the Patriotic League.",
+          "sourceKey": "RULE_OPTION_ARG_PATH_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "ARG_GOU",
+          "name": "Ramírez / Grupo de Oficiales Unidos",
+          "ideology": "Paternal Autocrat",
+          "category": "Military",
+          "notes": "Ramírez establishes the GOU military junta. Foreign-policy variants are grouped into this political path.",
+          "sourceKey": "RULE_OPTION_ARG_PATH_RAMIREZ_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ]
+    },
+    {
+      "tag": "GXC",
+      "country": "Liangguang",
+      "region": "East Asia",
+      "startingCountry": true,
+      "paths": [
+        {
+          "id": "GXC_FEDERALIST_SOCDEM",
+          "name": "Federalists / Zhang Junmai",
+          "ideology": "Social Democrat",
+          "category": "Federalist",
+          "notes": "Unify China as independent Federalist Liangguang, then pursue Zhang Junmai's Democratic Socialist electoral route. This is a post-unification path, not the starting government.",
+          "sourceKey": "RULE_OPTION_GXC_UPC_PATH_FIRST_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ]
+    },
+    {
+      "tag": "CAN",
+      "country": "Canada",
+      "region": "North America",
+      "startingCountry": true,
+      "paths": [
+        {
+          "id": "CAN_LIBERALS",
+          "name": "Mackenzie King / Liberals",
+          "ideology": "Market Liberal",
+          "category": "Parliamentary",
+          "notes": "The Liberals win the 1936 election. The party can move toward Social Liberalism after the Weltkrieg; the filter describes its initial political phase.",
+          "sourceKey": "RULE_OPTION_CAN_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "CAN_CONSERVATIVES",
+          "name": "Robert Manion / Conservatives",
+          "ideology": "Social Conservative",
+          "category": "Parliamentary",
+          "notes": "The moderate Conservatives win the 1936 election.",
+          "sourceKey": "RULE_OPTION_CAN_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ]
+    }
+  ]
+}
