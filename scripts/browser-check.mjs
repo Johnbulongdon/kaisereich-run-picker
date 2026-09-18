@@ -20,6 +20,7 @@ let checks = 0;
 function check(value, message) { assert.ok(value, message); checks++; console.log(`PASS ${message}`); }
 async function saved(page) { return page.evaluate(key => JSON.parse(localStorage.getItem(key))?.progress ?? {}, key); }
 async function go(page, view) { await page.locator(`nav a[href="#${view}"]`).click(); await page.locator(`#${view}`).waitFor({ state: 'visible' }); }
+async function waitForSpin(page) { await page.waitForFunction(() => !document.getElementById('result-card').hasAttribute('aria-busy')); }
 async function upload(page, data) {
   await page.locator('#import-file').setInputFiles({ name: 'save.json', mimeType: 'application/json', buffer: Buffer.from(typeof data === 'string' ? data : JSON.stringify(data)) });
   await page.waitForFunction(() => document.getElementById('import-file').value === '');
@@ -35,11 +36,28 @@ try {
   await page.locator('#application').waitFor({ state: 'visible' });
   check((await page.locator('#eligible-count').innerText()).includes('5 eligible'), 'sample database loads at the project subpath');
   for (const asset of ['/css/style.css', '/js/app.js', '/data/paths.json']) check(responses.some(item => item.url.endsWith(asset) && item.status === 200), `${asset} loads`);
+  check(await page.locator('#wheel-entries li').count() === 3, 'wheel initially contains one equal slice per country');
+  await page.locator('#wheel-spin').focus();
+  await page.keyboard.press('Enter');
+  check(await page.locator('#spin-both').isDisabled(), 'repeat draws are disabled while the wheel spins');
+  await waitForSpin(page);
+  check(await page.locator('#selection-wheel').getAttribute('data-selected-id') === await page.locator('#result-tag').innerText(), 'keyboard wheel spin lands on the selected country');
+  await page.locator('#wheel-spin').click();
+  await waitForSpin(page);
+  check((await page.locator('#selection-wheel').getAttribute('data-selected-id')).includes('_'), 'wheel hub continues from country into a path draw');
+  await page.locator('#spin-country').click();
+  await page.locator('#region').selectOption('East Asia');
+  await page.waitForTimeout(2300);
+  check(!await page.locator('#result-card').getAttribute('aria-busy') && await page.locator('#result-actions').isHidden(), 'changing filters cancels an in-flight spin without revealing its stale result');
+  check(await page.locator('#wheel-entries li').count() === 1, 'filtered wheel supports a single eligible choice');
+  await page.locator('#clear-filters').click();
   await page.locator('#country').selectOption('ARG');
   await page.locator('#spin-path').click();
+  await waitForSpin(page);
   check(await page.locator('#result-country').innerText() === 'Argentina', 'country to path maintains the selected country');
   await page.locator('#start-run').click();
   check(Object.values(await saved(page)).includes('played'), 'Start run saves Played');
+  check((await page.locator('#selection-wheel').getAttribute('data-selected-id')).includes('_'), 'saving run status keeps the wheel aligned with the selected path');
   await page.reload();
   await go(page, 'checklist');
   check(await page.locator('.path-row').count() === 5, 'checklist displays every active path');
@@ -54,6 +72,7 @@ try {
   await page.locator('#exclude-completed').check();
   await page.locator('#country').selectOption('ARG');
   await page.locator('#spin-path').click();
+  await waitForSpin(page);
   check((await page.locator('#result-path').innerText()).includes('Ramírez'), 'completed path is excluded from the draw');
   await page.locator('#status-filter').selectOption('completed');
   check(await page.locator('#result-country').innerText() === 'No paths match.', 'conflicting filters show a useful empty state');
@@ -63,11 +82,13 @@ try {
   check(await page.locator('#spin-both').isDisabled(), 'Path to Country requires an ideology');
   await page.locator('#ideology').selectOption('Social Democrat');
   await page.locator('#spin-both').click();
+  await waitForSpin(page);
   check(await page.locator('#result-country').innerText() === 'Liangguang', 'Path to Country uses the actual path ideology');
   await page.locator('input[value="random"]').check();
   await page.locator('#ideology').selectOption('Social Conservative');
   await page.locator('#region').selectOption('North America');
   await page.locator('#spin-both').click();
+  await waitForSpin(page);
   check((await page.locator('#result-path').innerText()).includes('Manion'), 'Fully Random honors combined region and ideology filters');
   await go(page, 'progress');
   const downloadPromise = page.waitForEvent('download');
@@ -105,6 +126,7 @@ try {
   await go(page, 'picker');
   await page.locator('#country').selectOption('ARG');
   await page.locator('#spin-path').click();
+  await waitForSpin(page);
   await page.screenshot({ path: join(output, 'desktop.png'), fullPage: true, animations: 'disabled' });
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
@@ -118,6 +140,7 @@ try {
   await page.screenshot({ path: join(output, 'mobile.png'), fullPage: true, animations: 'disabled' });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.locator('#spin-both').click();
+  await waitForSpin(page);
   check(await page.locator('#result-card').evaluate(element => getComputedStyle(element).animationName) === 'none', 'reduced motion disables reveal animation');
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.evaluate(() => document.documentElement.style.fontSize = '32px');
@@ -131,6 +154,7 @@ try {
   await deniedPage.goto(url);
   await deniedPage.locator('#application').waitFor({ state: 'visible' });
   await deniedPage.locator('#spin-both').click();
+  await waitForSpin(deniedPage);
   await deniedPage.locator('#start-run').click();
   check((await deniedPage.locator('#storage-warning').innerText()).includes('cannot be saved'), 'blocked storage warns and keeps the app usable');
   await denied.close();

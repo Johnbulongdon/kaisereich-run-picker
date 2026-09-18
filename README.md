@@ -9,6 +9,7 @@ A free, static country + political path randomizer and personal completion track
 - **Country → Path:** choose or spin an eligible country, then spin one of its paths.
 - **Path → Country:** choose an ideology, then draw a matching country–path record.
 - **Fully random / Randomize both:** equal probability for each eligible country–path combination.
+- **Interactive selection wheel:** equal slices for eligible countries or paths, a fixed pointer, and a slowing spin that lands on the chosen result. The center button also works with the keyboard; reduced-motion users get an immediate result. Changing filters cancels a pending spin.
 - Region, ideology and progress filters; independent exclusions for Played and Completed.
 - Searchable checklist and manual Unplayed / Played / Completed statuses.
 - Dynamic completion counts and percentage.
@@ -83,6 +84,7 @@ css/style.css                 Responsive strategy-document styling
 js/app.js                     DOM rendering and interaction orchestration
 js/picker.js                  Data validation, filtering, random selection, search
 js/tracker.js                 Status transitions and progress summaries
+js/wheel.js                   SVG wheel rendering and exact result landing
 js/storage.js                 Versioned persistence and save validation
 data/paths.json               Curated game data and source metadata
 scripts/serve.mjs              Optional static preview server
@@ -98,7 +100,7 @@ HANDOVER.md                   Original engineering brief
 npm test
 ```
 
-The 11 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage and reset. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
+The 13 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
 
 Optional browser acceptance checks require Playwright as a **development-only** tool:
 
@@ -129,7 +131,7 @@ For contributions:
 4. Run the core tests; use browser checks for interaction or layout changes.
 5. Open a pull request explaining the behavior and validation.
 
-An upstream extraction assistant, full data coverage, literal spinner wheel and cloud sync are deliberately outside this MVP. See [scripts/README.md](scripts/README.md) for the future curation workflow.
+An upstream extraction assistant, full data coverage and cloud sync remain outside this MVP. The original handover deferred a literal wheel; one was added following the owner's visual-feedback request. See [scripts/README.md](scripts/README.md) for the future curation workflow.
 
 ## License and attribution
 

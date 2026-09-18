@@ -1,11 +1,38 @@
 import { readDataset, eligiblePaths, choose, countriesIn, searchPaths } from './picker.js';
 import { setStatus, summarize, STATUSES, STATUS_LABELS } from './tracker.js';
 import { createStorage, parseSave, exportSave, MAX_SAVE_BYTES, STORAGE_KEY } from './storage.js';
+import { SelectionWheel } from './wheel.js';
 
 const $ = id => document.getElementById(id);
 const storage = createStorage();
 let records = [], progress = {}, result = null, selectedCountry = '', mode = 'country';
 let protectCorruptSave = false;
+const wheel = new SelectionWheel($('selection-wheel'), $('wheel-entries'));
+let spinning = false, spinToken = 0;
+
+function wheelItems(kind) {
+  const eligible = pool();
+  if (kind === 'country') return countriesIn(eligible).map(country => ({ ...country, id: country.tag, label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
+  return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry) : eligible)
+    .map((path, index) => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: `${path.tag} / ${String(index + 1).padStart(2, '0')}` }));
+}
+function defaultSpinKind() { return mode === 'country' ? (selectedCountry ? 'path' : 'country') : 'both'; }
+function renderWheel(kind = defaultSpinKind()) {
+  const entries = wheelItems(kind);
+  wheel.render(entries);
+  const selectedIndex = entries.findIndex(entry => entry.id === result?.id);
+  if (selectedIndex >= 0) wheel.land(selectedIndex);
+  $('wheel-legend-title').textContent = `On the wheel · ${entries.length} ${kind === 'country' ? 'countries' : 'paths'}`;
+  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each eligible path gets an equal slice.') : 'No eligible paths. Adjust your filters.';
+  $('wheel-spin').disabled = !entries.length || (mode === 'ideology' && !$('ideology').value);
+  $('wheel-button-label').textContent = 'SPIN';
+}
+function cancelSpin() {
+  spinToken++;
+  spinning = false;
+  wheel.cancel();
+  $('result-card').removeAttribute('aria-busy');
+}
 
 function announce(message) { $('announcement').textContent = message; }
 function warn(message) { $('storage-warning').textContent = message; $('storage-warning').hidden = !message; }
@@ -41,7 +68,8 @@ function updateStatus(id, status) {
   announce(`${records.find(path => path.id === id).name}: ${STATUS_LABELS[status]}. ${saved ? 'Saved in this browser.' : 'Session only; export to keep a backup.'}`);
 }
 
-function refreshEligibility() {
+function refreshEligibility(preserveWheel = false) {
+  if (!preserveWheel) cancelSpin();
   const eligible = pool();
   const countries = countriesIn(eligible);
   if (!countries.some(country => country.tag === selectedCountry)) selectedCountry = '';
@@ -56,6 +84,8 @@ function refreshEligibility() {
     $('result-country').textContent = 'No paths match.';
     $('result-path').textContent = 'Clear filters or include more progress states to draw again.';
   }
+  if (!preserveWheel) renderWheel();
+  else $('wheel-spin').disabled = !eligible.length;
 }
 
 function renderResult() {
@@ -77,23 +107,44 @@ function renderResult() {
 }
 function reveal() {
   renderResult();
-  $('result-card').classList.remove('revealing');
+  $('result-details').classList.remove('revealing');
   // Restart a short reveal; reduced-motion users receive the result immediately.
-  void $('result-card').offsetWidth;
-  $('result-card').classList.add('revealing');
+  void $('result-details').offsetWidth;
+  $('result-details').classList.add('revealing');
   announce(result ? `${result.country} — ${result.name}. ${result.ideology}.` : `${$('result-country').textContent}. ${$('result-path').textContent}`);
 }
-function spin(kind) {
-  const eligible = pool();
+async function spin(kind) {
+  if (spinning) return;
+  if (mode === 'ideology' && !$('ideology').value) return announce('Choose a political ideology first.');
+  const entries = wheelItems(kind);
+  const chosen = choose(entries);
+  if (!chosen) return;
+  renderWheel(kind);
+  const token = ++spinToken;
+  spinning = true;
+  result = null;
+  renderResult();
+  for (const id of ['spin-country', 'spin-path', 'spin-both', 'wheel-spin']) $(id).disabled = true;
+  $('result-card').setAttribute('aria-busy', 'true');
+  $('result-country').textContent = 'Fate is turning…';
+  $('result-path').textContent = 'The pointer will reveal your next campaign.';
+  $('wheel-button-label').textContent = '…';
+  $('wheel-caption').textContent = 'Drawing your next campaign…';
+  announce('Spinning the selection wheel.');
+  const landed = await wheel.spin(entries.indexOf(chosen), matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (!landed || token !== spinToken) return;
+  spinning = false;
+  $('result-card').removeAttribute('aria-busy');
   if (kind === 'country') {
-    selectedCountry = choose(countriesIn(eligible))?.tag ?? '';
+    selectedCountry = chosen.tag;
     result = null;
   } else {
-    if (mode === 'ideology' && !$('ideology').value) return announce('Choose a political ideology first.');
-    result = choose(kind === 'path' ? eligible.filter(path => path.tag === selectedCountry) : eligible);
-    selectedCountry = result?.tag ?? selectedCountry;
+    result = records.find(path => path.id === chosen.id);
+    selectedCountry = result.tag;
   }
-  refreshEligibility();
+  refreshEligibility(true);
+  $('wheel-caption').textContent = kind === 'country' ? `${chosen.country} selected. Spin again to draw its path.` : `${chosen.country} · ${chosen.ideology}`;
+  $('wheel-button-label').textContent = kind === 'country' ? 'PATH' : 'AGAIN';
   reveal();
 }
 function changeMode() {
@@ -212,6 +263,7 @@ function bindEvents() {
   document.querySelectorAll('input[name=mode]').forEach(input => input.addEventListener('change', changeMode));
   $('country').addEventListener('change', () => { selectedCountry = $('country').value; result = null; refreshEligibility(); renderResult(); });
   for (const kind of ['country', 'path', 'both']) $(`spin-${kind}`).addEventListener('click', () => spin(kind));
+  $('wheel-spin').addEventListener('click', () => spin(defaultSpinKind()));
   $('start-run').addEventListener('click', () => { if (result) updateStatus(result.id, 'played'); });
   $('result-status').addEventListener('change', event => { if (result) updateStatus(result.id, event.target.value); });
   $('search').addEventListener('input', renderChecklist);

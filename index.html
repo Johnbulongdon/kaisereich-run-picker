@@ -44,10 +44,22 @@
             <div class="spin-actions"><button id="spin-country">Spin country</button><button id="spin-path" disabled>Spin path</button><button id="spin-both" class="primary">Randomize both <span aria-hidden="true">↻</span></button></div>
             <article class="result-card" id="result-card" aria-labelledby="result-country">
               <div class="result-top"><span class="eyebrow">CAMPAIGN ASSIGNMENT</span><span id="result-tag" class="tag">—</span></div>
-              <div class="compass" aria-hidden="true">✦</div>
+              <div class="assignment-body">
+                <figure class="wheel-figure">
+                  <div class="wheel-stage">
+                    <span class="wheel-pointer" aria-hidden="true"></span>
+                    <svg id="selection-wheel" viewBox="0 0 400 400" aria-hidden="true"></svg>
+                    <button id="wheel-spin" class="wheel-hub" aria-label="Spin the selection wheel"><span aria-hidden="true">✦</span><span id="wheel-button-label">SPIN</span></button>
+                  </div>
+                  <figcaption id="wheel-caption">Spin the wheel. Find your next campaign.</figcaption>
+                </figure>
+                <div class="result-details" id="result-details">
               <p id="result-region" class="eyebrow">THE WORLD AWAITS</p><h2 id="result-country">A new history<br>starts here.</h2>
               <p id="result-path">Spin to discover your next campaign.</p><p id="result-ideology" class="ideology-chip" hidden></p><p id="result-notes" class="result-notes" hidden></p>
               <div id="result-actions" class="result-actions" hidden><button id="start-run" class="primary">Start run</button><div><label for="result-status">Run status</label><select id="result-status"><option value="unplayed">○ Unplayed</option><option value="played">◐ Played</option><option value="completed">✓ Completed</option></select></div></div>
+                </div>
+              </div>
+              <details class="wheel-legend"><summary id="wheel-legend-title">On the wheel</summary><ol id="wheel-entries"></ol></details>
             </article>
             <p class="selection-footnote" id="selection-footnote">A country first. A political path second. Your next run awaits.</p>
           </div>
