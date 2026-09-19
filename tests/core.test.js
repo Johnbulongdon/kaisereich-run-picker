@@ -6,22 +6,42 @@ import { setStatus, summarize } from '../js/tracker.js';
 import { createStorage, parseSave, exportSave, STORAGE_KEY } from '../js/storage.js';
 
 const fullData = JSON.parse(readFileSync(new URL('../data/paths.json', import.meta.url)));
-const data = { ...fullData, countries: fullData.countries.slice(0, 3) };
+const data = { ...fullData, countries: fullData.countries.slice(0, 3).map(c => ({ ...c, paths: c.paths.filter(p => ['ARG_CARLES','ARG_GOU','GXC_FEDERALIST_SOCDEM','CAN_LIBERALS','CAN_CONSERVATIVES'].includes(p.id)) })) };
 test('expanded collection has map anchors, goals and local heraldry for every route', () => {
   const { records, skipped } = readDataset(fullData);
   assert.equal(skipped, 0);
   assert.equal(fullData.countries.length, 109);
-  assert.equal(records.length, 90);
+  assert.equal(records.length, 788);
   for (const path of records) {
     assert.ok(path.objectives.length && path.challenge && path.sourceKey);
     assert.ok(path.location.length === 2 && path.location.every(Number.isFinite));
     assert.ok(path.location[0] >= -180 && path.location[0] <= 180);
     assert.ok(path.location[1] >= -90 && path.location[1] <= 90);
     assert.ok(readFileSync(new URL('../' + path.flag.slice(2), import.meta.url)).length > 0);
-    assert.ok(readFileSync(new URL('../' + fullData.ideologies[path.ideology].icon.slice(2), import.meta.url)).length > 0);
+    if (path.ideology !== 'Varies by branch') assert.ok(readFileSync(new URL('../' + fullData.ideologies[path.ideology].icon.slice(2), import.meta.url)).length > 0);
   }
 });
 const { records } = readDataset(data);
+
+test('every included political rule option is selectable once under its source country', () => {
+  const manifest = JSON.parse(readFileSync(new URL('../data/political-rule-coverage.json', import.meta.url)));
+  const { records: all } = readDataset(fullData);
+  assert.equal(manifest.upstreamCommit, fullData.metadata.upstreamCommit);
+  assert.equal(manifest.groups.length, 115);
+  for (const group of manifest.groups) {
+    for (const key of group.sourceKeys) {
+      const matches = all.filter(path => path.sourceKey === key);
+      assert.equal(matches.length, 1, key);
+      assert.equal(matches[0].tag, group.country, key);
+      assert.equal(matches[0].ruleGroup, group.group, key);
+      assert.ok(!/[§£]|\$\w+\$/.test(matches[0].notes), key);
+      assert.ok(eligiblePaths(all, {}, {country:group.country}).includes(matches[0]));
+    }
+  }
+  assert.equal(all.filter(path => path.tag === 'GXC').length, 27);
+  assert.equal(all.filter(path => path.tag === 'RUS').length, 26);
+  assert.ok(all.find(path => path.sourceKey === 'RULE_OPTION_CAN_PATH_SOCDEM').notes.includes('Requires:'));
+});
 
 test('sample data has stable unique IDs, sourced paths and representative countries', () => {
   assert.equal(records.length, 5);
@@ -147,6 +167,6 @@ test('unreviewed countries are discoverable but never become placeholder routes'
  for (const filters of [{ideology:'Social Democrat'}, {status:'unplayed'}, {excludeCompleted:true}, {excludePlayed:true}]) {
   assert.ok(!eligibleCountries(countries, records, {}, filters).some(c => c.tag === 'AFG'));
  }
- assert.equal(summarize(records, {}).total, 90);
- assert.equal(countries.filter(c => c.pathCoverage === 'pending').length, 74);
+ assert.equal(summarize(records, {}).total, 788);
+ assert.equal(countries.filter(c => c.pathCoverage === 'pending').length, 13);
 });

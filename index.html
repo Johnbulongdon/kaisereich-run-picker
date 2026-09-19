@@ -40,7 +40,7 @@
           </aside>
           <div class="selection-panel">
             <fieldset class="modes"><legend class="sr-only">Picker mode</legend><label><input type="radio" name="mode" value="country" checked><span>Country → Path</span></label><label><input type="radio" name="mode" value="ideology"><span>Path → Country</span></label><label><input type="radio" name="mode" value="random"><span>Fully random</span></label></fieldset>
-            <div class="mode-controls"><div id="country-control"><label for="country">Choose a country, or spin below</label><select id="country"><option value="">Let fate choose</option></select></div><p id="mode-help">Pick a country first, then discover one of its eligible paths.</p></div>
+            <div class="mode-controls"><div id="country-control"><label for="country">Choose a country, or spin below</label><select id="country"><option value="">Let fate choose</option></select><label for="path-choice">Browse this country's political routes</label><select id="path-choice" disabled><option value="">Choose a country first</option></select></div><p id="mode-help">Pick a country first, then choose or spin one of its eligible paths.</p></div>
             <div class="spin-actions"><button id="spin-country">Spin country</button><button id="spin-path" disabled>Spin path</button><button id="spin-both" class="primary">Randomize both <span aria-hidden="true">↻</span></button></div>
             <div class="motion-controls"><label for="spin-motion">Wheel animation</label><select id="spin-motion"><option value="on">Animated spin</option><option value="off">Instant result · no motion</option></select></div>
             <article class="result-card" id="result-card" aria-labelledby="result-country">
@@ -82,7 +82,7 @@
         <a href="#progress" class="progress-strip"><span>YOUR CAMPAIGN RECORD</span><strong id="mini-progress">0 paths completed</strong><span>View progress →</span></a>
       </section>
       <section id="checklist" class="view" aria-labelledby="checklist-heading" hidden>
-        <div class="page-heading"><div><p class="eyebrow">THE CAMPAIGN REGISTER</p><h1 id="checklist-heading" tabindex="-1">The campaign register.</h1><p>Browse all starting nations and keep a record of verified political routes.</p></div></div>
+        <div class="page-heading"><div><p class="eyebrow">THE CAMPAIGN REGISTER</p><h1 id="checklist-heading" tabindex="-1">The campaign register.</h1><p>Browse all starting nations and keep a record of source-backed political options.</p></div></div>
         <div class="browse-controls"><div><label for="search">Search countries, paths or ideologies</label><input id="search" type="search" placeholder="Try Argentina, Federalist, or Carlés…"></div><div><label for="browse-status">Show progress</label><select id="browse-status"><option value="">All paths</option><option value="unplayed">Unplayed</option><option value="played">Played</option><option value="completed">Completed</option></select></div></div>
         <p id="browse-count" class="eyebrow"></p><div id="checklist-list"></div><p id="browse-empty" class="notice" hidden>No paths match this search. Try another term or show all progress states.</p>
       </section>

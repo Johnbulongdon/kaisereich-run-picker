@@ -2,7 +2,7 @@
 
 A free, static country + political path randomizer and personal completion tracker for **Kaiserreich**, the Hearts of Iron IV mod.
 
-**Status: complete starting-country roster for the pinned source snapshot; incomplete political-path coverage.** The app lists **109 starting nations** and **90 verified political paths across 35 of them**. The other **74 nations** are available for country discovery and clearly marked **Paths pending**. All ten ideologies are represented. It does not represent every path in these countries or the whole mod. The collection is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
+**Status: complete starting-country roster for the pinned source snapshot; incomplete political-path coverage.** The app lists **109 starting nations** and **788 source-backed political options across 96 of them**. The other **13 nations** are available for country discovery and clearly marked **Paths pending**. All ten ideologies are represented. It does not represent every path in these countries or the whole mod. The collection is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
 
 ## Features
 
@@ -29,7 +29,7 @@ There is no build step, runtime dependency, account, backend, analytics, applica
 4. Click **Start run** to mark the path **Played**. This never marks it Completed.
 5. Use the result’s status selector or **Checklist** to change status manually.
 
-Country-only draws include nations with no verified routes. Ideology and progress filters require an actual matching verified route, so they exclude pending nations. Fully Random and Path → Country draw only verified routes. Empty path lists never create placeholder completion entries. Picker filters affect draws only. The checklist has independent search/status controls; the Progress view always counts the entire active database. With no eligible paths, the app explains the empty result and offers **Clear filters**. An ideology appears in the filter only when the dataset includes a path of that ideology.
+Country-only draws include nations with no source-backed routes. Ideology and progress filters require an actual matching source-backed route, so they exclude pending nations. Fully Random and Path → Country draw only source-backed routes. Empty path lists never create placeholder completion entries. Picker filters affect draws only. The checklist has independent search/status controls; the Progress view always counts the entire active database. With no eligible paths, the app explains the empty result and offers **Clear filters**. An ideology appears in the filter only when the dataset includes a path of that ideology.
 
 **Randomization:** Spin country selects countries uniformly, and Spin path selects paths within the chosen country uniformly. Fully random, Randomize both and Path → Country select from a flat list of eligible path records. Countries with more paths therefore occupy more slots in those modes, while every path has equal probability.
 

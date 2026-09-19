@@ -1,17 +1,11 @@
 # Maintainer tools
 
-`serve.mjs` is an optional loopback-only static preview server. It supports `/kaisereich-run-picker/` to expose broken absolute asset links before deployment. It is not part of the production app.
+`serve.mjs` is an optional loopback-only preview server supporting the project subpath `/kaisereich-run-picker/`.
 
-`browser-check.mjs` runs the optional Playwright acceptance suite against that URL, including actual browser restart persistence. See the root README for installation and environment options. Screenshots and temporary browser profiles are QA artifacts, not source files.
+`browser-check.mjs` is the optional Playwright acceptance suite. It uses a separate browser profile for save/import/reset checks.
 
-## Future upstream update assistant (not implemented)
+`audit-starting-roster.py` audits all starting territorial owners against a local checkout of the pinned upstream source.
 
-1. Inspect the current official `Kaiserreich/Kaiserreich-HOI4` repository and pin a commit/release.
-2. Locate country tags, political game rules, relevant event/focus logic and English localization. Confirm paths rather than assuming old filenames.
-3. Extract **candidate** additions/changes into a review report outside `data/paths.json`.
-4. Review meaningful political playthroughs separately from AI behavior, diplomatic alignment, election timing, war outcomes and temporary states.
-5. Reconcile candidates against existing stable IDs; propose migrations explicitly if needed.
-6. Review prerequisites, ideology phase, availability and source references. Update curated JSON only after review.
-7. Run validation/tests and submit a PR. Never automatically publish every game rule as a path.
+`import-political-routes.py` imports active domestic political game-rule options for starting nations. It resolves localized references, retains prerequisites and stable IDs, excludes random/foreign-policy/war-plan groups, and records an exact coverage manifest. The extra election and constitutional groups are explicitly allowlisted in the script. It does not fabricate combinations across independent rule groups or claim focus-tree completeness. See `data/README.md` for scope and ideology handling.
 
-The frontend reads only the curated dataset; it never fetches or parses upstream game scripts at runtime.
+For a new mod release, pin and inspect the source before importing. Review changed groups, source keys, prerequisites and ideology; make explicit migration decisions for removed or renamed entries. Run tests and review the PR before merging. No runtime upstream fetches are made by the app.

@@ -1016,3 +1016,8 @@ button.primary:hover, .result-actions button.primary:hover { background: #d1b77f
 .atlas-country small { display:block; color:#bdb9ad; font-size:10px; font-weight:normal; margin-top:4px; }
 .atlas-country span { text-align:left; }
 .atlas-countries { max-height:330px; overflow-y:auto; padding:4px; }
+
+/* Preserve route prerequisites from the official descriptions. */
+.result-notes { white-space: pre-line; }
+#path-choice { width: 100%; min-width: 0; margin-bottom: .75rem; }
+#country-control { min-width: 0; }

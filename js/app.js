@@ -34,7 +34,7 @@ function renderWheel(kind = defaultSpinKind()) {
   const selectedIndex = entries.findIndex(entry => entry.id === result?.id);
   if (selectedIndex >= 0) wheel.land(selectedIndex);
   $('wheel-legend-title').textContent = `On the wheel · ${entries.length} ${kind === 'country' ? 'countries' : 'paths'}`;
-  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each verified eligible path gets an equal slice.') : selectedCountry && !records.some(path => path.tag === selectedCountry) ? 'Routes awaiting review. Use Spin country to discover another nation.' : 'No eligible paths. Adjust your filters.';
+  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each eligible political option gets an equal slice.') : selectedCountry && !records.some(path => path.tag === selectedCountry) ? 'Routes awaiting review. Use Spin country to discover another nation.' : 'No eligible paths. Adjust your filters.';
   $('wheel-spin').disabled = !entries.length || (mode === 'ideology' && !$('ideology').value);
   $('wheel-button-label').textContent = 'SPIN';
 }
@@ -53,7 +53,7 @@ function filters() {
 }
 function pool() { return eligiblePaths(records, progress, filters()); }
 function countryPool() { return eligibleCountries(countries, records, progress, filters()); }
-function coverage(country) { const count = records.filter(path => path.tag === country.tag).length; return count ? `${count} verified ${count === 1 ? 'route' : 'routes'} · coverage incomplete` : 'Political paths awaiting review'; }
+function coverage(country) { const count = records.filter(path => path.tag === country.tag).length; return count ? `${count} political ${count === 1 ? 'route' : 'routes'} · coverage incomplete` : 'Political paths awaiting review'; }
 function safeSource(url) {
   try { const parsed = new URL(url); return parsed.protocol === 'https:' && parsed.hostname === 'github.com' ? parsed.href : null; }
   catch { return null; }
@@ -88,6 +88,10 @@ function refreshEligibility(preserveWheel = false) {
   if (!countries.some(country => country.tag === selectedCountry)) selectedCountry = '';
   options($('country'), countries.map(country => ({ label: `${country.country} — ${coverage(country)}`, value: country.tag })), 'Let fate choose');
   $('country').value = selectedCountry;
+  const routes = eligible.filter(path => path.tag === selectedCountry);
+  options($('path-choice'), routes.map(path => ({ value: path.id, label: `${path.name} · ${path.ideology} — ${path.ruleGroupName || path.category}` })), selectedCountry ? 'Choose a route, or spin' : 'Choose a country first');
+  $('path-choice').disabled = !routes.length;
+  $('path-choice').value = result?.tag === selectedCountry ? result.id : '';
   $('eligible-count').textContent = `${eligible.length} eligible ${eligible.length === 1 ? 'path' : 'paths'} · ${countries.length} countries`;
   $('spin-country').disabled = !countries.length;
   $('spin-path').disabled = !eligible.some(path => path.tag === selectedCountry);
@@ -118,9 +122,9 @@ function renderResult() {
   $('result-tag').textContent = result?.tag || selectedCountry || '—';
   $('result-region').textContent = nation?.region || 'THE WORLD AWAITS';
   $('result-country').textContent = nation?.country || 'A new history starts here.';
-  $('result-path').textContent = result?.name || (selectedCountry ? (records.some(path => path.tag === selectedCountry) ? 'Country selected. Spin a political path.' : 'This nation is playable. Its political routes are still awaiting verification; choose your own route in-game.') : 'Spin to discover your next campaign.');
+  $('result-path').textContent = result?.name || (selectedCountry ? (records.some(path => path.tag === selectedCountry) ? 'Country selected. Choose a route above or spin a political path.' : 'This nation is playable. Its political routes are still awaiting verification; choose your own route in-game.') : 'Spin to discover your next campaign.');
   $('result-ideology').textContent = result?.ideology || '';
-  $('result-notes').textContent = result?.notes || '';
+  $('result-notes').textContent = result ? `${result.ruleGroupName ? result.ruleGroupName + '\n\n' : ''}${result.notes || ''}` : '';
   if (result) $('result-status').value = progress[result.id] ?? 'unplayed';
   if (!countryPool().length) {
     $('result-country').textContent = 'No paths match.';
@@ -206,7 +210,7 @@ function renderChecklist() {
   const visible = searchPaths(eligiblePaths(records, progress, { status: $('browse-status').value }), $('search').value);
   const query = $('search').value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
   const pending = countries.filter(country => !records.some(path => path.tag === country.tag) && !$('browse-status').value && `${country.country} ${country.tag} ${country.region}`.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().includes(query));
-  $('browse-count').textContent = `${visible.length} of ${records.length} verified routes · ${pending.length} matching countries awaiting path review`;
+  $('browse-count').textContent = `${visible.length} of ${records.length} source-backed political options · ${pending.length} matching countries awaiting path review`;
   $('browse-empty').hidden = visible.length + pending.length > 0;
   const fragment = document.createDocumentFragment();
   for (const country of countriesIn(visible)) {
@@ -243,7 +247,7 @@ function renderChecklist() {
     const section = node('section', undefined, 'country-group');
     const heading = node('h2', country.country); heading.append(node('span', country.tag));
     const flag = node('img'); flag.src = country.flag; flag.alt = `${country.country} flag`; flag.className = 'roster-flag';
-    section.append(flag, heading, node('p', `${country.region} · Political paths awaiting review`, 'coverage-label'), node('p', 'Playable from the 1936 start. Select this country in the atlas or country picker; verified political routes will be added separately.'));
+    section.append(flag, heading, node('p', `${country.region} · Political paths awaiting review`, 'coverage-label'), node('p', 'Playable from the 1936 start. Select this country in the atlas or country picker; source-backed political options will be added separately.'));
     if (country.contentStatus?.startsWith('No bespoke')) section.append(node('p', country.contentStatus));
     const source = safeSource(country.source);
     if (source) { const link = node('a', 'Official starting-country source ↗'); link.href = source; link.target = '_blank'; link.rel = 'noopener noreferrer'; section.append(link); }
@@ -288,8 +292,8 @@ async function init() {
     options($('region'), [...new Set(countries.map(country => country.region))].sort(), 'All regions');
     $('atlas-view').replaceChildren(...Object.keys(VIEWS).map(view => new Option(view === 'world' ? 'Whole world' : view, view)));
     options($('ideology'), [...new Set(records.map(path => path.ideology))].sort(), 'All ideologies');
-    $('sample-summary').textContent = `${countries.filter(country => country.startingCountry).length} starting nations · ${records.length} verified routes. Country roster complete for the source snapshot; political-path coverage incomplete.`;
-    $('about-sample').textContent = `${countries.filter(country => country.startingCountry).length} starting nations are listed from the official 1936 state ownership and bookmark files. ${records.length} political routes are verified so far. Countries with no verified routes remain available in country draws and the atlas; they are not added as fake paths to progress totals.`;
+    $('sample-summary').textContent = `${countries.filter(country => country.startingCountry).length} starting nations · ${records.length} source-backed political options. Political game-rule collection; includes conditional branches and later elections.`;
+    $('about-sample').textContent = `${countries.filter(country => country.startingCountry).length} starting nations are listed from the official 1936 state ownership and bookmark files. ${records.length} political options are catalogued from the source. Countries with no source-backed political options remain available in country draws and the atlas; they are not added as fake paths to progress totals. Options are sourced from official game rules, not playtested walkthroughs. Separate rule groups can overlap. Focus-tree-only and successor-country routes are not comprehensively covered.`;
     $('data-version').textContent = `Kaiserreich data version: ${data.metadata.kaiserreichVersion}. Checked ${data.metadata.lastUpdated}.`;
     $('footer-version').textContent = `KR ${data.metadata.kaiserreichVersion}`;
     if (data.skipped) announce(`${data.skipped} disabled or invalid records were omitted from this collection.`);
@@ -316,6 +320,11 @@ function bindEvents() {
   });
   document.querySelectorAll('input[name=mode]').forEach(input => input.addEventListener('change', changeMode));
   $('country').addEventListener('change', () => { selectedCountry = $('country').value; result = null; refreshEligibility(); renderResult(); });
+  $('path-choice').addEventListener('change', () => {
+    cancelSpin();
+    result = pool().find(path => path.tag === selectedCountry && path.id === $('path-choice').value) || null;
+    refreshEligibility(); reveal();
+  });
   for (const kind of ['country', 'path', 'both']) $(`spin-${kind}`).addEventListener('click', () => spin(kind));
   $('wheel-spin').addEventListener('click', () => spin(defaultSpinKind()));
   $('start-run').addEventListener('click', () => { if (result) updateStatus(result.id, 'played'); });
