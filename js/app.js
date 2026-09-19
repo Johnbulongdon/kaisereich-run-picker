@@ -1,0 +1,374 @@
+import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths } from './picker.js';
+import { setStatus, summarize, STATUSES, STATUS_LABELS } from './tracker.js';
+import { createStorage, parseSave, exportSave, MAX_SAVE_BYTES, STORAGE_KEY } from './storage.js';
+import { SelectionWheel } from './wheel.js';
+import { CampaignAtlas } from './atlas.js';
+import { VIEWS } from './atlas.js';
+
+const $ = id => document.getElementById(id);
+const storage = createStorage();
+let countries = [];
+let records = [], progress = {}, result = null, selectedCountry = '', mode = 'country';
+let protectCorruptSave = false;
+const wheel = new SelectionWheel($('selection-wheel'), $('wheel-entries'));
+let spinning = false, spinToken = 0;
+const atlas = new CampaignAtlas($('campaign-map'), $('atlas-countries'), tag => {
+  document.querySelector('input[name=mode][value=country]').checked = true;
+  changeMode();
+  selectedCountry = tag;
+  refreshEligibility(); renderResult();
+  announce(`${$('result-country').textContent} selected from the map. Spin a political path.`);
+});
+
+function wheelItems(kind) {
+  const eligible = pool();
+  if (kind === 'country') return countryPool().map(country => ({ ...country, id: country.tag, color: '#30373e', label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
+  return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry) : eligible)
+    .map(path => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: path.shortName || path.tag }));
+}
+function assetUrl(path) { return /^\.\/assets\/[\w/-]+\.png$/.test(path ?? '') ? new URL('../' + path.slice(2), import.meta.url).href : ''; }
+function defaultSpinKind() { return mode === 'country' ? (selectedCountry ? 'path' : 'country') : 'both'; }
+function renderWheel(kind = defaultSpinKind()) {
+  const entries = wheelItems(kind);
+  wheel.render(entries);
+  const selectedIndex = entries.findIndex(entry => entry.id === result?.id);
+  if (selectedIndex >= 0) wheel.land(selectedIndex);
+  $('wheel-legend-title').textContent = `On the wheel · ${entries.length} ${kind === 'country' ? 'countries' : 'paths'}`;
+  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each eligible political option gets an equal slice.') : selectedCountry && !records.some(path => path.tag === selectedCountry) ? 'Routes awaiting review. Use Spin country to discover another nation.' : 'No eligible paths. Adjust your filters.';
+  $('wheel-spin').disabled = !entries.length || (mode === 'ideology' && !$('ideology').value);
+  $('wheel-button-label').textContent = 'SPIN';
+}
+function cancelSpin() {
+  spinToken++;
+  spinning = false;
+  wheel.cancel();
+  $('result-card').removeAttribute('aria-busy');
+}
+
+function announce(message) { $('announcement').textContent = message; }
+function warn(message) { $('storage-warning').textContent = message; $('storage-warning').hidden = !message; }
+function filters() {
+  return { region: $('region').value, ideology: $('ideology').value, status: $('status-filter').value,
+    excludeCompleted: $('exclude-completed').checked, excludePlayed: $('exclude-played').checked };
+}
+function pool() { return eligiblePaths(records, progress, filters()); }
+function countryPool() { return eligibleCountries(countries, records, progress, filters()); }
+function coverage(country) { const count = records.filter(path => path.tag === country.tag).length; return count ? `${count} political ${count === 1 ? 'route' : 'routes'} · coverage incomplete` : 'Political paths awaiting review'; }
+function safeSource(url) {
+  try { const parsed = new URL(url); return parsed.protocol === 'https:' && parsed.hostname === 'github.com' ? parsed.href : null; }
+  catch { return null; }
+}
+function options(select, entries, placeholder) {
+  select.replaceChildren(new Option(placeholder, ''));
+  for (const entry of entries) select.add(new Option(entry.label ?? entry, entry.value ?? entry));
+}
+function persist() {
+  if (protectCorruptSave) {
+    warn('The existing saved record is unreadable and has been left untouched. Changes are temporary. Export this session, then use Reset progress to replace the damaged record.');
+    return false;
+  }
+  const saved = storage.save(progress);
+  warn(saved ? '' : 'Progress cannot be saved in this browser. Changes are kept for this session only. Export a backup before closing.');
+  return saved;
+}
+function updateStatus(id, status) {
+  progress = setStatus(progress, id, status);
+  const saved = persist();
+  renderStats();
+  renderChecklist();
+  refreshEligibility();
+  renderResult();
+  announce(`${records.find(path => path.id === id).name}: ${STATUS_LABELS[status]}. ${saved ? 'Saved in this browser.' : 'Session only; export to keep a backup.'}`);
+}
+
+function refreshEligibility(preserveWheel = false) {
+  if (!preserveWheel) cancelSpin();
+  const eligible = pool();
+  const countries = countryPool();
+  if (!countries.some(country => country.tag === selectedCountry)) selectedCountry = '';
+  options($('country'), countries.map(country => ({ label: `${country.country} — ${coverage(country)}`, value: country.tag })), 'Let fate choose');
+  $('country').value = selectedCountry;
+  const routes = eligible.filter(path => path.tag === selectedCountry);
+  options($('path-choice'), routes.map(path => ({ value: path.id, label: `${path.name} · ${path.ideology} — ${path.ruleGroupName || path.category}` })), selectedCountry ? 'Choose a route, or spin' : 'Choose a country first');
+  $('path-choice').disabled = !routes.length;
+  $('path-choice').value = result?.tag === selectedCountry ? result.id : '';
+  $('eligible-count').textContent = `${eligible.length} eligible ${eligible.length === 1 ? 'path' : 'paths'} · ${countries.length} countries`;
+  $('spin-country').disabled = !countries.length;
+  $('spin-path').disabled = !eligible.some(path => path.tag === selectedCountry);
+  $('spin-both').disabled = !eligible.length || (mode === 'ideology' && !$('ideology').value);
+  if (result && !eligible.some(path => path.id === result.id)) result = null;
+  if (!eligible.length) {
+    $('result-country').textContent = 'No paths match.';
+    $('result-path').textContent = 'Clear filters or include more progress states to draw again.';
+  }
+  if (!preserveWheel) renderWheel();
+  else $('wheel-spin').disabled = !wheelItems(defaultSpinKind()).length;
+}
+
+function renderResult() {
+  atlas.render(countries, countryPool(), result?.tag || selectedCountry);
+  renderBriefing();
+  const nation = countries.find(country => country.tag === (result?.tag || selectedCountry));
+  $('result-coverage').hidden = !nation;
+  $('result-coverage').textContent = nation ? coverage(nation) : '';
+  $('result-heraldry').hidden = !nation?.flag;
+  if (nation?.flag) { $('result-flag').src = nation.flag; $('result-flag').alt = `${nation.country} starting-country flag`; }
+  $('result-emblem').hidden = !result?.icon;
+  if (result?.icon) { $('result-emblem').src = result.icon; $('result-emblem').alt = `${result.ideology} emblem`; }
+  $('result-ideology').style.borderColor = result?.color || '';
+  $('result-actions').hidden = !result;
+  $('result-ideology').hidden = !result;
+  $('result-notes').hidden = !result?.notes;
+  $('result-tag').textContent = result?.tag || selectedCountry || '—';
+  $('result-region').textContent = nation?.region || 'THE WORLD AWAITS';
+  $('result-country').textContent = nation?.country || 'A new history starts here.';
+  $('result-path').textContent = result?.name || (selectedCountry ? (records.some(path => path.tag === selectedCountry) ? 'Country selected. Choose a route above or spin a political path.' : 'This nation is playable. Its political routes are still awaiting verification; choose your own route in-game.') : 'Spin to discover your next campaign.');
+  $('result-ideology').textContent = result?.ideology || '';
+  $('result-notes').textContent = result ? `${result.ruleGroupName ? result.ruleGroupName + '\n\n' : ''}${result.notes || ''}` : '';
+  if (result) $('result-status').value = progress[result.id] ?? 'unplayed';
+  if (!countryPool().length) {
+    $('result-country').textContent = 'No paths match.';
+    $('result-path').textContent = 'Clear filters or include more progress states to draw again.';
+    $('result-tag').textContent = '—';
+  }
+}
+function renderBriefing() {
+  $('campaign-briefing').hidden = !result;
+  $('campaign-objectives').replaceChildren();
+  if (!result) return;
+  $('briefing-title').textContent = `${result.country} · Campaign goals`;
+  for (const objective of result.objectives ?? []) $('campaign-objectives').append(node('li', objective));
+  $('campaign-challenge').textContent = result.challenge || 'Keep your capital under your control through your first major war.';
+  const source = safeSource(result.source);
+  $('briefing-source').hidden = !source;
+  if (source) $('briefing-source').href = source;
+}
+function reveal() {
+  renderResult();
+  $('result-details').classList.remove('revealing');
+  // Restart a short reveal; reduced-motion users receive the result immediately.
+  void $('result-details').offsetWidth;
+  $('result-details').classList.add('revealing');
+  announce(result ? `${result.country} — ${result.name}. ${result.ideology}.` : `${$('result-country').textContent}. ${$('result-path').textContent}`);
+}
+async function spin(kind) {
+  if (spinning) return;
+  if (mode === 'ideology' && !$('ideology').value) return announce('Choose a political ideology first.');
+  const entries = wheelItems(kind);
+  const chosen = choose(entries);
+  if (!chosen) return;
+  renderWheel(kind);
+  const token = ++spinToken;
+  spinning = true;
+  result = null;
+  renderResult();
+  for (const id of ['spin-country', 'spin-path', 'spin-both', 'wheel-spin']) $(id).disabled = true;
+  $('result-card').setAttribute('aria-busy', 'true');
+  $('result-country').textContent = 'Fate is turning…';
+  $('result-path').textContent = 'The pointer will reveal your next campaign.';
+  $('wheel-button-label').textContent = '…';
+  $('wheel-caption').textContent = 'Drawing your next campaign…';
+  announce('Spinning the selection wheel.');
+  const landed = await wheel.spin(entries.indexOf(chosen), $('spin-motion').value === 'off');
+  if (!landed || token !== spinToken) return;
+  spinning = false;
+  $('result-card').removeAttribute('aria-busy');
+  if (kind === 'country') {
+    selectedCountry = chosen.tag;
+    result = null;
+  } else {
+    result = records.find(path => path.id === chosen.id);
+    selectedCountry = result.tag;
+  }
+  refreshEligibility(true);
+  $('wheel-caption').textContent = kind === 'country' ? `${chosen.country} selected. ${records.some(path => path.tag === chosen.tag) ? 'Spin again to draw its path.' : 'Political paths awaiting review.'}` : `${chosen.country} · ${chosen.ideology}`;
+  $('wheel-button-label').textContent = kind === 'country' ? (records.some(path => path.tag === chosen.tag) ? 'PATH' : 'PENDING') : 'AGAIN';
+  reveal();
+}
+function changeMode() {
+  mode = document.querySelector('input[name=mode]:checked').value;
+  result = null;
+  selectedCountry = '';
+  $('country-control').hidden = mode !== 'country';
+  $('spin-country').hidden = mode !== 'country';
+  $('spin-path').hidden = mode !== 'country';
+  $('spin-both').textContent = mode === 'country' ? 'Randomize both ↻' : mode === 'ideology' ? 'Find a country & path ↻' : 'Spin a new run ↻';
+  $('mode-help').textContent = mode === 'country' ? 'Pick a country first, then discover one of its eligible paths.' : mode === 'ideology' ? 'Choose a political ideology in the conditions, then draw a country and matching path.' : 'Every eligible country–path combination has an equal chance.';
+  $('selection-footnote').textContent = mode === 'country' ? 'A country first. A political path second. Your next run awaits.' : 'Filters apply before the draw. Every matching path gets one slot.';
+  refreshEligibility();
+  renderResult();
+}
+
+function node(tag, text, className) {
+  const element = document.createElement(tag);
+  if (text !== undefined) element.textContent = text;
+  if (className) element.className = className;
+  return element;
+}
+function renderChecklist() {
+  const activeId = document.activeElement?.dataset.pathId;
+  const visible = searchPaths(eligiblePaths(records, progress, { status: $('browse-status').value }), $('search').value);
+  const query = $('search').value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
+  const pending = countries.filter(country => !records.some(path => path.tag === country.tag) && !$('browse-status').value && `${country.country} ${country.tag} ${country.region}`.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().includes(query));
+  $('browse-count').textContent = `${visible.length} of ${records.length} source-backed political options · ${pending.length} matching countries awaiting path review`;
+  $('browse-empty').hidden = visible.length + pending.length > 0;
+  const fragment = document.createDocumentFragment();
+  for (const country of countriesIn(visible)) {
+    const section = node('section', undefined, 'country-group');
+    const heading = node('h2', country.country);
+    heading.append(node('span', country.tag));
+    section.append(heading, node('p', coverage(country), 'coverage-label'));
+    for (const path of visible.filter(item => item.tag === country.tag)) {
+      const row = node('div', undefined, 'path-row');
+      const info = node('div');
+      const imagery = node('div', undefined, 'checklist-heraldry');
+      if (path.flag) { const flag = node('img'); flag.src = path.flag; flag.alt = `${path.country} flag`; imagery.append(flag); }
+      if (path.icon) { const emblem = node('img'); emblem.src = path.icon; emblem.alt = `${path.ideology} emblem`; imagery.append(emblem); }
+      info.append(imagery);
+      info.append(node('h3', path.name), node('p', `${path.ideology} · ${path.region}`), node('p', path.notes ?? ''));
+      const url = safeSource(path.source);
+      if (url) { const link = node('a', 'View official source ↗'); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; info.append(link); }
+      const control = node('div');
+      const label = node('label', 'Run status');
+      label.htmlFor = `status-${path.id}`;
+      const select = node('select');
+      select.id = label.htmlFor;
+      select.dataset.pathId = path.id;
+      select.setAttribute('aria-label', `${path.country} — ${path.name}: run status`);
+      for (const status of STATUSES) select.add(new Option(STATUS_LABELS[status], status));
+      select.value = progress[path.id] ?? 'unplayed';
+      control.append(label, select);
+      row.append(info, control);
+      section.append(row);
+    }
+    fragment.append(section);
+  }
+  for (const country of pending) {
+    const section = node('section', undefined, 'country-group');
+    const heading = node('h2', country.country); heading.append(node('span', country.tag));
+    const flag = node('img'); flag.src = country.flag; flag.alt = `${country.country} flag`; flag.className = 'roster-flag';
+    section.append(flag, heading, node('p', `${country.region} · Political paths awaiting review`, 'coverage-label'), node('p', 'Playable from the 1936 start. Select this country in the atlas or country picker; source-backed political options will be added separately.'));
+    if (country.contentStatus?.startsWith('No bespoke')) section.append(node('p', country.contentStatus));
+    const source = safeSource(country.source);
+    if (source) { const link = node('a', 'Official starting-country source ↗'); link.href = source; link.target = '_blank'; link.rel = 'noopener noreferrer'; section.append(link); }
+    fragment.append(section);
+  }
+  $('checklist-list').replaceChildren(fragment);
+  // Keep keyboard focus after replacing a changed row; filtered-out rows return to the search.
+  if (activeId) ($(`status-${activeId}`) ?? $('search')).focus();
+}
+function renderStats() {
+  const stats = summarize(records, progress);
+  $('mini-progress').textContent = `${stats.completed} / ${stats.total} paths completed`;
+  $('completion-fraction').textContent = `${stats.completed} / ${stats.total}`;
+  $('completion-percent').textContent = `${stats.percent.toFixed(1)}%`;
+  $('completion-bar').value = stats.percent;
+  for (const status of STATUSES) $(`${status}-count`).textContent = stats[status];
+  const known = new Set(records.map(path => path.id));
+  const unknown = Object.keys(progress).filter(id => !known.has(id)).length;
+  $('unknown-count').textContent = unknown ? `${unknown} saved ${unknown === 1 ? 'path is' : 'paths are'} outside this database. Preserved in your save and exports; excluded from these statistics.` : '';
+}
+function route(focus = false) {
+  const id = location.hash.slice(1);
+  const view = ['picker', 'checklist', 'progress', 'about'].includes(id) ? id : 'picker';
+  for (const section of document.querySelectorAll('.view')) section.hidden = section.id !== view;
+  for (const link of document.querySelectorAll('nav a')) {
+    if (link.hash === `#${view}`) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
+  }
+  if (focus) $(`${view}-heading`).focus({ preventScroll: true });
+}
+
+async function init() {
+  try {
+    const response = await fetch(new URL('../data/paths.json', import.meta.url));
+    if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
+    const data = readDataset(await response.json());
+    records = data.records.map(path => ({ ...path, flag: assetUrl(path.flag), icon: assetUrl(data.ideologies[path.ideology]?.icon), color: /^#[0-9a-f]{6}$/i.test(data.ideologies[path.ideology]?.color ?? '') ? data.ideologies[path.ideology].color : '#30373e' }));
+    countries = data.countries.map(country => ({ ...country, flag: assetUrl(country.flag) }));
+    const saved = storage.load();
+    progress = saved.progress;
+    protectCorruptSave = saved.corrupt;
+    if (saved.error) warn(saved.corrupt ? 'The saved record is unreadable and has been left untouched. Export any new progress before resetting the damaged save.' : 'Progress cannot be saved in this browser. Export your progress before closing.');
+    options($('region'), [...new Set(countries.map(country => country.region))].sort(), 'All regions');
+    $('atlas-view').replaceChildren(...Object.keys(VIEWS).map(view => new Option(view === 'world' ? 'Whole world' : view, view)));
+    options($('ideology'), [...new Set(records.map(path => path.ideology))].sort(), 'All ideologies');
+    $('sample-summary').textContent = `${countries.filter(country => country.startingCountry).length} starting nations · ${records.length} source-backed political options. Political game-rule collection; includes conditional branches and later elections.`;
+    $('about-sample').textContent = `${countries.filter(country => country.startingCountry).length} starting nations are listed from the official 1936 state ownership and bookmark files. ${records.length} political options are catalogued from the source. Countries with no source-backed political options remain available in country draws and the atlas; they are not added as fake paths to progress totals. Options are sourced from official game rules, not playtested walkthroughs. Separate rule groups can overlap. Focus-tree-only and successor-country routes are not comprehensively covered.`;
+    $('data-version').textContent = `Kaiserreich data version: ${data.metadata.kaiserreichVersion}. Checked ${data.metadata.lastUpdated}.`;
+    $('footer-version').textContent = `KR ${data.metadata.kaiserreichVersion}`;
+    if (data.skipped) announce(`${data.skipped} disabled or invalid records were omitted from this collection.`);
+    bindEvents();
+    renderStats(); renderChecklist(); changeMode(); route();
+    $('application').hidden = false;
+  } catch (error) {
+    console.error('Unable to initialize the path database:', error);
+    $('load-error').hidden = false;
+  } finally { $('loading').hidden = true; }
+}
+
+function bindEvents() {
+  $('atlas-view').addEventListener('change', event => { atlas.view = event.target.value; atlas.render(countries, countryPool(), result?.tag || selectedCountry); });
+  $('spin-motion').addEventListener('change', () => { if (spinning) { cancelSpin(); refreshEligibility(); renderResult(); announce('Animation setting changed. Spin again when ready.'); } });
+  window.addEventListener('hashchange', () => route(true));
+  for (const id of ['region', 'ideology', 'status-filter', 'exclude-completed', 'exclude-played']) {
+    $(id).addEventListener('change', () => { result = null; refreshEligibility(); renderResult(); });
+  }
+  $('clear-filters').addEventListener('click', () => {
+    for (const id of ['region', 'ideology', 'status-filter']) $(id).value = '';
+    $('exclude-completed').checked = false; $('exclude-played').checked = false;
+    result = null; selectedCountry = ''; refreshEligibility(); renderResult(); announce('Filters cleared.');
+  });
+  document.querySelectorAll('input[name=mode]').forEach(input => input.addEventListener('change', changeMode));
+  $('country').addEventListener('change', () => { selectedCountry = $('country').value; result = null; refreshEligibility(); renderResult(); });
+  $('path-choice').addEventListener('change', () => {
+    cancelSpin();
+    result = pool().find(path => path.tag === selectedCountry && path.id === $('path-choice').value) || null;
+    refreshEligibility(); reveal();
+  });
+  for (const kind of ['country', 'path', 'both']) $(`spin-${kind}`).addEventListener('click', () => spin(kind));
+  $('wheel-spin').addEventListener('click', () => spin(defaultSpinKind()));
+  $('start-run').addEventListener('click', () => { if (result) updateStatus(result.id, 'played'); });
+  $('result-status').addEventListener('change', event => { if (result) updateStatus(result.id, event.target.value); });
+  $('search').addEventListener('input', renderChecklist);
+  $('browse-status').addEventListener('change', renderChecklist);
+  $('checklist-list').addEventListener('change', event => {
+    if (event.target.dataset.pathId) updateStatus(event.target.dataset.pathId, event.target.value);
+  });
+  $('export').addEventListener('click', () => {
+    const url = URL.createObjectURL(new Blob([exportSave(progress)], { type: 'application/json' }));
+    const link = node('a'); link.href = url; link.download = 'kaiserreich-run-picker-progress.json';
+    document.body.append(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    announce('Progress exported. Keep the JSON file as your backup.');
+  });
+  $('import').addEventListener('click', () => $('import-file').click());
+  $('import-file').addEventListener('change', async event => {
+    const file = event.target.files[0];
+    if (!file) return;
+    try {
+      if (file.size > MAX_SAVE_BYTES) throw new Error('Save is too large.');
+      const imported = parseSave(await file.text());
+      progress = { ...progress, ...imported };
+      const saved = persist();
+      renderStats(); renderChecklist(); refreshEligibility(); renderResult();
+      announce(`Imported ${Object.keys(imported).length} path statuses. ${saved ? 'Saved in this browser.' : 'Session only; export to keep a backup.'} ${$('unknown-count').textContent}`);
+    } catch { announce('This does not appear to be a valid Kaiserreich Run Picker save file (maximum 1 MB). Your progress was not changed.'); }
+    finally { event.target.value = ''; }
+  });
+  $('reset').addEventListener('click', () => { $('reset-dialog').returnValue = ''; $('reset-dialog').showModal(); });
+  $('reset-dialog').addEventListener('close', () => {
+    if ($('reset-dialog').returnValue !== 'reset') return;
+    const removed = storage.reset();
+    if (!removed) { warn('The browser could not erase the stored record. Your progress has been kept. Allow site storage and try again.'); return; }
+    progress = {}; protectCorruptSave = false; result = null; warn('');
+    renderStats(); renderChecklist(); refreshEligibility(); renderResult(); announce('All saved progress has been reset.');
+  });
+  window.addEventListener('storage', event => {
+    if (event.key !== STORAGE_KEY && event.key !== null) return;
+    const saved = storage.load();
+    if (saved.error) { protectCorruptSave = true; warn('Progress changed in another tab but could not be read. Reload before editing.'); return; }
+    progress = saved.progress; protectCorruptSave = false;
+    renderStats(); renderChecklist(); refreshEligibility(); renderResult(); announce('Progress updated from another tab.');
+  });
+}
+init();

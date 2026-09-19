@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pick your next Kaiserreich country and political path. Keep a private, local checklist of your campaigns.">
+  <title>Kaiserreich Run Picker</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <a class="brand" href="#picker" aria-label="Kaiserreich Run Picker home"><span class="brand-mark" aria-hidden="true">K<span>R</span></span><span>KAISERREICH<span class="brand-sub">RUN PICKER · COMMUNITY PROJECT</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#picker" aria-current="page">Pick a run</a><a href="#checklist">Checklist</a><a href="#progress">Progress</a><a href="#about">About</a>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="edition"><span>CAMPAIGN PLANNING OFFICE</span><span>VOL. 01 / ATLAS EDITION</span></div>
+    <div id="load-error" class="notice error" role="alert" hidden>Unable to load Kaiserreich path data. Check your connection and <a href="">reload the page</a>. For local use, start the included preview server.</div>
+    <div id="storage-warning" class="notice error" role="alert" hidden></div>
+    <div id="announcement" class="announcement" role="status" aria-live="polite"></div>
+    <noscript><p class="notice">Enable JavaScript to use the picker and save progress.</p></noscript>
+    <div id="loading" class="notice">Opening the campaign register…</div>
+    <div id="application" hidden>
+      <section id="picker" class="view" aria-labelledby="picker-heading">
+        <div class="page-heading"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><h1 id="picker-heading" tabindex="-1">Let fate decide.</h1><p>Choose a country. Find a path. Rewrite history.</p></div><a class="text-link" href="#checklist">Explore the register <span aria-hidden="true">↗</span></a></div>
+        <div class="sample-banner"><strong>Curated collection</strong><span id="sample-summary"></span><a href="#about">About the data</a></div>
+        <div class="picker-layout">
+          <aside class="filters" aria-labelledby="filters-heading">
+            <div class="panel-heading"><h2 id="filters-heading">Set the conditions</h2><span aria-hidden="true">01</span></div>
+            <label for="region">Region</label><select id="region"><option value="">All regions</option></select>
+            <label for="ideology">Political ideology</label><select id="ideology"><option value="">All ideologies</option></select>
+            <label for="status-filter">Progress</label><select id="status-filter"><option value="">All paths</option><option value="unplayed">Unplayed</option><option value="played">Played</option><option value="completed">Completed</option></select>
+            <div class="check-controls"><label><input type="checkbox" id="exclude-completed"> Exclude completed</label><label><input type="checkbox" id="exclude-played"> Exclude played</label></div>
+            <button id="clear-filters" class="quiet">Clear filters</button>
+            <p id="eligible-count" class="filter-count"></p>
+          </aside>
+          <div class="selection-panel">
+            <fieldset class="modes"><legend class="sr-only">Picker mode</legend><label><input type="radio" name="mode" value="country" checked><span>Country → Path</span></label><label><input type="radio" name="mode" value="ideology"><span>Path → Country</span></label><label><input type="radio" name="mode" value="random"><span>Fully random</span></label></fieldset>
+            <div class="mode-controls"><div id="country-control"><label for="country">Choose a country, or spin below</label><select id="country"><option value="">Let fate choose</option></select><label for="path-choice">Browse this country's political routes</label><select id="path-choice" disabled><option value="">Choose a country first</option></select></div><p id="mode-help">Pick a country first, then choose or spin one of its eligible paths.</p></div>
+            <div class="spin-actions"><button id="spin-country">Spin country</button><button id="spin-path" disabled>Spin path</button><button id="spin-both" class="primary">Randomize both <span aria-hidden="true">↻</span></button></div>
+            <div class="motion-controls"><label for="spin-motion">Wheel animation</label><select id="spin-motion"><option value="on">Animated spin</option><option value="off">Instant result · no motion</option></select></div>
+            <article class="result-card" id="result-card" aria-labelledby="result-country">
+              <div class="result-top"><span class="eyebrow">CAMPAIGN ASSIGNMENT</span><span id="result-tag" class="tag">—</span></div>
+              <div class="assignment-body">
+                <figure class="wheel-figure">
+                  <div class="wheel-stage">
+                    <span class="wheel-pointer" aria-hidden="true"></span>
+                    <svg id="selection-wheel" viewBox="0 0 400 400" aria-hidden="true"></svg>
+                    <button id="wheel-spin" class="wheel-hub" aria-label="Spin the selection wheel"><span aria-hidden="true">✦</span><span id="wheel-button-label">SPIN</span></button>
+                  </div>
+                  <figcaption id="wheel-caption">Spin the wheel. Find your next campaign.</figcaption>
+                </figure>
+                <div class="result-details" id="result-details">
+              <div id="result-heraldry" class="result-heraldry" hidden><img id="result-flag" class="nation-flag" alt=""><img id="result-emblem" class="ideology-emblem" alt="" hidden></div>
+              <p id="result-region" class="eyebrow">THE WORLD AWAITS</p><h2 id="result-country">A new history<br>starts here.</h2><p id="result-coverage" class="coverage-label" hidden></p>
+              <p id="result-path">Spin to discover your next campaign.</p><p id="result-ideology" class="ideology-chip" hidden></p><p id="result-notes" class="result-notes" hidden></p>
+              <div id="result-actions" class="result-actions" hidden><button id="start-run" class="primary">Start run</button><div><label for="result-status">Run status</label><select id="result-status"><option value="unplayed">○ Unplayed</option><option value="played">◐ Played</option><option value="completed">✓ Completed</option></select></div></div>
+                </div>
+              </div>
+              <details class="wheel-legend"><summary id="wheel-legend-title">On the wheel</summary><ol id="wheel-entries"></ol></details>
+            </article>
+            <section id="campaign-briefing" class="campaign-briefing" aria-labelledby="briefing-title" hidden>
+              <p class="eyebrow">YOUR FIELD ORDERS</p><h2 id="briefing-title">Campaign goals</h2>
+              <h3>Political objective</h3><ul id="campaign-objectives"></ul>
+              <a id="briefing-source" target="_blank" rel="noopener noreferrer">Official route reference ↗</a>
+              <div class="optional-challenge"><h3>Optional challenge</h3><p id="campaign-challenge"></p><small>A player-made challenge, not an in-game achievement. You decide when the run is complete.</small></div>
+            </section>
+            <p class="selection-footnote" id="selection-footnote">A country first. A political path second. Your next run awaits.</p>
+          </div>
+        </div>
+        <section class="campaign-atlas" aria-labelledby="atlas-title">
+          <div class="atlas-heading"><div><p class="eyebrow">CHOOSE YOUR THEATRE</p><h2 id="atlas-title">The world is waiting.</h2><p>Select a flag to choose a country, then spin its political path.</p></div>
+          <div><label for="atlas-view">Map view</label><select id="atlas-view"><option value="world">Whole world</option><option>Europe</option><option>East Asia</option><option>North America</option><option>South America</option><option>North Africa</option><option>Middle East</option><option>Oceania</option></select></div></div>
+          <div class="atlas-map-wrap"><svg id="campaign-map" viewBox="0 0 1080 465" role="group" aria-label="Campaign country map"></svg></div>
+          <p class="atlas-note">Geographic locator · Coastlines only, not Kaiserreich political borders. Gold marks your selection; faded flags have no paths matching your filters.</p>
+          <div id="atlas-countries" class="atlas-countries" aria-label="Select a map country"></div>
+        </section>
+        <a href="#progress" class="progress-strip"><span>YOUR CAMPAIGN RECORD</span><strong id="mini-progress">0 paths completed</strong><span>View progress →</span></a>
+      </section>
+      <section id="checklist" class="view" aria-labelledby="checklist-heading" hidden>
+        <div class="page-heading"><div><p class="eyebrow">THE CAMPAIGN REGISTER</p><h1 id="checklist-heading" tabindex="-1">The campaign register.</h1><p>Browse all starting nations and keep a record of source-backed political options.</p></div></div>
+        <div class="browse-controls"><div><label for="search">Search countries, paths or ideologies</label><input id="search" type="search" placeholder="Try Argentina, Federalist, or Carlés…"></div><div><label for="browse-status">Show progress</label><select id="browse-status"><option value="">All paths</option><option value="unplayed">Unplayed</option><option value="played">Played</option><option value="completed">Completed</option></select></div></div>
+        <p id="browse-count" class="eyebrow"></p><div id="checklist-list"></div><p id="browse-empty" class="notice" hidden>No paths match this search. Try another term or show all progress states.</p>
+      </section>
+      <section id="progress" class="view" aria-labelledby="progress-heading" hidden>
+        <div class="page-heading"><div><p class="eyebrow">YOUR CAMPAIGN RECORD</p><h1 id="progress-heading" tabindex="-1">History in the making.</h1><p>Completion is yours to define. Mark a run finished whenever you are.</p></div></div>
+        <div class="progress-summary"><div><span class="eyebrow">PATHS COMPLETED</span><p id="completion-fraction" class="big-number"></p></div><div class="completion-meter"><strong id="completion-percent"></strong><progress id="completion-bar" max="100" value="0" aria-label="Paths completed"></progress><p>Of the current curated collection</p></div></div>
+        <div class="stat-grid"><div><span>○ Unplayed</span><strong id="unplayed-count"></strong></div><div><span>◐ Played</span><strong id="played-count"></strong></div><div><span>✓ Completed</span><strong id="completed-count"></strong></div></div>
+        <section class="save-tools" aria-labelledby="save-heading"><h2 id="save-heading">Keep your campaign record safe.</h2><p>Progress is saved in this browser. Export a backup before clearing browser data or moving to another device.</p><p>Imports merge with your record. Statuses in the imported file replace matching saved statuses; other paths stay as they are.</p><div class="button-row"><button id="export">Export progress ↓</button><button id="import">Import progress ↑</button><input id="import-file" type="file" accept=".json,application/json" hidden><button id="reset" class="danger">Reset progress</button></div><p id="unknown-count"></p></section>
+      </section>
+      <section id="about" class="view prose" aria-labelledby="about-heading" hidden>
+        <p class="eyebrow">A COMMUNITY FIELD GUIDE</p><h1 id="about-heading" tabindex="-1">One more campaign.</h1><p>Kaiserreich Run Picker helps you choose a country and political path for Hearts of Iron IV’s Kaiserreich mod, and remember the campaigns you have played.</p>
+        <h2>A growing campaign atlas</h2><p id="about-sample"></p><p>The starting-country roster is complete for the pinned source snapshot. Political paths are incomplete: each nation is labelled with its reviewed route count or Paths pending. Later civil-war splinters and releasable nations are outside the starting-country roster. Each path links to the official source in the checklist. Some paths require unification or later elections; read the result notes before starting.</p><p id="data-version"></p>
+        <h2>How the draw works</h2><p>Fully random and Randomize both give every eligible country–path combination an equal chance. Spin country includes nations awaiting path review and chooses equally among eligible countries; Spin path then chooses equally among that country’s eligible paths. Path → Country uses your selected ideology and draws equally among matching path records.</p>
+        <h2>Your progress, your browser</h2><p>Start run marks a path Played. Completed always requires your choice. No accounts, cookies, analytics or external database are used by this application. Progress stays in localStorage on this browser and website address, unless you export it. Private browsing or clearing site data may remove it.</p>
+        <h2>Independent and open source</h2><p>An unofficial community project, not affiliated with or endorsed by the Kaiserreich development team or Paradox Interactive. Flags and ideology emblems come from the official Kaiserreich source; they remain the property of their respective creators and are not covered by this app’s MIT code license. Flags identify the starting nation, not every possible later government.</p><a class="text-link" href="https://github.com/Johnbulongdon/kaisereich-run-picker">Source code & contribution guide ↗</a>
+      </section>
+    </div>
+  </main>
+  <footer><span>KAISERREICH RUN PICKER</span><span>Unofficial. Local saves. Endless possibilities.</span><span id="footer-version">MVP · SAMPLE DATA</span></footer>
+  <dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description"><h2 id="reset-title">Erase your campaign record?</h2><p id="reset-description">This will erase all locally saved run progress, including paths outside the current sample. This cannot be undone unless you exported a backup.</p><form method="dialog" class="button-row"><button value="cancel" autofocus>Cancel</button><button value="reset" class="danger">Reset progress</button></form></dialog>
+</body>
+</html>
