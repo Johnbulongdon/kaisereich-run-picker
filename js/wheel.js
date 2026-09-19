@@ -60,6 +60,11 @@ export class SelectionWheel {
         const [fx, fy] = point(angle, 145);
         this.rotor.append(svgNode('image', { href: entry.flag, x: fx - 14, y: fy - 9, width: 28, height: 18, transform: `rotate(${angle}, ${fx}, ${fy})` }));
       }
+      if (entries.length > 32 && entry.id === entry.tag && entry.flag) {
+        const [fx, fy] = point(angle, 160);
+        const width = Math.min(22, 750 / entries.length);
+        this.rotor.append(svgNode('image', { href: entry.flag, x: fx - width / 2, y: fy - width / 3, width, height: width * 2 / 3, transform: `rotate(${angle}, ${fx}, ${fy})` }));
+      }
       if (entries.length <= 16) {
         const text = svgNode('text', { x, y, transform: `rotate(${angle}, ${x}, ${y})`, class: 'wheel-label', 'text-anchor': 'middle', 'dominant-baseline': 'middle' }, entry.shortLabel);
         text.style.fill = entry.color === '#ffed00' ? '#171b20' : '#fff9e9';
@@ -77,7 +82,9 @@ export class SelectionWheel {
       number.style.backgroundColor = entry.color || '#30373e';
       number.style.color = entry.color === '#ffed00' ? '#171b20' : '#fff9e9';
       number.textContent = String(index + 1).padStart(2, '0');
-      item.append(number, document.createTextNode(entry.label));
+      item.append(number);
+      if (entry.flag) { const flag = document.createElement('img'); flag.src = entry.flag; flag.alt = ''; flag.width = 27; flag.height = 18; item.append(flag); }
+      item.append(document.createTextNode(entry.label));
       this.legend.append(item);
     });
     this.svg.append(svgNode('circle', { cx: 200, cy: 200, r: 184, class: 'wheel-rim' }));

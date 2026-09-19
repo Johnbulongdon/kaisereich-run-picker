@@ -1,11 +1,13 @@
-import { readDataset, eligiblePaths, choose, countriesIn, searchPaths } from './picker.js';
+import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths } from './picker.js';
 import { setStatus, summarize, STATUSES, STATUS_LABELS } from './tracker.js';
 import { createStorage, parseSave, exportSave, MAX_SAVE_BYTES, STORAGE_KEY } from './storage.js';
 import { SelectionWheel } from './wheel.js';
 import { CampaignAtlas } from './atlas.js';
+import { VIEWS } from './atlas.js';
 
 const $ = id => document.getElementById(id);
 const storage = createStorage();
+let countries = [];
 let records = [], progress = {}, result = null, selectedCountry = '', mode = 'country';
 let protectCorruptSave = false;
 const wheel = new SelectionWheel($('selection-wheel'), $('wheel-entries'));
@@ -20,7 +22,7 @@ const atlas = new CampaignAtlas($('campaign-map'), $('atlas-countries'), tag => 
 
 function wheelItems(kind) {
   const eligible = pool();
-  if (kind === 'country') return countriesIn(eligible).map(country => ({ ...country, id: country.tag, flag: eligible.find(path => path.tag === country.tag).flag, color: '#30373e', label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
+  if (kind === 'country') return countryPool().map(country => ({ ...country, id: country.tag, color: '#30373e', label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
   return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry) : eligible)
     .map(path => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: path.shortName || path.tag }));
 }
@@ -32,7 +34,7 @@ function renderWheel(kind = defaultSpinKind()) {
   const selectedIndex = entries.findIndex(entry => entry.id === result?.id);
   if (selectedIndex >= 0) wheel.land(selectedIndex);
   $('wheel-legend-title').textContent = `On the wheel · ${entries.length} ${kind === 'country' ? 'countries' : 'paths'}`;
-  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each eligible path gets an equal slice.') : 'No eligible paths. Adjust your filters.';
+  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each verified eligible path gets an equal slice.') : selectedCountry && !records.some(path => path.tag === selectedCountry) ? 'Routes awaiting review. Use Spin country to discover another nation.' : 'No eligible paths. Adjust your filters.';
   $('wheel-spin').disabled = !entries.length || (mode === 'ideology' && !$('ideology').value);
   $('wheel-button-label').textContent = 'SPIN';
 }
@@ -50,6 +52,8 @@ function filters() {
     excludeCompleted: $('exclude-completed').checked, excludePlayed: $('exclude-played').checked };
 }
 function pool() { return eligiblePaths(records, progress, filters()); }
+function countryPool() { return eligibleCountries(countries, records, progress, filters()); }
+function coverage(country) { const count = records.filter(path => path.tag === country.tag).length; return count ? `${count} verified ${count === 1 ? 'route' : 'routes'} · coverage incomplete` : 'Political paths awaiting review'; }
 function safeSource(url) {
   try { const parsed = new URL(url); return parsed.protocol === 'https:' && parsed.hostname === 'github.com' ? parsed.href : null; }
   catch { return null; }
@@ -80,13 +84,13 @@ function updateStatus(id, status) {
 function refreshEligibility(preserveWheel = false) {
   if (!preserveWheel) cancelSpin();
   const eligible = pool();
-  const countries = countriesIn(eligible);
+  const countries = countryPool();
   if (!countries.some(country => country.tag === selectedCountry)) selectedCountry = '';
-  options($('country'), countries.map(country => ({ label: country.country, value: country.tag })), 'Let fate choose');
+  options($('country'), countries.map(country => ({ label: `${country.country} — ${coverage(country)}`, value: country.tag })), 'Let fate choose');
   $('country').value = selectedCountry;
   $('eligible-count').textContent = `${eligible.length} eligible ${eligible.length === 1 ? 'path' : 'paths'} · ${countries.length} countries`;
-  $('spin-country').disabled = !eligible.length;
-  $('spin-path').disabled = !selectedCountry;
+  $('spin-country').disabled = !countries.length;
+  $('spin-path').disabled = !eligible.some(path => path.tag === selectedCountry);
   $('spin-both').disabled = !eligible.length || (mode === 'ideology' && !$('ideology').value);
   if (result && !eligible.some(path => path.id === result.id)) result = null;
   if (!eligible.length) {
@@ -94,13 +98,15 @@ function refreshEligibility(preserveWheel = false) {
     $('result-path').textContent = 'Clear filters or include more progress states to draw again.';
   }
   if (!preserveWheel) renderWheel();
-  else $('wheel-spin').disabled = !eligible.length;
+  else $('wheel-spin').disabled = !wheelItems(defaultSpinKind()).length;
 }
 
 function renderResult() {
-  atlas.render(records, pool(), result?.tag || selectedCountry);
+  atlas.render(countries, countryPool(), result?.tag || selectedCountry);
   renderBriefing();
-  const nation = result || records.find(path => path.tag === selectedCountry);
+  const nation = countries.find(country => country.tag === (result?.tag || selectedCountry));
+  $('result-coverage').hidden = !nation;
+  $('result-coverage').textContent = nation ? coverage(nation) : '';
   $('result-heraldry').hidden = !nation?.flag;
   if (nation?.flag) { $('result-flag').src = nation.flag; $('result-flag').alt = `${nation.country} starting-country flag`; }
   $('result-emblem').hidden = !result?.icon;
@@ -110,13 +116,13 @@ function renderResult() {
   $('result-ideology').hidden = !result;
   $('result-notes').hidden = !result?.notes;
   $('result-tag').textContent = result?.tag || selectedCountry || '—';
-  $('result-region').textContent = result?.region || 'THE WORLD AWAITS';
-  $('result-country').textContent = result?.country || countriesIn(records).find(country => country.tag === selectedCountry)?.country || 'A new history starts here.';
-  $('result-path').textContent = result?.name || (selectedCountry ? 'Country selected. Spin a political path.' : 'Spin to discover your next campaign.');
+  $('result-region').textContent = nation?.region || 'THE WORLD AWAITS';
+  $('result-country').textContent = nation?.country || 'A new history starts here.';
+  $('result-path').textContent = result?.name || (selectedCountry ? (records.some(path => path.tag === selectedCountry) ? 'Country selected. Spin a political path.' : 'This nation is playable. Its political routes are still awaiting verification; choose your own route in-game.') : 'Spin to discover your next campaign.');
   $('result-ideology').textContent = result?.ideology || '';
   $('result-notes').textContent = result?.notes || '';
   if (result) $('result-status').value = progress[result.id] ?? 'unplayed';
-  if (!pool().length) {
+  if (!countryPool().length) {
     $('result-country').textContent = 'No paths match.';
     $('result-path').textContent = 'Clear filters or include more progress states to draw again.';
     $('result-tag').textContent = '—';
@@ -171,8 +177,8 @@ async function spin(kind) {
     selectedCountry = result.tag;
   }
   refreshEligibility(true);
-  $('wheel-caption').textContent = kind === 'country' ? `${chosen.country} selected. Spin again to draw its path.` : `${chosen.country} · ${chosen.ideology}`;
-  $('wheel-button-label').textContent = kind === 'country' ? 'PATH' : 'AGAIN';
+  $('wheel-caption').textContent = kind === 'country' ? `${chosen.country} selected. ${records.some(path => path.tag === chosen.tag) ? 'Spin again to draw its path.' : 'Political paths awaiting review.'}` : `${chosen.country} · ${chosen.ideology}`;
+  $('wheel-button-label').textContent = kind === 'country' ? (records.some(path => path.tag === chosen.tag) ? 'PATH' : 'PENDING') : 'AGAIN';
   reveal();
 }
 function changeMode() {
@@ -198,14 +204,16 @@ function node(tag, text, className) {
 function renderChecklist() {
   const activeId = document.activeElement?.dataset.pathId;
   const visible = searchPaths(eligiblePaths(records, progress, { status: $('browse-status').value }), $('search').value);
-  $('browse-count').textContent = `${visible.length} of ${records.length} curated paths`;
-  $('browse-empty').hidden = visible.length > 0;
+  const query = $('search').value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
+  const pending = countries.filter(country => !records.some(path => path.tag === country.tag) && !$('browse-status').value && `${country.country} ${country.tag} ${country.region}`.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().includes(query));
+  $('browse-count').textContent = `${visible.length} of ${records.length} verified routes · ${pending.length} matching countries awaiting path review`;
+  $('browse-empty').hidden = visible.length + pending.length > 0;
   const fragment = document.createDocumentFragment();
   for (const country of countriesIn(visible)) {
     const section = node('section', undefined, 'country-group');
     const heading = node('h2', country.country);
     heading.append(node('span', country.tag));
-    section.append(heading);
+    section.append(heading, node('p', coverage(country), 'coverage-label'));
     for (const path of visible.filter(item => item.tag === country.tag)) {
       const row = node('div', undefined, 'path-row');
       const info = node('div');
@@ -229,6 +237,16 @@ function renderChecklist() {
       row.append(info, control);
       section.append(row);
     }
+    fragment.append(section);
+  }
+  for (const country of pending) {
+    const section = node('section', undefined, 'country-group');
+    const heading = node('h2', country.country); heading.append(node('span', country.tag));
+    const flag = node('img'); flag.src = country.flag; flag.alt = `${country.country} flag`; flag.className = 'roster-flag';
+    section.append(flag, heading, node('p', `${country.region} · Political paths awaiting review`, 'coverage-label'), node('p', 'Playable from the 1936 start. Select this country in the atlas or country picker; verified political routes will be added separately.'));
+    if (country.contentStatus?.startsWith('No bespoke')) section.append(node('p', country.contentStatus));
+    const source = safeSource(country.source);
+    if (source) { const link = node('a', 'Official starting-country source ↗'); link.href = source; link.target = '_blank'; link.rel = 'noopener noreferrer'; section.append(link); }
     fragment.append(section);
   }
   $('checklist-list').replaceChildren(fragment);
@@ -262,14 +280,16 @@ async function init() {
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     const data = readDataset(await response.json());
     records = data.records.map(path => ({ ...path, flag: assetUrl(path.flag), icon: assetUrl(data.ideologies[path.ideology]?.icon), color: /^#[0-9a-f]{6}$/i.test(data.ideologies[path.ideology]?.color ?? '') ? data.ideologies[path.ideology].color : '#30373e' }));
+    countries = data.countries.map(country => ({ ...country, flag: assetUrl(country.flag) }));
     const saved = storage.load();
     progress = saved.progress;
     protectCorruptSave = saved.corrupt;
     if (saved.error) warn(saved.corrupt ? 'The saved record is unreadable and has been left untouched. Export any new progress before resetting the damaged save.' : 'Progress cannot be saved in this browser. Export your progress before closing.');
-    options($('region'), [...new Set(records.map(path => path.region))].sort(), 'All regions');
+    options($('region'), [...new Set(countries.map(country => country.region))].sort(), 'All regions');
+    $('atlas-view').replaceChildren(...Object.keys(VIEWS).map(view => new Option(view === 'world' ? 'Whole world' : view, view)));
     options($('ideology'), [...new Set(records.map(path => path.ideology))].sort(), 'All ideologies');
-    $('sample-summary').textContent = `${countriesIn(records).length} countries · ${records.length} paths. Selected political routes, with room to grow.`;
-    $('about-sample').textContent = `This collection contains ${records.length} paths across ${countriesIn(records).map(country => country.country).join(', ')}.`;
+    $('sample-summary').textContent = `${countries.filter(country => country.startingCountry).length} starting nations · ${records.length} verified routes. Country roster complete for the source snapshot; political-path coverage incomplete.`;
+    $('about-sample').textContent = `${countries.filter(country => country.startingCountry).length} starting nations are listed from the official 1936 state ownership and bookmark files. ${records.length} political routes are verified so far. Countries with no verified routes remain available in country draws and the atlas; they are not added as fake paths to progress totals.`;
     $('data-version').textContent = `Kaiserreich data version: ${data.metadata.kaiserreichVersion}. Checked ${data.metadata.lastUpdated}.`;
     $('footer-version').textContent = `KR ${data.metadata.kaiserreichVersion}`;
     if (data.skipped) announce(`${data.skipped} disabled or invalid records were omitted from this collection.`);
@@ -283,7 +303,7 @@ async function init() {
 }
 
 function bindEvents() {
-  $('atlas-view').addEventListener('change', event => { atlas.view = event.target.value; atlas.render(records, pool(), result?.tag || selectedCountry); });
+  $('atlas-view').addEventListener('change', event => { atlas.view = event.target.value; atlas.render(countries, countryPool(), result?.tag || selectedCountry); });
   $('spin-motion').addEventListener('change', () => { if (spinning) { cancelSpin(); refreshEligibility(); renderResult(); announce('Animation setting changed. Spin again when ready.'); } });
   window.addEventListener('hashchange', () => route(true));
   for (const id of ['region', 'ideology', 'status-filter', 'exclude-completed', 'exclude-played']) {

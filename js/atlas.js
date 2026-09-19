@@ -3,7 +3,10 @@ export const VIEWS = {
   world: [0, 0, 1080, 465], Europe: [490, 35, 210, 145],
   'East Asia': [795, 75, 210, 165], 'North America': [120, 45, 240, 205],
   'South America': [285, 225, 210, 220], 'North Africa': [480, 130, 210, 135],
-  'Middle East': [620, 105, 150, 120], Oceania: [855, 280, 215, 170]
+  'Middle East': [620, 105, 150, 120], Oceania: [855, 280, 215, 170],
+  'Central America': [240, 180, 100, 75], 'Sub-Saharan Africa': [480, 180, 250, 200],
+  'Central Asia': [690, 105, 170, 100], 'South Asia': [720, 150, 150, 125],
+  'Southeast Asia': [800, 160, 190, 150]
 };
 export function project([longitude, latitude]) { return [(longitude + 180) * 3, (85 - latitude) * 3]; }
 function svg(name, attrs) {
@@ -55,7 +58,10 @@ export class CampaignAtlas {
       button.dataset.mapTag = country.tag;
       button.setAttribute('aria-pressed', String(chosen));
       const flag = document.createElement('img'); flag.src = country.flag; flag.alt = '';
-      button.append(flag,document.createTextNode(country.country));
+      const label = document.createElement('span'); label.textContent = country.country;
+      const status = document.createElement('small'); status.textContent = country.paths?.length ? `${country.paths.length} ${country.paths.length === 1 ? 'route' : 'routes'} · partial` : 'Paths pending';
+      label.append(status);
+      button.append(flag,label);
       button.addEventListener('click',()=>this.select(country.tag));
       this.list.append(button);
     }

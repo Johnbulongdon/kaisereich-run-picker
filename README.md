@@ -2,7 +2,7 @@
 
 A free, static country + political path randomizer and personal completion tracker for **Kaiserreich**, the Hearts of Iron IV mod.
 
-**Status: curated, incomplete coverage.** The collection contains **66 political paths across 23 countries**, with all ten ideologies represented. It does not represent every path in these countries or the whole mod. The collection is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
+**Status: complete starting-country roster for the pinned source snapshot; incomplete political-path coverage.** The app lists **109 starting nations** and **90 verified political paths across 35 of them**. The other **74 nations** are available for country discovery and clearly marked **Paths pending**. All ten ideologies are represented. It does not represent every path in these countries or the whole mod. The collection is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
 
 ## Features
 
@@ -29,7 +29,7 @@ There is no build step, runtime dependency, account, backend, analytics, applica
 4. Click **Start run** to mark the path **Played**. This never marks it Completed.
 5. Use the result’s status selector or **Checklist** to change status manually.
 
-Picker filters affect draws only. The checklist has independent search/status controls; the Progress view always counts the entire active database. With no eligible paths, the app explains the empty result and offers **Clear filters**. An ideology appears in the filter only when the dataset includes a path of that ideology.
+Country-only draws include nations with no verified routes. Ideology and progress filters require an actual matching verified route, so they exclude pending nations. Fully Random and Path → Country draw only verified routes. Empty path lists never create placeholder completion entries. Picker filters affect draws only. The checklist has independent search/status controls; the Progress view always counts the entire active database. With no eligible paths, the app explains the empty result and offers **Clear filters**. An ideology appears in the filter only when the dataset includes a path of that ideology.
 
 **Randomization:** Spin country selects countries uniformly, and Spin path selects paths within the chosen country uniformly. Fully random, Randomize both and Path → Country select from a flat list of eligible path records. Countries with more paths therefore occupy more slots in those modes, while every path has equal probability.
 
@@ -105,7 +105,7 @@ HANDOVER.md                   Original engineering brief
 npm test
 ```
 
-The 14 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
+The 16 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
 
 Optional browser acceptance checks require Playwright as a **development-only** tool:
 
@@ -136,7 +136,7 @@ For contributions:
 4. Run the core tests; use browser checks for interaction or layout changes.
 5. Open a pull request explaining the behavior and validation.
 
-An upstream extraction assistant, full data coverage and cloud sync remain outside this MVP. The original handover deferred a literal wheel; one was added following the owner's visual-feedback request. See [scripts/README.md](scripts/README.md) for the future curation workflow.
+Full political-path coverage and cloud sync remain future work. The starting roster is audited against all 1,125 state-history files; the checked-in ownership manifest and `scripts/audit-starting-roster.py` make the 109-country count reproducible. Canada retains its existing CAN display/save identity while the source uses IMP. The original handover deferred a literal wheel; one was added following the owner's visual-feedback request. See [scripts/README.md](scripts/README.md) for the future curation workflow.
 
 ## License and attribution
 

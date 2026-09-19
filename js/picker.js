@@ -24,7 +24,16 @@ export function readDataset(data) {
     }
   }
   if (!records.length) throw new Error('No valid paths in the database.');
-  return { records, skipped, metadata: data.metadata, ideologies: data.ideologies ?? {} };
+  return { records, countries: data.countries.filter(country => country.enabled !== false && /^[A-Z0-9]{3}$/.test(country.tag) && typeof country.country === 'string' && typeof country.region === 'string' && Array.isArray(country.paths)), skipped, metadata: data.metadata, ideologies: data.ideologies ?? {} };
+}
+
+// Country discovery includes nations whose routes have not yet been reviewed.
+// Path-specific filters require a real matching route, never a placeholder.
+export function eligibleCountries(countries, records, progress = {}, filters = {}) {
+  const matching = new Set(eligiblePaths(records, progress, filters).map(path => path.tag));
+  const pathFilter = filters.ideology || filters.status || filters.excludeCompleted || filters.excludePlayed;
+  return countries.filter(country => (!filters.region || country.region === filters.region) &&
+    (!filters.country || country.tag === filters.country) && (!pathFilter || matching.has(country.tag)));
 }
 
 export function eligiblePaths(records, progress = {}, filters = {}) {

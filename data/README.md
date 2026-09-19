@@ -1,6 +1,6 @@
 # Curated campaign data
 
-Current coverage: **23 countries, 66 paths**, checked against Kaiserreich **1.6.4** at commit `00f64443a8a3ec4ae0cc78179efade3cb41e1946` on 2026-09-19. This is a curated incomplete collection, not exhaustive mod coverage or exhaustive coverage of those countries.
+Current coverage: **109 starting countries, 90 verified paths across 35 countries**, checked against Kaiserreich **1.6.4** at commit `00f64443a8a3ec4ae0cc78179efade3cb41e1946` on 2026-09-19. This is a curated incomplete collection, not exhaustive mod coverage or exhaustive coverage of those countries.
 
 ## Schema version 1
 
@@ -39,3 +39,17 @@ The original five IDs are unchanged. Added selected political routes for Mexico,
 Objectives paraphrase the political outcome and major prerequisites in the pinned official descriptions. They are not step-by-step walkthroughs. Temporary regimes (such as Mannerheim) and post-unification or postwar routes are marked in the notes. Country-level optional challenges are original suggestions, not claims about official achievements.
 
 Map anchors are approximate geographic reference points for the starting country. They are not territory centroids or territorial claims. Flag displacement and leader lines keep nearby countries distinguishable. The map never draws modern or invented Kaiserreich political borders. All data and assets are bundled locally.
+
+## Complete starting roster, partial route coverage
+
+`starting-roster.json` records every initial territorial owner in the 1,125 state files at the pinned commit, along with owned-state filenames and capital state IDs. There are 109 unique tags; system country AAA owns no territory and is excluded. Later releasable nations are outside this starting-country scope. Subjects are included. The source bookmark omits some countries without bespoke content, so its featured-country list alone is insufficient. Canada uses upstream tag IMP, mapped to the existing CAN display identity without changing saved path IDs.
+
+Each country has `sourceTag`, a pinned country-history `source`, `pathCoverage` (partial or pending), and `contentStatus`. All 35 countries with verified routes remain partial; the 74 others have empty `paths` arrays. Empty arrays are intentional and must never be padded with invented political routes. Geography uses approximate locator anchors.
+
+To reproduce the territorial roster against a local checkout of the recorded commit:
+
+```sh
+python scripts/audit-starting-roster.py /path/to/Kaiserreich-HOI4
+```
+
+The expansion adds 24 reviewed routes for the Ottoman Empire, United States, Qing, Bharatiya People’s Republic, Dominion of India, French Republic, Chile, Denmark, Netherlands, Lithuania, Flanders-Wallonia and Ukraine. Prerequisites include post-unification Indian elections, the US civil-war settlement and Belgian independence; these are retained in each route’s notes.

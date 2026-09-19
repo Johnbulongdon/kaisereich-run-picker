@@ -6,8 +6,11 @@
     "sample": false,
     "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
     "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-    "notes": "Selected political routes across 23 starting countries; not exhaustive. Ideology describes the featured phase. Objectives paraphrase pinned official game rules; optional challenges are authored suggestions, not game achievements.",
-    "complete": false
+    "notes": "All 109 territorial country tags at the pinned 1936 start, including subjects and countries without bespoke content. Canada uses stable display tag CAN for upstream IMP. Political routes remain individually curated and incomplete; pending countries are not placeholder paths.",
+    "complete": false,
+    "startingCountryCount": 109,
+    "rosterComplete": true,
+    "pathCoverageComplete": false
   },
   "countries": [
     {
@@ -48,7 +51,12 @@
         -58,
         -35
       ],
-      "challenge": "Build an army equipped entirely by domestic factories."
+      "challenge": "Build an army equipped entirely by domestic factories.",
+      "sourceTag": "ARG",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ARG%20-%20Argentina.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/ARG.tga"
     },
     {
       "tag": "GXC",
@@ -75,7 +83,12 @@
         113,
         23
       ],
-      "challenge": "Unify China while keeping your original capital under your control."
+      "challenge": "Unify China while keeping your original capital under your control.",
+      "sourceTag": "GXC",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GXC%20-%20Liangguang.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/GXC.tga"
     },
     {
       "tag": "CAN",
@@ -115,7 +128,12 @@
         -76,
         45
       ],
-      "challenge": "Keep your starting capital ships afloat during your first major war."
+      "challenge": "Keep your starting capital ships afloat during your first major war.",
+      "sourceTag": "IMP",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/IMP%20-%20Canada%20and%20UK.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/CAN_entente.tga"
     },
     {
       "tag": "MEX",
@@ -168,7 +186,12 @@
             "Elect Rubio’s Labourist Party in 1937."
           ]
         }
-      ]
+      ],
+      "sourceTag": "MEX",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/MEX%20-%20Mexico.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/MEX.tga"
     },
     {
       "tag": "BRA",
@@ -234,7 +257,12 @@
             "Elect the Integralists, then restore the imperial throne under Pedro III."
           ]
         }
-      ]
+      ],
+      "sourceTag": "BRA",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BRA%20-%20Brazil.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/BRA.tga"
     },
     {
       "tag": "FRA",
@@ -287,7 +315,12 @@
             "Win the elections with Valois and maintain Sorelian leadership."
           ]
         }
-      ]
+      ],
+      "sourceTag": "FRA",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/FRA%20-%20Communard%20France.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/FRA.tga"
     },
     {
       "tag": "ENG",
@@ -340,7 +373,12 @@
             "Back the Maximists at the 1936 congress and consolidate Mosley’s control."
           ]
         }
-      ]
+      ],
+      "sourceTag": "ENG",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ENG%20-%20Union%20of%20Britain.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/ENG.tga"
     },
     {
       "tag": "GER",
@@ -393,7 +431,12 @@
             "Replace Schleicher with the Black-White-Red coalition and secure Fatherland Party dominance after victory in the Second Weltkrieg."
           ]
         }
-      ]
+      ],
+      "sourceTag": "GER",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GER%20-%20Germany.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/GER.tga"
     },
     {
       "tag": "RUS",
@@ -446,7 +489,12 @@
             "Establish a republic after Savinkov falls, then elect Titov while keeping the Radical Democrats’ moderate faction in control."
           ]
         }
-      ]
+      ],
+      "sourceTag": "RUS",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/RUS%20-%20Russia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/RUS.tga"
     },
     {
       "tag": "JAP",
@@ -499,7 +547,12 @@
             "After the Restorationist coup, empower the Centralists who defeat it and establish the Kyōwakai."
           ]
         }
-      ]
+      ],
+      "sourceTag": "JAP",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/JAP%20-%20Japan.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/JAP.tga"
     },
     {
       "tag": "AST",
@@ -552,7 +605,12 @@
             "Begin with a Labor election victory, then enable Campbell’s Guard coup during the syndicalist crisis."
           ]
         }
-      ]
+      ],
+      "sourceTag": "AST",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/AST%20-%20Australia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/AST_australasia_entente.tga"
     },
     {
       "tag": "NOR",
@@ -605,7 +663,12 @@
             "Elect Labour in 1936, defeat Quisling’s intervention, and bring the Syndicalist Federation to power."
           ]
         }
-      ]
+      ],
+      "sourceTag": "NOR",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/NOR%20-%20Norway.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/NOR.tga"
     },
     {
       "tag": "SWE",
@@ -658,7 +721,12 @@
             "Form a radical SAP–SSV government, then follow the military coup into Helge Jung’s Army Patriots regime."
           ]
         }
-      ]
+      ],
+      "sourceTag": "SWE",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SWE%20-%20Sweden.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/SWE.tga"
     },
     {
       "tag": "FIN",
@@ -711,7 +779,12 @@
             "Use the Lapua Movement to displace the royal government and consolidate its nationalist regime."
           ]
         }
-      ]
+      ],
+      "sourceTag": "FIN",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/FIN%20-%20Finland.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/FIN_monarchy.tga"
     },
     {
       "tag": "SER",
@@ -764,7 +837,12 @@
             "Enable the White Hand coup and Živković’s regency, then consolidate the royalist single-party government."
           ]
         }
-      ]
+      ],
+      "sourceTag": "SER",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SER%20-%20Serbia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/SER.tga"
     },
     {
       "tag": "ROM",
@@ -817,7 +895,12 @@
             "Unite with Transylvania and bring Mihai to the throne. Restore democracy and elect the National Liberals."
           ]
         }
-      ]
+      ],
+      "sourceTag": "ROM",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ROM%20-%20Romania.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/ROM.tga"
     },
     {
       "tag": "BUL",
@@ -870,7 +953,12 @@
             "Repeal the State Protection Act and elect the National Liberals."
           ]
         }
-      ]
+      ],
+      "sourceTag": "BUL",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BUL%20-%20Bulgaria.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/BUL.tga"
     },
     {
       "tag": "EGY",
@@ -923,7 +1011,12 @@
             "Adopt absolutist reforms and concentrate authority in the Alawiyya dynasty."
           ]
         }
-      ]
+      ],
+      "sourceTag": "EGY",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/EGY%20-%20Egypt.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/EGY.tga"
     },
     {
       "tag": "PER",
@@ -976,7 +1069,12 @@
             "Create a socialist republic led by the Justice Party."
           ]
         }
-      ]
+      ],
+      "sourceTag": "PER",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PER%20-%20Persia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/PER_monarchy.tga"
     },
     {
       "tag": "IRE",
@@ -1029,7 +1127,12 @@
             "Use the March on Dublin to bring O’Duffy to power and win his internal party struggle. The official rule also allows an alternative pro-German coup route."
           ]
         }
-      ]
+      ],
+      "sourceTag": "IRE",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/IRE%20-%20Ireland.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/IRE.tga"
     },
     {
       "tag": "POR",
@@ -1082,7 +1185,12 @@
             "Lose or hand over Mozambique in the Bush War, then support royal rule through the Catholic Centre Party."
           ]
         }
-      ]
+      ],
+      "sourceTag": "POR",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/POR%20-%20Portugal.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/POR_monarchy.tga"
     },
     {
       "tag": "SWI",
@@ -1135,7 +1243,12 @@
             "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Conservatives."
           ]
         }
-      ]
+      ],
+      "sourceTag": "SWI",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SWI%20-%20Switzerland.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/SWI.tga"
     },
     {
       "tag": "SRI",
@@ -1188,7 +1301,1884 @@
             "Reunite Italy, win the post-unification election with Mussolini’s faction, and consolidate his regime."
           ]
         }
-      ]
+      ],
+      "sourceTag": "SRI",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SRI%20-%20Socialist%20Republic%20of%20Italy.txt",
+      "contentStatus": "Political routes require individual verification",
+      "flagSource": "gfx/flags/SRI.tga"
+    },
+    {
+      "tag": "AFG",
+      "country": "Afghanistan",
+      "paths": [],
+      "flag": "./assets/flags/AFG.png",
+      "location": [
+        69,
+        35
+      ],
+      "startingCountry": true,
+      "sourceTag": "AFG",
+      "region": "Central Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/AFG%20-%20Afghanistan.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/AFG_paternal_autocrat.tga"
+    },
+    {
+      "tag": "ALB",
+      "country": "Albania",
+      "paths": [],
+      "flag": "./assets/flags/ALB.png",
+      "location": [
+        20,
+        41
+      ],
+      "startingCountry": true,
+      "sourceTag": "ALB",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ALB%20-%20Albania.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/ALB.tga"
+    },
+    {
+      "tag": "AUS",
+      "country": "Austria",
+      "paths": [],
+      "flag": "./assets/flags/AUS.png",
+      "location": [
+        16,
+        48
+      ],
+      "startingCountry": true,
+      "sourceTag": "AUS",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/AUS%20-%20Austria.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/AUS_empire.tga"
+    },
+    {
+      "tag": "AZR",
+      "country": "Azerbaijan",
+      "paths": [],
+      "flag": "./assets/flags/AZR.png",
+      "location": [
+        50,
+        40
+      ],
+      "startingCountry": true,
+      "sourceTag": "AZR",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/AZR%20-%20Azerbaijan.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/AZR.tga"
+    },
+    {
+      "tag": "HND",
+      "country": "Bharatiya People’s Republic",
+      "paths": [
+        {
+          "id": "HND_SYNDIE",
+          "name": "Moderates",
+          "shortName": "Moderates",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Unify India as the Bharatiya People’s Republic, then keep Nehru and the moderate Congress faction in power.",
+          "objectives": [
+            "Unify India as the Bharatiya People’s Republic, then keep Nehru and the moderate Congress faction in power."
+          ],
+          "sourceKey": "RULE_OPTION_HND_PATH_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "HND_RADSOC",
+          "name": "Agrarians",
+          "shortName": "Agrarians",
+          "ideology": "Radical Socialist",
+          "category": "Political route",
+          "notes": "Unify India as the Bharatiya People’s Republic, then elect Naidu and the agrarian Congress faction.",
+          "objectives": [
+            "Unify India as the Bharatiya People’s Republic, then elect Naidu and the agrarian Congress faction."
+          ],
+          "sourceKey": "RULE_OPTION_HND_PATH_RADSOC",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/HND.png",
+      "location": [
+        88,
+        23
+      ],
+      "startingCountry": true,
+      "sourceTag": "HND",
+      "region": "South Asia",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/HND%20-%20Bharatiya%20Peoples%20Republic.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/HND.tga"
+    },
+    {
+      "tag": "BHU",
+      "country": "Bhutan",
+      "paths": [],
+      "flag": "./assets/flags/BHU.png",
+      "location": [
+        90,
+        27
+      ],
+      "startingCountry": true,
+      "sourceTag": "BHU",
+      "region": "South Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BHU%20-%20Bhutan.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BHU.tga"
+    },
+    {
+      "tag": "CZE",
+      "country": "Bohemia",
+      "paths": [],
+      "flag": "./assets/flags/CZE.png",
+      "location": [
+        14,
+        50
+      ],
+      "startingCountry": true,
+      "sourceTag": "CZE",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/CZE%20-%20Bohemia.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/CZE_habsburg.tga"
+    },
+    {
+      "tag": "BOL",
+      "country": "Bolivia",
+      "paths": [],
+      "flag": "./assets/flags/BOL.png",
+      "location": [
+        -68,
+        -17
+      ],
+      "startingCountry": true,
+      "sourceTag": "BOL",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BOL%20-%20Bolivia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BOL.tga"
+    },
+    {
+      "tag": "BUK",
+      "country": "Bukhara",
+      "paths": [],
+      "flag": "./assets/flags/BUK.png",
+      "location": [
+        64,
+        40
+      ],
+      "startingCountry": true,
+      "sourceTag": "BUK",
+      "region": "Central Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BUK%20-%20Bukhara.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BUK.tga"
+    },
+    {
+      "tag": "BRM",
+      "country": "Burma",
+      "paths": [],
+      "flag": "./assets/flags/BRM.png",
+      "location": [
+        96,
+        17
+      ],
+      "startingCountry": true,
+      "sourceTag": "BRM",
+      "region": "Southeast Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BRM%20-%20Burma.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BRM.tga"
+    },
+    {
+      "tag": "CHL",
+      "country": "Chile",
+      "paths": [
+        {
+          "id": "CHL_SYNDIE",
+          "name": "Partido Sindicalista Chileno",
+          "shortName": "Partido Sindicalista Chi",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Keep Chile socialist and elect a chairman from the Chilean Syndicalist Party.",
+          "objectives": [
+            "Keep Chile socialist and elect a chairman from the Chilean Syndicalist Party."
+          ],
+          "sourceKey": "RULE_OPTION_CHL_PATH_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "CHL_RADSOC",
+          "name": "Alianza Socialista Nacional",
+          "shortName": "Alianza Socialista Nacio",
+          "ideology": "Radical Socialist",
+          "category": "Political route",
+          "notes": "Keep Chile socialist and elect a chairman from the National Socialist Alliance.",
+          "objectives": [
+            "Keep Chile socialist and elect a chairman from the National Socialist Alliance."
+          ],
+          "sourceKey": "RULE_OPTION_CHL_PATH_RADSOC",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/CHL.png",
+      "location": [
+        -71,
+        -33
+      ],
+      "startingCountry": true,
+      "sourceTag": "CHL",
+      "region": "South America",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/CHL%20-%20Chile.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/CHL.tga"
+    },
+    {
+      "tag": "COL",
+      "country": "Colombia",
+      "paths": [],
+      "flag": "./assets/flags/COL.png",
+      "location": [
+        -74,
+        5
+      ],
+      "startingCountry": true,
+      "sourceTag": "COL",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/COL%20-%20Colombia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/COL.tga"
+    },
+    {
+      "tag": "COS",
+      "country": "Costa Rica",
+      "paths": [],
+      "flag": "./assets/flags/COS.png",
+      "location": [
+        -84,
+        10
+      ],
+      "startingCountry": true,
+      "sourceTag": "COS",
+      "region": "Central America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/COS%20-%20Costa%20Rica.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/COS.tga"
+    },
+    {
+      "tag": "CUB",
+      "country": "Cuba",
+      "paths": [],
+      "flag": "./assets/flags/CUB.png",
+      "location": [
+        -82,
+        23
+      ],
+      "startingCountry": true,
+      "sourceTag": "CUB",
+      "region": "North America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/CUB%20-%20Cuba.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/CUB.tga"
+    },
+    {
+      "tag": "LBA",
+      "country": "Cyrenaica",
+      "paths": [],
+      "flag": "./assets/flags/LBA.png",
+      "location": [
+        20,
+        32
+      ],
+      "startingCountry": true,
+      "sourceTag": "LBA",
+      "region": "North Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/LBA%20-%20Cyrenaica.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/LBA.tga"
+    },
+    {
+      "tag": "DEN",
+      "country": "Denmark",
+      "paths": [
+        {
+          "id": "DEN_SOCDEM",
+          "name": "Democracy - Socialdemokratiet",
+          "shortName": "Socialdemokratiet",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Resolve the recovery negotiations under Stauning and support the king through the constitutional crisis, preserving Social Democratic government.",
+          "objectives": [
+            "Resolve the recovery negotiations under Stauning and support the king through the constitutional crisis, preserving Social Democratic government."
+          ],
+          "sourceKey": "RULE_OPTION_DEN_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "DEN_MARLIB",
+          "name": "Democracy - Venstre",
+          "shortName": "Venstre",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Let recovery negotiations fail, replace the government with Madsen-Mygdal’s Venstre, and support the king in the constitutional crisis.",
+          "objectives": [
+            "Let recovery negotiations fail, replace the government with Madsen-Mygdal’s Venstre, and support the king in the constitutional crisis."
+          ],
+          "sourceKey": "RULE_OPTION_DEN_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/DEN.png",
+      "location": [
+        13,
+        56
+      ],
+      "startingCountry": true,
+      "sourceTag": "DEN",
+      "region": "Europe",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/DEN%20-%20Denmark.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/DEN.tga"
+    },
+    {
+      "tag": "DOM",
+      "country": "Dominican Republic",
+      "paths": [],
+      "flag": "./assets/flags/DOM.png",
+      "location": [
+        -70,
+        19
+      ],
+      "startingCountry": true,
+      "sourceTag": "DOM",
+      "region": "North America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/DOM%20-%20Dominican%20Republic.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/DOM.tga"
+    },
+    {
+      "tag": "RAJ",
+      "country": "Dominion of India",
+      "paths": [
+        {
+          "id": "RAJ_SOCCON",
+          "name": "Unionists",
+          "shortName": "Unionists",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Unify India as the Dominion, then elect Tiwana’s Unionist Party.",
+          "objectives": [
+            "Unify India as the Dominion, then elect Tiwana’s Unionist Party."
+          ],
+          "sourceKey": "RULE_OPTION_RAJ_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "RAJ_SOCLIB",
+          "name": "Home Rule",
+          "shortName": "Home Rule",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Unify India as the Dominion, then elect Jinnah’s All-India Home Rule Party.",
+          "objectives": [
+            "Unify India as the Dominion, then elect Jinnah’s All-India Home Rule Party."
+          ],
+          "sourceKey": "RULE_OPTION_RAJ_PATH_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/RAJ.png",
+      "location": [
+        73,
+        19
+      ],
+      "startingCountry": true,
+      "sourceTag": "RAJ",
+      "region": "South Asia",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/RAJ%20-%20Dominion%20of%20India.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/RAJ.tga"
+    },
+    {
+      "tag": "DEI",
+      "country": "Dutch East Indies",
+      "paths": [],
+      "flag": "./assets/flags/DEI.png",
+      "location": [
+        107,
+        -6
+      ],
+      "startingCountry": true,
+      "sourceTag": "DEI",
+      "region": "Southeast Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/DEI%20-%20Dutch%20East%20Indies.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/DEI.tga"
+    },
+    {
+      "tag": "ECU",
+      "country": "Ecuador",
+      "paths": [],
+      "flag": "./assets/flags/ECU.png",
+      "location": [
+        -79,
+        0
+      ],
+      "startingCountry": true,
+      "sourceTag": "ECU",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ECU%20-%20Ecuador.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/ECU.tga"
+    },
+    {
+      "tag": "ELS",
+      "country": "El Salvador",
+      "paths": [],
+      "flag": "./assets/flags/ELS.png",
+      "location": [
+        -89,
+        14
+      ],
+      "startingCountry": true,
+      "sourceTag": "ELS",
+      "region": "Central America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ELS%20-%20El%20Salvador.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/ELS.tga"
+    },
+    {
+      "tag": "ETH",
+      "country": "Ethiopia",
+      "paths": [],
+      "flag": "./assets/flags/ETH.png",
+      "location": [
+        39,
+        9
+      ],
+      "startingCountry": true,
+      "sourceTag": "ETH",
+      "region": "Sub-Saharan Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ETH%20-%20Ethiopia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/ETH.tga"
+    },
+    {
+      "tag": "FNG",
+      "country": "Fengtian Government",
+      "paths": [],
+      "flag": "./assets/flags/FNG.png",
+      "location": [
+        123,
+        42
+      ],
+      "startingCountry": true,
+      "sourceTag": "FNG",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/FNG%20-%20Fengtian.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/FNG.tga"
+    },
+    {
+      "tag": "BEL",
+      "country": "Flanders-Wallonia",
+      "paths": [
+        {
+          "id": "BEL_MON_SOCDEM",
+          "name": "Monarchy - Labour",
+          "shortName": "Labour",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Secure Belgian independence after the February crisis, vote to restore Albert I, and elect Van Acker’s Labour faction.",
+          "objectives": [
+            "Secure Belgian independence after the February crisis, vote to restore Albert I, and elect Van Acker’s Labour faction."
+          ],
+          "sourceKey": "RULE_OPTION_BEL_PATH_MON_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "BEL_REP_MARLIB",
+          "name": "Republic - Liberals",
+          "shortName": "Liberals",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Secure Belgian independence after the February crisis, establish a republic, and elect Janson’s Liberals.",
+          "objectives": [
+            "Secure Belgian independence after the February crisis, establish a republic, and elect Janson’s Liberals."
+          ],
+          "sourceKey": "RULE_OPTION_BEL_PATH_REP_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/BEL.png",
+      "location": [
+        4,
+        51
+      ],
+      "startingCountry": true,
+      "sourceTag": "BEL",
+      "region": "Europe",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BEL%20-%20Belgium.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BEL_flanders_wallonia.tga"
+    },
+    {
+      "tag": "NFA",
+      "country": "French Republic",
+      "paths": [
+        {
+          "id": "NFA_AUTDEM",
+          "name": "Comité du Salut National",
+          "shortName": "Comité du Salut National",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Establish the Committee of National Salvation as the exile government, with its promise of restoring democracy after retaking metropolitan France.",
+          "objectives": [
+            "Establish the Committee of National Salvation as the exile government, with its promise of restoring democracy after retaking metropolitan France."
+          ],
+          "sourceKey": "RULE_OPTION_NFA_PATH_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "NFA_NATPOP",
+          "name": "Action Française",
+          "shortName": "Action Française",
+          "ideology": "National Populist",
+          "category": "Political route",
+          "notes": "Bring Action Française to power in Algiers and restore the monarchy under Jean III.",
+          "objectives": [
+            "Bring Action Française to power in Algiers and restore the monarchy under Jean III."
+          ],
+          "sourceKey": "RULE_OPTION_NFA_PATH_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/NFA.png",
+      "location": [
+        3,
+        37
+      ],
+      "startingCountry": true,
+      "sourceTag": "NFA",
+      "region": "North Africa",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/NFA%20-%20NatFrance.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/NFA.tga"
+    },
+    {
+      "tag": "GAL",
+      "country": "Galicia-Lodomeria",
+      "paths": [],
+      "flag": "./assets/flags/GAL.png",
+      "location": [
+        24,
+        50
+      ],
+      "startingCountry": true,
+      "sourceTag": "GAL",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GAL%20-%20Galicia-Lodomeria.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/GAL.tga"
+    },
+    {
+      "tag": "GEO",
+      "country": "Georgia",
+      "paths": [],
+      "flag": "./assets/flags/GEO.png",
+      "location": [
+        45,
+        42
+      ],
+      "startingCountry": true,
+      "sourceTag": "GEO",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GEO%20-%20Georgia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/GEO.tga"
+    },
+    {
+      "tag": "GEA",
+      "country": "German East Asia",
+      "paths": [],
+      "flag": "./assets/flags/GEA.png",
+      "location": [
+        107,
+        11
+      ],
+      "startingCountry": true,
+      "sourceTag": "GEA",
+      "region": "Southeast Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GEA%20-%20German%20East%20Asia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/GEA.tga"
+    },
+    {
+      "tag": "GRE",
+      "country": "Greece",
+      "paths": [],
+      "flag": "./assets/flags/GRE.png",
+      "location": [
+        24,
+        38
+      ],
+      "startingCountry": true,
+      "sourceTag": "GRE",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GRE%20-%20Greece.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/GRE.tga"
+    },
+    {
+      "tag": "GUA",
+      "country": "Guatemala",
+      "paths": [],
+      "flag": "./assets/flags/GUA.png",
+      "location": [
+        -91,
+        15
+      ],
+      "startingCountry": true,
+      "sourceTag": "GUA",
+      "region": "Central America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/GUA%20-%20Guatemala.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/GUA.tga"
+    },
+    {
+      "tag": "HAI",
+      "country": "Haiti",
+      "paths": [],
+      "flag": "./assets/flags/HAI.png",
+      "location": [
+        -72,
+        19
+      ],
+      "startingCountry": true,
+      "sourceTag": "HAI",
+      "region": "North America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/HAI%20-%20Haiti.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/HAI.tga"
+    },
+    {
+      "tag": "HON",
+      "country": "Honduras",
+      "paths": [],
+      "flag": "./assets/flags/HON.png",
+      "location": [
+        -87,
+        14
+      ],
+      "startingCountry": true,
+      "sourceTag": "HON",
+      "region": "Central America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/HON%20-%20Honduras.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/HON.tga"
+    },
+    {
+      "tag": "HNN",
+      "country": "Hunan",
+      "paths": [],
+      "flag": "./assets/flags/HNN.png",
+      "location": [
+        113,
+        28
+      ],
+      "startingCountry": true,
+      "sourceTag": "HNN",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/HNN%20-%20Hunan.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/HNN.tga"
+    },
+    {
+      "tag": "HUN",
+      "country": "Hungary",
+      "paths": [],
+      "flag": "./assets/flags/HUN.png",
+      "location": [
+        19,
+        48
+      ],
+      "startingCountry": true,
+      "sourceTag": "HUN",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/HUN%20-%20Hungary.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/HUN_habsburg.tga"
+    },
+    {
+      "tag": "ICE",
+      "country": "Iceland",
+      "paths": [],
+      "flag": "./assets/flags/ICE.png",
+      "location": [
+        -22,
+        64
+      ],
+      "startingCountry": true,
+      "sourceTag": "ICE",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ICE%20-%20Iceland.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/ICE.tga"
+    },
+    {
+      "tag": "CRO",
+      "country": "Illyria",
+      "paths": [],
+      "flag": "./assets/flags/CRO.png",
+      "location": [
+        16,
+        46
+      ],
+      "startingCountry": true,
+      "sourceTag": "CRO",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/CRO%20-%20Croatia.txt",
+      "contentStatus": "No bespoke content listed in the source bookmark",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/CRO_illyria_habsburg.tga"
+    },
+    {
+      "tag": "ITA",
+      "country": "Italian Republic",
+      "paths": [],
+      "flag": "./assets/flags/ITA.png",
+      "location": [
+        10,
+        46
+      ],
+      "startingCountry": true,
+      "sourceTag": "ITA",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/ITA%20-%20Italy.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/ITA.tga"
+    },
+    {
+      "tag": "JBS",
+      "country": "Jabal Shammar",
+      "paths": [],
+      "flag": "./assets/flags/JBS.png",
+      "location": [
+        42,
+        28
+      ],
+      "startingCountry": true,
+      "sourceTag": "JBS",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/JBS%20-%20Jabal%20Shammar.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/JBS.tga"
+    },
+    {
+      "tag": "PAL",
+      "country": "Jerusalem",
+      "paths": [],
+      "flag": "./assets/flags/PAL.png",
+      "location": [
+        35,
+        32
+      ],
+      "startingCountry": true,
+      "sourceTag": "PAL",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PAL%20-%20Jerusalem.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PAL.tga"
+    },
+    {
+      "tag": "KHI",
+      "country": "Khiva",
+      "paths": [],
+      "flag": "./assets/flags/KHI.png",
+      "location": [
+        60,
+        41
+      ],
+      "startingCountry": true,
+      "sourceTag": "KHI",
+      "region": "Central Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/KHI%20-%20Khiva.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/KHI.tga"
+    },
+    {
+      "tag": "KUM",
+      "country": "Kumul Khanate",
+      "paths": [],
+      "flag": "./assets/flags/KUM.png",
+      "location": [
+        93,
+        43
+      ],
+      "startingCountry": true,
+      "sourceTag": "KUM",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/KUM%20-%20Kumul.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/KUM.tga"
+    },
+    {
+      "tag": "LEP",
+      "country": "League of Eight Provinces",
+      "paths": [],
+      "flag": "./assets/flags/LEP.png",
+      "location": [
+        119,
+        32
+      ],
+      "startingCountry": true,
+      "sourceTag": "LEP",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/LEP%20-%20League%20of%20Eight%20Provinces.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/LEP_LEP.tga"
+    },
+    {
+      "tag": "CHI",
+      "country": "Left Kuomintang",
+      "paths": [],
+      "flag": "./assets/flags/CHI.png",
+      "location": [
+        117,
+        26
+      ],
+      "startingCountry": true,
+      "sourceTag": "CHI",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/CHI%20-%20Left%20Kuomintang.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/CHI_insurgency.tga"
+    },
+    {
+      "tag": "LEC",
+      "country": "Legation Cities",
+      "paths": [],
+      "flag": "./assets/flags/LEC.png",
+      "location": [
+        121,
+        31
+      ],
+      "startingCountry": true,
+      "sourceTag": "LEC",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/LEC%20-%20Legation%20Cities.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/LEC.tga"
+    },
+    {
+      "tag": "LIB",
+      "country": "Liberia",
+      "paths": [],
+      "flag": "./assets/flags/LIB.png",
+      "location": [
+        -11,
+        6
+      ],
+      "startingCountry": true,
+      "sourceTag": "LIB",
+      "region": "Sub-Saharan Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/LIB%20-%20Liberia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/LIB.tga"
+    },
+    {
+      "tag": "LIT",
+      "country": "Lithuania",
+      "paths": [
+        {
+          "id": "LIT_MON_SOCCON",
+          "name": "Renewal in Christ",
+          "shortName": "Renewal in Christ",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Retain the monarchy and keep the Christian Democrats in office after the 1937 election under Šalkauskis.",
+          "objectives": [
+            "Retain the monarchy and keep the Christian Democrats in office after the 1937 election under Šalkauskis."
+          ],
+          "sourceKey": "RULE_OPTION_LIT_PATH_MON_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "LIT_MON_SOCDEM",
+          "name": "For the Working Man",
+          "shortName": "For the Working Man",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Retain the monarchy and elect Kairys’s Social Democrats in 1937.",
+          "objectives": [
+            "Retain the monarchy and elect Kairys’s Social Democrats in 1937."
+          ],
+          "sourceKey": "RULE_OPTION_LIT_PATH_MON_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/LIT.png",
+      "location": [
+        24,
+        55
+      ],
+      "startingCountry": true,
+      "sourceTag": "LIT",
+      "region": "Europe",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/LIT%20-%20Lithuania.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/LIT_monarchy.tga"
+    },
+    {
+      "tag": "XSM",
+      "country": "Ma Clique",
+      "paths": [],
+      "flag": "./assets/flags/XSM.png",
+      "location": [
+        102,
+        37
+      ],
+      "startingCountry": true,
+      "sourceTag": "XSM",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/XSM%20-%20Ma%20Clique.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/XSM.tga"
+    },
+    {
+      "tag": "MAF",
+      "country": "Mittelafrika",
+      "paths": [],
+      "flag": "./assets/flags/MAF.png",
+      "location": [
+        39,
+        -7
+      ],
+      "startingCountry": true,
+      "sourceTag": "MAF",
+      "region": "Sub-Saharan Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/MAF%20-%20Mittelafrika.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/MAF.tga"
+    },
+    {
+      "tag": "MON",
+      "country": "Mongolia",
+      "paths": [],
+      "flag": "./assets/flags/MON.png",
+      "location": [
+        107,
+        48
+      ],
+      "startingCountry": true,
+      "sourceTag": "MON",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/MON%20-%20Mongolia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/MON.tga"
+    },
+    {
+      "tag": "MOR",
+      "country": "Morocco",
+      "paths": [],
+      "flag": "./assets/flags/MOR.png",
+      "location": [
+        -7,
+        34
+      ],
+      "startingCountry": true,
+      "sourceTag": "MOR",
+      "region": "North Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/MOR%20-%20Morocco.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/MOR.tga"
+    },
+    {
+      "tag": "SAU",
+      "country": "Nejd",
+      "paths": [],
+      "flag": "./assets/flags/SAU.png",
+      "location": [
+        47,
+        25
+      ],
+      "startingCountry": true,
+      "sourceTag": "SAU",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SAU%20-%20Saudi%20Arabia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SAU.tga"
+    },
+    {
+      "tag": "NEP",
+      "country": "Nepal",
+      "paths": [],
+      "flag": "./assets/flags/NEP.png",
+      "location": [
+        85,
+        28
+      ],
+      "startingCountry": true,
+      "sourceTag": "NEP",
+      "region": "South Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/NEP%20-%20Nepal.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/NEP.tga"
+    },
+    {
+      "tag": "HOL",
+      "country": "Netherlands",
+      "paths": [
+        {
+          "id": "HOL_MON_MARLIB",
+          "name": "Wilhelmina - PvdV /  VVD",
+          "shortName": "PvdV /  VVD",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Accept Wilhelmina’s demand for Oud as prime minister, then elect the later liberal party formed by the VDB right wing and LSP.",
+          "objectives": [
+            "Accept Wilhelmina’s demand for Oud as prime minister, then elect the later liberal party formed by the VDB right wing and LSP."
+          ],
+          "sourceKey": "RULE_OPTION_HOL_PATH_MON_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "HOL_REP_SOCLIB",
+          "name": "Republic - VDB",
+          "shortName": "VDB",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Reject Wilhelmina’s condition for a VDB prime minister, establish a republic after her abdication, and elect the VDB in later elections.",
+          "objectives": [
+            "Reject Wilhelmina’s condition for a VDB prime minister, establish a republic after her abdication, and elect the VDB in later elections."
+          ],
+          "sourceKey": "RULE_OPTION_HOL_PATH_REP_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/HOL.png",
+      "location": [
+        5,
+        52
+      ],
+      "startingCountry": true,
+      "sourceTag": "HOL",
+      "region": "Europe",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/HOL%20-%20Netherlands.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/HOL.tga"
+    },
+    {
+      "tag": "NIC",
+      "country": "Nicaragua",
+      "paths": [],
+      "flag": "./assets/flags/NIC.png",
+      "location": [
+        -86,
+        12
+      ],
+      "startingCountry": true,
+      "sourceTag": "NIC",
+      "region": "Central America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/NIC%20-%20Nicaragua.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/NIC_syndicalist.tga"
+    },
+    {
+      "tag": "OMA",
+      "country": "Oman",
+      "paths": [],
+      "flag": "./assets/flags/OMA.png",
+      "location": [
+        59,
+        24
+      ],
+      "startingCountry": true,
+      "sourceTag": "OMA",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/OMA%20-%20Oman.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/OMA_paternal_autocrat.tga"
+    },
+    {
+      "tag": "TUR",
+      "country": "Ottoman Empire",
+      "paths": [
+        {
+          "id": "TUR_AUTDEM",
+          "name": "Ottoman People's Party",
+          "shortName": "Ottoman People's Party",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Concentrate authority in Mustafa Kemal’s Ottoman People’s Party and pursue its centralising reforms.",
+          "objectives": [
+            "Concentrate authority in Mustafa Kemal’s Ottoman People’s Party and pursue its centralising reforms."
+          ],
+          "sourceKey": "RULE_OPTION_OTT_PATH_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "TUR_MARLIB",
+          "name": "Freedom and Accord Party",
+          "shortName": "Freedom and Accord Party",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Replace Mustafa Kemal with Sabahaddin’s Liberal Entente and pursue decentralisation and provincial autonomy.",
+          "objectives": [
+            "Replace Mustafa Kemal with Sabahaddin’s Liberal Entente and pursue decentralisation and provincial autonomy."
+          ],
+          "sourceKey": "RULE_OPTION_OTT_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/TUR.png",
+      "location": [
+        29,
+        41
+      ],
+      "startingCountry": true,
+      "sourceTag": "TUR",
+      "region": "Middle East",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/TUR%20-%20Ottoman%20Empire.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/TUR.tga"
+    },
+    {
+      "tag": "PAN",
+      "country": "Panama",
+      "paths": [],
+      "flag": "./assets/flags/PAN.png",
+      "location": [
+        -80,
+        9
+      ],
+      "startingCountry": true,
+      "sourceTag": "PAN",
+      "region": "Central America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PAN%20-%20Panama.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PAN.tga"
+    },
+    {
+      "tag": "PAR",
+      "country": "Paraguay",
+      "paths": [],
+      "flag": "./assets/flags/PAR.png",
+      "location": [
+        -58,
+        -25
+      ],
+      "startingCountry": true,
+      "sourceTag": "PAR",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PAR%20-%20Paraguay.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PAR.tga"
+    },
+    {
+      "tag": "FOP",
+      "country": "Patagonia",
+      "paths": [],
+      "flag": "./assets/flags/FOP.png",
+      "location": [
+        -67,
+        -46
+      ],
+      "startingCountry": true,
+      "sourceTag": "FOP",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/FOP%20-%20Patagonia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/FOP.tga"
+    },
+    {
+      "tag": "PRU",
+      "country": "Peru",
+      "paths": [],
+      "flag": "./assets/flags/PRU.png",
+      "location": [
+        -77,
+        -12
+      ],
+      "startingCountry": true,
+      "sourceTag": "PRU",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PRU%20-%20Peru.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PRU.tga"
+    },
+    {
+      "tag": "PHI",
+      "country": "Philippines",
+      "paths": [],
+      "flag": "./assets/flags/PHI.png",
+      "location": [
+        121,
+        15
+      ],
+      "startingCountry": true,
+      "sourceTag": "PHI",
+      "region": "Southeast Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PHI%20-%20Philippines.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PHI.tga"
+    },
+    {
+      "tag": "POL",
+      "country": "Poland",
+      "paths": [],
+      "flag": "./assets/flags/POL.png",
+      "location": [
+        21,
+        52
+      ],
+      "startingCountry": true,
+      "sourceTag": "POL",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/POL%20-%20Poland.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/POL.tga"
+    },
+    {
+      "tag": "PRF",
+      "country": "Princely Federation",
+      "paths": [],
+      "flag": "./assets/flags/PRF.png",
+      "location": [
+        78,
+        17
+      ],
+      "startingCountry": true,
+      "sourceTag": "PRF",
+      "region": "South Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PRF%20-%20Princely%20Federation.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PRF.tga"
+    },
+    {
+      "tag": "QIE",
+      "country": "Qing Empire",
+      "paths": [
+        {
+          "id": "QIE_LEP_AUTDEM",
+          "name": "Zhili Monarchy - Pro-Nanjing",
+          "shortName": "Pro-Nanjing",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Support the Nanjing remnants during the League collapse and retain Wu Peifu’s pro-German Zhili monarchy.",
+          "objectives": [
+            "Support the Nanjing remnants during the League collapse and retain Wu Peifu’s pro-German Zhili monarchy."
+          ],
+          "sourceKey": "RULE_OPTION_QIE_PATH_LEP_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "QIE_PATAUT",
+          "name": "Manchu Coup - Zongshe Party",
+          "shortName": "Zongshe Party",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Keep Wu Peifu out of the League conflict, secure a supporting patron for the Beijing coup, and restore Puyi’s authority through the Royalist Party.",
+          "objectives": [
+            "Keep Wu Peifu out of the League conflict, secure a supporting patron for the Beijing coup, and restore Puyi’s authority through the Royalist Party."
+          ],
+          "sourceKey": "RULE_OPTION_QIE_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/QIE.png",
+      "location": [
+        116,
+        40
+      ],
+      "startingCountry": true,
+      "sourceTag": "QIE",
+      "region": "East Asia",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/QIE%20-%20Qing%20Empire.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/QIE_government_qing.tga"
+    },
+    {
+      "tag": "SRD",
+      "country": "Sardinia",
+      "paths": [],
+      "flag": "./assets/flags/SRD.png",
+      "location": [
+        9,
+        39
+      ],
+      "startingCountry": true,
+      "sourceTag": "SRD",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SRD%20-%20Sardinia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SRD.tga"
+    },
+    {
+      "tag": "SHD",
+      "country": "Shandong",
+      "paths": [],
+      "flag": "./assets/flags/SHD.png",
+      "location": [
+        117,
+        37
+      ],
+      "startingCountry": true,
+      "sourceTag": "SHD",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SHD%20-%20Shandong.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SHD.tga"
+    },
+    {
+      "tag": "SHX",
+      "country": "Shanxi",
+      "paths": [],
+      "flag": "./assets/flags/SHX.png",
+      "location": [
+        112,
+        38
+      ],
+      "startingCountry": true,
+      "sourceTag": "SHX",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SHX%20-%20Shanxi.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SHX.tga"
+    },
+    {
+      "tag": "SIA",
+      "country": "Siam",
+      "paths": [],
+      "flag": "./assets/flags/SIA.png",
+      "location": [
+        101,
+        14
+      ],
+      "startingCountry": true,
+      "sourceTag": "SIA",
+      "region": "Southeast Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SIA%20-%20Siam.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SIA.tga"
+    },
+    {
+      "tag": "SZC",
+      "country": "Sichuan",
+      "paths": [],
+      "flag": "./assets/flags/SZC.png",
+      "location": [
+        104,
+        31
+      ],
+      "startingCountry": true,
+      "sourceTag": "SZC",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SZC%20-%20Sichuan.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SZC.tga"
+    },
+    {
+      "tag": "SOM",
+      "country": "Somalia",
+      "paths": [],
+      "flag": "./assets/flags/SOM.png",
+      "location": [
+        45,
+        2
+      ],
+      "startingCountry": true,
+      "sourceTag": "SOM",
+      "region": "Sub-Saharan Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SOM%20-%20Somalia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SOM.tga"
+    },
+    {
+      "tag": "SAF",
+      "country": "South Africa",
+      "paths": [],
+      "flag": "./assets/flags/SAF.png",
+      "location": [
+        28,
+        -26
+      ],
+      "startingCountry": true,
+      "sourceTag": "SAF",
+      "region": "Sub-Saharan Africa",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SAF%20-%20South%20Africa.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SAF_union.tga"
+    },
+    {
+      "tag": "SPA",
+      "country": "Spain",
+      "paths": [],
+      "flag": "./assets/flags/SPA.png",
+      "location": [
+        -4,
+        40
+      ],
+      "startingCountry": true,
+      "sourceTag": "SPA",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SPA%20-%20Spain.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SPA_kingdom.tga"
+    },
+    {
+      "tag": "PAP",
+      "country": "The Papal State",
+      "paths": [],
+      "flag": "./assets/flags/PAP.png",
+      "location": [
+        12,
+        42
+      ],
+      "startingCountry": true,
+      "sourceTag": "PAP",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/PAP%20-%20The%20Papal%20State.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/PAP.tga"
+    },
+    {
+      "tag": "TIB",
+      "country": "Tibet",
+      "paths": [],
+      "flag": "./assets/flags/TIB.png",
+      "location": [
+        91,
+        30
+      ],
+      "startingCountry": true,
+      "sourceTag": "TIB",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/TIB%20-%20Tibet.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/TIB.tga"
+    },
+    {
+      "tag": "TRK",
+      "country": "Turkestan Republic",
+      "paths": [],
+      "flag": "./assets/flags/TRK.png",
+      "location": [
+        69,
+        41
+      ],
+      "startingCountry": true,
+      "sourceTag": "TRK",
+      "region": "Central Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/TRK%20-%20Turkestan%20Republic.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/TRK_authoritarian_democrat.tga"
+    },
+    {
+      "tag": "SIC",
+      "country": "Two Sicilies",
+      "paths": [],
+      "flag": "./assets/flags/SIC.png",
+      "location": [
+        14,
+        41
+      ],
+      "startingCountry": true,
+      "sourceTag": "SIC",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SIC%20-%20Two%20Sicilies.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SIC.tga"
+    },
+    {
+      "tag": "UKR",
+      "country": "Ukraine",
+      "paths": [
+        {
+          "id": "UKR_USKHD_AUTDEM",
+          "name": "Hetmanate - The Classocratic Ideal",
+          "shortName": "The Classocratic Ideal",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Defeat the Anti-Hetman Revolt and form Skoropadskyi’s Agrarian-Statist cabinet to pursue its classocratic programme.",
+          "objectives": [
+            "Defeat the Anti-Hetman Revolt and form Skoropadskyi’s Agrarian-Statist cabinet to pursue its classocratic programme."
+          ],
+          "sourceKey": "RULE_OPTION_UKR_PATH_USKHD_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "UKR_REP_SOCDEM",
+          "name": "Republic - Mandate for the Workers",
+          "shortName": "Mandate for the Workers",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Overthrow the Hetmanate through the democratic movement, then elect the Ukrainian Social-Democratic Workers’ Party.",
+          "objectives": [
+            "Overthrow the Hetmanate through the democratic movement, then elect the Ukrainian Social-Democratic Workers’ Party."
+          ],
+          "sourceKey": "RULE_OPTION_UKR_PATH_REP_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/UKR.png",
+      "location": [
+        31,
+        50
+      ],
+      "startingCountry": true,
+      "sourceTag": "UKR",
+      "region": "Europe",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/UKR%20-%20Ukraine.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/UKR.tga"
+    },
+    {
+      "tag": "BAT",
+      "country": "United Baltic Duchy",
+      "paths": [],
+      "flag": "./assets/flags/BAT.png",
+      "location": [
+        24,
+        57
+      ],
+      "startingCountry": true,
+      "sourceTag": "BAT",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BAT%20-%20United%20Baltic%20Duchy.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BAT.tga"
+    },
+    {
+      "tag": "USA",
+      "country": "United States",
+      "paths": [
+        {
+          "id": "USA_MARLIB",
+          "name": "Republicans",
+          "shortName": "Republicans",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Retain or restore electoral government through the American civil-war settlement, then elect Republicans from 1940 onward. The source allows several MacArthur settlement variants; this is not a civil-war avoidance route.",
+          "objectives": [
+            "Retain or restore electoral government through the American civil-war settlement, then elect Republicans from 1940 onward. The source allows several MacArthur settlement variants; this is not a civil-war avoidance route."
+          ],
+          "sourceKey": "RULE_OPTION_USA_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        },
+        {
+          "id": "USA_SOCLIB",
+          "name": "Democrats (Liberal)",
+          "shortName": "Democrats (Liberal)",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Retain or restore electoral government through the American civil-war settlement, then elect the liberal Democrats when they field a candidate. Timing depends on the incumbent and can be as late as 1952 after a shadow presidency.",
+          "objectives": [
+            "Retain or restore electoral government through the American civil-war settlement, then elect the liberal Democrats when they field a candidate. Timing depends on the incumbent and can be as late as 1952 after a shadow presidency."
+          ],
+          "sourceKey": "RULE_OPTION_USA_PATH_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml"
+        }
+      ],
+      "flag": "./assets/flags/USA.png",
+      "location": [
+        -77,
+        39
+      ],
+      "startingCountry": true,
+      "sourceTag": "USA",
+      "region": "North America",
+      "pathCoverage": "partial",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/USA%20-%20United%20States.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/america_blue.tga"
+    },
+    {
+      "tag": "URG",
+      "country": "Uruguay",
+      "paths": [],
+      "flag": "./assets/flags/URG.png",
+      "location": [
+        -56,
+        -35
+      ],
+      "startingCountry": true,
+      "sourceTag": "URG",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/URG%20-%20Uruguay.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/URG.tga"
+    },
+    {
+      "tag": "VEN",
+      "country": "Venezuela",
+      "paths": [],
+      "flag": "./assets/flags/VEN.png",
+      "location": [
+        -67,
+        10
+      ],
+      "startingCountry": true,
+      "sourceTag": "VEN",
+      "region": "South America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/VEN%20-%20Venezuela.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/VEN.tga"
+    },
+    {
+      "tag": "WIF",
+      "country": "West Indies Federation",
+      "paths": [],
+      "flag": "./assets/flags/WIF.png",
+      "location": [
+        -77,
+        18
+      ],
+      "startingCountry": true,
+      "sourceTag": "WIF",
+      "region": "North America",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/WIF%20-%20West%20Indies.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/WIF_entente.tga"
+    },
+    {
+      "tag": "BLR",
+      "country": "White Ruthenia",
+      "paths": [],
+      "flag": "./assets/flags/BLR.png",
+      "location": [
+        28,
+        54
+      ],
+      "startingCountry": true,
+      "sourceTag": "BLR",
+      "region": "Europe",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/BLR%20-%20White%20Ruthenia.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/BLR_GER.tga"
+    },
+    {
+      "tag": "SIK",
+      "country": "Xinjiang",
+      "paths": [],
+      "flag": "./assets/flags/SIK.png",
+      "location": [
+        88,
+        44
+      ],
+      "startingCountry": true,
+      "sourceTag": "SIK",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/SIK%20-%20Xinjiang.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/SIK.tga"
+    },
+    {
+      "tag": "YEM",
+      "country": "Yemen",
+      "paths": [],
+      "flag": "./assets/flags/YEM.png",
+      "location": [
+        44,
+        15
+      ],
+      "startingCountry": true,
+      "sourceTag": "YEM",
+      "region": "Middle East",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/YEM%20-%20Yemen.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/YEM.tga"
+    },
+    {
+      "tag": "YUN",
+      "country": "Yunnan",
+      "paths": [],
+      "flag": "./assets/flags/YUN.png",
+      "location": [
+        103,
+        25
+      ],
+      "startingCountry": true,
+      "sourceTag": "YUN",
+      "region": "East Asia",
+      "pathCoverage": "pending",
+      "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/history/countries/YUN%20-%20Yunnan.txt",
+      "contentStatus": "Political routes require individual verification",
+      "challenge": "Keep your capital secure through your first major war.",
+      "flagSource": "gfx/flags/YUN.tga"
     }
   ],
   "ideologies": {

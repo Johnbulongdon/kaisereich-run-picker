@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { readDataset, eligiblePaths, choose, countriesIn, searchPaths } from '../js/picker.js';
+import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths } from '../js/picker.js';
 import { setStatus, summarize } from '../js/tracker.js';
 import { createStorage, parseSave, exportSave, STORAGE_KEY } from '../js/storage.js';
 
@@ -10,8 +10,8 @@ const data = { ...fullData, countries: fullData.countries.slice(0, 3) };
 test('expanded collection has map anchors, goals and local heraldry for every route', () => {
   const { records, skipped } = readDataset(fullData);
   assert.equal(skipped, 0);
-  assert.equal(fullData.countries.length, 23);
-  assert.equal(records.length, 66);
+  assert.equal(fullData.countries.length, 109);
+  assert.equal(records.length, 90);
   for (const path of records) {
     assert.ok(path.objectives.length && path.challenge && path.sourceKey);
     assert.ok(path.location.length === 2 && path.location.every(Number.isFinite));
@@ -125,4 +125,28 @@ test('storage denial, quota failure and corrupt saves are recoverable', () => {
   const corrupt = createStorage(() => ({ getItem: () => '{broken' }));
   assert.equal(corrupt.load().corrupt, true);
   assert.deepEqual(corrupt.load().progress, {});
+});
+
+const manifest = JSON.parse(readFileSync(new URL('../data/starting-roster.json', import.meta.url)));
+test('every audited starting owner appears exactly once, with source and heraldry', () => {
+ assert.equal(manifest.countries.length, 109);
+ assert.deepEqual(fullData.countries.map(c => c.tag).sort(), manifest.countries.map(c => c.tag).sort());
+ assert.equal(new Set(manifest.countries.map(c => c.sourceTag)).size, 109);
+ assert.equal(manifest.countries.find(c => c.tag === 'CAN').sourceTag, 'IMP');
+ for (const country of fullData.countries) {
+  assert.ok(country.startingCountry && country.source && country.location);
+  assert.ok(readFileSync(new URL('../' + country.flag.slice(2), import.meta.url)).length > 0);
+  assert.equal(country.pathCoverage, country.paths.length ? 'partial' : 'pending');
+ }
+});
+test('unreviewed countries are discoverable but never become placeholder routes', () => {
+ const { records, countries } = readDataset(fullData);
+ assert.equal(eligibleCountries(countries, records).length, 109);
+ assert.ok(eligibleCountries(countries, records, {}, { region: 'Central Asia' }).some(c => c.tag === 'AFG'));
+ assert.equal(records.filter(p => p.tag === 'AFG').length, 0);
+ for (const filters of [{ideology:'Social Democrat'}, {status:'unplayed'}, {excludeCompleted:true}, {excludePlayed:true}]) {
+  assert.ok(!eligibleCountries(countries, records, {}, filters).some(c => c.tag === 'AFG'));
+ }
+ assert.equal(summarize(records, {}).total, 90);
+ assert.equal(countries.filter(c => c.pathCoverage === 'pending').length, 74);
 });
