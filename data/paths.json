@@ -1,12 +1,13 @@
 {
   "metadata": {
     "schemaVersion": 1,
-    "kaiserreichVersion": "1.6.4 — sample only",
-    "lastUpdated": "2026-09-18",
-    "sample": true,
+    "kaiserreichVersion": "1.6.4 — curated collection",
+    "lastUpdated": "2026-09-19",
+    "sample": false,
     "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
     "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-    "notes": "Five curated examples, not a complete country or path list. Ideology describes the featured political phase; some routes change ideology later."
+    "notes": "Selected political routes across 23 starting countries; not exhaustive. Ideology describes the featured phase. Objectives paraphrase pinned official game rules; optional challenges are authored suggestions, not game achievements.",
+    "complete": false
   },
   "countries": [
     {
@@ -23,7 +24,10 @@
           "notes": "Carlés retains power and leads the Patriotic League.",
           "sourceKey": "RULE_OPTION_ARG_PATH_NATPOP",
           "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-          "shortName": "Liga Patriótica"
+          "shortName": "Liga Patriótica",
+          "objectives": [
+            "Carlés retains power and leads the Patriotic League."
+          ]
         },
         {
           "id": "ARG_GOU",
@@ -33,10 +37,18 @@
           "notes": "Ramírez establishes the GOU military junta. Foreign-policy variants are grouped into this political path.",
           "sourceKey": "RULE_OPTION_ARG_PATH_RAMIREZ_PATAUT",
           "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-          "shortName": "GOU Junta"
+          "shortName": "GOU Junta",
+          "objectives": [
+            "Ramírez establishes the GOU military junta. Foreign-policy variants are grouped into this political path."
+          ]
         }
       ],
-      "flag": "./assets/flags/ARG.png"
+      "flag": "./assets/flags/ARG.png",
+      "location": [
+        -58,
+        -35
+      ],
+      "challenge": "Build an army equipped entirely by domestic factories."
     },
     {
       "tag": "GXC",
@@ -52,10 +64,18 @@
           "notes": "Unify China as independent Federalist Liangguang, then pursue Zhang Junmai's Democratic Socialist electoral route. This is a post-unification path, not the starting government.",
           "sourceKey": "RULE_OPTION_GXC_UPC_PATH_FIRST_SOCDEM",
           "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-          "shortName": "Federalists"
+          "shortName": "Federalists",
+          "objectives": [
+            "Unify China as independent Federalist Liangguang, then pursue Zhang Junmai's Democratic Socialist electoral route. This is a post-unification path, not the starting government."
+          ]
         }
       ],
-      "flag": "./assets/flags/GXC.png"
+      "flag": "./assets/flags/GXC.png",
+      "location": [
+        113,
+        23
+      ],
+      "challenge": "Unify China while keeping your original capital under your control."
     },
     {
       "tag": "CAN",
@@ -71,7 +91,10 @@
           "notes": "The Liberals win the 1936 election. The party can move toward Social Liberalism after the Weltkrieg; the filter describes its initial political phase.",
           "sourceKey": "RULE_OPTION_CAN_PATH_MARLIB",
           "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-          "shortName": "Liberals"
+          "shortName": "Liberals",
+          "objectives": [
+            "The Liberals win the 1936 election. The party can move toward Social Liberalism after the Weltkrieg; the filter describes its initial political phase."
+          ]
         },
         {
           "id": "CAN_CONSERVATIVES",
@@ -81,10 +104,1091 @@
           "notes": "The moderate Conservatives win the 1936 election.",
           "sourceKey": "RULE_OPTION_CAN_PATH_SOCCON",
           "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
-          "shortName": "Conservatives"
+          "shortName": "Conservatives",
+          "objectives": [
+            "The moderate Conservatives win the 1936 election."
+          ]
         }
       ],
-      "flag": "./assets/flags/CAN.png"
+      "flag": "./assets/flags/CAN.png",
+      "location": [
+        -76,
+        45
+      ],
+      "challenge": "Keep your starting capital ships afloat during your first major war."
+    },
+    {
+      "tag": "MEX",
+      "country": "Mexico",
+      "region": "North America",
+      "startingCountry": true,
+      "flag": "./assets/flags/MEX.png",
+      "location": [
+        -99,
+        19
+      ],
+      "challenge": "Build a self-sufficient army without importing infantry equipment.",
+      "paths": [
+        {
+          "id": "MEX_PATAUT",
+          "name": "Junta Militar",
+          "shortName": "Junta Militar",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "After Zapata dies, bring Garza and Treviño to power and retain their military junta.",
+          "sourceKey": "RULE_OPTION_MEX_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "After Zapata dies, bring Garza and Treviño to power and retain their military junta."
+          ]
+        },
+        {
+          "id": "MEX_SYNDIE",
+          "name": "Trabajadores",
+          "shortName": "Trabajadores",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Elect the Mexican Workers’ Party under Toledano in 1937.",
+          "sourceKey": "RULE_OPTION_MEX_PATH_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect the Mexican Workers’ Party under Toledano in 1937."
+          ]
+        },
+        {
+          "id": "MEX_SOCDEM",
+          "name": "Laboristas",
+          "shortName": "Laboristas",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Elect Rubio’s Labourist Party in 1937.",
+          "sourceKey": "RULE_OPTION_MEX_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect Rubio’s Labourist Party in 1937."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "BRA",
+      "country": "Brazil",
+      "region": "South America",
+      "startingCountry": true,
+      "flag": "./assets/flags/BRA.png",
+      "location": [
+        -47,
+        -16
+      ],
+      "challenge": "Build a navy that can protect your Atlantic coast.",
+      "paths": [
+        {
+          "id": "BRA_SOCCON",
+          "name": "Republicanos",
+          "shortName": "Republicanos",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Elect Vargas in 1936, but prevent his attempt to replace democracy with personal rule.",
+          "sourceKey": "RULE_OPTION_BRA_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect Vargas in 1936, but prevent his attempt to replace democracy with personal rule."
+          ]
+        },
+        {
+          "id": "BRA_PATAUT",
+          "name": "Republicanos (Centralista)",
+          "shortName": "Republicanos (Centralist",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Elect Vargas in 1936 and consolidate the centralist Republican regime.",
+          "sourceKey": "RULE_OPTION_BRA_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect Vargas in 1936 and consolidate the centralist Republican regime."
+          ]
+        },
+        {
+          "id": "BRA_SOCLIB",
+          "name": "Liberais",
+          "shortName": "Liberais",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Bring Prestes and the Liberal Party to power in the 1936 election.",
+          "sourceKey": "RULE_OPTION_BRA_PATH_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Bring Prestes and the Liberal Party to power in the 1936 election."
+          ]
+        },
+        {
+          "id": "BRA_NATPOP",
+          "name": "Integralistas",
+          "shortName": "Integralistas",
+          "ideology": "National Populist",
+          "category": "Political route",
+          "notes": "Elect the Integralists, then restore the imperial throne under Pedro III.",
+          "sourceKey": "RULE_OPTION_BRA_PATH_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect the Integralists, then restore the imperial throne under Pedro III."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "FRA",
+      "country": "Commune of France",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/FRA.png",
+      "location": [
+        2,
+        49
+      ],
+      "challenge": "Win your major European war without losing Paris.",
+      "paths": [
+        {
+          "id": "FRA_FRACHON_SYNDIE",
+          "name": "Orthodoxes - Frachon",
+          "shortName": "Frachon",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Secure an Orthodox majority and choose Frachon to lead the BGT.",
+          "sourceKey": "RULE_OPTION_FRA_PATH_FRACHON_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Secure an Orthodox majority and choose Frachon to lead the BGT."
+          ]
+        },
+        {
+          "id": "FRA_RADSOC",
+          "name": "Anarchistes",
+          "shortName": "Anarchistes",
+          "ideology": "Radical Socialist",
+          "category": "Political route",
+          "notes": "Give the Anarchist Federalists a majority and keep their council in power.",
+          "sourceKey": "RULE_OPTION_FRA_PATH_RADSOC",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Give the Anarchist Federalists a majority and keep their council in power."
+          ]
+        },
+        {
+          "id": "FRA_VALOIS_TOTALIST",
+          "name": "Sorelians",
+          "shortName": "Sorelians",
+          "ideology": "Totalist",
+          "category": "Political route",
+          "notes": "Win the elections with Valois and maintain Sorelian leadership.",
+          "sourceKey": "RULE_OPTION_FRA_PATH_VALOIS_TOTALIST",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Win the elections with Valois and maintain Sorelian leadership."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "ENG",
+      "country": "Union of Britain",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/ENG.png",
+      "location": [
+        -1,
+        53
+      ],
+      "challenge": "Keep Britain free of enemy landings throughout your major war.",
+      "paths": [
+        {
+          "id": "ENG_HORNER_SYNDIE",
+          "name": "Federationists - Horner",
+          "shortName": "Horner",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Secure a Federationist majority at the 1936 congress and install Horner as chairman.",
+          "sourceKey": "RULE_OPTION_ENG_PATH_HORNER_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Secure a Federationist majority at the 1936 congress and install Horner as chairman."
+          ]
+        },
+        {
+          "id": "ENG_RADSOC",
+          "name": "Autonomists - A New Capital",
+          "shortName": "A New Capital",
+          "ideology": "Radical Socialist",
+          "category": "Political route",
+          "notes": "Back the Autonomists, decentralise the union, and move the capital to Birmingham after the war.",
+          "sourceKey": "RULE_OPTION_ENG_PATH_RADSOC",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Back the Autonomists, decentralise the union, and move the capital to Birmingham after the war."
+          ]
+        },
+        {
+          "id": "ENG_MOSLEY_TOTALIST",
+          "name": "Maximists - Mosley",
+          "shortName": "Mosley",
+          "ideology": "Totalist",
+          "category": "Political route",
+          "notes": "Back the Maximists at the 1936 congress and consolidate Mosley’s control.",
+          "sourceKey": "RULE_OPTION_ENG_PATH_MOSLEY_TOTALIST",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Back the Maximists at the 1936 congress and consolidate Mosley’s control."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "GER",
+      "country": "Germany",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/GER.png",
+      "location": [
+        13,
+        52
+      ],
+      "challenge": "Keep Berlin under your control through the Second Weltkrieg.",
+      "paths": [
+        {
+          "id": "GER_SCHLEICHER_AUTDEM",
+          "name": "Kabinett Schleicher - Moderate",
+          "shortName": "Moderate",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Keep Schleicher in power through the Enabling Act and pursue his moderate postwar succession. Requires victory in the Second Weltkrieg.",
+          "sourceKey": "RULE_OPTION_GER_PATH_SCHLEICHER_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Keep Schleicher in power through the Enabling Act and pursue his moderate postwar succession. Requires victory in the Second Weltkrieg."
+          ]
+        },
+        {
+          "id": "GER_SOCDEM",
+          "name": "Demokratische Union - SPD Postwar",
+          "shortName": "SPD Postwar",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Replace Schleicher with the Democratic Union, then retain the SPD in postwar elections. Requires victory in the Second Weltkrieg.",
+          "sourceKey": "RULE_OPTION_GER_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Replace Schleicher with the Democratic Union, then retain the SPD in postwar elections. Requires victory in the Second Weltkrieg."
+          ]
+        },
+        {
+          "id": "GER_SWR_PATAUT",
+          "name": "Koalition S-W-R - DVLP Dominant",
+          "shortName": "DVLP Dominant",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Replace Schleicher with the Black-White-Red coalition and secure Fatherland Party dominance after victory in the Second Weltkrieg.",
+          "sourceKey": "RULE_OPTION_GER_PATH_SWR_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Replace Schleicher with the Black-White-Red coalition and secure Fatherland Party dominance after victory in the Second Weltkrieg."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "RUS",
+      "country": "Russia",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/RUS.png",
+      "location": [
+        38,
+        56
+      ],
+      "challenge": "Build a railway supply corridor to every active front.",
+      "paths": [
+        {
+          "id": "RUS_OLD_SVOBODNIK_NATPOP",
+          "name": "SZRS (Old Svobodnik)",
+          "shortName": "SZRS (Old Svobodnik)",
+          "ideology": "National Populist",
+          "category": "Political route",
+          "notes": "Keep the dictatorship after the assassination crisis. Defeat Germany and secure the old Svobodnik faction’s victory under Savinkov.",
+          "sourceKey": "RULE_OPTION_RUS_PATH_OLD_SVOBODNIK_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Keep the dictatorship after the assassination crisis. Defeat Germany and secure the old Svobodnik faction’s victory under Savinkov."
+          ]
+        },
+        {
+          "id": "RUS_MAKLAKOV_MARLIB",
+          "name": "KDS - Maklakov",
+          "shortName": "Maklakov",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Establish a republic after Savinkov falls, then elect Maklakov and the Kadets.",
+          "sourceKey": "RULE_OPTION_RUS_PATH_MAKLAKOV_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Establish a republic after Savinkov falls, then elect Maklakov and the Kadets."
+          ]
+        },
+        {
+          "id": "RUS_SOCDEM",
+          "name": "RDP - Titov",
+          "shortName": "Titov",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Establish a republic after Savinkov falls, then elect Titov while keeping the Radical Democrats’ moderate faction in control.",
+          "sourceKey": "RULE_OPTION_RUS_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Establish a republic after Savinkov falls, then elect Titov while keeping the Radical Democrats’ moderate faction in control."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "JAP",
+      "country": "Japan",
+      "region": "East Asia",
+      "startingCountry": true,
+      "flag": "./assets/flags/JAP.png",
+      "location": [
+        140,
+        36
+      ],
+      "challenge": "Keep your starting carriers afloat through your first major war.",
+      "paths": [
+        {
+          "id": "JAP_SOCCON",
+          "name": "Seiyūkai",
+          "shortName": "Seiyūkai",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Pass the National Security Act, preserve electoral government, and elect the Seiyūkai.",
+          "sourceKey": "RULE_OPTION_JAP_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Pass the National Security Act, preserve electoral government, and elect the Seiyūkai."
+          ]
+        },
+        {
+          "id": "JAP_SOCDEM",
+          "name": "Shakai Taishūtō",
+          "shortName": "Shakai Taishūtō",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Preserve democracy, first elect the Minseitō, then bring the Socialist Masses Party to power in a later election.",
+          "sourceKey": "RULE_OPTION_JAP_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Preserve democracy, first elect the Minseitō, then bring the Socialist Masses Party to power in a later election."
+          ]
+        },
+        {
+          "id": "JAP_PATAUT",
+          "name": "Kyōwakai",
+          "shortName": "Kyōwakai",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "After the Restorationist coup, empower the Centralists who defeat it and establish the Kyōwakai.",
+          "sourceKey": "RULE_OPTION_JAP_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "After the Restorationist coup, empower the Centralists who defeat it and establish the Kyōwakai."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "AST",
+      "country": "Australasia",
+      "region": "Oceania",
+      "startingCountry": true,
+      "flag": "./assets/flags/AST.png",
+      "location": [
+        149,
+        -35
+      ],
+      "challenge": "Field an expeditionary force supplied entirely by domestic equipment.",
+      "paths": [
+        {
+          "id": "AST_MARLIB",
+          "name": "Country Party",
+          "shortName": "Country Party",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Elect Page’s Country Party in 1936 and retain its government in later elections.",
+          "sourceKey": "RULE_OPTION_AST_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect Page’s Country Party in 1936 and retain its government in later elections."
+          ]
+        },
+        {
+          "id": "AST_SOCDEM",
+          "name": "Labor",
+          "shortName": "Labor",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Elect Curtin’s Labor Party in 1936 and maintain its parliamentary majority.",
+          "sourceKey": "RULE_OPTION_AST_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect Curtin’s Labor Party in 1936 and maintain its parliamentary majority."
+          ]
+        },
+        {
+          "id": "AST_NATPOP",
+          "name": "Australasian Guard Coup",
+          "shortName": "Australasian Guard Coup",
+          "ideology": "National Populist",
+          "category": "Political route",
+          "notes": "Begin with a Labor election victory, then enable Campbell’s Guard coup during the syndicalist crisis.",
+          "sourceKey": "RULE_OPTION_AST_PATH_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Begin with a Labor election victory, then enable Campbell’s Guard coup during the syndicalist crisis."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "NOR",
+      "country": "Norway",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/NOR.png",
+      "location": [
+        11,
+        60
+      ],
+      "challenge": "Defend your coastline without building new capital ships.",
+      "paths": [
+        {
+          "id": "NOR_SOCDEM",
+          "name": "Democracy - NSA",
+          "shortName": "NSA",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Preserve democracy with a Social Democratic–Venstre coalition.",
+          "sourceKey": "RULE_OPTION_NOR_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Preserve democracy with a Social Democratic–Venstre coalition."
+          ]
+        },
+        {
+          "id": "NOR_MARLIB",
+          "name": "Democracy - Høyre",
+          "shortName": "Høyre",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Preserve democracy with a Høyre–Farmers’ Party coalition.",
+          "sourceKey": "RULE_OPTION_NOR_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Preserve democracy with a Høyre–Farmers’ Party coalition."
+          ]
+        },
+        {
+          "id": "NOR_SYNDIE",
+          "name": "Revolution - NSF",
+          "shortName": "NSF",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Elect Labour in 1936, defeat Quisling’s intervention, and bring the Syndicalist Federation to power.",
+          "sourceKey": "RULE_OPTION_NOR_PATH_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect Labour in 1936, defeat Quisling’s intervention, and bring the Syndicalist Federation to power."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "SWE",
+      "country": "Sweden",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/SWE.png",
+      "location": [
+        18,
+        59
+      ],
+      "challenge": "Equip a modern army using domestic military production.",
+      "paths": [
+        {
+          "id": "SWE_SOCDEM",
+          "name": "Democracy - SAP",
+          "shortName": "SAP",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Form a Social Democratic coalition with the Farmers’ Union.",
+          "sourceKey": "RULE_OPTION_SWE_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Form a Social Democratic coalition with the Farmers’ Union."
+          ]
+        },
+        {
+          "id": "SWE_SOCCON",
+          "name": "Democracy - AV",
+          "shortName": "AV",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Elect the General Electoral League and defend democracy through its free-trade policy.",
+          "sourceKey": "RULE_OPTION_SWE_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Elect the General Electoral League and defend democracy through its free-trade policy."
+          ]
+        },
+        {
+          "id": "SWE_PATAUT",
+          "name": "Military Coup - AFV",
+          "shortName": "AFV",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Form a radical SAP–SSV government, then follow the military coup into Helge Jung’s Army Patriots regime.",
+          "sourceKey": "RULE_OPTION_SWE_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Form a radical SAP–SSV government, then follow the military coup into Helge Jung’s Army Patriots regime."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "FIN",
+      "country": "Finland",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/FIN.png",
+      "location": [
+        25,
+        61
+      ],
+      "challenge": "Hold your capital through your first defensive war.",
+      "paths": [
+        {
+          "id": "FIN_PATAUT",
+          "name": "Mannerheim Clique",
+          "shortName": "Mannerheim Clique",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Bring Mannerheim to power during the royal crisis. His military rule is temporary and eventually hands power to elected civilians.",
+          "sourceKey": "RULE_OPTION_FIN_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Bring Mannerheim to power during the royal crisis. His military rule is temporary and eventually hands power to elected civilians."
+          ]
+        },
+        {
+          "id": "FIN_SOCLIB",
+          "name": "Democracy - Agrarians",
+          "shortName": "Agrarians",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Follow Mannerheim’s intervention with a transfer to democracy, then elect the Agrarian League.",
+          "sourceKey": "RULE_OPTION_FIN_PATH_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Follow Mannerheim’s intervention with a transfer to democracy, then elect the Agrarian League."
+          ]
+        },
+        {
+          "id": "FIN_NATPOP",
+          "name": "Lapua Movement",
+          "shortName": "Lapua Movement",
+          "ideology": "National Populist",
+          "category": "Political route",
+          "notes": "Use the Lapua Movement to displace the royal government and consolidate its nationalist regime.",
+          "sourceKey": "RULE_OPTION_FIN_PATH_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Use the Lapua Movement to displace the royal government and consolidate its nationalist regime."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "SER",
+      "country": "Serbia",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/SER.png",
+      "location": [
+        21,
+        44
+      ],
+      "challenge": "Develop a fully supplied army before your next Balkan war.",
+      "paths": [
+        {
+          "id": "SER_REP_SOCLIB",
+          "name": "Republicans",
+          "shortName": "Republicans",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Keep the Republicans in power and continue their route into a republican Yugoslavia.",
+          "sourceKey": "RULE_OPTION_SER_PATH_REP_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Keep the Republicans in power and continue their route into a republican Yugoslavia."
+          ]
+        },
+        {
+          "id": "SER_SOCDEM",
+          "name": "Socialists",
+          "shortName": "Socialists",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Start with the Republicans, form Yugoslavia, then bring the Socialists into government with their Republican partners.",
+          "sourceKey": "RULE_OPTION_SER_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Start with the Republicans, form Yugoslavia, then bring the Socialists into government with their Republican partners."
+          ]
+        },
+        {
+          "id": "SER_MON_PATAUT",
+          "name": "Royalist Coup - Radical Peasants",
+          "shortName": "Radical Peasants",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Enable the White Hand coup and Živković’s regency, then consolidate the royalist single-party government.",
+          "sourceKey": "RULE_OPTION_SER_PATH_MON_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Enable the White Hand coup and Živković’s regency, then consolidate the royalist single-party government."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "ROM",
+      "country": "Romania",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/ROM.png",
+      "location": [
+        26,
+        45
+      ],
+      "challenge": "Protect your oil-producing territory through your first major war.",
+      "paths": [
+        {
+          "id": "ROM_PATAUT",
+          "name": "Carol - National Renaissance Front",
+          "shortName": "National Renaissance Fro",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Unite with Transylvania, win the Great Game as Carol, and establish the National Renaissance Front.",
+          "sourceKey": "RULE_OPTION_ROM_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Unite with Transylvania, win the Great Game as Carol, and establish the National Renaissance Front."
+          ]
+        },
+        {
+          "id": "ROM_SOCLIB",
+          "name": "Mihai - Peasant Party (Centre)",
+          "shortName": "Peasant Party (Centre)",
+          "ideology": "Social Liberal",
+          "category": "Political route",
+          "notes": "Unite with Transylvania and resolve the royal struggle in Mihai’s favour. Restore elections and choose Maniu’s centrist Peasant Party.",
+          "sourceKey": "RULE_OPTION_ROM_PATH_SOCLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Unite with Transylvania and resolve the royal struggle in Mihai’s favour. Restore elections and choose Maniu’s centrist Peasant Party."
+          ]
+        },
+        {
+          "id": "ROM_MARLIB",
+          "name": "Mihai - National-Liberals",
+          "shortName": "National-Liberals",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Unite with Transylvania and bring Mihai to the throne. Restore democracy and elect the National Liberals.",
+          "sourceKey": "RULE_OPTION_ROM_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Unite with Transylvania and bring Mihai to the throne. Restore democracy and elect the National Liberals."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "BUL",
+      "country": "Bulgaria",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/BUL.png",
+      "location": [
+        25,
+        43
+      ],
+      "challenge": "Keep Sofia under your control throughout your first war.",
+      "paths": [
+        {
+          "id": "BUL_AUTDEM",
+          "name": "Non-Partisan Regime",
+          "shortName": "Non-Partisan Regime",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Retain the State Protection Act and the Tsar’s non-partisan government.",
+          "sourceKey": "RULE_OPTION_BUL_PATH_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Retain the State Protection Act and the Tsar’s non-partisan government."
+          ]
+        },
+        {
+          "id": "BUL_PATAUT",
+          "name": "Zveno",
+          "shortName": "Zveno",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Bring Zveno to power through its military intervention.",
+          "sourceKey": "RULE_OPTION_BUL_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Bring Zveno to power through its military intervention."
+          ]
+        },
+        {
+          "id": "BUL_SOCCON",
+          "name": "Democracy - National Liberals",
+          "shortName": "National Liberals",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Repeal the State Protection Act and elect the National Liberals.",
+          "sourceKey": "RULE_OPTION_BUL_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Repeal the State Protection Act and elect the National Liberals."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "EGY",
+      "country": "Egypt",
+      "region": "North Africa",
+      "startingCountry": true,
+      "flag": "./assets/flags/EGY.png",
+      "location": [
+        31,
+        30
+      ],
+      "challenge": "Build a supply network that supports an army beyond the Nile.",
+      "paths": [
+        {
+          "id": "EGY_MARLIB",
+          "name": "Wafd Party",
+          "shortName": "Wafd Party",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Adopt liberal constitutional reforms and elect Wafd under a constitutional monarchy.",
+          "sourceKey": "RULE_OPTION_EGY_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Adopt liberal constitutional reforms and elect Wafd under a constitutional monarchy."
+          ]
+        },
+        {
+          "id": "EGY_SOCCON",
+          "name": "Watanī Party",
+          "shortName": "Watanī Party",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Adopt conservative reforms and retain Watanī leadership through elections.",
+          "sourceKey": "RULE_OPTION_EGY_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Adopt conservative reforms and retain Watanī leadership through elections."
+          ]
+        },
+        {
+          "id": "EGY_PATAUT",
+          "name": "Alawiyya Dynasty",
+          "shortName": "Alawiyya Dynasty",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Adopt absolutist reforms and concentrate authority in the Alawiyya dynasty.",
+          "sourceKey": "RULE_OPTION_EGY_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Adopt absolutist reforms and concentrate authority in the Alawiyya dynasty."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "PER",
+      "country": "Persia",
+      "region": "Middle East",
+      "startingCountry": true,
+      "flag": "./assets/flags/PER.png",
+      "location": [
+        51,
+        36
+      ],
+      "challenge": "Connect your frontier forces to the capital by railway.",
+      "paths": [
+        {
+          "id": "PER_MON_SOCDEM",
+          "name": "Monarchy - Democrats",
+          "shortName": "Democrats",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Retain the Qajar monarchy with democratic guarantees, then elect the Democrats.",
+          "sourceKey": "RULE_OPTION_PER_PATH_MON_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Retain the Qajar monarchy with democratic guarantees, then elect the Democrats."
+          ]
+        },
+        {
+          "id": "PER_PATAUT",
+          "name": "Monarchy - Qajars (Absolutist)",
+          "shortName": "Qajars (Absolutist)",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Retain the Qajar dynasty, strengthen the Shah, and ultimately abolish constitutional restraints.",
+          "sourceKey": "RULE_OPTION_PER_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Retain the Qajar dynasty, strengthen the Shah, and ultimately abolish constitutional restraints."
+          ]
+        },
+        {
+          "id": "PER_RADSOC",
+          "name": "Socialist Republic",
+          "shortName": "Socialist Republic",
+          "ideology": "Radical Socialist",
+          "category": "Political route",
+          "notes": "Create a socialist republic led by the Justice Party.",
+          "sourceKey": "RULE_OPTION_PER_PATH_RADSOC",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Create a socialist republic led by the Justice Party."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "IRE",
+      "country": "Ireland",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/IRE.png",
+      "location": [
+        -8,
+        53
+      ],
+      "challenge": "Keep Ireland independent through the European war.",
+      "paths": [
+        {
+          "id": "IRE_COLLINS_MARLIB",
+          "name": "Sinn Féin - Collins",
+          "shortName": "Collins",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Keep Collins at the head of Sinn Féin, win the 1937 election, and navigate the Northern Crisis. The official rule also allows an alternative pro-German coup route.",
+          "sourceKey": "RULE_OPTION_IRE_PATH_COLLINS_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Keep Collins at the head of Sinn Féin, win the 1937 election, and navigate the Northern Crisis. The official rule also allows an alternative pro-German coup route."
+          ]
+        },
+        {
+          "id": "IRE_SOCDEM",
+          "name": "Labour",
+          "shortName": "Labour",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Lead the 1937 coalition with O’Brien’s Labour Party and retain its leadership in later elections. The official rule also allows an alternative pro-German coup route.",
+          "sourceKey": "RULE_OPTION_IRE_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Lead the 1937 coalition with O’Brien’s Labour Party and retain its leadership in later elections. The official rule also allows an alternative pro-German coup route."
+          ]
+        },
+        {
+          "id": "IRE_PATAUT",
+          "name": "Aontas Náisiúnta - Autocracy",
+          "shortName": "Autocracy",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Use the March on Dublin to bring O’Duffy to power and win his internal party struggle. The official rule also allows an alternative pro-German coup route.",
+          "sourceKey": "RULE_OPTION_IRE_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Use the March on Dublin to bring O’Duffy to power and win his internal party struggle. The official rule also allows an alternative pro-German coup route."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "POR",
+      "country": "Portugal",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/POR.png",
+      "location": [
+        -9,
+        39
+      ],
+      "challenge": "Maintain a navy capable of escorting your overseas convoys.",
+      "paths": [
+        {
+          "id": "POR_NATPOP",
+          "name": "Integralists",
+          "shortName": "Integralists",
+          "ideology": "National Populist",
+          "category": "Political route",
+          "notes": "Support the Integralists’ decentralised model of monarchy.",
+          "sourceKey": "RULE_OPTION_POR_PATH_NATPOP",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Support the Integralists’ decentralised model of monarchy."
+          ]
+        },
+        {
+          "id": "POR_PATAUT",
+          "name": "Council of the Monarchist Cause",
+          "shortName": "Council of the Monarchis",
+          "ideology": "Paternal Autocrat",
+          "category": "Political route",
+          "notes": "Lose or hand over Mozambique in the Bush War, then support royal rule through the Council of the Monarchist Cause.",
+          "sourceKey": "RULE_OPTION_POR_PATH_PATAUT",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Lose or hand over Mozambique in the Bush War, then support royal rule through the Council of the Monarchist Cause."
+          ]
+        },
+        {
+          "id": "POR_AUTDEM",
+          "name": "Catholic Centre Party",
+          "shortName": "Catholic Centre Party",
+          "ideology": "Authoritarian Democrat",
+          "category": "Political route",
+          "notes": "Lose or hand over Mozambique in the Bush War, then support royal rule through the Catholic Centre Party.",
+          "sourceKey": "RULE_OPTION_POR_PATH_AUTDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Lose or hand over Mozambique in the Bush War, then support royal rule through the Catholic Centre Party."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "SWI",
+      "country": "Switzerland",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/SWI.png",
+      "location": [
+        8,
+        47
+      ],
+      "challenge": "Keep your capital secure without creating a tank division.",
+      "paths": [
+        {
+          "id": "SWI_MARLIB",
+          "name": "Freethinking Democrats",
+          "shortName": "Freethinking Democrats",
+          "ideology": "Market Liberal",
+          "category": "Political route",
+          "notes": "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Freethinking Democrats.",
+          "sourceKey": "RULE_OPTION_SWI_PATH_MARLIB",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Freethinking Democrats."
+          ]
+        },
+        {
+          "id": "SWI_SOCDEM",
+          "name": "Social Democrats",
+          "shortName": "Social Democrats",
+          "ideology": "Social Democrat",
+          "category": "Political route",
+          "notes": "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Social Democrats.",
+          "sourceKey": "RULE_OPTION_SWI_PATH_SOCDEM",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Social Democrats."
+          ]
+        },
+        {
+          "id": "SWI_SOCCON",
+          "name": "Conservatives",
+          "shortName": "Conservatives",
+          "ideology": "Social Conservative",
+          "category": "Political route",
+          "notes": "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Conservatives.",
+          "sourceKey": "RULE_OPTION_SWI_PATH_SOCCON",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Avoid joining the Third Internationale during the Savoyard Crisis, then elect the Conservatives."
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "SRI",
+      "country": "Socialist Republic of Italy",
+      "region": "Europe",
+      "startingCountry": true,
+      "flag": "./assets/flags/SRI.png",
+      "location": [
+        8,
+        45
+      ],
+      "challenge": "Complete reunification while preserving your starting fleet.",
+      "paths": [
+        {
+          "id": "SRI_VITTORIO_SYNDIE",
+          "name": "Return to Normalcy",
+          "shortName": "Return to Normalcy",
+          "ideology": "Syndicalist",
+          "category": "Political route",
+          "notes": "Reunite Italy, win the post-unification election with the syndicalists, and choose di Vittorio as president.",
+          "sourceKey": "RULE_OPTION_SRI_PATH_VITTORIO_SYNDIE",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Reunite Italy, win the post-unification election with the syndicalists, and choose di Vittorio as president."
+          ]
+        },
+        {
+          "id": "SRI_SALVEMINI_RADSOC",
+          "name": "The Constitutional Restoration",
+          "shortName": "The Constitutional Resto",
+          "ideology": "Radical Socialist",
+          "category": "Political route",
+          "notes": "Reunite Italy, elect Rosselli’s Action Party, and complete democratic reform with Salvemini as president.",
+          "sourceKey": "RULE_OPTION_SRI_PATH_SALVEMINI_RADSOC",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Reunite Italy, elect Rosselli’s Action Party, and complete democratic reform with Salvemini as president."
+          ]
+        },
+        {
+          "id": "SRI_MUSSOLINI_TOTALIST",
+          "name": "Mussolini's Victory",
+          "shortName": "Mussolini's Victory",
+          "ideology": "Totalist",
+          "category": "Political route",
+          "notes": "Reunite Italy, win the post-unification election with Mussolini’s faction, and consolidate his regime.",
+          "sourceKey": "RULE_OPTION_SRI_PATH_MUSSOLINI_TOTALIST",
+          "source": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/localisation/english/KR_common/Game%20Rules%20l_english.yml",
+          "objectives": [
+            "Reunite Italy, win the post-unification election with Mussolini’s faction, and consolidate his regime."
+          ]
+        }
+      ]
     }
   ],
   "ideologies": {
@@ -107,6 +1211,26 @@
     "Social Conservative": {
       "color": "#005d95",
       "icon": "./assets/ideologies/social_conservative.png"
+    },
+    "Authoritarian Democrat": {
+      "color": "#878787",
+      "icon": "./assets/ideologies/authoritarian_democrat.png"
+    },
+    "Social Liberal": {
+      "color": "#ef7d00",
+      "icon": "./assets/ideologies/social_liberal.png"
+    },
+    "Radical Socialist": {
+      "color": "#ea5153",
+      "icon": "./assets/ideologies/radical_socialist.png"
+    },
+    "Syndicalist": {
+      "color": "#e30613",
+      "icon": "./assets/ideologies/syndicalist.png"
+    },
+    "Totalist": {
+      "color": "#770f00",
+      "icon": "./assets/ideologies/totalist.png"
     }
   }
 }

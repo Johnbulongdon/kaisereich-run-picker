@@ -979,3 +979,35 @@ button.primary:hover, .result-actions button.primary:hover { background: #d1b77f
     scroll-behavior:auto!important
   }
 }
+/* Campaign atlas and sourced field orders */
+.campaign-atlas, .campaign-briefing { background: #20262b; border: 1px solid #515248; padding: 28px; margin-top: 24px; }
+.campaign-atlas h2, .campaign-briefing h2 { margin: 0 0 12px; color: #e9dfc8; }
+.atlas-heading { display:flex; justify-content:space-between; gap:24px; align-items:center; }
+.atlas-heading p { color:#babbb5; }
+.atlas-heading select { min-width:180px; }
+.atlas-map-wrap { margin:20px 0 12px; background-color:#171e24; background-image:linear-gradient(#b9a46e0c 1px,transparent 1px),linear-gradient(90deg,#b9a46e0c 1px,transparent 1px); background-size:40px 40px; border:1px solid #4a514e; }
+#campaign-map { display:block; width:100%; aspect-ratio:1080 / 465; }
+.atlas-leader { stroke:#bba876; stroke-width:.6; vector-effect:non-scaling-stroke; }
+.atlas-anchor { fill:#d7bc7e; }
+.atlas-marker { cursor:pointer; }
+.atlas-marker rect { fill:#1b2228; stroke:#98968a; stroke-width:1.5; }
+.atlas-marker[aria-disabled=true] { opacity:.25; cursor:default; }
+.atlas-marker[aria-pressed=true] rect { fill:#b69859; stroke:#ffdf91; stroke-width:4; }
+.atlas-marker:focus rect, .atlas-marker:hover rect { stroke:#fff0c7; stroke-width:3; }
+.atlas-note { font-size:12px; color:#b7b6aa; line-height:1.7; }
+.atlas-countries { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+.atlas-country { display:flex; align-items:center; gap:8px; min-height:44px; padding:8px 12px; font-size:12px; }
+.atlas-country img { width:27px; height:18px; object-fit:contain; }
+.atlas-country[aria-pressed=true] { border-color:#d6b46d; background:#554830; color:#fff0c7; }
+.campaign-briefing h3 { color:#d8bd82; font-size:13px; letter-spacing:.04em; }
+.campaign-briefing li, .campaign-briefing p { line-height:1.8; color:#ded9ca; }
+.campaign-briefing ul { padding-left:20px; }
+.campaign-briefing a { color:#dcc18a; font-size:13px; text-decoration:underline; }
+.optional-challenge { border-top:1px solid #515248; margin-top:22px; padding-top:12px; }
+.optional-challenge small { color:#b8b8af; line-height:1.6; display:block; }
+@media(max-width:600px) {
+ .campaign-atlas, .campaign-briefing { padding:18px; }
+ .atlas-heading { display:block; }
+ .atlas-heading select { width:100%; }
+ .atlas-country { flex:1 1 135px; }
+}

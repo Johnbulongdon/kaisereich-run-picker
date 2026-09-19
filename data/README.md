@@ -1,14 +1,14 @@
-# Curated sample data
+# Curated campaign data
 
-Current coverage: **3 countries, 5 paths**, checked against Kaiserreich **1.6.4** at commit `00f64443a8a3ec4ae0cc78179efade3cb41e1946` on 2026-09-18. This is a deliberately incomplete MVP sample, not exhaustive mod coverage or exhaustive coverage of those countries.
+Current coverage: **23 countries, 66 paths**, checked against Kaiserreich **1.6.4** at commit `00f64443a8a3ec4ae0cc78179efade3cb41e1946` on 2026-09-19. This is a curated incomplete collection, not exhaustive mod coverage or exhaustive coverage of those countries.
 
 ## Schema version 1
 
 Top level:
 
 - `metadata`: `schemaVersion`, `kaiserreichVersion`, `lastUpdated`, `sample`, `upstreamCommit`, `source`, `notes`.
-- `countries`: array of country records, each with `tag`, `country`, `region`, `startingCountry`, `paths`, optional local `flag` PNG path and `enabled`.
-- Each path: stable `id`, display `name`, `ideology`, `category`, optional `shortName` for the wheel, `notes`, `source`, `sourceKey`, `flag` override and `enabled`.
+- `countries`: array of country records, each with `tag`, `country`, `region`, `startingCountry`, `paths`, `location` as [longitude, latitude], `challenge` as an optional player-made goal, optional local `flag` PNG path and `enabled`.
+- Each path: stable `id`, display `name`, `ideology`, `category`, optional `shortName` for the wheel, `notes`, `source`, `sourceKey`, `objectives` as a list of source-backed political objectives, `flag` override and `enabled`.
 - `ideologies`: a display-name-keyed map of exact upstream hex `color` values and local `icon` PNG paths. All optional image paths must be inside `./assets/`. Missing visual metadata falls back to labels and a neutral slice.
 
 IDs use uppercase letters, digits and underscores. Preserve IDs across renames. The app uses the ID only for progress, not display names. IDs must be globally unique; duplicates reject the database to avoid ambiguous saves. Disabled and invalid records are omitted from draws, checklist and completion totals. An empty/unsupported database shows a recoverable load error. Unknown saved IDs survive dataset changes and exports.
@@ -31,3 +31,11 @@ Primary references at the pinned commit:
 | `CAN_CONSERVATIVES` | `RULE_OPTION_CAN_PATH_SOCCON` | Robert Manion's moderate Conservative electoral route. |
 
 These descriptions are concise summaries, not copied game scripts. Source keys make follow-up review possible. No automatic extraction or in-game playtesting has been claimed. Treat additions and changed prerequisites as review work before expanding coverage.
+
+## Atlas expansion
+
+The original five IDs are unchanged. Added selected political routes for Mexico, Brazil, the Commune of France, the Union of Britain, Germany, Russia, Japan, Australasia, Norway, Sweden, Finland, Serbia, Romania, Bulgaria, Egypt, Persia, Ireland, Portugal, Switzerland and the Socialist Republic of Italy. Each added route includes its exact official game-rule key. These are manually reviewed choices, not an exhaustive import of game rules.
+
+Objectives paraphrase the political outcome and major prerequisites in the pinned official descriptions. They are not step-by-step walkthroughs. Temporary regimes (such as Mannerheim) and post-unification or postwar routes are marked in the notes. Country-level optional challenges are original suggestions, not claims about official achievements.
+
+Map anchors are approximate geographic reference points for the starting country. They are not territory centroids or territorial claims. Flag displacement and leader lines keep nearby countries distinguishable. The map never draws modern or invented Kaiserreich political borders. All data and assets are bundled locally.

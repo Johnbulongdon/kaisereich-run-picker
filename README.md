@@ -2,9 +2,12 @@
 
 A free, static country + political path randomizer and personal completion tracker for **Kaiserreich**, the Hearts of Iron IV mod.
 
-**Status: first MVP, incomplete sample data.** The collection contains **5 curated paths across Argentina, Liangguang and Canada**. It does not represent every path in these countries or the whole mod. The sample is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
+**Status: curated, incomplete coverage.** The collection contains **66 political paths across 23 countries**, with all ten ideologies represented. It does not represent every path in these countries or the whole mod. The collection is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
 
 ## Features
+
+- **Clickable campaign atlas:** coastlines, geographic flag anchors, regional views and accessible country buttons. Selecting a country prepares its path wheel; filter-ineligible markers are disabled. This is a geographic locator, not a Kaiserreich political-border map.
+- **Campaign briefings:** a sourced political objective for each route and a separate optional country-specific challenge. These are suggestions for your run, not game achievements or automatic completion checks.
 
 - **Country → Path:** choose or spin an eligible country, then spin one of its paths.
 - **Path → Country:** choose an ideology, then draw a matching country–path record.
@@ -86,6 +89,7 @@ js/app.js                     DOM rendering and interaction orchestration
 js/picker.js                  Data validation, filtering, random selection, search
 js/tracker.js                 Status transitions and progress summaries
 js/wheel.js                   SVG wheel rendering and exact result landing
+js/atlas.js                   Geographic map and country selection
 js/storage.js                 Versioned persistence and save validation
 data/paths.json               Curated game data and source metadata
 scripts/serve.mjs              Optional static preview server
@@ -101,7 +105,7 @@ HANDOVER.md                   Original engineering brief
 npm test
 ```
 
-The 13 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
+The 14 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
 
 Optional browser acceptance checks require Playwright as a **development-only** tool:
 
@@ -116,11 +120,11 @@ node scripts/browser-check.mjs
 
 Set `BROWSER_CHANNEL=msedge` or `chrome` to use an installed browser instead of downloading Chromium. `APP_URL` can point at a deployed URL, and `QA_OUTPUT` controls the screenshot directory. `PLAYWRIGHT_MODULE` can point to an existing Playwright installation. The suite uses a new temporary browser profile, leaves it available for inspection, and never touches your normal browser progress.
 
-The browser suite verifies all three modes, persistence across an actual browser restart, searches, status updates, counts, downloads, imports, unknown IDs, malformed saves, reset cancellation/confirmation, subpath resources, navigation/refresh, reduced motion, storage failure and data-load errors. It checks all four views for horizontal overflow at 320, 390, 768 and 1440 pixels and checks 200% text size. Screenshots support visual review. Browser QA is optional locally; dependency-free core tests run in CI.
+The browser suite includes atlas selection, regional zoom, filtered markers, goal/source rendering and all three modes, persistence across an actual browser restart, searches, status updates, counts, downloads, imports, unknown IDs, malformed saves, reset cancellation/confirmation, subpath resources, navigation/refresh, reduced motion, storage failure and data-load errors. It checks all four views for horizontal overflow at 320, 390, 768 and 1440 pixels and checks 200% text size. Screenshots support visual review. Browser QA is optional locally; dependency-free core tests run in CI.
 
 ## Data accuracy and contribution
 
-See [data/README.md](data/README.md) for the schema, source decisions and stable-ID rules. Add game data to JSON, never to UI code. Keep the sample label until the intended full collection has been reviewed. A one-path sample country does **not** mean the country only has one playable path in the mod.
+See [data/README.md](data/README.md) for the schema, source decisions and stable-ID rules. Add game data to JSON, never to UI code. Keep coverage explicitly incomplete until the intended full collection has been reviewed. A one-path country does **not** mean the country only has one playable path in the mod.
 
 Use the [official Kaiserreich source repository](https://github.com/Kaiserreich/Kaiserreich-HOI4) as the primary source. Inspect current file locations and record the exact upstream commit. Political branches, diplomatic variants, AI rules, war outcomes and temporary regimes are not interchangeable. Review whether a candidate represents a meaningful player campaign; do not import every game rule.
 

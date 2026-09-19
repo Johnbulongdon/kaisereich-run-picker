@@ -5,7 +5,22 @@ import { readDataset, eligiblePaths, choose, countriesIn, searchPaths } from '..
 import { setStatus, summarize } from '../js/tracker.js';
 import { createStorage, parseSave, exportSave, STORAGE_KEY } from '../js/storage.js';
 
-const data = JSON.parse(readFileSync(new URL('../data/paths.json', import.meta.url)));
+const fullData = JSON.parse(readFileSync(new URL('../data/paths.json', import.meta.url)));
+const data = { ...fullData, countries: fullData.countries.slice(0, 3) };
+test('expanded collection has map anchors, goals and local heraldry for every route', () => {
+  const { records, skipped } = readDataset(fullData);
+  assert.equal(skipped, 0);
+  assert.equal(fullData.countries.length, 23);
+  assert.equal(records.length, 66);
+  for (const path of records) {
+    assert.ok(path.objectives.length && path.challenge && path.sourceKey);
+    assert.ok(path.location.length === 2 && path.location.every(Number.isFinite));
+    assert.ok(path.location[0] >= -180 && path.location[0] <= 180);
+    assert.ok(path.location[1] >= -90 && path.location[1] <= 90);
+    assert.ok(readFileSync(new URL('../' + path.flag.slice(2), import.meta.url)).length > 0);
+    assert.ok(readFileSync(new URL('../' + fullData.ideologies[path.ideology].icon.slice(2), import.meta.url)).length > 0);
+  }
+});
 const { records } = readDataset(data);
 
 test('sample data has stable unique IDs, sourced paths and representative countries', () => {

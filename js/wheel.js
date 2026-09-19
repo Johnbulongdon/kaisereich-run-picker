@@ -55,7 +55,11 @@ export class SelectionWheel {
       this.rotor.append(segment);
       const angle = (index + 0.5) * step;
       const [x, y] = point(angle, 140);
-      // Dense future datasets retain a complete legend instead of unreadable labels.
+      // Keep flags visible for the country roster; dense path wheels use the legend.
+      if (entries.length > 16 && entries.length <= 32 && entry.flag) {
+        const [fx, fy] = point(angle, 145);
+        this.rotor.append(svgNode('image', { href: entry.flag, x: fx - 14, y: fy - 9, width: 28, height: 18, transform: `rotate(${angle}, ${fx}, ${fy})` }));
+      }
       if (entries.length <= 16) {
         const text = svgNode('text', { x, y, transform: `rotate(${angle}, ${x}, ${y})`, class: 'wheel-label', 'text-anchor': 'middle', 'dominant-baseline': 'middle' }, entry.shortLabel);
         text.style.fill = entry.color === '#ffed00' ? '#171b20' : '#fff9e9';

@@ -2,6 +2,7 @@ import { readDataset, eligiblePaths, choose, countriesIn, searchPaths } from './
 import { setStatus, summarize, STATUSES, STATUS_LABELS } from './tracker.js';
 import { createStorage, parseSave, exportSave, MAX_SAVE_BYTES, STORAGE_KEY } from './storage.js';
 import { SelectionWheel } from './wheel.js';
+import { CampaignAtlas } from './atlas.js';
 
 const $ = id => document.getElementById(id);
 const storage = createStorage();
@@ -9,6 +10,13 @@ let records = [], progress = {}, result = null, selectedCountry = '', mode = 'co
 let protectCorruptSave = false;
 const wheel = new SelectionWheel($('selection-wheel'), $('wheel-entries'));
 let spinning = false, spinToken = 0;
+const atlas = new CampaignAtlas($('campaign-map'), $('atlas-countries'), tag => {
+  document.querySelector('input[name=mode][value=country]').checked = true;
+  changeMode();
+  selectedCountry = tag;
+  refreshEligibility(); renderResult();
+  announce(`${$('result-country').textContent} selected from the map. Spin a political path.`);
+});
 
 function wheelItems(kind) {
   const eligible = pool();
@@ -90,6 +98,8 @@ function refreshEligibility(preserveWheel = false) {
 }
 
 function renderResult() {
+  atlas.render(records, pool(), result?.tag || selectedCountry);
+  renderBriefing();
   const nation = result || records.find(path => path.tag === selectedCountry);
   $('result-heraldry').hidden = !nation?.flag;
   if (nation?.flag) { $('result-flag').src = nation.flag; $('result-flag').alt = `${nation.country} starting-country flag`; }
@@ -111,6 +121,17 @@ function renderResult() {
     $('result-path').textContent = 'Clear filters or include more progress states to draw again.';
     $('result-tag').textContent = '—';
   }
+}
+function renderBriefing() {
+  $('campaign-briefing').hidden = !result;
+  $('campaign-objectives').replaceChildren();
+  if (!result) return;
+  $('briefing-title').textContent = `${result.country} · Campaign goals`;
+  for (const objective of result.objectives ?? []) $('campaign-objectives').append(node('li', objective));
+  $('campaign-challenge').textContent = result.challenge || 'Keep your capital under your control through your first major war.';
+  const source = safeSource(result.source);
+  $('briefing-source').hidden = !source;
+  if (source) $('briefing-source').href = source;
 }
 function reveal() {
   renderResult();
@@ -177,7 +198,7 @@ function node(tag, text, className) {
 function renderChecklist() {
   const activeId = document.activeElement?.dataset.pathId;
   const visible = searchPaths(eligiblePaths(records, progress, { status: $('browse-status').value }), $('search').value);
-  $('browse-count').textContent = `${visible.length} of ${records.length} sample paths`;
+  $('browse-count').textContent = `${visible.length} of ${records.length} curated paths`;
   $('browse-empty').hidden = visible.length > 0;
   const fragment = document.createDocumentFragment();
   for (const country of countriesIn(visible)) {
@@ -247,8 +268,8 @@ async function init() {
     if (saved.error) warn(saved.corrupt ? 'The saved record is unreadable and has been left untouched. Export any new progress before resetting the damaged save.' : 'Progress cannot be saved in this browser. Export your progress before closing.');
     options($('region'), [...new Set(records.map(path => path.region))].sort(), 'All regions');
     options($('ideology'), [...new Set(records.map(path => path.ideology))].sort(), 'All ideologies');
-    $('sample-summary').textContent = `${countriesIn(records).length} countries · ${records.length} paths. An incomplete collection for this first edition.`;
-    $('about-sample').textContent = `This MVP contains ${records.length} paths across ${countriesIn(records).map(country => country.country).join(', ')}.`;
+    $('sample-summary').textContent = `${countriesIn(records).length} countries · ${records.length} paths. Selected political routes, with room to grow.`;
+    $('about-sample').textContent = `This collection contains ${records.length} paths across ${countriesIn(records).map(country => country.country).join(', ')}.`;
     $('data-version').textContent = `Kaiserreich data version: ${data.metadata.kaiserreichVersion}. Checked ${data.metadata.lastUpdated}.`;
     $('footer-version').textContent = `KR ${data.metadata.kaiserreichVersion}`;
     if (data.skipped) announce(`${data.skipped} disabled or invalid records were omitted from this collection.`);
@@ -262,6 +283,7 @@ async function init() {
 }
 
 function bindEvents() {
+  $('atlas-view').addEventListener('change', event => { atlas.view = event.target.value; atlas.render(records, pool(), result?.tag || selectedCountry); });
   $('spin-motion').addEventListener('change', () => { if (spinning) { cancelSpin(); refreshEligibility(); renderResult(); announce('Animation setting changed. Spin again when ready.'); } });
   window.addEventListener('hashchange', () => route(true));
   for (const id of ['region', 'ideology', 'status-filter', 'exclude-completed', 'exclude-played']) {
