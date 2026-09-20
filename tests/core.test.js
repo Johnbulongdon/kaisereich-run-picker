@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths } from '../js/picker.js';
+import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths, groupByIdeology } from '../js/picker.js';
 import { setStatus, summarize } from '../js/tracker.js';
 import { createStorage, parseSave, exportSave, STORAGE_KEY } from '../js/storage.js';
 
@@ -191,4 +191,20 @@ test('source branches preserve ownership and compose with country availability f
  }
  assert.ok(!records.some(p => p.tag === 'NEE' && p.source.includes('APG')));
  assert.ok(!records.some(p => p.tag === 'GER' && p.name.includes('Germany Demands Regime Change')));
+});
+
+
+test('ideology layers retain each eligible path once without mixing ideologies', () => {
+ const { records } = readDataset(fullData);
+ for (const country of fullData.countries) {
+  const paths = eligiblePaths(records, {}, {country:country.tag});
+  const groups = groupByIdeology(paths);
+  assert.equal(groups.length, new Set(paths.map(p => p.ideology)).size);
+  assert.deepEqual(groups.flatMap(g => g.paths.map(p => p.id)).sort(), paths.map(p => p.id).sort());
+  for (const group of groups) assert.ok(group.paths.every(p => p.ideology === group.ideology && p.tag === country.tag));
+ }
+ assert.deepEqual(groupByIdeology([]), []);
+ const selected = eligiblePaths(records, {}, {country:'ARG', ideology:'National Populist'});
+ assert.deepEqual(groupByIdeology(selected).map(g => g.ideology), ['National Populist']);
+ assert.ok(selected.some(p => p.id === 'ARG_CARLES'));
 });

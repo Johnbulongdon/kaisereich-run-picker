@@ -1,4 +1,4 @@
-import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths } from './picker.js';
+import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths, groupByIdeology } from './picker.js';
 import { setStatus, summarize, STATUSES, STATUS_LABELS } from './tracker.js';
 import { createStorage, parseSave, exportSave, MAX_SAVE_BYTES, STORAGE_KEY } from './storage.js';
 import { SelectionWheel } from './wheel.js';
@@ -8,14 +8,14 @@ import { VIEWS } from './atlas.js';
 const $ = id => document.getElementById(id);
 const storage = createStorage();
 let countries = [];
-let records = [], progress = {}, result = null, selectedCountry = '', mode = 'country';
+let records = [], progress = {}, result = null, selectedCountry = '', selectedIdeology = '', mode = 'country';
 let protectCorruptSave = false;
 const wheel = new SelectionWheel($('selection-wheel'), $('wheel-entries'));
 let spinning = false, spinToken = 0;
 const atlas = new CampaignAtlas($('campaign-map'), $('atlas-countries'), tag => {
   document.querySelector('input[name=mode][value=country]').checked = true;
   changeMode();
-  selectedCountry = tag;
+  selectedCountry = tag; selectedIdeology = '';
   refreshEligibility(); renderResult();
   announce(`${$('result-country').textContent} selected from the map. Spin a political path.`);
 });
@@ -23,18 +23,19 @@ const atlas = new CampaignAtlas($('campaign-map'), $('atlas-countries'), tag => 
 function wheelItems(kind) {
   const eligible = pool();
   if (kind === 'country') return countryPool().map(country => ({ ...country, id: country.tag, color: '#30373e', label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
-  return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry) : eligible)
+  if (kind === 'ideology') return groupByIdeology(eligible.filter(path => path.tag === selectedCountry)).map(group => ({ ...group, id: group.ideology, label: `${group.ideology} · ${group.paths.length} ${group.paths.length === 1 ? 'path' : 'paths'}`, shortLabel: group.ideology }));
+  return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry && path.ideology === selectedIdeology && path.ideology === selectedIdeology) : eligible)
     .map(path => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: path.shortName || path.tag }));
 }
 function assetUrl(path) { return /^\.\/assets\/[\w/-]+\.png$/.test(path ?? '') ? new URL('../' + path.slice(2), import.meta.url).href : ''; }
-function defaultSpinKind() { return mode === 'country' ? (selectedCountry ? 'path' : 'country') : 'both'; }
+function defaultSpinKind() { return mode === 'country' ? (selectedCountry ? (selectedIdeology ? 'path' : 'ideology') : 'country') : 'both'; }
 function renderWheel(kind = defaultSpinKind()) {
   const entries = wheelItems(kind);
   wheel.render(entries);
   const selectedIndex = entries.findIndex(entry => entry.id === result?.id);
   if (selectedIndex >= 0) wheel.land(selectedIndex);
-  $('wheel-legend-title').textContent = `On the wheel · ${entries.length} ${kind === 'country' ? 'countries' : 'paths'}`;
-  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : 'Each eligible political option gets an equal slice.') : selectedCountry && !records.some(path => path.tag === selectedCountry) ? 'Routes awaiting review. Use Spin country to discover another nation.' : 'No eligible paths. Adjust your filters.';
+  $('wheel-legend-title').textContent = `On the wheel · ${entries.length} ${kind === 'country' ? 'countries' : kind === 'ideology' ? 'ideologies' : 'paths'}`;
+  $('wheel-caption').textContent = entries.length ? (kind === 'country' ? 'Each country gets an equal slice.' : kind === 'ideology' ? 'Each available ideology gets an equal slice. Paths come next.' : 'Each eligible political option gets an equal slice.') : selectedCountry && !records.some(path => path.tag === selectedCountry) ? 'Routes awaiting review. Use Spin country to discover another nation.' : 'No eligible paths. Adjust your filters.';
   $('wheel-spin').disabled = !entries.length || (mode === 'ideology' && !$('ideology').value);
   $('wheel-button-label').textContent = 'SPIN';
 }
@@ -88,13 +89,20 @@ function refreshEligibility(preserveWheel = false) {
   if (!countries.some(country => country.tag === selectedCountry)) selectedCountry = '';
   options($('country'), countries.map(country => ({ label: `${country.country}${country.startingCountry ? '' : ' (forms during play)'} — ${coverage(country)}`, value: country.tag })), 'Let fate choose');
   $('country').value = selectedCountry;
-  const routes = eligible.filter(path => path.tag === selectedCountry);
-  options($('path-choice'), routes.map(path => ({ value: path.id, label: `${path.name} · ${path.ideology} — ${path.ruleGroupName || path.category}` })), selectedCountry ? 'Choose a route, or spin' : 'Choose a country first');
+  const countryRoutes = eligible.filter(path => path.tag === selectedCountry);
+  const groups = groupByIdeology(countryRoutes);
+  if (!groups.some(group => group.ideology === selectedIdeology)) selectedIdeology = '';
+  options($('country-ideology'), groups.map(group => ({value:group.ideology, label:`${group.ideology} · ${group.paths.length} ${group.paths.length === 1 ? 'path' : 'paths'}`})), selectedCountry ? 'Choose an ideology, or spin' : 'Choose a country first');
+  $('country-ideology').disabled = !groups.length;
+  $('country-ideology').value = selectedIdeology;
+  const routes = countryRoutes.filter(path => path.ideology === selectedIdeology);
+  options($('path-choice'), routes.map(path => ({ value: path.id, label: `${path.name} — ${path.ruleGroupName || path.category}` })), selectedIdeology ? 'Choose a path, or spin' : 'Choose an ideology first');
   $('path-choice').disabled = !routes.length;
   $('path-choice').value = result?.tag === selectedCountry ? result.id : '';
   $('eligible-count').textContent = `${eligible.length} eligible ${eligible.length === 1 ? 'path' : 'paths'} · ${countries.length} countries`;
   $('spin-country').disabled = !countries.length;
-  $('spin-path').disabled = !eligible.some(path => path.tag === selectedCountry);
+  $('spin-ideology').disabled = !groups.length;
+  $('spin-path').disabled = !routes.length;
   $('spin-both').disabled = !eligible.length || (mode === 'ideology' && !$('ideology').value);
   if (result && !eligible.some(path => path.id === result.id)) result = null;
   if (!eligible.length) {
@@ -109,21 +117,22 @@ function renderResult() {
   atlas.render(countries, countryPool(), result?.tag || selectedCountry);
   renderBriefing();
   const nation = countries.find(country => country.tag === (result?.tag || selectedCountry));
+  const ideologyDisplay = result || records.find(path => path.tag === selectedCountry && path.ideology === selectedIdeology);
   $('result-coverage').hidden = !nation;
   $('result-coverage').textContent = nation ? coverage(nation) : '';
   $('result-heraldry').hidden = !nation?.flag;
   if (nation?.flag) { $('result-flag').src = nation.flag; $('result-flag').alt = `${nation.country} country flag`; }
-  $('result-emblem').hidden = !result?.icon;
-  if (result?.icon) { $('result-emblem').src = result.icon; $('result-emblem').alt = `${result.ideology} emblem`; }
-  $('result-ideology').style.borderColor = result?.color || '';
+  $('result-emblem').hidden = !ideologyDisplay?.icon;
+  if (ideologyDisplay?.icon) { $('result-emblem').src = ideologyDisplay.icon; $('result-emblem').alt = `${ideologyDisplay.ideology} emblem`; }
+  $('result-ideology').style.borderColor = ideologyDisplay?.color || '';
   $('result-actions').hidden = !result;
-  $('result-ideology').hidden = !result;
+  $('result-ideology').hidden = !ideologyDisplay;
   $('result-notes').hidden = !result?.notes && !nation?.formationContext;
   $('result-tag').textContent = result?.tag || selectedCountry || '—';
   $('result-region').textContent = nation?.region || 'THE WORLD AWAITS';
   $('result-country').textContent = nation?.country || 'A new history starts here.';
-  $('result-path').textContent = result?.name || (selectedCountry ? (records.some(path => path.tag === selectedCountry) ? 'Country selected. Choose a route above or spin a political path.' : 'This nation is playable. Its political routes are still awaiting verification; choose your own route in-game.') : 'Spin to discover your next campaign.');
-  $('result-ideology').textContent = result?.ideology || '';
+  $('result-path').textContent = result?.name || (selectedCountry ? (records.some(path => path.tag === selectedCountry) ? (selectedIdeology ? `${selectedIdeology} selected. Choose or spin a path in layer 3.` : 'Country selected. Choose or spin an ideology in layer 2.') : 'This nation is playable. Its political routes are still awaiting verification; choose your own route in-game.') : 'Spin to discover your next campaign.');
+  $('result-ideology').textContent = ideologyDisplay?.ideology || '';
   $('result-notes').textContent = `${nation?.formationContext ? nation.formationContext + '\n\n' : ''}${result ? `${result.ruleGroupName ? result.ruleGroupName + '\n\n' : ''}${result.notes || ''}` : ''}`;
   if (result) $('result-status').value = progress[result.id] ?? 'unplayed';
   if (!countryPool().length) {
@@ -162,7 +171,7 @@ async function spin(kind) {
   spinning = true;
   result = null;
   renderResult();
-  for (const id of ['spin-country', 'spin-path', 'spin-both', 'wheel-spin']) $(id).disabled = true;
+  for (const id of ['spin-country', 'spin-ideology', 'spin-path', 'spin-both', 'wheel-spin']) $(id).disabled = true;
   $('result-card').setAttribute('aria-busy', 'true');
   $('result-country').textContent = 'Fate is turning…';
   $('result-path').textContent = 'The pointer will reveal your next campaign.';
@@ -175,26 +184,32 @@ async function spin(kind) {
   $('result-card').removeAttribute('aria-busy');
   if (kind === 'country') {
     selectedCountry = chosen.tag;
+    selectedIdeology = '';
+    result = null;
+  } else if (kind === 'ideology') {
+    selectedIdeology = chosen.ideology;
     result = null;
   } else {
     result = records.find(path => path.id === chosen.id);
     selectedCountry = result.tag;
+    selectedIdeology = result.ideology;
   }
   refreshEligibility(true);
-  $('wheel-caption').textContent = kind === 'country' ? `${chosen.country} selected. ${records.some(path => path.tag === chosen.tag) ? 'Spin again to draw its path.' : 'Political paths awaiting review.'}` : `${chosen.country} · ${chosen.ideology}`;
-  $('wheel-button-label').textContent = kind === 'country' ? (records.some(path => path.tag === chosen.tag) ? 'PATH' : 'PENDING') : 'AGAIN';
+  $('wheel-caption').textContent = kind === 'country' ? `${chosen.country} selected. ${records.some(path => path.tag === chosen.tag) ? 'Spin again to choose its ideology, then its path.' : 'Political paths awaiting review.'}` : kind === 'ideology' ? `${chosen.ideology} selected. Spin again to choose a path.` : `${chosen.country} · ${chosen.ideology}`;
+  $('wheel-button-label').textContent = kind === 'country' ? (records.some(path => path.tag === chosen.tag) ? 'IDEOLOGY' : 'PENDING') : kind === 'ideology' ? 'PATH' : 'AGAIN';
   reveal();
 }
 function changeMode() {
   mode = document.querySelector('input[name=mode]:checked').value;
   result = null;
-  selectedCountry = '';
+  selectedCountry = ''; selectedIdeology = '';
   $('country-control').hidden = mode !== 'country';
   $('spin-country').hidden = mode !== 'country';
   $('spin-path').hidden = mode !== 'country';
-  $('spin-both').textContent = mode === 'country' ? 'Randomize both ↻' : mode === 'ideology' ? 'Find a country & path ↻' : 'Spin a new run ↻';
-  $('mode-help').textContent = mode === 'country' ? 'Pick a country first, then discover one of its eligible paths.' : mode === 'ideology' ? 'Choose a political ideology in the conditions, then draw a country and matching path.' : 'Every eligible country–path combination has an equal chance.';
-  $('selection-footnote').textContent = mode === 'country' ? 'A country first. A political path second. Your next run awaits.' : 'Filters apply before the draw. Every matching path gets one slot.';
+  $('spin-ideology').hidden = mode !== 'country';
+  $('spin-both').textContent = mode === 'country' ? 'Randomize run ↻' : mode === 'ideology' ? 'Find a country & path ↻' : 'Spin a new run ↻';
+  $('mode-help').textContent = mode === 'country' ? 'Choose a country, then an ideology, then a specific path. Each layer narrows the next.' : mode === 'ideology' ? 'Choose a political ideology in the conditions, then draw a country and matching path.' : 'Every eligible country–path combination has an equal chance.';
+  $('selection-footnote').textContent = mode === 'country' ? 'Layer 1: Country → Layer 2: Ideology → Layer 3: Path.' : 'Filters apply before the draw. Every matching path gets one slot.';
   refreshEligibility();
   renderResult();
 }
@@ -207,6 +222,7 @@ function node(tag, text, className) {
 }
 function renderChecklist() {
   const activeId = document.activeElement?.dataset.pathId;
+  const expanded = new Set([...document.querySelectorAll('.ideology-group[open]')].map(group => group.dataset.groupKey));
   const visible = searchPaths(eligiblePaths(records, progress, { status: $('browse-status').value }), $('search').value);
   const query = $('search').value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
   const pending = countries.filter(country => !records.some(path => path.tag === country.tag) && !$('browse-status').value && `${country.country} ${country.tag} ${country.region}`.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().includes(query));
@@ -218,7 +234,15 @@ function renderChecklist() {
     const heading = node('h2', country.country);
     heading.append(node('span', country.tag));
     section.append(heading, node('p', coverage(country), 'coverage-label'));
-    for (const path of visible.filter(item => item.tag === country.tag)) {
+    for (const group of groupByIdeology(visible.filter(item => item.tag === country.tag))) {
+      const layer = node('details', undefined, 'ideology-group');
+      layer.dataset.groupKey = `${country.tag}:${group.ideology}`;
+      layer.open = Boolean(query || $('browse-status').value || expanded.has(layer.dataset.groupKey));
+      const summary = node('summary');
+      if (group.icon) { const icon = node('img'); icon.src = group.icon; icon.alt = ''; summary.append(icon); }
+      summary.append(node('span', group.ideology), node('small', `${group.paths.length} ${group.paths.length === 1 ? 'path' : 'paths'}`));
+      layer.append(summary);
+      for (const path of group.paths) {
       const row = node('div', undefined, 'path-row');
       const info = node('div');
       const imagery = node('div', undefined, 'checklist-heraldry');
@@ -239,7 +263,9 @@ function renderChecklist() {
       select.value = progress[path.id] ?? 'unplayed';
       control.append(label, select);
       row.append(info, control);
-      section.append(row);
+      layer.append(row);
+      }
+      section.append(layer);
     }
     fragment.append(section);
   }
@@ -316,16 +342,17 @@ function bindEvents() {
   $('clear-filters').addEventListener('click', () => {
     for (const id of ['region', 'ideology', 'status-filter', 'availability', 'route-kind']) $(id).value = '';
     $('exclude-completed').checked = false; $('exclude-played').checked = false;
-    result = null; selectedCountry = ''; refreshEligibility(); renderResult(); announce('Filters cleared.');
+    result = null; selectedCountry = ''; selectedIdeology = ''; refreshEligibility(); renderResult(); announce('Filters cleared.');
   });
   document.querySelectorAll('input[name=mode]').forEach(input => input.addEventListener('change', changeMode));
-  $('country').addEventListener('change', () => { selectedCountry = $('country').value; result = null; refreshEligibility(); renderResult(); });
+  $('country').addEventListener('change', () => { selectedCountry = $('country').value; selectedIdeology = ''; result = null; refreshEligibility(); renderResult(); });
+  $('country-ideology').addEventListener('change', () => { selectedIdeology = $('country-ideology').value; result = null; refreshEligibility(); renderResult(); });
   $('path-choice').addEventListener('change', () => {
     cancelSpin();
-    result = pool().find(path => path.tag === selectedCountry && path.id === $('path-choice').value) || null;
+    result = pool().find(path => path.tag === selectedCountry && path.ideology === selectedIdeology && path.id === $('path-choice').value) || null;
     refreshEligibility(); reveal();
   });
-  for (const kind of ['country', 'path', 'both']) $(`spin-${kind}`).addEventListener('click', () => spin(kind));
+  for (const kind of ['country', 'ideology', 'path', 'both']) $(`spin-${kind}`).addEventListener('click', () => spin(kind));
   $('wheel-spin').addEventListener('click', () => spin(defaultSpinKind()));
   $('start-run').addEventListener('click', () => { if (result) updateStatus(result.id, 'played'); });
   $('result-status').addEventListener('change', event => { if (result) updateStatus(result.id, event.target.value); });
