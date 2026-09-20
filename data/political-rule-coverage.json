@@ -1,0 +1,2434 @@
+{
+  "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
+  "groups": [
+    {
+      "group": "CAN_path",
+      "country": "CAN",
+      "sourceKeys": [
+        "RULE_OPTION_CAN_PATH_MARLIB",
+        "RULE_OPTION_CAN_PATH_SOCCON",
+        "RULE_OPTION_CAN_PATH_AUTDEM",
+        "RULE_OPTION_CAN_PATH_PATAUT",
+        "RULE_OPTION_CAN_PATH_SOCDEM",
+        "RULE_OPTION_CAN_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "CAN_king",
+      "country": "CAN",
+      "sourceKeys": [
+        "RULE_OPTION_CAN_KING_EDWARD",
+        "RULE_OPTION_CAN_KING_ABDICATES",
+        "RULE_OPTION_CAN_KING_ALBERT",
+        "RULE_OPTION_CAN_KING_HENRY",
+        "RULE_OPTION_CAN_KING_GEORGE"
+      ]
+    },
+    {
+      "group": "CAN_referendum",
+      "country": "CAN",
+      "sourceKeys": [
+        "RULE_OPTION_CAN_REFERENDUM_EMPIRE",
+        "RULE_OPTION_CAN_REFERENDUM_REP"
+      ]
+    },
+    {
+      "group": "USA_election",
+      "country": "USA",
+      "sourceKeys": [
+        "RULE_OPTION_USA_ELECTION_BORAH",
+        "RULE_OPTION_USA_ELECTION_LANDON",
+        "RULE_OPTION_USA_ELECTION_OLSON",
+        "RULE_OPTION_USA_ELECTION_LONG",
+        "RULE_OPTION_USA_ELECTION_HULL"
+      ]
+    },
+    {
+      "group": "USA_civil_war",
+      "country": "USA",
+      "sourceKeys": [
+        "RULE_OPTION_USA_CIVIL_WAR_FOUR_SIDES",
+        "RULE_OPTION_USA_CIVIL_WAR_THREE_SIDES",
+        "RULE_OPTION_USA_CIVIL_WAR_TWO_SIDES"
+      ]
+    },
+    {
+      "group": "USA_macarthur_path",
+      "country": "USA",
+      "sourceKeys": [
+        "RULE_OPTION_USA_MACARTHUR_PATH_CAESAR",
+        "RULE_OPTION_USA_MACARTHUR_PATH_CINCINNATUS",
+        "RULE_OPTION_USA_MACARTHUR_PATH_CINCINNATUS_PEACE",
+        "RULE_OPTION_USA_MACARTHUR_PATH_CINCINNATUS_PEACE_PRISON",
+        "RULE_OPTION_USA_MACARTHUR_PATH_CINCINNATUS_WAR"
+      ]
+    },
+    {
+      "group": "USA_path",
+      "country": "USA",
+      "sourceKeys": [
+        "RULE_OPTION_USA_PATH_MARLIB",
+        "RULE_OPTION_USA_PATH_SOCLIB",
+        "RULE_OPTION_USA_PATH_SOCCON",
+        "RULE_OPTION_USA_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "WCA_path",
+      "country": "WCA",
+      "sourceKeys": [
+        "RULE_OPTION_WCA_PATH_SYNDIE",
+        "RULE_OPTION_WCA_PATH_RADSOC",
+        "RULE_OPTION_WCA_PATH_BROWDER_TOTALIST",
+        "RULE_OPTION_WCA_PATH_FOSTER_TOTALIST"
+      ]
+    },
+    {
+      "group": "APG_path",
+      "country": "APG",
+      "sourceKeys": [
+        "RULE_OPTION_APG_PATH_NATPOP",
+        "RULE_OPTION_APG_PATH_LONG_AUTDEM",
+        "RULE_OPTION_APG_PATH_PATAUT",
+        "RULE_OPTION_APG_PATH_DIES_AUTDEM"
+      ]
+    },
+    {
+      "group": "ACC_path",
+      "country": "ACC",
+      "sourceKeys": [
+        "RULE_OPTION_ACC_PATH_MARLIB",
+        "RULE_OPTION_ACC_PATH_SOCLIB",
+        "RULE_OPTION_ACC_PATH_SOCCON",
+        "RULE_OPTION_ACC_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "HAW_strike",
+      "country": "HAW",
+      "sourceKeys": [
+        "RULE_OPTION_HAW_STRIKE_MON",
+        "RULE_OPTION_HAW_STRIKE_REP",
+        "RULE_OPTION_HAW_STRIKE_SYNDIE"
+      ]
+    },
+    {
+      "group": "HAW_path",
+      "country": "HAW",
+      "sourceKeys": [
+        "RULE_OPTION_HAW_PATH_SOCDEM",
+        "RULE_OPTION_HAW_PATH_SOCLIB",
+        "RULE_OPTION_HAW_PATH_MARLIB",
+        "RULE_OPTION_HAW_PATH_SOCCON",
+        "RULE_OPTION_HAW_PATH_RADSOC",
+        "RULE_OPTION_HAW_PATH_SYNDIE",
+        "RULE_OPTION_HAW_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "MEX_path",
+      "country": "MEX",
+      "sourceKeys": [
+        "RULE_OPTION_MEX_PATH_MAXIMATO_TOTALIST",
+        "RULE_OPTION_MEX_PATH_PATAUT",
+        "RULE_OPTION_MEX_PATH_AUTDEM",
+        "RULE_OPTION_MEX_PATH_NATPOP",
+        "RULE_OPTION_MEX_PATH_ELECTED_TOTALIST",
+        "RULE_OPTION_MEX_PATH_SYNDIE",
+        "RULE_OPTION_MEX_PATH_RADSOC",
+        "RULE_OPTION_MEX_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "MEX_revolt",
+      "country": "MEX",
+      "sourceKeys": [
+        "RULE_OPTION_MEX_REVOLT_NO",
+        "RULE_OPTION_MEX_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "YUC_path",
+      "country": "YUC",
+      "sourceKeys": [
+        "RULE_OPTION_YUC_PATH_MARLIB",
+        "RULE_OPTION_YUC_PATH_SOCLIB",
+        "RULE_OPTION_YUC_PATH_SOCDEM",
+        "RULE_OPTION_YUC_PATH_RADSOC"
+      ]
+    },
+    {
+      "group": "CUB_path",
+      "country": "CUB",
+      "sourceKeys": [
+        "RULE_OPTION_CUB_PATH_MARLIB",
+        "RULE_OPTION_CUB_PATH_SOCLIB",
+        "RULE_OPTION_CUB_PATH_SOCDEM",
+        "RULE_OPTION_CUB_PATH_PATAUT",
+        "RULE_OPTION_CUB_PATH_AUTDEM",
+        "RULE_OPTION_CUB_PATH_SOCCON",
+        "RULE_OPTION_CUB_PATH_RADSOC",
+        "RULE_OPTION_CUB_PATH_SYNDIE",
+        "RULE_OPTION_CUB_PATH_TOTALIST",
+        "RULE_OPTION_CUB_PATH_COUP_PATAUT",
+        "RULE_OPTION_CUB_PATH_COUP_AUTDEM",
+        "RULE_OPTION_CUB_PATH_COUP_MARLIB",
+        "RULE_OPTION_CUB_PATH_COUP_SOCLIB"
+      ]
+    },
+    {
+      "group": "DOM_path",
+      "country": "DOM",
+      "sourceKeys": [
+        "RULE_OPTION_DOM_PATH_SOCCON",
+        "RULE_OPTION_DOM_PATH_MARLIB",
+        "RULE_OPTION_DOM_PATH_PATAUT",
+        "RULE_OPTION_DOM_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "HAI_path",
+      "country": "HAI",
+      "sourceKeys": [
+        "RULE_OPTION_HAI_PATH_CIVIL_WAR",
+        "RULE_OPTION_HAI_PATH_CALIXTE_AUTDEM",
+        "RULE_OPTION_HAI_PATH_TOTALIST",
+        "RULE_OPTION_HAI_PATH_SOCDEM",
+        "RULE_OPTION_HAI_PATH_RADSOC",
+        "RULE_OPTION_HAI_PATH_SOCCON",
+        "RULE_OPTION_HAI_PATH_MARLIB",
+        "RULE_OPTION_HAI_PATH_SOCLIB",
+        "RULE_OPTION_HAI_PATH_VINCENT_AUTDEM"
+      ]
+    },
+    {
+      "group": "WIF_path",
+      "country": "WIF",
+      "sourceKeys": [
+        "RULE_OPTION_WIF_PATH_SOCDEM",
+        "RULE_OPTION_WIF_PATH_SOCLIB",
+        "RULE_OPTION_WIF_PATH_MARLIB",
+        "RULE_OPTION_WIF_PATH_SOCCON",
+        "RULE_OPTION_WIF_PATH_AUTDEM",
+        "RULE_OPTION_WIF_PATH_LABOUR_RADSOC",
+        "RULE_OPTION_WIF_PATH_PEOPLES_RADSOC",
+        "RULE_OPTION_WIF_PATH_SYNDIE",
+        "RULE_OPTION_WIF_PATH_NOT_SOC"
+      ]
+    },
+    {
+      "group": "PUE_path",
+      "country": "PUE",
+      "sourceKeys": [
+        "RULE_OPTION_PUE_PATH_CAN",
+        "RULE_OPTION_PUE_PATH_WIF",
+        "RULE_OPTION_PUE_PATH_PUPPET",
+        "RULE_OPTION_PUE_PATH_INTERVENTION_NATPOP",
+        "RULE_OPTION_PUE_PATH_ACQUIESCENCE_NATPOP",
+        "RULE_OPTION_PUE_PATH_INDEPENDENCE",
+        "RULE_OPTION_PUE_PATH_STAY_IN_UNION",
+        "RULE_OPTION_PUE_PATH_BACK_TO_UNION"
+      ]
+    },
+    {
+      "group": "PUE_election",
+      "country": "PUE",
+      "sourceKeys": [
+        "RULE_OPTION_PUE_ELECTION_SOCDEM",
+        "RULE_OPTION_PUE_ELECTION_SOCLIB",
+        "RULE_OPTION_PUE_ELECTION_AUTDEM",
+        "RULE_OPTION_PUE_ELECTION_NATPOP"
+      ]
+    },
+    {
+      "group": "GUA_path",
+      "country": "GUA",
+      "sourceKeys": [
+        "RULE_OPTION_GUA_PATH_AUTDEM",
+        "RULE_OPTION_GUA_PATH_RADSOC",
+        "RULE_OPTION_GUA_PATH_SOCCON",
+        "RULE_OPTION_GUA_PATH_SOCDEM",
+        "RULE_OPTION_GUA_PATH_CIVIL_WAR_PATAUT",
+        "RULE_OPTION_GUA_PATH_COUP_PATAUT"
+      ]
+    },
+    {
+      "group": "ELS_path",
+      "country": "ELS",
+      "sourceKeys": [
+        "RULE_OPTION_ELS_PATH_PATAUT",
+        "RULE_OPTION_ELS_PATH_NATPOP",
+        "RULE_OPTION_ELS_PATH_SYNDIE",
+        "RULE_OPTION_ELS_PATH_SOCDEM",
+        "RULE_OPTION_ELS_PATH_SOCLIB",
+        "RULE_OPTION_ELS_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "HON_path",
+      "country": "HON",
+      "sourceKeys": [
+        "RULE_OPTION_HON_PATH_PATAUT",
+        "RULE_OPTION_HON_PATH_SOCCON",
+        "RULE_OPTION_HON_PATH_SOCDEM",
+        "RULE_OPTION_HON_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "NIC_path",
+      "country": "NIC",
+      "sourceKeys": [
+        "RULE_OPTION_NIC_PATH_SYNDIE",
+        "RULE_OPTION_NIC_PATH_RADSOC",
+        "RULE_OPTION_NIC_PATH_SOCLIB",
+        "RULE_OPTION_NIC_PATH_SOCCON"
+      ]
+    },
+    {
+      "group": "CEN_dem_path",
+      "country": "CEN",
+      "sourceKeys": [
+        "RULE_OPTION_CEN_DEM_PATH_SOCCON",
+        "RULE_OPTION_CEN_DEM_PATH_SOCLIB",
+        "RULE_OPTION_CEN_DEM_PATH_MARLIB",
+        "RULE_OPTION_CEN_DEM_PATH_LABOUR_SOCDEM",
+        "RULE_OPTION_CEN_DEM_PATH_REVOLUTIONARY_SOCDEM"
+      ]
+    },
+    {
+      "group": "CEN_soc_path",
+      "country": "CEN",
+      "sourceKeys": [
+        "RULE_OPTION_CEN_SOC_PATH_SYNDIE",
+        "RULE_OPTION_CEN_SOC_PATH_REVOLUTIONARY_RADSOC",
+        "RULE_OPTION_CEN_SOC_PATH_TOTALIST",
+        "RULE_OPTION_CEN_SOC_PATH_MODERADO_RADSOC"
+      ]
+    },
+    {
+      "group": "CEN_mil_path",
+      "country": "CEN",
+      "sourceKeys": [
+        "RULE_OPTION_CEN_MIL_PATH_AUTDEM",
+        "RULE_OPTION_CEN_MIL_PATH_PATAUT",
+        "RULE_OPTION_CEN_MIL_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "COS_path",
+      "country": "COS",
+      "sourceKeys": [
+        "RULE_OPTION_COS_PATH_SOCCON",
+        "RULE_OPTION_COS_PATH_CALDERON_SOCDEM",
+        "RULE_OPTION_COS_PATH_FERRER_SOCDEM",
+        "RULE_OPTION_COS_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "PAN_path",
+      "country": "PAN",
+      "sourceKeys": [
+        "RULE_OPTION_PAN_PATH_AUTDEM",
+        "RULE_OPTION_PAN_PATH_SOCLIB",
+        "RULE_OPTION_PAN_PATH_PATAUT",
+        "RULE_OPTION_PAN_PATH_SOCCON"
+      ]
+    },
+    {
+      "group": "ARG_path",
+      "country": "ARG",
+      "sourceKeys": [
+        "RULE_OPTION_ARG_PATH_NATPOP",
+        "RULE_OPTION_ARG_PATH_RAMIREZ_DEM",
+        "RULE_OPTION_ARG_PATH_RAMIREZ_SOCCON",
+        "RULE_OPTION_ARG_PATH_RAMIREZ_MARLIB",
+        "RULE_OPTION_ARG_PATH_RAMIREZ_SOCLIB",
+        "RULE_OPTION_ARG_PATH_RAMIREZ_PATAUT",
+        "RULE_OPTION_ARG_PATH_RAMIREZ_PATAUT_NEUT",
+        "RULE_OPTION_ARG_PATH_FARRELL",
+        "RULE_OPTION_ARG_PATH_FARRELL_SOCCON",
+        "RULE_OPTION_ARG_PATH_FARRELL_MARLIB",
+        "RULE_OPTION_ARG_PATH_FARRELL_SOCLIB",
+        "RULE_OPTION_ARG_PATH_FARRELL_AUTDEM",
+        "RULE_OPTION_ARG_PATH_FARRELL_RADSOC"
+      ]
+    },
+    {
+      "group": "FOP_path",
+      "country": "FOP",
+      "sourceKeys": [
+        "RULE_OPTION_FOP_PATH_RADICALS_SYNDIE",
+        "RULE_OPTION_FOP_PATH_MODERATES_SYNDIE",
+        "RULE_OPTION_FOP_PATH_CONSTITUTION_RADSOC",
+        "RULE_OPTION_FOP_PATH_SOCLIB",
+        "RULE_OPTION_FOP_PATH_MARLIB",
+        "RULE_OPTION_FOP_PATH_REVOLUTIONARY_RADSOC",
+        "RULE_OPTION_FOP_PATH_UGARTISTAS_RADSOC",
+        "RULE_OPTION_FOP_PATH_UGARTISTAS_BOOSTED_RADSOC",
+        "RULE_OPTION_FOP_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "CHL_path",
+      "country": "CHL",
+      "sourceKeys": [
+        "RULE_OPTION_CHL_PATH_SYNDIE",
+        "RULE_OPTION_CHL_PATH_RADSOC",
+        "RULE_OPTION_CHL_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "BRA_path",
+      "country": "BRA",
+      "sourceKeys": [
+        "RULE_OPTION_BRA_PATH_SOCCON",
+        "RULE_OPTION_BRA_PATH_PATAUT",
+        "RULE_OPTION_BRA_PATH_SOCLIB",
+        "RULE_OPTION_BRA_PATH_SOCDEM",
+        "RULE_OPTION_BRA_PATH_MARLIB",
+        "RULE_OPTION_BRA_PATH_RADSOC",
+        "RULE_OPTION_BRA_PATH_SYNDIE",
+        "RULE_OPTION_BRA_PATH_TOTALIST",
+        "RULE_OPTION_BRA_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "URG_path",
+      "country": "URG",
+      "sourceKeys": [
+        "RULE_OPTION_URG_PATH_SOCLIB",
+        "RULE_OPTION_URG_PATH_COUNCIL_SOCDEM",
+        "RULE_OPTION_URG_PATH_COUNCIL_SOCCON",
+        "RULE_OPTION_URG_PATH_PRESIDENCY_SOCDEM",
+        "RULE_OPTION_URG_PATH_PRESIDENCY_SOCCON",
+        "RULE_OPTION_URG_PATH_RADSOC",
+        "RULE_OPTION_URG_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "PAR_path",
+      "country": "PAR",
+      "sourceKeys": [
+        "RULE_OPTION_PAR_PATH_AUTDEM",
+        "RULE_OPTION_PAR_PATH_SOCCON",
+        "RULE_OPTION_PAR_PATH_NATPOP",
+        "RULE_OPTION_PAR_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "BOL_path",
+      "country": "BOL",
+      "sourceKeys": [
+        "RULE_OPTION_BOL_PATH_PATAUT",
+        "RULE_OPTION_BOL_PATH_NATPOP",
+        "RULE_OPTION_BOL_PATH_SOCCON",
+        "RULE_OPTION_BOL_PATH_MARLIB",
+        "RULE_OPTION_BOL_PATH_SOCDEM",
+        "RULE_OPTION_BOL_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "PRU_path",
+      "country": "PRU",
+      "sourceKeys": [
+        "RULE_OPTION_PRU_PATH_SANCHEZ_CERRO_PATAUT",
+        "RULE_OPTION_PRU_PATH_BENAVIDES_PATAUT",
+        "RULE_OPTION_PRU_PATH_SYNDIE",
+        "RULE_OPTION_PRU_PATH_TOTALIST",
+        "RULE_OPTION_PRU_PATH_SOCCON",
+        "RULE_OPTION_PRU_PATH_MARLIB",
+        "RULE_OPTION_PRU_PATH_SOCDEM",
+        "RULE_OPTION_PRU_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "ECU_path",
+      "country": "ECU",
+      "sourceKeys": [
+        "RULE_OPTION_ECU_PATH_MARLIB",
+        "RULE_OPTION_ECU_PATH_SOCCON",
+        "RULE_OPTION_ECU_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "COL_path",
+      "country": "COL",
+      "sourceKeys": [
+        "RULE_OPTION_COL_PATH_SOCDEM",
+        "RULE_OPTION_COL_PATH_SOCCON",
+        "RULE_OPTION_COL_PATH_RADSOC",
+        "RULE_OPTION_COL_PATH_PATAUT",
+        "RULE_OPTION_COL_PATH_PATAUT_GRAN_COLOMBIA"
+      ]
+    },
+    {
+      "group": "VEN_path",
+      "country": "VEN",
+      "sourceKeys": [
+        "RULE_OPTION_VEN_PATH_SOCDEM",
+        "RULE_OPTION_VEN_PATH_SOCLIB",
+        "RULE_OPTION_VEN_PATH_SYNDIE",
+        "RULE_OPTION_VEN_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "FRA_path",
+      "country": "FRA",
+      "sourceKeys": [
+        "RULE_OPTION_FRA_PATH_FRACHON_SYNDIE",
+        "RULE_OPTION_FRA_PATH_JOUHAUX_SYNDIE",
+        "RULE_OPTION_FRA_PATH_RADSOC",
+        "RULE_OPTION_FRA_PATH_VALOIS_TOTALIST",
+        "RULE_OPTION_FRA_PATH_WAR_VALOIS_TOTALIST",
+        "RULE_OPTION_FRA_PATH_DEAT_RADICAL_TOTALIST",
+        "RULE_OPTION_FRA_PATH_MARQUET_RADICAL_TOTALIST",
+        "RULE_OPTION_FRA_PATH_DEAT_GRADUAL_TOTALIST",
+        "RULE_OPTION_FRA_PATH_MARQUET_GRADUAL_TOTALIST",
+        "RULE_OPTION_FRA_PATH_GAMELIN_SYNDIE",
+        "RULE_OPTION_FRA_PATH_NO_MAJORITY_SYNDIE"
+      ]
+    },
+    {
+      "group": "NFA_election",
+      "country": "NFA",
+      "sourceKeys": [
+        "RULE_OPTION_NFA_ELECTION_SOCCON",
+        "RULE_OPTION_NFA_ELECTION_SOCLIB",
+        "RULE_OPTION_NFA_ELECTION_MARLIB",
+        "RULE_OPTION_NFA_ELECTION_AUTDEM",
+        "RULE_OPTION_NFA_ELECTION_PATAUT"
+      ]
+    },
+    {
+      "group": "ENG_path",
+      "country": "ENG",
+      "sourceKeys": [
+        "RULE_OPTION_ENG_PATH_HORNER_SYNDIE",
+        "RULE_OPTION_ENG_PATH_ATTLEE_SYNDIE",
+        "RULE_OPTION_ENG_PATH_PANKHURST_SYNDIE",
+        "RULE_OPTION_ENG_PATH_WILKINSON_SYNDIE",
+        "RULE_OPTION_ENG_PATH_RADSOC",
+        "RULE_OPTION_ENG_PATH_EDWARDS_SYNDIE",
+        "RULE_OPTION_ENG_PATH_MOSLEY_TOTALIST",
+        "RULE_OPTION_ENG_PATH_STRACHEY_TOTALIST",
+        "RULE_OPTION_ENG_PATH_BLAIR_RADSOC",
+        "RULE_OPTION_ENG_PATH_NO_MAJORITY_SYNDIE"
+      ]
+    },
+    {
+      "group": "GBR_path",
+      "country": "GBR",
+      "sourceKeys": [
+        "RULE_OPTION_GBR_PATH_ELECTED_AUTDEM",
+        "RULE_OPTION_GBR_PATH_SOCCON",
+        "RULE_OPTION_GBR_PATH_MARLIB",
+        "RULE_OPTION_GBR_PATH_GAITSKELL_SOCDEM",
+        "RULE_OPTION_GBR_PATH_CROSSMAN_SOCDEM",
+        "RULE_OPTION_GBR_PATH_GUIDED_AUTDEM"
+      ]
+    },
+    {
+      "group": "IRE_election",
+      "country": "IRE",
+      "sourceKeys": [
+        "RULE_OPTION_IRE_ELECTION_COLLINS_AUTDEM",
+        "RULE_OPTION_IRE_ELECTION_MULCAHY_AUTDEM",
+        "RULE_OPTION_IRE_ELECTION_CENTRIST_SOCCON",
+        "RULE_OPTION_IRE_ELECTION_CURSED_SOCCON",
+        "RULE_OPTION_IRE_ELECTION_COMPROMISE_SOCDEM",
+        "RULE_OPTION_IRE_ELECTION_RADICAL_SOCDEM",
+        "RULE_OPTION_IRE_ELECTION_PATAUT"
+      ]
+    },
+    {
+      "group": "IRE_path",
+      "country": "IRE",
+      "sourceKeys": [
+        "RULE_OPTION_IRE_PATH_COLLINS_MARLIB",
+        "RULE_OPTION_IRE_PATH_MULCAHY_MARLIB",
+        "RULE_OPTION_IRE_PATH_SOCCON",
+        "RULE_OPTION_IRE_PATH_SOCDEM",
+        "RULE_OPTION_IRE_PATH_LEMASS_MARLIB",
+        "RULE_OPTION_IRE_PATH_SOCLIB",
+        "RULE_OPTION_IRE_PATH_RADSOC",
+        "RULE_OPTION_IRE_PATH_PATAUT",
+        "RULE_OPTION_IRE_PATH_AUTDEM",
+        "RULE_OPTION_IRE_PATH_REG_NATPOP",
+        "RULE_OPTION_IRE_PATH_MON_NATPOP",
+        "RULE_OPTION_IRE_PATH_SYNDIE",
+        "RULE_OPTION_IRE_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "NIR_revolt",
+      "country": "NIR",
+      "sourceKeys": [
+        "RULE_OPTION_NIR_REVOLT_NO",
+        "RULE_OPTION_NIR_REVOLT_YES",
+        "RULE_OPTION_NIR_REVOLT_PUPPET",
+        "RULE_OPTION_NIR_REVOLT_ANNEX"
+      ]
+    },
+    {
+      "group": "BEL_flawal_path",
+      "country": "BEL",
+      "sourceKeys": [
+        "RULE_OPTION_BEL_FLAWAL_PATH_REFORM_AUTDEM",
+        "RULE_OPTION_BEL_FLAWAL_PATH_REFORM_SOCCON",
+        "RULE_OPTION_BEL_FLAWAL_PATH_REFORM_SOCDEM",
+        "RULE_OPTION_BEL_FLAWAL_PATH_REFORM_MARLIB",
+        "RULE_OPTION_BEL_FLAWAL_PATH_REFORM_SOCLIB",
+        "RULE_OPTION_BEL_FLAWAL_PATH_COUP_SOCCON",
+        "RULE_OPTION_BEL_FLAWAL_PATH_COUP_MARLIB",
+        "RULE_OPTION_BEL_FLAWAL_PATH_COUP_SOCDEM",
+        "RULE_OPTION_BEL_FLAWAL_PATH_COUP_SOCLIB",
+        "RULE_OPTION_BEL_FLAWAL_PATH_COUP_AUTDEM",
+        "RULE_OPTION_BEL_FLAWAL_PATH_PATAUT",
+        "RULE_OPTION_BEL_FLAWAL_PATH_INTERVENTION",
+        "RULE_OPTION_BEL_FLAWAL_PATH_ACQUIESCENCE",
+        "RULE_OPTION_BEL_FLAWAL_PATH_REBELLION",
+        "RULE_OPTION_BEL_FLAWAL_PATH_REFERENDUM",
+        "RULE_OPTION_BEL_FLAWAL_PATH_CRACKDOWN",
+        "RULE_OPTION_BEL_FLAWAL_PATH_ABDICATION",
+        "RULE_OPTION_BEL_FLAWAL_PATH_COLLAPSE"
+      ]
+    },
+    {
+      "group": "BEL_path",
+      "country": "BEL",
+      "sourceKeys": [
+        "RULE_OPTION_BEL_PATH_MON",
+        "RULE_OPTION_BEL_PATH_MON_SOCCON",
+        "RULE_OPTION_BEL_PATH_MON_MARLIB",
+        "RULE_OPTION_BEL_PATH_MON_SOCDEM",
+        "RULE_OPTION_BEL_PATH_MON_SOCLIB",
+        "RULE_OPTION_BEL_PATH_MON_PATAUT",
+        "RULE_OPTION_BEL_PATH_REP",
+        "RULE_OPTION_BEL_PATH_REP_SOCDEM",
+        "RULE_OPTION_BEL_PATH_REP_SOCLIB",
+        "RULE_OPTION_BEL_PATH_REP_MARLIB",
+        "RULE_OPTION_BEL_PATH_REP_SOCCON",
+        "RULE_OPTION_BEL_PATH_REP_PATAUT",
+        "RULE_OPTION_BEL_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "FLA_path",
+      "country": "FLA",
+      "sourceKeys": [
+        "RULE_OPTION_FLA_PATH_AUTDEM",
+        "RULE_OPTION_FLA_PATH_MON_SOCCON",
+        "RULE_OPTION_FLA_PATH_MON_SOCDEM",
+        "RULE_OPTION_FLA_PATH_MON_SOCLIB",
+        "RULE_OPTION_FLA_PATH_MON_MARLIB",
+        "RULE_OPTION_FLA_PATH_REP_SOCCON",
+        "RULE_OPTION_FLA_PATH_REP_SOCDEM",
+        "RULE_OPTION_FLA_PATH_REP_SOCLIB",
+        "RULE_OPTION_FLA_PATH_REP_MARLIB",
+        "RULE_OPTION_FLA_PATH_NATPOP",
+        "RULE_OPTION_FLA_PATH_REVOLT_HOL",
+        "RULE_OPTION_FLA_PATH_HOL",
+        "RULE_OPTION_FLA_PATH_HOL_GER",
+        "RULE_OPTION_FLA_PATH_HOL_WAR"
+      ]
+    },
+    {
+      "group": "WAL_path",
+      "country": "WAL",
+      "sourceKeys": [
+        "RULE_OPTION_WAL_PATH_AUTDEM",
+        "RULE_OPTION_WAL_PATH_MON_MARLIB",
+        "RULE_OPTION_WAL_PATH_MON_SOCDEM",
+        "RULE_OPTION_WAL_PATH_REP_MARLIB",
+        "RULE_OPTION_WAL_PATH_REP_SOCDEM",
+        "RULE_OPTION_WAL_PATH_REP_SYNDIE",
+        "RULE_OPTION_WAL_PATH_REP_WAR_SYNDIE",
+        "RULE_OPTION_WAL_PATH_REP_TOTALIST",
+        "RULE_OPTION_WAL_PATH_REP_WAR_TOTALIST",
+        "RULE_OPTION_WAL_PATH_NATPOP",
+        "RULE_OPTION_WAL_PATH_GUARANTEE_TOTALIST",
+        "RULE_OPTION_WAL_PATH_ALONE_TOTALIST",
+        "RULE_OPTION_WAL_PATH_WAR_TOTALIST"
+      ]
+    },
+    {
+      "group": "HOL_path",
+      "country": "HOL",
+      "sourceKeys": [
+        "RULE_OPTION_HOL_PATH_MON_SOCLIB_SOCDEM",
+        "RULE_OPTION_HOL_PATH_MON_MARLIB",
+        "RULE_OPTION_HOL_PATH_MON_SOCDEM",
+        "RULE_OPTION_HOL_PATH_REP_SOCDEM",
+        "RULE_OPTION_HOL_PATH_REP_SOCLIB",
+        "RULE_OPTION_HOL_PATH_REP_MARLIB",
+        "RULE_OPTION_HOL_PATH_REP_SOCCON",
+        "RULE_OPTION_HOL_PATH_MON_SOCCON_MARLIB",
+        "RULE_OPTION_HOL_PATH_MON_SOCLIB",
+        "RULE_OPTION_HOL_PATH_MON_SOCCON",
+        "RULE_OPTION_HOL_PATH_MON_SOCCON_PATAUT",
+        "RULE_OPTION_HOL_PATH_TOTALIST",
+        "RULE_OPTION_HOL_PATH_NAS_SYNDIE",
+        "RULE_OPTION_HOL_PATH_KAPN_SYNDIE",
+        "RULE_OPTION_HOL_PATH_RSAP_RADSOC",
+        "RULE_OPTION_HOL_PATH_SDAP_RADSOC",
+        "RULE_OPTION_HOL_PATH_AUTDEM",
+        "RULE_OPTION_HOL_PATH_PATAUT",
+        "RULE_OPTION_HOL_PATH_NATPOP",
+        "RULE_OPTION_HOL_PATH_NOT_SOC"
+      ]
+    },
+    {
+      "group": "SPA_path",
+      "country": "SPA",
+      "sourceKeys": [
+        "RULE_OPTION_SPA_PATH_JUAN_AUTDEM",
+        "RULE_OPTION_SPA_PATH_JUAN_SOCCON",
+        "RULE_OPTION_SPA_PATH_JAIME_AUTDEM",
+        "RULE_OPTION_SPA_PATH_JAIME_SOCCON",
+        "RULE_OPTION_SPA_PATH_JAIME_PATAUT",
+        "RULE_OPTION_SPA_PATH_REP_AUTDEM",
+        "RULE_OPTION_SPA_PATH_REP_SOCCON",
+        "RULE_OPTION_SPA_PATH_REP_PATAUT"
+      ]
+    },
+    {
+      "group": "SWF_path",
+      "country": "SWF",
+      "sourceKeys": [
+        "RULE_OPTION_SWF_PATH_RADSOC",
+        "RULE_OPTION_SWF_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "POR_path",
+      "country": "POR",
+      "sourceKeys": [
+        "RULE_OPTION_POR_PATH_NATPOP",
+        "RULE_OPTION_POR_PATH_PATAUT",
+        "RULE_OPTION_POR_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "SRI_path",
+      "country": "SRI",
+      "sourceKeys": [
+        "RULE_OPTION_SRI_PATH_VITTORIO_SYNDIE",
+        "RULE_OPTION_SRI_PATH_NENNI_SYNDIE",
+        "RULE_OPTION_SRI_PATH_MESCHI_SYNDIE",
+        "RULE_OPTION_SRI_PATH_SALVEMINI_RADSOC",
+        "RULE_OPTION_SRI_PATH_LUSSU_RADSOC",
+        "RULE_OPTION_SRI_PATH_MUSSOLINI_TOTALIST",
+        "RULE_OPTION_SRI_PATH_TOGLIATTI_TOTALIST",
+        "RULE_OPTION_SRI_PATH_DE_AMBRIS_TOTALIST"
+      ]
+    },
+    {
+      "group": "ITA_path",
+      "country": "ITA",
+      "sourceKeys": [
+        "RULE_OPTION_ITA_PATH_SOCLIB",
+        "RULE_OPTION_ITA_PATH_MARLIB",
+        "RULE_OPTION_ITA_PATH_SOCCON",
+        "RULE_OPTION_ITA_PATH_SOCDEM",
+        "RULE_OPTION_ITA_PATH_NATPOP",
+        "RULE_OPTION_ITA_PATH_HABSBURG_AUTDEM",
+        "RULE_OPTION_ITA_PATH_VISCONTI_AUTDEM",
+        "RULE_OPTION_ITA_PATH_COLLAPSE"
+      ]
+    },
+    {
+      "group": "VNC_path",
+      "country": "VNC",
+      "sourceKeys": [
+        "RULE_OPTION_VNC_PATH_SOCCON",
+        "RULE_OPTION_VNC_PATH_MARLIB",
+        "RULE_OPTION_VNC_PATH_SOCLIB",
+        "RULE_OPTION_VNC_PATH_SOCDEM",
+        "RULE_OPTION_VNC_PATH_AUTDEM",
+        "RULE_OPTION_VNC_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "LOM_path",
+      "country": "LOM",
+      "sourceKeys": [
+        "RULE_OPTION_LOM_PATH_REP_SOCCON",
+        "RULE_OPTION_LOM_PATH_REP_MARLIB",
+        "RULE_OPTION_LOM_PATH_REP_SOCLIB",
+        "RULE_OPTION_LOM_PATH_SOCDEM",
+        "RULE_OPTION_LOM_PATH_NATPOP",
+        "RULE_OPTION_LOM_PATH_MON_SOCCON",
+        "RULE_OPTION_LOM_PATH_MON_MARLIB",
+        "RULE_OPTION_LOM_PATH_MON_SOCLIB",
+        "RULE_OPTION_LOM_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "PAP_path",
+      "country": "PAP",
+      "sourceKeys": [
+        "RULE_OPTION_PAP_PATH_NATPOP",
+        "RULE_OPTION_PAP_PATH_PATAUT",
+        "RULE_OPTION_PAP_PATH_SOCCON",
+        "RULE_OPTION_PAP_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "SIC_path",
+      "country": "SIC",
+      "sourceKeys": [
+        "RULE_OPTION_SIC_PATH_SOCCON",
+        "RULE_OPTION_SIC_PATH_SOCLIB",
+        "RULE_OPTION_SIC_PATH_SOCDEM",
+        "RULE_OPTION_SIC_PATH_AUTDEM",
+        "RULE_OPTION_SIC_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "SRD_path",
+      "country": "SRD",
+      "sourceKeys": [
+        "RULE_OPTION_SRD_PATH_PATAUT",
+        "RULE_OPTION_SRD_PATH_AUTDEM",
+        "RULE_OPTION_SRD_PATH_AUT_MARLIB",
+        "RULE_OPTION_SRD_PATH_SOCCON",
+        "RULE_OPTION_SRD_PATH_DEM_MARLIB",
+        "RULE_OPTION_SRD_PATH_SOCLIB",
+        "RULE_OPTION_SRD_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "GER_path",
+      "country": "GER",
+      "sourceKeys": [
+        "RULE_OPTION_GER_PATH_SCHLEICHER_AUTDEM",
+        "RULE_OPTION_GER_PATH_SCHLEICHER_PATAUT",
+        "RULE_OPTION_GER_PATH_SOCDEM",
+        "RULE_OPTION_GER_PATH_SOCCON",
+        "RULE_OPTION_GER_PATH_SWR_PATAUT",
+        "RULE_OPTION_GER_PATH_SWR_AUTDEM",
+        "RULE_OPTION_GER_PATH_SOCLIB"
+      ]
+    },
+    {
+      "group": "POL_election",
+      "country": "POL",
+      "sourceKeys": [
+        "RULE_OPTION_POL_ELECTION_MARLIB",
+        "RULE_OPTION_POL_ELECTION_SOCCON",
+        "RULE_OPTION_POL_ELECTION_AUTDEM",
+        "RULE_OPTION_POL_ELECTION_SOCDEM_AUS",
+        "RULE_OPTION_POL_ELECTION_SOCLIB_AUS",
+        "RULE_OPTION_POL_ELECTION_REP_SOCCON_AUS",
+        "RULE_OPTION_POL_ELECTION_SOCDEM_GER",
+        "RULE_OPTION_POL_ELECTION_SOCLIB_GER",
+        "RULE_OPTION_POL_ELECTION_REP_SOCCON_GER"
+      ]
+    },
+    {
+      "group": "POL_revolts",
+      "country": "POL",
+      "sourceKeys": [
+        "RULE_OPTION_POL_REVOLTS_NO_REVOLT",
+        "RULE_OPTION_POL_REVOLTS_TOTALIST",
+        "RULE_OPTION_POL_REVOLTS_SYNDIE",
+        "RULE_OPTION_POL_REVOLTS_RADSOC",
+        "RULE_OPTION_POL_REVOLTS_NATPOP",
+        "RULE_OPTION_POL_REVOLTS_PATAUT",
+        "RULE_OPTION_POL_REVOLTS_SOCCON"
+      ]
+    },
+    {
+      "group": "SWI_path",
+      "country": "SWI",
+      "sourceKeys": [
+        "RULE_OPTION_SWI_PATH_MARLIB",
+        "RULE_OPTION_SWI_PATH_AUTDEM",
+        "RULE_OPTION_SWI_PATH_SOCCON",
+        "RULE_OPTION_SWI_PATH_SOCLIB",
+        "RULE_OPTION_SWI_PATH_SOCDEM",
+        "RULE_OPTION_SWI_PATH_SYNDIE",
+        "RULE_OPTION_SWI_PATH_TOTALIST",
+        "RULE_OPTION_SWI_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "AUS_election",
+      "country": "AUS",
+      "sourceKeys": [
+        "RULE_OPTION_AUS_ELECTION_SOCCON",
+        "RULE_OPTION_AUS_ELECTION_SOCDEM"
+      ]
+    },
+    {
+      "group": "AUS_ausgleich",
+      "country": "AUS",
+      "sourceKeys": [
+        "RULE_OPTION_AUS_AUSGLEICH_STATUS_QUO",
+        "RULE_OPTION_AUS_AUSGLEICH_FEDERATE_CIVIL_WAR",
+        "RULE_OPTION_AUS_AUSGLEICH_FEDERATE_SUCCESS",
+        "RULE_OPTION_AUS_AUSGLEICH_PATAUT"
+      ]
+    },
+    {
+      "group": "DEN_path",
+      "country": "DEN",
+      "sourceKeys": [
+        "RULE_OPTION_DEN_PATH_DEM",
+        "RULE_OPTION_DEN_PATH_SOCDEM",
+        "RULE_OPTION_DEN_PATH_SOCLIB",
+        "RULE_OPTION_DEN_PATH_MARLIB",
+        "RULE_OPTION_DEN_PATH_PURSCHEL_AUTDEM",
+        "RULE_OPTION_DEN_PATH_SOCCON",
+        "RULE_OPTION_DEN_PATH_WESTERGAARD_AUTDEM",
+        "RULE_OPTION_DEN_PATH_FREDERIK_SOCDEM",
+        "RULE_OPTION_DEN_PATH_FREDERIK_SOCLIB",
+        "RULE_OPTION_DEN_PATH_REP_SOCDEM",
+        "RULE_OPTION_DEN_PATH_REP_SOCLIB",
+        "RULE_OPTION_DEN_PATH_TOTALIST",
+        "RULE_OPTION_DEN_PATH_JENSEN_SYNDIE",
+        "RULE_OPTION_DEN_PATH_CHRISTIANSEN_SYNDIE",
+        "RULE_OPTION_DEN_PATH_LARSEN_RADSOC",
+        "RULE_OPTION_DEN_PATH_STAUNING_RADSOC"
+      ]
+    },
+    {
+      "group": "NOR_path",
+      "country": "NOR",
+      "sourceKeys": [
+        "RULE_OPTION_NOR_PATH_DEM",
+        "RULE_OPTION_NOR_PATH_SOCDEM",
+        "RULE_OPTION_NOR_PATH_MARLIB",
+        "RULE_OPTION_NOR_PATH_PATAUT",
+        "RULE_OPTION_NOR_PATH_RADSOC",
+        "RULE_OPTION_NOR_PATH_SYNDIE",
+        "RULE_OPTION_NOR_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "SWE_path",
+      "country": "SWE",
+      "sourceKeys": [
+        "RULE_OPTION_SWE_PATH_DEM",
+        "RULE_OPTION_SWE_PATH_SOCDEM",
+        "RULE_OPTION_SWE_PATH_SOCCON",
+        "RULE_OPTION_SWE_PATH_ELECTED_AUTDEM",
+        "RULE_OPTION_SWE_PATH_MARLIB",
+        "RULE_OPTION_SWE_PATH_RESTORED_AUTDEM",
+        "RULE_OPTION_SWE_PATH_AUTDEM",
+        "RULE_OPTION_SWE_PATH_PATAUT",
+        "RULE_OPTION_SWE_PATH_NATPOP",
+        "RULE_OPTION_SWE_PATH_RADSOC",
+        "RULE_OPTION_SWE_PATH_SYNDIE",
+        "RULE_OPTION_SWE_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "FIN_path",
+      "country": "FIN",
+      "sourceKeys": [
+        "RULE_OPTION_FIN_PATH_AUTDEM",
+        "RULE_OPTION_FIN_PATH_PATAUT",
+        "RULE_OPTION_FIN_PATH_DEM",
+        "RULE_OPTION_FIN_PATH_SDP_SOCDEM",
+        "RULE_OPTION_FIN_PATH_RED_EARTH_SOCDEM",
+        "RULE_OPTION_FIN_PATH_SOCLIB",
+        "RULE_OPTION_FIN_PATH_SOCCON",
+        "RULE_OPTION_FIN_PATH_NATPOP",
+        "RULE_OPTION_FIN_PATH_SYNDIE",
+        "RULE_OPTION_FIN_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "ICE_path",
+      "country": "ICE",
+      "sourceKeys": [
+        "RULE_OPTION_ICE_PATH_SOCDEM",
+        "RULE_OPTION_ICE_PATH_SOCCON",
+        "RULE_OPTION_ICE_PATH_SOCCON_INDEPENDENT",
+        "RULE_OPTION_ICE_PATH_PATAUT",
+        "RULE_OPTION_ICE_PATH_SYNDIE",
+        "RULE_OPTION_ICE_PATH_RADSOC"
+      ]
+    },
+    {
+      "group": "RUS_aftermath",
+      "country": "RUS",
+      "sourceKeys": [
+        "RULE_OPTION_RUS_AFTERMATH_AUT",
+        "RULE_OPTION_RUS_AFTERMATH_REP",
+        "RULE_OPTION_RUS_AFTERMATH_MON",
+        "RULE_OPTION_RUS_AFTERMATH_REG",
+        "RULE_OPTION_RUS_AFTERMATH_SOC",
+        "RULE_OPTION_RUS_AFTERMATH_NOT_SOC"
+      ]
+    },
+    {
+      "group": "RUS_path",
+      "country": "RUS",
+      "sourceKeys": [
+        "RULE_OPTION_RUS_PATH_OLD_SVOBODNIK_NATPOP",
+        "RULE_OPTION_RUS_PATH_SOLIDARIST_NATPOP",
+        "RULE_OPTION_RUS_PATH_IDEOCRAT_NATPOP",
+        "RULE_OPTION_RUS_PATH_AUTDEM",
+        "RULE_OPTION_RUS_PATH_SOLONEVICH_SOCCON",
+        "RULE_OPTION_RUS_PATH_ROMANOV_SOCCON",
+        "RULE_OPTION_RUS_PATH_GOLITSYN_SOCCON",
+        "RULE_OPTION_RUS_PATH_VERNADSKY_SOCCON",
+        "RULE_OPTION_RUS_PATH_MAKLAKOV_MARLIB",
+        "RULE_OPTION_RUS_PATH_DOLGORUKOV_MARLIB",
+        "RULE_OPTION_RUS_PATH_KARTASHYOV_MARLIB",
+        "RULE_OPTION_RUS_PATH_GRONSKY_MARLIB",
+        "RULE_OPTION_RUS_PATH_NEKRASOV_MARLIB",
+        "RULE_OPTION_RUS_PATH_RIKHTER_SOCLIB",
+        "RULE_OPTION_RUS_PATH_SOROKIN_SOCLIB",
+        "RULE_OPTION_RUS_PATH_FONDAMINSKY_SOCLIB",
+        "RULE_OPTION_RUS_PATH_SOCDEM",
+        "RULE_OPTION_RUS_PATH_REP_SULIMOV_SYNDIE",
+        "RULE_OPTION_RUS_PATH_ZDOBNOV_RADSOC",
+        "RULE_OPTION_RUS_PATH_KAMKOV_RADSOC",
+        "RULE_OPTION_RUS_PATH_USTINOV_TOTALIST",
+        "RULE_OPTION_RUS_PATH_ABRAMOVICH_SYNDIE",
+        "RULE_OPTION_RUS_PATH_LEVITSKY_SYNDIE",
+        "RULE_OPTION_RUS_PATH_SULIMOV_SYNDIE",
+        "RULE_OPTION_RUS_PATH_KAMENEV_SYNDIE",
+        "RULE_OPTION_RUS_PATH_ZINOVYEV_TOTALIST"
+      ]
+    },
+    {
+      "group": "RSA_path",
+      "country": "RSA",
+      "sourceKeys": [
+        "RULE_OPTION_RSA_PATH_SOCDEM",
+        "RULE_OPTION_RSA_PATH_SOCLIB",
+        "RULE_OPTION_RSA_PATH_MARLIB",
+        "RULE_OPTION_RSA_PATH_SOCCON",
+        "RULE_OPTION_RSA_PATH_OPPOSITION"
+      ]
+    },
+    {
+      "group": "FER_path",
+      "country": "FER",
+      "sourceKeys": [
+        "RULE_OPTION_FER_PATH_RUS_PATAUT",
+        "RULE_OPTION_FER_PATH_RUS_AUTDEM",
+        "RULE_OPTION_FER_PATH_SIB_PATAUT",
+        "RULE_OPTION_FER_PATH_SIB_AUTDEM",
+        "RULE_OPTION_FER_PATH_NATPOP",
+        "RULE_OPTION_FER_PATH_NO_REVOLT"
+      ]
+    },
+    {
+      "group": "BAT_collapse",
+      "country": "BAT",
+      "sourceKeys": [
+        "RULE_OPTION_BAT_COLLAPSE_NO",
+        "RULE_OPTION_BAT_COLLAPSE_YES"
+      ]
+    },
+    {
+      "group": "BAT_path",
+      "country": "BAT",
+      "sourceKeys": [
+        "RULE_OPTION_BAT_PATH_SOCLIB",
+        "RULE_OPTION_BAT_PATH_PATAUT",
+        "RULE_OPTION_BAT_PATH_NATPOP",
+        "RULE_OPTION_BAT_PATH_SOCCON",
+        "RULE_OPTION_BAT_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "EST_path",
+      "country": "EST",
+      "sourceKeys": [
+        "RULE_OPTION_EST_PATH_PATAUT",
+        "RULE_OPTION_EST_PATH_AUTDEM",
+        "RULE_OPTION_EST_PATH_SOCCON",
+        "RULE_OPTION_EST_PATH_MARLIB",
+        "RULE_OPTION_EST_PATH_SOCLIB",
+        "RULE_OPTION_EST_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "LAT_path",
+      "country": "LAT",
+      "sourceKeys": [
+        "RULE_OPTION_LAT_PATH_AUTDEM",
+        "RULE_OPTION_LAT_PATH_PATAUT",
+        "RULE_OPTION_LAT_PATH_RADSOC",
+        "RULE_OPTION_LAT_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "LIT_path",
+      "country": "LIT",
+      "sourceKeys": [
+        "RULE_OPTION_LIT_PATH_MON_SOCCON",
+        "RULE_OPTION_LIT_PATH_MON_SOCDEM",
+        "RULE_OPTION_LIT_PATH_AUTDEM",
+        "RULE_OPTION_LIT_PATH_REP_SOCCON",
+        "RULE_OPTION_LIT_PATH_REP_SOCDEM",
+        "RULE_OPTION_LIT_PATH_MARLIB",
+        "RULE_OPTION_LIT_PATH_PATAUT",
+        "RULE_OPTION_LIT_PATH_RADSOC",
+        "RULE_OPTION_LIT_PATH_VOLDEMARAS_NATPOP",
+        "RULE_OPTION_LIT_PATH_ALANTAS_NATPOP",
+        "RULE_OPTION_LIT_PATH_MACEINA_NATPOP"
+      ]
+    },
+    {
+      "group": "BLR_path",
+      "country": "BLR",
+      "sourceKeys": [
+        "RULE_OPTION_BLR_PATH_SOCDEM",
+        "RULE_OPTION_BLR_PATH_SOCCON",
+        "RULE_OPTION_BLR_PATH_SOCDEM_GER",
+        "RULE_OPTION_BLR_PATH_RADSOC",
+        "RULE_OPTION_BLR_PATH_AUTDEM",
+        "RULE_OPTION_BLR_PATH_PATAUT",
+        "RULE_OPTION_BLR_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "UKR_path",
+      "country": "UKR",
+      "sourceKeys": [
+        "RULE_OPTION_UKR_PATH_USKHD_AUTDEM",
+        "RULE_OPTION_UKR_PATH_UDKHP_AUTDEM",
+        "RULE_OPTION_UKR_PATH_SOCCON",
+        "RULE_OPTION_UKR_PATH_PATAUT",
+        "RULE_OPTION_UKR_PATH_SHD_AUTDEM",
+        "RULE_OPTION_UKR_PATH_HETMANATE_SOCLIB",
+        "RULE_OPTION_UKR_PATH_HETMANATE_SOCDEM",
+        "RULE_OPTION_UKR_PATH_NATPOP",
+        "RULE_OPTION_UKR_PATH_REP_SOCLIB",
+        "RULE_OPTION_UKR_PATH_MARLIB",
+        "RULE_OPTION_UKR_PATH_REP_SOCDEM",
+        "RULE_OPTION_UKR_PATH_RADSOC",
+        "RULE_OPTION_UKR_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "BUL_path",
+      "country": "BUL",
+      "sourceKeys": [
+        "RULE_OPTION_BUL_PATH_AUTDEM",
+        "RULE_OPTION_BUL_PATH_PATAUT",
+        "RULE_OPTION_BUL_PATH_SOCCON",
+        "RULE_OPTION_BUL_PATH_MARLIB",
+        "RULE_OPTION_BUL_PATH_SOCLIB",
+        "RULE_OPTION_BUL_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "BUL_loss_path",
+      "country": "BUL",
+      "sourceKeys": [
+        "RULE_OPTION_BUL_LOSS_PATH_MON_AUTDEM",
+        "RULE_OPTION_BUL_LOSS_PATH_PATAUT",
+        "RULE_OPTION_BUL_LOSS_PATH_MARLIB",
+        "RULE_OPTION_BUL_LOSS_PATH_SOCCON",
+        "RULE_OPTION_BUL_LOSS_PATH_SOCLIB",
+        "RULE_OPTION_BUL_LOSS_PATH_SOCDEM",
+        "RULE_OPTION_BUL_LOSS_PATH_NATPOP",
+        "RULE_OPTION_BUL_LOSS_PATH_REP_AUTDEM",
+        "RULE_OPTION_BUL_LOSS_PATH_RADSOC",
+        "RULE_OPTION_BUL_LOSS_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "ALB_path",
+      "country": "ALB",
+      "sourceKeys": [
+        "RULE_OPTION_ALB_PATH_SOCDEM",
+        "RULE_OPTION_ALB_PATH_SOCCON"
+      ]
+    },
+    {
+      "group": "SER_path",
+      "country": "SER",
+      "sourceKeys": [
+        "RULE_OPTION_SER_PATH_REP_SOCLIB",
+        "RULE_OPTION_SER_PATH_SOCDEM",
+        "RULE_OPTION_SER_PATH_AUTDEM",
+        "RULE_OPTION_SER_PATH_REP_PATAUT",
+        "RULE_OPTION_SER_PATH_RADSOC",
+        "RULE_OPTION_SER_PATH_MON_PATAUT",
+        "RULE_OPTION_SER_PATH_NATPOP",
+        "RULE_OPTION_SER_PATH_MON_SOCLIB",
+        "RULE_OPTION_SER_PATH_SOCCON"
+      ]
+    },
+    {
+      "group": "ROM_path",
+      "country": "ROM",
+      "sourceKeys": [
+        "RULE_OPTION_ROM_PATH_PATAUT",
+        "RULE_OPTION_ROM_PATH_NATPOP",
+        "RULE_OPTION_ROM_PATH_SOCDEM",
+        "RULE_OPTION_ROM_PATH_SOCLIB",
+        "RULE_OPTION_ROM_PATH_SOCCON",
+        "RULE_OPTION_ROM_PATH_MARLIB",
+        "RULE_OPTION_ROM_PATH_ELECTED_NATPOP",
+        "RULE_OPTION_ROM_PATH_CANTACUZINO_NATPOP"
+      ]
+    },
+    {
+      "group": "GRE_election",
+      "country": "GRE",
+      "sourceKeys": [
+        "RULE_OPTION_GRE_ELECTION_SOCCON",
+        "RULE_OPTION_GRE_ELECTION_MARLIB",
+        "RULE_OPTION_GRE_ELECTION_SOCLIB",
+        "RULE_OPTION_GRE_ELECTION_SOCDEM",
+        "RULE_OPTION_GRE_ELECTION_SOC"
+      ]
+    },
+    {
+      "group": "GRE_referendum",
+      "country": "GRE",
+      "sourceKeys": [
+        "RULE_OPTION_GRE_REFERENDUM_ALEXANDROS_DEM",
+        "RULE_OPTION_GRE_REFERENDUM_ALEXANDROS_AUTDEM",
+        "RULE_OPTION_GRE_REFERENDUM_GEORGIOS_AUTDEM",
+        "RULE_OPTION_GRE_REFERENDUM_REP",
+        "RULE_OPTION_GRE_REFERENDUM_METAXAS_PATAUT",
+        "RULE_OPTION_GRE_REFERENDUM_PAVLOS_PATAUT",
+        "RULE_OPTION_GRE_REFERENDUM_SYNDIE",
+        "RULE_OPTION_GRE_REFERENDUM_TOTALIST"
+      ]
+    },
+    {
+      "group": "NFA_path",
+      "country": "NFA",
+      "sourceKeys": [
+        "RULE_OPTION_NFA_PATH_SUS_SOCCON",
+        "RULE_OPTION_NFA_PATH_PSF_SOCCON",
+        "RULE_OPTION_NFA_PATH_MARLIB",
+        "RULE_OPTION_NFA_PATH_AUTDEM",
+        "RULE_OPTION_NFA_PATH_PATAUT",
+        "RULE_OPTION_NFA_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "CHA_revolt",
+      "country": "CHA",
+      "sourceKeys": [
+        "RULE_OPTION_CHA_REVOLT_NO",
+        "RULE_OPTION_CHA_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "NGR_revolt",
+      "country": "NGR",
+      "sourceKeys": [
+        "RULE_OPTION_NGR_REVOLT_NO",
+        "RULE_OPTION_NGR_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "VOL_revolt",
+      "country": "VOL",
+      "sourceKeys": [
+        "RULE_OPTION_VOL_REVOLT_NO",
+        "RULE_OPTION_VOL_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "MLI_revolt",
+      "country": "MLI",
+      "sourceKeys": [
+        "RULE_OPTION_MLI_REVOLT_NO",
+        "RULE_OPTION_MLI_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "GNA_revolt",
+      "country": "GNA",
+      "sourceKeys": [
+        "RULE_OPTION_GNA_REVOLT_NO",
+        "RULE_OPTION_GNA_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "MRT_revolt",
+      "country": "MRT",
+      "sourceKeys": [
+        "RULE_OPTION_MRT_REVOLT_NO",
+        "RULE_OPTION_MRT_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "TUN_revolt",
+      "country": "TUN",
+      "sourceKeys": [
+        "RULE_OPTION_TUN_REVOLT_NO",
+        "RULE_OPTION_TUN_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "IVO_revolt",
+      "country": "IVO",
+      "sourceKeys": [
+        "RULE_OPTION_IVO_REVOLT_NO",
+        "RULE_OPTION_IVO_REVOLT_YES"
+      ]
+    },
+    {
+      "group": "MAF_path",
+      "country": "MAF",
+      "sourceKeys": [
+        "RULE_OPTION_MAF_PATH_RITTER_PATAUT",
+        "RULE_OPTION_MAF_PATH_KRAUT_PATAUT",
+        "RULE_OPTION_MAF_PATH_JUENGER_PATAUT",
+        "RULE_OPTION_MAF_PATH_KOLBE_AUTDEM",
+        "RULE_OPTION_MAF_PATH_ASMIS_AUTDEM"
+      ]
+    },
+    {
+      "group": "GAB_path",
+      "country": "GAB",
+      "sourceKeys": [
+        "RULE_OPTION_GAB_PATH_SOCCON",
+        "RULE_OPTION_GAB_PATH_MARLIB",
+        "RULE_OPTION_GAB_PATH_SOCLIB",
+        "RULE_OPTION_GAB_PATH_RADSOC",
+        "RULE_OPTION_GAB_PATH_SYNDIE",
+        "RULE_OPTION_GAB_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "KTG_path",
+      "country": "KTG",
+      "sourceKeys": [
+        "RULE_OPTION_KTG_PATH_AUTDEM",
+        "RULE_OPTION_KTG_PATH_SOCCON",
+        "RULE_OPTION_KTG_PATH_SOCLIB",
+        "RULE_OPTION_KTG_PATH_SOCDEM",
+        "RULE_OPTION_KTG_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "SAF_path",
+      "country": "SAF",
+      "sourceKeys": [
+        "RULE_OPTION_SAF_PATH_SAP_SOCLIB",
+        "RULE_OPTION_SAF_PATH_SOCDEM",
+        "RULE_OPTION_SAF_PATH_UNITED_AUTDEM",
+        "RULE_OPTION_SAF_PATH_UNITED_SOCCON",
+        "RULE_OPTION_SAF_PATH_UNITED_SOCLIB",
+        "RULE_OPTION_SAF_PATH_NATIONAL_AUTDEM",
+        "RULE_OPTION_SAF_PATH_PATAUT",
+        "RULE_OPTION_SAF_PATH_PATAUT_GER",
+        "RULE_OPTION_SAF_PATH_NATPOP",
+        "RULE_OPTION_SAF_PATH_NATPOP_GER",
+        "RULE_OPTION_SAF_PATH_RADSOC",
+        "RULE_OPTION_SAF_PATH_SYNDIE",
+        "RULE_OPTION_SAF_PATH_TOTALIST",
+        "RULE_OPTION_SAF_PATH_DOMINION_SOCLIB",
+        "RULE_OPTION_SAF_PATH_DOMINION_PATAUT"
+      ]
+    },
+    {
+      "group": "LIB_path",
+      "country": "LIB",
+      "sourceKeys": [
+        "RULE_OPTION_LIB_PATH_NATPOP",
+        "RULE_OPTION_LIB_PATH_TOTALIST",
+        "RULE_OPTION_LIB_PATH_SOCCON",
+        "RULE_OPTION_LIB_PATH_MARLIB",
+        "RULE_OPTION_LIB_PATH_SOCLIB",
+        "RULE_OPTION_LIB_PATH_RADSOC",
+        "RULE_OPTION_LIB_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "ETH_path",
+      "country": "ETH",
+      "sourceKeys": [
+        "RULE_OPTION_ETH_PATH_PATAUT",
+        "RULE_OPTION_ETH_PATH_AUTDEM",
+        "RULE_OPTION_ETH_PATH_SOCCON",
+        "RULE_OPTION_ETH_PATH_MARLIB",
+        "RULE_OPTION_ETH_PATH_SOCLIB",
+        "RULE_OPTION_ETH_PATH_SOCDEM"
+      ]
+    },
+    {
+      "group": "SOM_path",
+      "country": "SOM",
+      "sourceKeys": [
+        "RULE_OPTION_SOM_PATH_SOCCON",
+        "RULE_OPTION_SOM_PATH_AUTDEM",
+        "RULE_OPTION_SOM_PATH_PATAUT",
+        "RULE_OPTION_SOM_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "OTT_path",
+      "country": "TUR",
+      "sourceKeys": [
+        "RULE_OPTION_OTT_PATH_AUTDEM",
+        "RULE_OPTION_OTT_PATH_MARLIB",
+        "RULE_OPTION_OTT_PATH_SOCLIB",
+        "RULE_OPTION_OTT_PATH_SOCCON",
+        "RULE_OPTION_OTT_PATH_PATAUT",
+        "RULE_OPTION_OTT_PATH_ENDEAVOUR_AUTDEM",
+        "RULE_OPTION_OTT_PATH_ENDEAVOUR_MARLIB",
+        "RULE_OPTION_OTT_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "TUR_path",
+      "country": "TUR",
+      "sourceKeys": [
+        "RULE_OPTION_TUR_PATH_SOCLIB",
+        "RULE_OPTION_TUR_PATH_SOCCON",
+        "RULE_OPTION_TUR_PATH_AUTDEM",
+        "RULE_OPTION_TUR_PATH_PATAUT",
+        "RULE_OPTION_TUR_PATH_NATPOP",
+        "RULE_OPTION_TUR_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "GEO_path",
+      "country": "GEO",
+      "sourceKeys": [
+        "RULE_OPTION_GEO_PATH_SOCDEM_SOCLIB",
+        "RULE_OPTION_GEO_PATH_SOCDEM_RADSOC",
+        "RULE_OPTION_GEO_PATH_REP_SOCCON",
+        "RULE_OPTION_GEO_PATH_MON_GIORGI_SOCCON",
+        "RULE_OPTION_GEO_PATH_MON_JOACHIM_SOCCON",
+        "RULE_OPTION_GEO_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "ARM_path",
+      "country": "ARM",
+      "sourceKeys": [
+        "RULE_OPTION_ARM_PATH_PATAUT",
+        "RULE_OPTION_ARM_PATH_NATPOP",
+        "RULE_OPTION_ARM_PATH_AUTDEM",
+        "RULE_OPTION_ARM_PATH_MARLIB",
+        "RULE_OPTION_ARM_PATH_SOCDEM",
+        "RULE_OPTION_ARM_PATH_SOCCON",
+        "RULE_OPTION_ARM_PATH_SOCLIB",
+        "RULE_OPTION_ARM_PATH_RADSOC",
+        "RULE_OPTION_ARM_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "JBS_path",
+      "country": "JBS",
+      "sourceKeys": [
+        "RULE_OPTION_JBS_PATH_AUTDEM",
+        "RULE_OPTION_JBS_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "JBS_emir",
+      "country": "JBS",
+      "sourceKeys": [
+        "RULE_OPTION_JBS_EMIR_AZIZ",
+        "RULE_OPTION_JBS_EMIR_IBN_TALAL_OTT",
+        "RULE_OPTION_JBS_EMIR_IBN_TALAL_EGY",
+        "RULE_OPTION_JBS_EMIR_IBN_MITAB",
+        "RULE_OPTION_JBS_EMIR_SUBHAN"
+      ]
+    },
+    {
+      "group": "JBS_unification",
+      "country": "JBS",
+      "sourceKeys": [
+        "RULE_OPTION_JBS_UNIFICATION_ANNEX",
+        "RULE_OPTION_JBS_UNIFICATION_UNION"
+      ]
+    },
+    {
+      "group": "SAU_path",
+      "country": "SAU",
+      "sourceKeys": [
+        "RULE_OPTION_SAU_PATH_HEGEMONY",
+        "RULE_OPTION_SAU_PATH_FAITH"
+      ]
+    },
+    {
+      "group": "YEM_path",
+      "country": "YEM",
+      "sourceKeys": [
+        "RULE_OPTION_YEM_PATH_PATAUT",
+        "RULE_OPTION_YEM_PATH_SOCCON",
+        "RULE_OPTION_YEM_PATH_SOCLIB"
+      ]
+    },
+    {
+      "group": "ASY_revolt",
+      "country": "ASY",
+      "sourceKeys": [
+        "RULE_OPTION_ASY_REVOLT_NO_REVOLT",
+        "RULE_OPTION_ASY_REVOLT_ABANDON",
+        "RULE_OPTION_ASY_REVOLT_AUTON_NO",
+        "RULE_OPTION_ASY_REVOLT_AUTON_YES",
+        "RULE_OPTION_ASY_REVOLT_PEACE_NO",
+        "RULE_OPTION_ASY_REVOLT_PEACE_YES"
+      ]
+    },
+    {
+      "group": "ASY_path",
+      "country": "ASY",
+      "sourceKeys": [
+        "RULE_OPTION_ASY_PATH_SOCCON",
+        "RULE_OPTION_ASY_PATH_NATPOP",
+        "RULE_OPTION_ASY_PATH_MARLIB"
+      ]
+    },
+    {
+      "group": "SYR_path",
+      "country": "SYR",
+      "sourceKeys": [
+        "RULE_OPTION_SYR_PATH_SOCLIB",
+        "RULE_OPTION_SYR_PATH_MARLIB",
+        "RULE_OPTION_SYR_PATH_SOCCON",
+        "RULE_OPTION_SYR_PATH_PATAUT",
+        "RULE_OPTION_SYR_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "LEB_path",
+      "country": "LEB",
+      "sourceKeys": [
+        "RULE_OPTION_LEB_PATH_AUTDEM",
+        "RULE_OPTION_LEB_PATH_MARLIB",
+        "RULE_OPTION_LEB_PATH_SOCLIB",
+        "RULE_OPTION_LEB_PATH_SOCCON_EGY",
+        "RULE_OPTION_LEB_PATH_SOCCON_IRQ",
+        "RULE_OPTION_LEB_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "IRQ_path",
+      "country": "IRQ",
+      "sourceKeys": [
+        "RULE_OPTION_IRQ_PATH_YASIN_AUTDEM",
+        "RULE_OPTION_IRQ_PATH_NATPOP",
+        "RULE_OPTION_IRQ_PATH_TAHA_AUTDEM",
+        "RULE_OPTION_IRQ_PATH_REP_SOCDEM",
+        "RULE_OPTION_IRQ_PATH_MON_SOCDEM",
+        "RULE_OPTION_IRQ_PATH_PATAUT",
+        "RULE_OPTION_IRQ_PATH_MARLIB"
+      ]
+    },
+    {
+      "group": "PER_path",
+      "country": "PER",
+      "sourceKeys": [
+        "RULE_OPTION_PER_PATH_MON_SOCDEM",
+        "RULE_OPTION_PER_PATH_MON_SOCLIB",
+        "RULE_OPTION_PER_PATH_MON_SOCCON",
+        "RULE_OPTION_PER_PATH_AUTDEM",
+        "RULE_OPTION_PER_PATH_PATAUT",
+        "RULE_OPTION_PER_PATH_REP_SOCDEM",
+        "RULE_OPTION_PER_PATH_REP_SOCLIB",
+        "RULE_OPTION_PER_PATH_MARLIB",
+        "RULE_OPTION_PER_PATH_REP_SOCCON",
+        "RULE_OPTION_PER_PATH_RADSOC"
+      ]
+    },
+    {
+      "group": "EGY_path",
+      "country": "EGY",
+      "sourceKeys": [
+        "RULE_OPTION_EGY_PATH_MARLIB",
+        "RULE_OPTION_EGY_PATH_SOCLIB",
+        "RULE_OPTION_EGY_PATH_SOCDEM",
+        "RULE_OPTION_EGY_PATH_SOCCON",
+        "RULE_OPTION_EGY_PATH_AUTDEM",
+        "RULE_OPTION_EGY_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "LBA_path",
+      "country": "LBA",
+      "sourceKeys": [
+        "RULE_OPTION_LBA_PATH_AUTDEM",
+        "RULE_OPTION_LBA_PATH_NATPOP_OTT",
+        "RULE_OPTION_LBA_PATH_NATPOP_WAR"
+      ]
+    },
+    {
+      "group": "LBA_unification",
+      "country": "LBA",
+      "sourceKeys": [
+        "RULE_OPTION_LBA_UNIFICATION_YES",
+        "RULE_OPTION_LBA_UNIFICATION_NO"
+      ]
+    },
+    {
+      "group": "TRP_path",
+      "country": "TRP",
+      "sourceKeys": [
+        "RULE_OPTION_TRP_PATH_RADSOC",
+        "RULE_OPTION_TRP_PATH_SOCCON",
+        "RULE_OPTION_TRP_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "QIE_path",
+      "country": "QIE",
+      "sourceKeys": [
+        "RULE_OPTION_QIE_PATH_LEP_AUTDEM",
+        "RULE_OPTION_QIE_PATH_ANQ_AUTDEM",
+        "RULE_OPTION_QIE_PATH_PATAUT",
+        "RULE_OPTION_QIE_PATH_MANCHU_AUTDEM",
+        "RULE_OPTION_QIE_PATH_SOCCON",
+        "RULE_OPTION_QIE_PATH_SOCDEM",
+        "RULE_OPTION_QIE_PATH_SHIH_AUTDEM",
+        "RULE_OPTION_QIE_PATH_KOO_AUTDEM"
+      ]
+    },
+    {
+      "group": "JAP_path",
+      "country": "JAP",
+      "sourceKeys": [
+        "RULE_OPTION_JAP_PATH_SOCCON",
+        "RULE_OPTION_JAP_PATH_MARLIB",
+        "RULE_OPTION_JAP_PATH_SOCDEM",
+        "RULE_OPTION_JAP_PATH_AUTDEM",
+        "RULE_OPTION_JAP_PATH_PATAUT",
+        "RULE_OPTION_JAP_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "FNG_path",
+      "country": "FNG",
+      "sourceKeys": [
+        "RULE_OPTION_FNG_PATH_RECOVERY_AUTDEM",
+        "RULE_OPTION_FNG_PATH_COMMUNICATIONS_AUTDEM",
+        "RULE_OPTION_FNG_PATH_TWIN_DRAGONS_AUTDEM",
+        "RULE_OPTION_FNG_PATH_GAMBIT_PATAUT",
+        "RULE_OPTION_FNG_PATH_CONCORD_PATAUT"
+      ]
+    },
+    {
+      "group": "SHD_path",
+      "country": "SHD",
+      "sourceKeys": [
+        "RULE_OPTION_SHD_PATH_PATAUT",
+        "RULE_OPTION_SHD_PATH_NATPOP",
+        "RULE_OPTION_SHD_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "CHI_path",
+      "country": "CHI",
+      "sourceKeys": [
+        "RULE_OPTION_CHI_PATH_CHAIRMAN_JINGWEI_RADSOC",
+        "RULE_OPTION_CHI_PATH_REVOLUTIONARY_JINGWEI_RADSOC",
+        "RULE_OPTION_CHI_PATH_STATESMAN_JINGWEI_RADSOC",
+        "RULE_OPTION_CHI_PATH_RED_NAPOLEON_QINGLING_RADSOC",
+        "RULE_OPTION_CHI_PATH_ETERNAL_PREMIER_QINGLING_RADSOC",
+        "RULE_OPTION_CHI_PATH_TRUE_LOVE_QINGLING_RADSOC",
+        "RULE_OPTION_CHI_PATH_UNITY_QINGLING_RADSOC",
+        "RULE_OPTION_CHI_PATH_RED_GENERALISSIMO_TOTALIST",
+        "RULE_OPTION_CHI_PATH_REGENERATION_TOTALIST",
+        "RULE_OPTION_CHI_PATH_ZHONGMING_RADSOC",
+        "RULE_OPTION_CHI_PATH_GONGBO_RADSOC"
+      ]
+    },
+    {
+      "group": "GXC_path",
+      "country": "GXC",
+      "sourceKeys": [
+        "RULE_OPTION_GXC_PATH_NPA_AUTDEM",
+        "RULE_OPTION_GXC_PATH_UPC_AUTDEM",
+        "RULE_OPTION_GXC_PATH_KMT_AUTDEM"
+      ]
+    },
+    {
+      "group": "GXC_NPA_path",
+      "country": "GXC",
+      "sourceKeys": [
+        "RULE_OPTION_GXC_NPA_PATH_YUGUANG_PATAUT",
+        "RULE_OPTION_GXC_NPA_PATH_YUGUANG_AUTDEM",
+        "RULE_OPTION_GXC_GXC_NPA_PATH_JIAHUA_AUTDEM",
+        "RULE_OPTION_GXC_GXC_NPA_PATH_YAOHAN_PATAUT",
+        "RULE_OPTION_GXC_NPA_PATH_SOCCON",
+        "RULE_OPTION_GXC_NPA_PATH_MARLIB"
+      ]
+    },
+    {
+      "group": "GXC_UPC_path",
+      "country": "GXC",
+      "sourceKeys": [
+        "RULE_OPTION_GXC_UPC_PATH_FIRST_SOCDEM",
+        "RULE_OPTION_GXC_UPC_PATH_SECOND_SOCDEM",
+        "RULE_OPTION_GXC_UPC_PATH_SECOND_SOCLIB",
+        "RULE_OPTION_GXC_UPC_PATH_FIRST_SOCLIB",
+        "RULE_OPTION_GXC_UPC_PATH_YE_JU_AUTDEM",
+        "RULE_OPTION_GXC_UPC_PATH_JISHEN_TUTELAGE_AUTDEM",
+        "RULE_OPTION_GXC_UPC_PATH_JISHEN_RENAISSANCE_AUTDEM",
+        "RULE_OPTION_GXC_UPC_PATH_QIYOU_AUTDEM",
+        "RULE_OPTION_GXC_GXC_UPC_PATH_YE_JU_PATAUT"
+      ]
+    },
+    {
+      "group": "GXC_KMT_path",
+      "country": "GXC",
+      "sourceKeys": [
+        "RULE_OPTION_GXC_KMT_PATH_SYNDIE",
+        "RULE_OPTION_GXC_KMT_PATH_RADSOC",
+        "RULE_OPTION_GXC_KMT_PATH_SOCDEM",
+        "RULE_OPTION_GXC_KMT_PATH_SOCLIB",
+        "RULE_OPTION_GXC_KMT_PATH_SOCCON",
+        "RULE_OPTION_GXC_KMT_PATH_PRINCIPLED_AUTDEM",
+        "RULE_OPTION_GXC_KMT_PATH_REVOLUTIONARY_AUTDEM",
+        "RULE_OPTION_GXC_KMT_PATH_DIARCHY_AUTDEM",
+        "RULE_OPTION_GXC_KMT_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "HNN_path",
+      "country": "HNN",
+      "sourceKeys": [
+        "RULE_OPTION_HNN_PATH_SOCCON",
+        "RULE_OPTION_HNN_PATH_SOCDEM",
+        "RULE_OPTION_HNN_PATH_RKMT_AUTDEM",
+        "RULE_OPTION_HNN_PATH_PATAUT",
+        "RULE_OPTION_HNN_PATH_TANG_AUTDEM"
+      ]
+    },
+    {
+      "group": "SZC_path",
+      "country": "SZC",
+      "sourceKeys": [
+        "RULE_OPTION_SZC_PATH_SEN_AUTDEM",
+        "RULE_OPTION_SZC_PATH_XIANG_AUTDEM",
+        "RULE_OPTION_SZC_PATH_CUNHOU_PATAUT",
+        "RULE_OPTION_SZC_PATH_XIHOU_SOCCON",
+        "RULE_OPTION_SZC_PATH_WENHUI_SOCCON",
+        "RULE_OPTION_SZC_PATH_SOCLIB",
+        "RULE_OPTION_SZC_PATH_SOCDEM",
+        "RULE_OPTION_SZC_PATH_ZHL_AUTDEM",
+        "RULE_OPTION_SZC_PATH_ZHL_PATAUT"
+      ]
+    },
+    {
+      "group": "SZC_UPC_path",
+      "country": "SZC",
+      "sourceKeys": [
+        "RULE_OPTION_SZC_UPC_PATH_SOCDEM",
+        "RULE_OPTION_SZC_UPC_PATH_SOCLIB",
+        "RULE_OPTION_SZC_UPC_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "YUN_path",
+      "country": "YUN",
+      "sourceKeys": [
+        "RULE_OPTION_YUN_PATH_AUTDEM",
+        "RULE_OPTION_YUN_PATH_SOCCON"
+      ]
+    },
+    {
+      "group": "YUN_NPA_path",
+      "country": "YUN",
+      "sourceKeys": [
+        "RULE_OPTION_YUN_NPA_PATH_LONG_YUN_PATAUT",
+        "RULE_OPTION_YUN_NPA_PATH_LONG_YUN_AUTDEM",
+        "RULE_OPTION_YUN_NPA_PATH_HU_RUOYU_PATAUT",
+        "RULE_OPTION_YUN_NPA_PATH_LU_HAN_AUTDEM"
+      ]
+    },
+    {
+      "group": "YUN_UPC_path",
+      "country": "YUN",
+      "sourceKeys": [
+        "RULE_OPTION_YUN_UPC_PATH_SOCDEM",
+        "RULE_OPTION_YUN_UPC_PATH_MARLIB",
+        "RULE_OPTION_YUN_UPC_XIAOYING_AUTDEM",
+        "RULE_OPTION_YUN_UPC_PATH_SOCLIB",
+        "RULE_OPTION_YUN_UPC_PATH_SOCCON",
+        "RULE_OPTION_YUN_UPC_PATH_JIYAO_AUTDEM"
+      ]
+    },
+    {
+      "group": "YUN_KMT_path",
+      "country": "YUN",
+      "sourceKeys": [
+        "RULE_OPTION_YUN_KMT_PATH_RADSOC",
+        "RULE_OPTION_YUN_KMT_PATH_SOCDEM",
+        "RULE_OPTION_YUN_KMT_PATH_GENYUAN_MARLIB",
+        "RULE_OPTION_YUN_KMT_PATH_SOCCON",
+        "RULE_OPTION_YUN_KMT_PATH_QUN_MARLIB",
+        "RULE_OPTION_YUN_KMT_PATH_AUTDEM",
+        "RULE_OPTION_YUN_KMT_PATH_JITAO_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_CHENG_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_PEOPLES_YINGQIN_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_REVOLUTIONARY_YINGQIN_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_LUCKY_YINGQIN_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_LIBERAL_YINGQIN_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_BLUE_SHIRT_YINGQIN_PATAUT",
+        "RULE_OPTION_YUN_KMT_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "LEC_path",
+      "country": "LEC",
+      "sourceKeys": [
+        "RULE_OPTION_LEC_PATH_PATAUT",
+        "RULE_OPTION_LEC_PATH_NATPOP",
+        "RULE_OPTION_LEC_PATH_MARLIB",
+        "RULE_OPTION_LEC_PATH_SOCCON",
+        "RULE_OPTION_LEC_PATH_AUTDEM_GER",
+        "RULE_OPTION_LEC_PATH_AUTDEM_JAP"
+      ]
+    },
+    {
+      "group": "SHX_path",
+      "country": "SHX",
+      "sourceKeys": [
+        "RULE_OPTION_SHX_PATH_PATAUT",
+        "RULE_OPTION_SHX_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "XSM_path",
+      "country": "XSM",
+      "sourceKeys": [
+        "RULE_OPTION_XSM_PATH_SOCCON",
+        "RULE_OPTION_XSM_PATH_NATPOP",
+        "RULE_OPTION_XSM_PATH_PATAUT",
+        "RULE_OPTION_XSM_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "SIK_path",
+      "country": "SIK",
+      "sourceKeys": [
+        "RULE_OPTION_SIK_PATH_PATAUT",
+        "RULE_OPTION_SIK_PATH_SOCDEM",
+        "RULE_OPTION_SIK_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "KUM_path",
+      "country": "KUM",
+      "sourceKeys": [
+        "RULE_OPTION_KUM_PATH_NASIR_PATAUT",
+        "RULE_OPTION_KUM_PATH_NASIR_SOCCON",
+        "RULE_OPTION_KUM_PATH_BASHIR_PATAUT",
+        "RULE_OPTION_KUM_PATH_BASHIR_SOCCON",
+        "RULE_OPTION_KUM_PATH_NIYAZ_PATAUT",
+        "RULE_OPTION_KUM_PATH_SOCDEM",
+        "RULE_OPTION_KUM_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "ETS_path",
+      "country": "ETS",
+      "sourceKeys": [
+        "RULE_OPTION_ETS_PATH_ELECTION_AUTDEM",
+        "RULE_OPTION_ETS_PATH_SHAH_AUTDEM",
+        "RULE_OPTION_ETS_PATH_ISLAM_NATPOP",
+        "RULE_OPTION_ETS_PATH_TURKISM_NATPOP",
+        "RULE_OPTION_ETS_PATH_SOCCON",
+        "RULE_OPTION_ETS_PATH_AUTDEM",
+        "RULE_OPTION_ETS_PATH_SOCDEM",
+        "RULE_OPTION_ETS_PATH_SABRI_AUTDEM"
+      ]
+    },
+    {
+      "group": "MON_path",
+      "country": "MON",
+      "sourceKeys": [
+        "RULE_OPTION_MON_PATH_PATAUT",
+        "RULE_OPTION_MON_PATH_SOCDEM",
+        "RULE_OPTION_MON_PATH_SOCLIB",
+        "RULE_OPTION_MON_PATH_SOCCON",
+        "RULE_OPTION_MON_PATH_AUTDEM",
+        "RULE_OPTION_MON_PATH_NATPOP"
+      ]
+    },
+    {
+      "group": "TIB_path",
+      "country": "TIB",
+      "sourceKeys": [
+        "RULE_OPTION_TIB_PATH_PATAUT",
+        "RULE_OPTION_TIB_PATH_AUTDEM",
+        "RULE_OPTION_TIB_PATH_SOCDEM",
+        "RULE_OPTION_TIB_PATH_SOCLIB",
+        "RULE_OPTION_TIB_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "RAJ_path",
+      "country": "RAJ",
+      "sourceKeys": [
+        "RULE_OPTION_RAJ_PATH_SOCCON",
+        "RULE_OPTION_RAJ_PATH_JAYAKAR_MARLIB",
+        "RULE_OPTION_RAJ_PATH_SAPRU_MARLIB",
+        "RULE_OPTION_RAJ_PATH_SOCLIB"
+      ]
+    },
+    {
+      "group": "HND_path",
+      "country": "HND",
+      "sourceKeys": [
+        "RULE_OPTION_HND_PATH_SYNDIE",
+        "RULE_OPTION_HND_PATH_RADSOC",
+        "RULE_OPTION_HND_PATH_TOTALIST"
+      ]
+    },
+    {
+      "group": "PRF_path",
+      "country": "PRF",
+      "sourceKeys": [
+        "RULE_OPTION_PRF_PATH_KAISAR_PATAUT",
+        "RULE_OPTION_PRF_PATH_FATHER_PATAUT",
+        "RULE_OPTION_PRF_PATH_NATPOP",
+        "RULE_OPTION_PRF_PATH_PRINCES_AUTDEM",
+        "RULE_OPTION_PRF_PATH_IYER_AUTDEM",
+        "RULE_OPTION_PRF_PATH_MARLIB"
+      ]
+    },
+    {
+      "group": "NEP_path",
+      "country": "NEP",
+      "sourceKeys": [
+        "RULE_OPTION_NEP_PATH_AUTDEM",
+        "RULE_OPTION_NEP_PATH_SOCLIB",
+        "RULE_OPTION_NEP_PATH_RADSOC",
+        "RULE_OPTION_NEP_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "BHU_path",
+      "country": "BHU",
+      "sourceKeys": [
+        "RULE_OPTION_BHU_PATH_JIGME_PATAUT",
+        "RULE_OPTION_BHU_PATH_TSHERING_PATAUT",
+        "RULE_OPTION_BHU_PATH_NATPOP",
+        "RULE_OPTION_BHU_PATH_AUTDEM"
+      ]
+    },
+    {
+      "group": "BRM_path",
+      "country": "BRM",
+      "sourceKeys": [
+        "RULE_OPTION_BRM_PATH_AUTDEM",
+        "RULE_OPTION_BRM_PATH_PATAUT",
+        "RULE_OPTION_BRM_PATH_MON_SOCCON",
+        "RULE_OPTION_BRM_PATH_REP_SOCCON",
+        "RULE_OPTION_BRM_PATH_SOCLIB",
+        "RULE_OPTION_BRM_PATH_SOCDEM",
+        "RULE_OPTION_BRM_PATH_RADSOC"
+      ]
+    },
+    {
+      "group": "SIA_constitution",
+      "country": "SIA",
+      "sourceKeys": [
+        "RULE_OPTION_SIA_CONSTITUTION_PRAJADHIPOK",
+        "RULE_OPTION_SIA_CONSTITUTION_KHANARATSADON"
+      ]
+    },
+    {
+      "group": "SIA_civil_war",
+      "country": "SIA",
+      "sourceKeys": [
+        "RULE_OPTION_SIA_CIVIL_WAR_NO",
+        "RULE_OPTION_SIA_CIVIL_WAR_BOWORADET_PATAUT",
+        "RULE_OPTION_SIA_CIVIL_WAR_RADSOC",
+        "RULE_OPTION_SIA_CIVIL_WAR_PLAEK_NATPOP",
+        "RULE_OPTION_SIA_CIVIL_WAR_SARIT_PATAUT",
+        "RULE_OPTION_SIA_CIVIL_WAR_PHAO_NATPOP"
+      ]
+    },
+    {
+      "group": "SIA_election",
+      "country": "SIA",
+      "sourceKeys": [
+        "RULE_OPTION_SIA_ELECTION_SOCLIB",
+        "RULE_OPTION_SIA_ELECTION_SOCDEM",
+        "RULE_OPTION_SIA_ELECTION_SOCCON"
+      ]
+    },
+    {
+      "group": "GEA_path",
+      "country": "GEA",
+      "sourceKeys": [
+        "RULE_OPTION_GEA_PATH_AUTDEM",
+        "RULE_OPTION_GEA_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "INC_revolt",
+      "country": "INC",
+      "sourceKeys": [
+        "RULE_OPTION_INC_REVOLT_YES",
+        "RULE_OPTION_INC_REVOLT_VIN",
+        "RULE_OPTION_INC_REVOLT_NO"
+      ]
+    },
+    {
+      "group": "INC_path",
+      "country": "INC",
+      "sourceKeys": [
+        "RULE_OPTION_INC_PATH_TOTALIST",
+        "RULE_OPTION_INC_PATH_SYNDIE",
+        "RULE_OPTION_INC_PATH_ASPIRATION_RADSOC",
+        "RULE_OPTION_INC_PATH_VNQDD_RADSOC",
+        "RULE_OPTION_INC_PATH_AUTDEM",
+        "RULE_OPTION_INC_PATH_PATAUT"
+      ]
+    },
+    {
+      "group": "DEI_path",
+      "country": "DEI",
+      "sourceKeys": [
+        "RULE_OPTION_DEI_PATH_PALAR_AUTDEM",
+        "RULE_OPTION_DEI_PATH_STARKENBORGH_STACHOUWER_AUTDEM",
+        "RULE_OPTION_DEI_PATH_FURSTNER_AUTDEM"
+      ]
+    },
+    {
+      "group": "INS_revolt",
+      "country": "INS",
+      "sourceKeys": [
+        "RULE_OPTION_INS_REVOLT_YES",
+        "RULE_OPTION_INS_REVOLT_NO"
+      ]
+    },
+    {
+      "group": "INS_path",
+      "country": "INS",
+      "sourceKeys": [
+        "RULE_OPTION_INS_PATH_SOCCON",
+        "RULE_OPTION_INS_PATH_AUTDEM",
+        "RULE_OPTION_INS_PATH_RADSOC",
+        "RULE_OPTION_INS_PATH_ISLAMIST_PATAUT",
+        "RULE_OPTION_INS_PATH_SULTANATE_PATAUT"
+      ]
+    },
+    {
+      "group": "PHI_path",
+      "country": "PHI",
+      "sourceKeys": [
+        "RULE_OPTION_PHI_PATH_MARLIB",
+        "RULE_OPTION_PHI_PATH_ROXAS_AUTDEM",
+        "RULE_OPTION_PHI_PATH_SOCLIB",
+        "RULE_OPTION_PHI_PATH_AGUINALDO_AUTDEM",
+        "RULE_OPTION_PHI_PATH_SYNDIE"
+      ]
+    },
+    {
+      "group": "AST_path",
+      "country": "AST",
+      "sourceKeys": [
+        "RULE_OPTION_AST_PATH_DEM",
+        "RULE_OPTION_AST_PATH_MARLIB",
+        "RULE_OPTION_AST_PATH_SOCDEM",
+        "RULE_OPTION_AST_PATH_SOCCON",
+        "RULE_OPTION_AST_PATH_SOCLIB",
+        "RULE_OPTION_AST_PATH_SYNDIE",
+        "RULE_OPTION_AST_PATH_TOTALIST",
+        "RULE_OPTION_AST_PATH_RADSOC",
+        "RULE_OPTION_AST_PATH_NATPOP",
+        "RULE_OPTION_AST_PATH_AUTDEM",
+        "RULE_OPTION_AST_PATH_ELECTED_NATPOP",
+        "RULE_OPTION_AST_PATH_LATER_SYNDIE",
+        "RULE_OPTION_AST_PATH_PATAUT",
+        "RULE_OPTION_AST_PATH_ELECTED_AUTDEM"
+      ]
+    },
+    {
+      "group": "NZL_succession",
+      "country": "NZL",
+      "sourceKeys": [
+        "RULE_OPTION_NZL_SUCCESSION_ENT",
+        "RULE_OPTION_NZL_SUCCESSION_ALONE",
+        "RULE_OPTION_NZL_SUCCESSION_NO"
+      ]
+    },
+    {
+      "group": "NZL_path",
+      "country": "NZL",
+      "sourceKeys": [
+        "RULE_OPTION_NZL_PATH_PATAUT",
+        "RULE_OPTION_NZL_PATH_SOCDEM",
+        "RULE_OPTION_NZL_PATH_SOCCON",
+        "RULE_OPTION_NZL_PATH_NATPOP"
+      ]
+    }
+  ],
+  "excludedGroups": [
+    {
+      "group": "CAN_acw_new_england",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CAN_acw_alaska",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CAN_acw_support",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CAN_acw_intervene",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CAN_halifax",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "USA_macarthur_war_plan",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "USA_ceasefire",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "USA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "WCA_flag",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "WCA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "APG_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ACC_WCA_peace",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ACC_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "HAW_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CUB_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "DOM_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "HAI_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CEN_dem_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CEN_mil_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "COS_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "PAN_crisis",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ARG_peace",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ARG_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BRA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BOL_pru_confed",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "FRA_flag",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "IRE_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BEL_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "HOL_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SPA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ITA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "VNC_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "LOM_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SIC_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SIC_unified",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "GER_card_game",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SWI_crisis",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "NOR_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "FIN_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "RUS_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "RUS_central_asia",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "RUS_conference",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "RSA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "FER_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "EST_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "LAT_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "UKR_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BUL_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BPL_war",
+      "reason": "No mapped campaign country"
+    },
+    {
+      "group": "ALB_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BPL_dissolution",
+      "reason": "No mapped campaign country"
+    },
+    {
+      "group": "ROM_game",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "GRE_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "GRE_expansionism",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "MOR_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "MAF_bush_war",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "MAF_bush_war_outcome",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "LIB_independence",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ETH_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "OTT_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "OTT_RUS_convention",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "TUR_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "GEO_treaty",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ARM_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "OMA_protector",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SYR_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "IRQ_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "PER_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "EGY_syria_occupy",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "QIE_coup_friend",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "FNG_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "LEP_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SHD_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ANQ_deal",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "ANQ_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CHI_ally_betrayal",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "GXC_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SZC_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "YUN_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "CHN_south_china_war",
+      "reason": "No mapped campaign country"
+    },
+    {
+      "group": "LEC_faction",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SHX_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "AFG_war",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "RAJ_bombay",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "HND_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "PRF_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "NEP_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "BRM_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "SIA_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "INC_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "INS_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    },
+    {
+      "group": "PHI_forpol",
+      "reason": "Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route"
+    }
+  ]
+}

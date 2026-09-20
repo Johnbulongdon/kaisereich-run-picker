@@ -1,0 +1,2004 @@
+{
+  "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
+  "startDate": "1936-01-01",
+  "method": "Unique initial owners in all 1125 upstream history/states files; checked against bookmark country entries. No dated ownership overrides apply before the start date. System tag AAA and later releasables are excluded. IMP maps to existing CAN display/save identity.",
+  "countries": [
+    {
+      "tag": "AFG",
+      "sourceTag": "AFG",
+      "historyFile": "history/countries/AFG - Afghanistan.txt",
+      "ownedStates": [
+        "1117 - Kandahar.txt",
+        "1118 - Qataghan.txt",
+        "267 - Kabul.txt",
+        "415 - Herat.txt",
+        "442 - Peshawar.txt"
+      ],
+      "capitalState": "267"
+    },
+    {
+      "tag": "ALB",
+      "sourceTag": "ALB",
+      "historyFile": "history/countries/ALB - Albania.txt",
+      "ownedStates": [
+        "1053 - Ghegeria.txt",
+        "44 - Toskeria.txt",
+        "766 - Northern Epirus.txt"
+      ],
+      "capitalState": "44"
+    },
+    {
+      "tag": "ARG",
+      "sourceTag": "ARG",
+      "historyFile": "history/countries/ARG - Argentina.txt",
+      "ownedStates": [
+        "1028 - Tierra del Fuego.txt",
+        "1074 - Misiones.txt",
+        "278 - Buenos Aires.txt",
+        "299 - Falkland Islands.txt",
+        "449 - La Pampa.txt",
+        "508 - Tucuman.txt",
+        "509 - Santiago del Estero.txt",
+        "510 - La Mesopotamia.txt",
+        "511 - Mendoza.txt",
+        "579 - Neuquen.txt",
+        "720 - South Georgia.txt",
+        "901 - Southern Chaco.txt",
+        "902 - Cordoba.txt",
+        "903 - Jujuy.txt",
+        "904 - La Rioja.txt"
+      ],
+      "capitalState": "278"
+    },
+    {
+      "tag": "AST",
+      "sourceTag": "AST",
+      "historyFile": "history/countries/AST - Australia.txt",
+      "ownedStates": [
+        "284 - North Island.txt",
+        "285 - New South Wales.txt",
+        "517 - Victoria.txt",
+        "518 - Tasmania.txt",
+        "519 - South Australia.txt",
+        "520 - Northern Territory.txt",
+        "521 - Southern Queensland.txt",
+        "522 - Western Australia.txt",
+        "523 - SE. New Guinea.txt",
+        "636 - Fiji.txt",
+        "674 - Central Australia.txt",
+        "711 - Christmas & Cocos.txt",
+        "723 - South Island.txt",
+        "985 - Canberra.txt",
+        "986 - North Queensland.txt",
+        "987 - Kimberly.txt",
+        "988 - Pilbara.txt"
+      ],
+      "capitalState": "985"
+    },
+    {
+      "tag": "AUS",
+      "sourceTag": "AUS",
+      "historyFile": "history/countries/AUS - Austria.txt",
+      "ownedStates": [
+        "102 - Carniola.txt",
+        "1107 - Karavanks.txt",
+        "152 - Upper Austria.txt",
+        "153 - North Tyrol.txt",
+        "39 - South Tyrol.txt",
+        "4 - Lower Austria.txt",
+        "488 - Trieste.txt",
+        "683 - Gorizia.txt",
+        "736 - Istria.txt",
+        "775 - Styria.txt",
+        "783 - Trentino.txt",
+        "835 - Carinthia.txt",
+        "836 - Salzburg.txt",
+        "942 - Vorarlberg.txt"
+      ],
+      "capitalState": "4"
+    },
+    {
+      "tag": "AZR",
+      "sourceTag": "AZR",
+      "historyFile": "history/countries/AZR - Azerbaijan.txt",
+      "ownedStates": [
+        "229 - Azerbaijan.txt",
+        "998 - Karabagh.txt"
+      ],
+      "capitalState": "229"
+    },
+    {
+      "tag": "BAT",
+      "sourceTag": "BAT",
+      "historyFile": "history/countries/BAT - United Baltic Duchy.txt",
+      "ownedStates": [
+        "12 - Livonia.txt",
+        "13 - Estonia.txt",
+        "190 - Courland.txt",
+        "191 - Northern Livonia.txt",
+        "842 - Riga.txt"
+      ],
+      "capitalState": "842"
+    },
+    {
+      "tag": "BEL",
+      "sourceTag": "BEL",
+      "historyFile": "history/countries/BEL - Belgium.txt",
+      "ownedStates": [
+        "29 - Dunkirk.txt",
+        "34 - Hainaut.txt",
+        "6 - Flanders.txt",
+        "925 - Brabant.txt",
+        "948 - Liege.txt"
+      ],
+      "capitalState": "925"
+    },
+    {
+      "tag": "BHU",
+      "sourceTag": "BHU",
+      "historyFile": "history/countries/BHU - Bhutan.txt",
+      "ownedStates": [
+        "324 - Bhutan.txt"
+      ],
+      "capitalState": "324"
+    },
+    {
+      "tag": "BLR",
+      "sourceTag": "BLR",
+      "historyFile": "history/countries/BLR - White Ruthenia.txt",
+      "ownedStates": [
+        "1087 - Mohilev.txt",
+        "194 - Mozyr.txt",
+        "204 - Novogrudok.txt",
+        "206 - Minsk.txt",
+        "207 - Braslav.txt",
+        "95 - Pinsk.txt"
+      ],
+      "capitalState": "206"
+    },
+    {
+      "tag": "BOL",
+      "sourceTag": "BOL",
+      "historyFile": "history/countries/BOL - Bolivia.txt",
+      "ownedStates": [
+        "1073 - Tarija.txt",
+        "302 - La Paz.txt",
+        "487 - Santa Cruz.txt",
+        "847 - Beni.txt",
+        "848 - Potosi.txt"
+      ],
+      "capitalState": "302"
+    },
+    {
+      "tag": "BRA",
+      "sourceTag": "BRA",
+      "historyFile": "history/countries/BRA - Brazil.txt",
+      "ownedStates": [
+        "1030 - Western Amazonas.txt",
+        "1031 - Northern Amazonas.txt",
+        "1033 - Eastern Amazonas.txt",
+        "1040 - Acre Jungle.txt",
+        "1041 - Iguassu.txt",
+        "1043 - Ponta Pora.txt",
+        "280 - Mato Grosso.txt",
+        "495 - Amazonas.txt",
+        "496 - Minas Gerais.txt",
+        "497 - Piaui.txt",
+        "498 - Northeastern Brazil.txt",
+        "499 - Bahia.txt",
+        "500 - Rio de Janeiro.txt",
+        "501 - Sao Paulo.txt",
+        "502 - Rio Grande do Sul.txt",
+        "503 - Parana.txt",
+        "504 - Campo Grande.txt",
+        "505 - Goyaz.txt",
+        "855 - Acre.txt",
+        "894 - Santa Catarina.txt",
+        "895 - Espirito Santo.txt",
+        "896 - Maranhao.txt",
+        "898 - Para.txt",
+        "900 - Guapore.txt"
+      ],
+      "capitalState": "500"
+    },
+    {
+      "tag": "BRM",
+      "sourceTag": "BRM",
+      "historyFile": "history/countries/BRM - Burma.txt",
+      "ownedStates": [
+        "1111 - Hukawng Valley.txt",
+        "288 - Rangoon.txt",
+        "640 - Mandalay.txt",
+        "701 - Kachin.txt",
+        "72 - Upper Shan.txt",
+        "790 - Arakan.txt"
+      ],
+      "capitalState": "288"
+    },
+    {
+      "tag": "BUK",
+      "sourceTag": "BUK",
+      "historyFile": "history/countries/BUK - Bukhara.txt",
+      "ownedStates": [
+        "405 - Bukhara.txt",
+        "732 - Samarkand.txt",
+        "804 - Pamir.txt"
+      ],
+      "capitalState": "405"
+    },
+    {
+      "tag": "BUL",
+      "sourceTag": "BUL",
+      "historyFile": "history/countries/BUL - Bulgaria.txt",
+      "ownedStates": [
+        "106 - Macedonia.txt",
+        "1089 - Kardzhali.txt",
+        "184 - Komotini.txt",
+        "211 - Burgas.txt",
+        "212 - Plovdiv.txt",
+        "48 - Sofia.txt",
+        "731 - Florina.txt",
+        "767 - Nish.txt",
+        "769 - Serres.txt",
+        "77 - Silistria.txt",
+        "770 - Pleven.txt",
+        "771 - Varna.txt",
+        "772 - Constantza.txt",
+        "990 - Vidin.txt"
+      ],
+      "capitalState": "48"
+    },
+    {
+      "tag": "CHI",
+      "sourceTag": "CHI",
+      "historyFile": "history/countries/CHI - Left Kuomintang.txt",
+      "ownedStates": [
+        "1046 - Longyan.txt",
+        "595 - Nanping.txt"
+      ],
+      "capitalState": "1046"
+    },
+    {
+      "tag": "CHL",
+      "sourceTag": "CHL",
+      "historyFile": "history/countries/CHL - Chile.txt",
+      "ownedStates": [
+        "1113 - Cautin.txt",
+        "270 - Easter Island.txt",
+        "279 - Santiago.txt",
+        "506 - Antofagasta.txt",
+        "507 - Magallanes.txt",
+        "872 - Arica.txt",
+        "873 - Tarapaca.txt",
+        "874 - Atacama.txt"
+      ],
+      "capitalState": "279"
+    },
+    {
+      "tag": "COL",
+      "sourceTag": "COL",
+      "historyFile": "history/countries/COL - Colombia.txt",
+      "ownedStates": [
+        "306 - Cundinamarca.txt",
+        "486 - Meta.txt",
+        "493 - Caribe.txt",
+        "851 - Caqueta.txt",
+        "852 - Cauca.txt",
+        "853 - Choco.txt",
+        "854 - Putumayo.txt"
+      ],
+      "capitalState": "306"
+    },
+    {
+      "tag": "COS",
+      "sourceTag": "COS",
+      "historyFile": "history/countries/COS - Costa Rica.txt",
+      "ownedStates": [
+        "316 - Costa Rica.txt"
+      ],
+      "capitalState": "316"
+    },
+    {
+      "tag": "CRO",
+      "sourceTag": "CRO",
+      "historyFile": "history/countries/CRO - Croatia.txt",
+      "ownedStates": [
+        "103 - Rijeka.txt",
+        "104 - Bosnia.txt",
+        "109 - Central Croatia.txt",
+        "1109 - Herzegovina.txt",
+        "1125 - Slavonia.txt",
+        "163 - Dalmatia.txt",
+        "794 - Syrmia.txt",
+        "841 - Kotor.txt"
+      ],
+      "capitalState": "109"
+    },
+    {
+      "tag": "CUB",
+      "sourceTag": "CUB",
+      "historyFile": "history/countries/CUB - Cuba.txt",
+      "ownedStates": [
+        "315 - Havana.txt",
+        "820 - Santiago de Cuba.txt"
+      ],
+      "capitalState": "315"
+    },
+    {
+      "tag": "CZE",
+      "sourceTag": "CZE",
+      "historyFile": "history/countries/CZE - Bohemia.txt",
+      "ownedStates": [
+        "69 - Liberec.txt",
+        "74 - Czech Silesia.txt",
+        "75 - Moravia.txt",
+        "786 - Budejovice.txt",
+        "9 - Prague.txt",
+        "924 - Tesin.txt"
+      ],
+      "capitalState": "9"
+    },
+    {
+      "tag": "DEI",
+      "sourceTag": "DEI",
+      "historyFile": "history/countries/DEI - Dutch East Indies.txt",
+      "ownedStates": [
+        "1016 - South Borneo.txt",
+        "1017 - West Timor.txt",
+        "1018 - Flores & Sumba.txt",
+        "1019 - East Java.txt",
+        "1020 - Residency of Batavia.txt",
+        "1021 - Palembang.txt",
+        "1022 - Sumatra's West Coast.txt",
+        "1023 - Aceh & Tapanuli.txt",
+        "334 - Inner Borneo.txt",
+        "335 - West & Central Java.txt",
+        "667 - Bali & Sumbawa.txt",
+        "668 - Moluccas.txt",
+        "669 - NW. New Guinea.txt",
+        "672 - Sumatra's East Coast.txt",
+        "673 - Celebes.txt",
+        "843 - SW. New Guinea.txt",
+        "972 - Aru Islands.txt"
+      ],
+      "capitalState": "1020"
+    },
+    {
+      "tag": "DEN",
+      "sourceTag": "DEN",
+      "historyFile": "history/countries/DEN - Denmark.txt",
+      "ownedStates": [
+        "101 - Greenland.txt",
+        "1112 - Funen.txt",
+        "337 - Faroe Islands.txt",
+        "37 - Zealand.txt",
+        "926 - Greenland Ice Sheet.txt",
+        "99 - Jutland.txt"
+      ],
+      "capitalState": "37"
+    },
+    {
+      "tag": "DOM",
+      "sourceTag": "DOM",
+      "historyFile": "history/countries/DOM - Dominican Republic.txt",
+      "ownedStates": [
+        "319 - Santo Domingo.txt"
+      ],
+      "capitalState": "319"
+    },
+    {
+      "tag": "ECU",
+      "sourceTag": "ECU",
+      "historyFile": "history/countries/ECU - Ecuador.txt",
+      "ownedStates": [
+        "305 - Quito.txt",
+        "490 - Pastaza.txt",
+        "649 - Galapagos Islands.txt"
+      ],
+      "capitalState": "305"
+    },
+    {
+      "tag": "EGY",
+      "sourceTag": "EGY",
+      "historyFile": "history/countries/EGY - Egypt.txt",
+      "ownedStates": [
+        "1007 - Nubia.txt",
+        "1008 - Asyut.txt",
+        "1010 - Darfur.txt",
+        "1011 - Nubian Desert.txt",
+        "446 - Cairo.txt",
+        "447 - Alexandria.txt",
+        "452 - Libyan Plateau.txt",
+        "456 - Aswan.txt",
+        "457 - Eastern Desert.txt",
+        "549 - Upper Nile.txt",
+        "551 - Khartoum.txt",
+        "552 - Western Desert.txt",
+        "862 - Darfur Desert.txt"
+      ],
+      "capitalState": "446"
+    },
+    {
+      "tag": "ELS",
+      "sourceTag": "ELS",
+      "historyFile": "history/countries/ELS - El Salvador.txt",
+      "ownedStates": [
+        "314 - El Salvador.txt"
+      ],
+      "capitalState": "314"
+    },
+    {
+      "tag": "ENG",
+      "sourceTag": "ENG",
+      "historyFile": "history/countries/ENG - Union of Britain.txt",
+      "ownedStates": [
+        "1108 - Cumbria.txt",
+        "1121 - Aireshire.txt",
+        "1122 - Wessex.txt",
+        "1123 - West Country.txt",
+        "1124 - Isle of Man.txt",
+        "120 - Scottish Highlands.txt",
+        "121 - Lothian.txt",
+        "122 - South Wales.txt",
+        "123 - Cornwall.txt",
+        "125 - East Anglia.txt",
+        "126 - Greater London.txt",
+        "127 - Home Provinces.txt",
+        "128 - West Midlands.txt",
+        "129 - East Midlands.txt",
+        "130 - Yorkshire.txt",
+        "131 - Northumbria.txt",
+        "132 - Salfordshire.txt",
+        "133 - Strathclyde.txt",
+        "136 - Grampian.txt",
+        "338 - Avon.txt",
+        "703 - Ascension.txt",
+        "704 - Saint Helena.txt",
+        "938 - Orkney & Shetland.txt",
+        "957 - North Wales.txt"
+      ],
+      "capitalState": "126"
+    },
+    {
+      "tag": "ETH",
+      "sourceTag": "ETH",
+      "historyFile": "history/countries/ETH - Ethiopia.txt",
+      "ownedStates": [
+        "1091 - Welega.txt",
+        "1092 - Gojjam.txt",
+        "1093 - Wollo.txt",
+        "1094 - Bale.txt",
+        "271 - Shewa.txt",
+        "550 - Eritrea.txt",
+        "919 - Sidamo.txt",
+        "920 - Begemder.txt",
+        "921 - Afar.txt",
+        "922 - Kaffa.txt",
+        "923 - Tigray.txt",
+        "944 - Hararghe.txt"
+      ],
+      "capitalState": "271"
+    },
+    {
+      "tag": "FIN",
+      "sourceTag": "FIN",
+      "historyFile": "history/countries/FIN - Finland.txt",
+      "ownedStates": [
+        "111 - Tavastia.txt",
+        "145 - Aland.txt",
+        "146 - Karelia.txt",
+        "148 - Tornio.txt",
+        "149 - Ostrobothnia.txt",
+        "840 - Nyland.txt",
+        "844 - Lapland.txt",
+        "863 - Finland Proper.txt",
+        "864 - Savo.txt"
+      ],
+      "capitalState": "840"
+    },
+    {
+      "tag": "FNG",
+      "sourceTag": "FNG",
+      "historyFile": "history/countries/FNG - Fengtian.txt",
+      "ownedStates": [
+        "328 - Andong.txt",
+        "610 - Rehe.txt",
+        "714 - Qiqihar.txt",
+        "715 - Liaobei.txt",
+        "716 - Liaoning.txt",
+        "717 - Hejiang.txt",
+        "883 - Aigun.txt",
+        "884 - Songling.txt",
+        "885 - Songjiang.txt",
+        "886 - Jilin.txt",
+        "996 - Barga.txt"
+      ],
+      "capitalState": "716"
+    },
+    {
+      "tag": "FOP",
+      "sourceTag": "FOP",
+      "historyFile": "history/countries/FOP - Patagonia.txt",
+      "ownedStates": [
+        "1029 - Santa Cruz.txt",
+        "512 - Chubut.txt"
+      ],
+      "capitalState": "512"
+    },
+    {
+      "tag": "FRA",
+      "sourceTag": "FRA",
+      "historyFile": "history/countries/FRA - Communard France.txt",
+      "ownedStates": [
+        "14 - Upper Brittany.txt",
+        "15 - Normandy.txt",
+        "16 - Ile de France.txt",
+        "17 - Pas-de-Calais.txt",
+        "18 - Champagne.txt",
+        "19 - Aquitaine.txt",
+        "20 - Lyonnais.txt",
+        "21 - Provence.txt",
+        "22 - Languedoc.txt",
+        "23 - Poitou.txt",
+        "24 - Picardy.txt",
+        "25 - Limousin.txt",
+        "26 - Auvergne.txt",
+        "27 - Burgundy.txt",
+        "30 - Maine.txt",
+        "31 - Garonne.txt",
+        "32 - Rhone.txt",
+        "33 - Orleanais.txt",
+        "735 - Savoy.txt",
+        "762 - Nice.txt",
+        "763 - Alpes.txt",
+        "779 - Labourd.txt",
+        "785 - Lorraine.txt",
+        "817 - Roussillon.txt",
+        "980 - Lille.txt",
+        "983 - Brittany.txt",
+        "984 - Pyrenees.txt"
+      ],
+      "capitalState": "16"
+    },
+    {
+      "tag": "GAL",
+      "sourceTag": "GAL",
+      "historyFile": "history/countries/GAL - Galicia-Lodomeria.txt",
+      "ownedStates": [
+        "713 - Suceava.txt",
+        "80 - Cernauti.txt",
+        "88 - Krakow.txt",
+        "89 - Stanislawow.txt",
+        "91 - Lwow.txt"
+      ],
+      "capitalState": "91"
+    },
+    {
+      "tag": "GEA",
+      "sourceTag": "GEA",
+      "historyFile": "history/countries/GEA - German East Asia.txt",
+      "ownedStates": [
+        "1002 - Pahang.txt",
+        "286 - Cochinchina.txt",
+        "333 - North Borneo.txt",
+        "336 - Singapore.txt",
+        "633 - Marshall Islands.txt",
+        "634 - Solomon Islands.txt",
+        "635 - New Caledonia.txt",
+        "639 - Gilbert Islands.txt",
+        "641 - Tahiti.txt",
+        "643 - Ellice Islands.txt",
+        "646 - Mariana Islands.txt",
+        "647 - Palau.txt",
+        "670 - Laos.txt",
+        "671 - Tonkin.txt",
+        "684 - Caroline Islands.txt",
+        "725 - Nauru.txt",
+        "728 - Guangzhouwan.txt",
+        "734 - Nendo.txt",
+        "737 - Bismarck Archipelago.txt",
+        "744 - Qingdao.txt",
+        "757 - NE. New Guinea.txt",
+        "826 - Stung Treng.txt",
+        "827 - Annam.txt",
+        "828 - Sabah.txt",
+        "846 - Johore.txt",
+        "856 - Mekong Delta.txt",
+        "857 - Dong Bac.txt",
+        "941 - Western Samoa.txt",
+        "963 - Perak-Selangor.txt"
+      ],
+      "capitalState": "336"
+    },
+    {
+      "tag": "GEO",
+      "sourceTag": "GEO",
+      "historyFile": "history/countries/GEO - Georgia.txt",
+      "ownedStates": [
+        "1080 - Abkhazia.txt",
+        "231 - Georgia.txt"
+      ],
+      "capitalState": "231"
+    },
+    {
+      "tag": "GER",
+      "sourceTag": "GER",
+      "historyFile": "history/countries/GER - Germany.txt",
+      "ownedStates": [
+        "1119 - Trincomalee.txt",
+        "147 - Prussian Saxony.txt",
+        "188 - Memel.txt",
+        "268 - Djibouti.txt",
+        "28 - Alsace-Lorraine.txt",
+        "281 - Maldives.txt",
+        "42 - Palatinate.txt",
+        "422 - Colombo.txt",
+        "5 - East Prussia.txt",
+        "50 - Wurttemberg.txt",
+        "51 - Eastern Rhineland.txt",
+        "52 - Upper Bavaria.txt",
+        "53 - Lower Bavaria.txt",
+        "54 - Franconia.txt",
+        "543 - Madagascar.txt",
+        "55 - Hesse.txt",
+        "56 - Oldenburg.txt",
+        "57 - Westphalia.txt",
+        "58 - Schleswig-Holstein.txt",
+        "59 - Hanover.txt",
+        "60 - Thuringia.txt",
+        "61 - Mecklenburg.txt",
+        "62 - Hither Pomerania.txt",
+        "63 - Farther Pomerania.txt",
+        "64 - Brandenburg.txt",
+        "65 - Saxony.txt",
+        "66 - Lower Silesia.txt",
+        "67 - Upper Silesia.txt",
+        "68 - Neumark.txt",
+        "706 - Reunion.txt",
+        "707 - Mauritius.txt",
+        "708 - Comoros.txt",
+        "709 - Seychelles.txt",
+        "710 - Diego Garcia.txt",
+        "741 - Verviers.txt",
+        "776 - West Prussia.txt",
+        "777 - Masuria.txt",
+        "780 - Baden.txt",
+        "781 - Western Rhineland.txt",
+        "782 - Northern Schleswig.txt",
+        "8 - Luxembourg.txt",
+        "818 - Pondicherry.txt",
+        "86 - Posen.txt"
+      ],
+      "capitalState": "64"
+    },
+    {
+      "tag": "GRE",
+      "sourceTag": "GRE",
+      "historyFile": "history/countries/GRE - Greece.txt",
+      "ownedStates": [
+        "1076 - Veria.txt",
+        "182 - Crete.txt",
+        "185 - Epirus.txt",
+        "186 - Peloponnese.txt",
+        "47 - Central Greece.txt",
+        "758 - Ionian Islands.txt",
+        "768 - Thessaly.txt",
+        "989 - Chalcidice.txt"
+      ],
+      "capitalState": "47"
+    },
+    {
+      "tag": "GUA",
+      "sourceTag": "GUA",
+      "historyFile": "history/countries/GUA - Guatemala.txt",
+      "ownedStates": [
+        "313 - Guatemala.txt"
+      ],
+      "capitalState": "313"
+    },
+    {
+      "tag": "GXC",
+      "sourceTag": "GXC",
+      "historyFile": "history/countries/GXC - Liangguang.txt",
+      "ownedStates": [
+        "1012 - Huiyang.txt",
+        "1054 - Baise.txt",
+        "1055 - Liuzhou.txt",
+        "1056 - Beihai.txt",
+        "591 - Qiongya.txt",
+        "592 - Guangzhou.txt",
+        "593 - Qingyuan.txt",
+        "594 - Nanning.txt",
+        "599 - Guilin.txt",
+        "800 - Shaoguan.txt"
+      ],
+      "capitalState": "594"
+    },
+    {
+      "tag": "HAI",
+      "sourceTag": "HAI",
+      "historyFile": "history/countries/HAI - Haiti.txt",
+      "ownedStates": [
+        "318 - Haiti.txt"
+      ],
+      "capitalState": "318"
+    },
+    {
+      "tag": "HND",
+      "sourceTag": "HND",
+      "historyFile": "history/countries/HND - Bharatiya Peoples Republic.txt",
+      "ownedStates": [
+        "1057 - Jubbulpore.txt",
+        "426 - Orissa.txt",
+        "428 - Gujarat.txt",
+        "430 - East Bengal.txt",
+        "431 - West Bengal.txt",
+        "432 - Assam.txt",
+        "434 - Manipur.txt",
+        "435 - Bihar.txt",
+        "436 - Raipur.txt",
+        "437 - Central Provinces.txt",
+        "438 - Oudh.txt",
+        "439 - Delhi.txt",
+        "815 - Patiala.txt",
+        "839 - Aravali.txt",
+        "889 - Vizagapatnam.txt",
+        "936 - Gwalior.txt",
+        "966 - Chhattisgarh.txt"
+      ],
+      "capitalState": "431"
+    },
+    {
+      "tag": "HNN",
+      "sourceTag": "HNN",
+      "historyFile": "history/countries/HNN - Hunan.txt",
+      "ownedStates": [
+        "1013 - Changde.txt",
+        "1052 - Kaili.txt",
+        "602 - Changsha.txt"
+      ],
+      "capitalState": "602"
+    },
+    {
+      "tag": "HOL",
+      "sourceTag": "HOL",
+      "historyFile": "history/countries/HOL - Netherlands.txt",
+      "ownedStates": [
+        "1038 - Suriname.txt",
+        "1077 - Saint Martin.txt",
+        "309 - Paramaribo.txt",
+        "35 - North Brabant.txt",
+        "36 - Frisia.txt",
+        "695 - Curacao.txt",
+        "7 - Holland.txt",
+        "866 - Guelders.txt",
+        "978 - Limburg.txt",
+        "979 - Westerscheldt.txt"
+      ],
+      "capitalState": "7"
+    },
+    {
+      "tag": "HON",
+      "sourceTag": "HON",
+      "historyFile": "history/countries/HON - Honduras.txt",
+      "ownedStates": [
+        "312 - Honduras.txt"
+      ],
+      "capitalState": "312"
+    },
+    {
+      "tag": "HUN",
+      "sourceTag": "HUN",
+      "historyFile": "history/countries/HUN - Hungary.txt",
+      "ownedStates": [
+        "1090 - Pressburg.txt",
+        "154 - Alfold.txt",
+        "155 - Transdanubia.txt",
+        "43 - Central Hungary.txt",
+        "45 - Vojvodina.txt",
+        "664 - Miskolc.txt",
+        "70 - Slovakia.txt",
+        "71 - Danubian Plain.txt",
+        "73 - Transcarpathia.txt",
+        "76 - Cluj.txt",
+        "784 - Burgenland.txt",
+        "789 - Szeklerland.txt",
+        "82 - Banat.txt",
+        "83 - Partium.txt",
+        "84 - Brasov.txt",
+        "875 - West Banat.txt"
+      ],
+      "capitalState": "43"
+    },
+    {
+      "tag": "ICE",
+      "sourceTag": "ICE",
+      "historyFile": "history/countries/ICE - Iceland.txt",
+      "ownedStates": [
+        "100 - Iceland.txt"
+      ],
+      "capitalState": "100"
+    },
+    {
+      "tag": "CAN",
+      "sourceTag": "IMP",
+      "historyFile": "history/countries/IMP - Canada and UK.txt",
+      "ownedStates": [
+        "276 - Southern Ontario.txt",
+        "331 - Newfoundland.txt",
+        "332 - Ungava.txt",
+        "464 - Nova Scotia.txt",
+        "465 - New Brunswick.txt",
+        "466 - Saguenay.txt",
+        "467 - Manitoba.txt",
+        "468 - Saint Lawrence.txt",
+        "469 - Saskatchewan.txt",
+        "470 - Alberta.txt",
+        "471 - Yukon.txt",
+        "472 - Nunavut.txt",
+        "473 - British Columbia.txt",
+        "682 - Northern Ontario.txt",
+        "730 - St. Pierre.txt",
+        "739 - Ottawa.txt",
+        "740 - Vancouver Island.txt",
+        "832 - Quebec.txt"
+      ],
+      "capitalState": "739"
+    },
+    {
+      "tag": "IRE",
+      "sourceTag": "IRE",
+      "historyFile": "history/countries/IRE - Ireland.txt",
+      "ownedStates": [
+        "113 - Leinster.txt",
+        "119 - Northern Ireland.txt",
+        "134 - Connacht.txt",
+        "135 - Munster.txt"
+      ],
+      "capitalState": "113"
+    },
+    {
+      "tag": "ITA",
+      "sourceTag": "ITA",
+      "historyFile": "history/countries/ITA - Italy.txt",
+      "ownedStates": [
+        "159 - Lombardy.txt",
+        "160 - Venetia.txt",
+        "759 - Friuli.txt"
+      ],
+      "capitalState": "159"
+    },
+    {
+      "tag": "JAP",
+      "sourceTag": "JAP",
+      "historyFile": "history/countries/JAP - Japan.txt",
+      "ownedStates": [
+        "1099 - Samnam.txt",
+        "1100 - Gwanbuk.txt",
+        "1101 - North Kanto.txt",
+        "1102 - South Kyushu.txt",
+        "1103 - San'in.txt",
+        "1104 - Hyogo.txt",
+        "1105 - Koshinsei.txt",
+        "1106 - North Tohoku.txt",
+        "282 - Tokyo.txt",
+        "524 - Taiwan.txt",
+        "525 - Gyeonggi.txt",
+        "526 - Ryukyu Islands.txt",
+        "527 - Yangseo.txt",
+        "528 - North Kyushu.txt",
+        "529 - San'yo.txt",
+        "530 - Shikoku.txt",
+        "531 - Kansai.txt",
+        "532 - Tokai.txt",
+        "533 - South Tohoku.txt",
+        "534 - Niigata.txt",
+        "535 - Hokuriku.txt",
+        "536 - Hokkaido.txt",
+        "537 - South Sakhalin.txt",
+        "555 - Kuril Islands.txt",
+        "645 - Iwo Jima.txt",
+        "648 - Marcus Island.txt",
+        "745 - Dalian.txt"
+      ],
+      "capitalState": "282"
+    },
+    {
+      "tag": "JBS",
+      "sourceTag": "JBS",
+      "historyFile": "history/countries/JBS - Jabal Shammar.txt",
+      "ownedStates": [
+        "1035 - Anizzah.txt",
+        "915 - Ha'il.txt",
+        "994 - Jawf.txt"
+      ],
+      "capitalState": "915"
+    },
+    {
+      "tag": "KHI",
+      "sourceTag": "KHI",
+      "historyFile": "history/countries/KHI - Khiva.txt",
+      "ownedStates": [
+        "584 - Karakum.txt",
+        "861 - Khorezm.txt"
+      ],
+      "capitalState": "861"
+    },
+    {
+      "tag": "KUM",
+      "sourceTag": "KUM",
+      "historyFile": "history/countries/KUM - Kumul.txt",
+      "ownedStates": [
+        "1083 - Kumul.txt"
+      ],
+      "capitalState": "1083"
+    },
+    {
+      "tag": "LBA",
+      "sourceTag": "LBA",
+      "historyFile": "history/countries/LBA - Cyrenaica.txt",
+      "ownedStates": [
+        "1009 - Kufra.txt",
+        "451 - Ajdabiya.txt",
+        "663 - Jaghbub.txt"
+      ],
+      "capitalState": "451"
+    },
+    {
+      "tag": "LEC",
+      "sourceTag": "LEC",
+      "historyFile": "history/countries/LEC - Legation Cities.txt",
+      "ownedStates": [
+        "326 - Hong Kong.txt",
+        "609 - Tianjin.txt",
+        "743 - Shanghai.txt",
+        "746 - Ningbo.txt",
+        "747 - Fuzhou.txt",
+        "801 - Shantou.txt"
+      ],
+      "capitalState": "743"
+    },
+    {
+      "tag": "LEP",
+      "sourceTag": "LEP",
+      "historyFile": "history/countries/LEP - League of Eight Provinces.txt",
+      "ownedStates": [
+        "1014 - Wuhu.txt",
+        "1044 - Nanchang.txt",
+        "1047 - Xuzhou.txt",
+        "1050 - Bengbu.txt",
+        "1066 - Quanzhou.txt",
+        "1067 - Jinhua.txt",
+        "1069 - Lishui.txt",
+        "1075 - Nantong.txt",
+        "596 - Hangzhou.txt",
+        "598 - Yancheng.txt",
+        "600 - Ganzhou.txt",
+        "606 - Anqing.txt",
+        "613 - Nanjing.txt",
+        "802 - Xiamen.txt",
+        "803 - Wenzhou.txt"
+      ],
+      "capitalState": "613"
+    },
+    {
+      "tag": "LIB",
+      "sourceTag": "LIB",
+      "historyFile": "history/countries/LIB - Liberia.txt",
+      "ownedStates": [
+        "298 - Liberia.txt"
+      ],
+      "capitalState": "298"
+    },
+    {
+      "tag": "LIT",
+      "sourceTag": "LIT",
+      "historyFile": "history/countries/LIT - Lithuania.txt",
+      "ownedStates": [
+        "11 - Kaunas.txt",
+        "189 - Samogitia.txt",
+        "655 - Sudovia.txt",
+        "94 - Volkovysk.txt",
+        "96 - Vilnius.txt",
+        "97 - Bialystok.txt"
+      ],
+      "capitalState": "96"
+    },
+    {
+      "tag": "MAF",
+      "sourceTag": "MAF",
+      "historyFile": "history/countries/MAF - Mittelafrika.txt",
+      "ownedStates": [
+        "1025 - Congo-Ubangi.txt",
+        "1026 - Stanleyville.txt",
+        "1032 - Greater Unyamwezi.txt",
+        "1096 - Yaounde.txt",
+        "1097 - Skeleton Coast.txt",
+        "1098 - Namaqualand.txt",
+        "274 - Gold Coast.txt",
+        "295 - Leopoldville.txt",
+        "538 - Tshuapa.txt",
+        "539 - Gabon.txt",
+        "541 - Damaraland.txt",
+        "546 - Dodoma.txt",
+        "547 - Kenya.txt",
+        "548 - Uganda.txt",
+        "558 - Southern Nigeria.txt",
+        "660 - Ubangi-Shari.txt",
+        "662 - Northern Nigeria.txt",
+        "718 - Welle.txt",
+        "813 - South Zambesia.txt",
+        "869 - Rwanda.txt",
+        "870 - Urundi.txt",
+        "871 - Nyasaland.txt",
+        "876 - Dahomey.txt",
+        "877 - Togoland.txt",
+        "878 - Hausaland.txt",
+        "879 - Katanga.txt",
+        "881 - Bas-Congo.txt",
+        "892 - Jubaland.txt",
+        "899 - Ruvuma.txt",
+        "905 - Zanzibar.txt",
+        "913 - Bornu.txt",
+        "918 - Bukoba.txt",
+        "927 - Douala.txt",
+        "928 - Middle Congo.txt",
+        "949 - Maniema.txt",
+        "952 - Adamawa.txt",
+        "953 - Tekeland.txt",
+        "955 - East Luangwa.txt",
+        "956 - Northern Zambesia.txt",
+        "958 - Barotseland.txt",
+        "962 - Maroua.txt",
+        "964 - Ovambo & Omaheke.txt",
+        "965 - Dar-es-Salaam.txt",
+        "969 - Rift Valley.txt",
+        "970 - Mombasa.txt",
+        "971 - New Cameroon.txt",
+        "973 - Lagos.txt",
+        "974 - Lower Sangha.txt",
+        "976 - Kasai.txt",
+        "977 - Kivu.txt"
+      ],
+      "capitalState": "965"
+    },
+    {
+      "tag": "MEX",
+      "sourceTag": "MEX",
+      "historyFile": "history/countries/MEX - Mexico.txt",
+      "ownedStates": [
+        "277 - Mexico.txt",
+        "474 - Yucatan.txt",
+        "475 - Chiapas.txt",
+        "476 - Oaxaca.txt",
+        "477 - Veracruz.txt",
+        "478 - Jalisco.txt",
+        "479 - Tamaulipas.txt",
+        "480 - Coahuila.txt",
+        "481 - Durango.txt",
+        "482 - Chihuahua.txt",
+        "483 - Sonora.txt",
+        "484 - Lower California.txt",
+        "485 - Guerrero.txt"
+      ],
+      "capitalState": "277"
+    },
+    {
+      "tag": "MON",
+      "sourceTag": "MON",
+      "historyFile": "history/countries/MON - Mongolia.txt",
+      "ownedStates": [
+        "1084 - Uliastai.txt",
+        "1114 - Gobi Desert.txt",
+        "1115 - Moron.txt",
+        "1116 - Bayan Tumen.txt",
+        "330 - Urga.txt",
+        "612 - Xilingol.txt"
+      ],
+      "capitalState": "330"
+    },
+    {
+      "tag": "MOR",
+      "sourceTag": "MOR",
+      "historyFile": "history/countries/MOR - Morocco.txt",
+      "ownedStates": [
+        "1110 - Moroccan Frontier.txt",
+        "461 - Central Morocco.txt",
+        "462 - Southwestern Morocco.txt"
+      ],
+      "capitalState": "461"
+    },
+    {
+      "tag": "NEP",
+      "sourceTag": "NEP",
+      "historyFile": "history/countries/NEP - Nepal.txt",
+      "ownedStates": [
+        "323 - Nepal.txt",
+        "814 - Uttaranchal.txt",
+        "887 - Darjeeling.txt",
+        "888 - Sikkim.txt"
+      ],
+      "capitalState": "323"
+    },
+    {
+      "tag": "NFA",
+      "sourceTag": "NFA",
+      "historyFile": "history/countries/NFA - NatFrance.txt",
+      "ownedStates": [
+        "1 - Corsica.txt",
+        "1095 - Timbuktu.txt",
+        "116 - Malta.txt",
+        "272 - Senegal.txt",
+        "458 - Tunis.txt",
+        "459 - Algiers.txt",
+        "460 - Constantine.txt",
+        "513 - Southern Algeria.txt",
+        "514 - Sahara.txt",
+        "515 - Chad.txt",
+        "556 - Bamako.txt",
+        "557 - Mauritania.txt",
+        "665 - Gabes.txt",
+        "700 - Sierra Leone.txt",
+        "805 - Oran.txt",
+        "806 - Conakry.txt",
+        "807 - Ivory Coast.txt",
+        "808 - Upper Volta.txt",
+        "809 - Niger.txt",
+        "834 - Gambia.txt",
+        "860 - Asawad.txt",
+        "865 - Aures.txt",
+        "910 - Air.txt",
+        "911 - Borku-Ennedi.txt",
+        "967 - Adrar.txt"
+      ],
+      "capitalState": "459"
+    },
+    {
+      "tag": "NIC",
+      "sourceTag": "NIC",
+      "historyFile": "history/countries/NIC - Nicaragua.txt",
+      "ownedStates": [
+        "1071 - Matagalpa.txt",
+        "317 - Managua.txt"
+      ],
+      "capitalState": "317"
+    },
+    {
+      "tag": "NOR",
+      "sourceTag": "NOR",
+      "historyFile": "history/countries/NOR - Norway.txt",
+      "ownedStates": [
+        "110 - Ostlandet.txt",
+        "142 - Vestlandet.txt",
+        "143 - Trondelag.txt",
+        "144 - Nordland & Troms.txt",
+        "937 - Finnmark.txt"
+      ],
+      "capitalState": "110"
+    },
+    {
+      "tag": "OMA",
+      "sourceTag": "OMA",
+      "historyFile": "history/countries/OMA - Oman.txt",
+      "ownedStates": [
+        "1024 - Dhofar.txt",
+        "294 - Muscat.txt",
+        "347 - Khasab.txt",
+        "859 - Oman.txt"
+      ],
+      "capitalState": "294"
+    },
+    {
+      "tag": "PAL",
+      "sourceTag": "PAL",
+      "historyFile": "history/countries/PAL - Jerusalem.txt",
+      "ownedStates": [
+        "453 - Sinai.txt",
+        "454 - Jerusalem.txt",
+        "753 - Suez Canal.txt"
+      ],
+      "capitalState": "454"
+    },
+    {
+      "tag": "PAN",
+      "sourceTag": "PAN",
+      "historyFile": "history/countries/PAN - Panama.txt",
+      "ownedStates": [
+        "304 - Panama.txt"
+      ],
+      "capitalState": "304"
+    },
+    {
+      "tag": "PAP",
+      "sourceTag": "PAP",
+      "historyFile": "history/countries/PAP - The Papal State.txt",
+      "ownedStates": [
+        "2 - Latium.txt"
+      ],
+      "capitalState": "2"
+    },
+    {
+      "tag": "PAR",
+      "sourceTag": "PAR",
+      "historyFile": "history/countries/PAR - Paraguay.txt",
+      "ownedStates": [
+        "1027 - Upper Chaco.txt",
+        "301 - Paraguay.txt",
+        "688 - Northern Chaco.txt"
+      ],
+      "capitalState": "301"
+    },
+    {
+      "tag": "PER",
+      "sourceTag": "PER",
+      "historyFile": "history/countries/PER - Persia.txt",
+      "ownedStates": [
+        "266 - Teheran.txt",
+        "410 - Sistan.txt",
+        "411 - Isfahan.txt",
+        "412 - Fars.txt",
+        "413 - Khuzestan.txt",
+        "414 - Kerman.txt",
+        "416 - Khorasan.txt",
+        "417 - Urmia.txt",
+        "418 - Ashkhabad.txt",
+        "419 - Tabriz.txt",
+        "420 - Mazandaran.txt",
+        "421 - Kermanshah.txt"
+      ],
+      "capitalState": "266"
+    },
+    {
+      "tag": "PHI",
+      "sourceTag": "PHI",
+      "historyFile": "history/countries/PHI - Philippines.txt",
+      "ownedStates": [
+        "327 - Central Luzon.txt",
+        "623 - Northern Luzon.txt",
+        "624 - Southern Luzon.txt",
+        "625 - Eastern Visayas.txt",
+        "626 - Palawan.txt",
+        "627 - Mindanao.txt",
+        "628 - Western Visayas.txt"
+      ],
+      "capitalState": "327"
+    },
+    {
+      "tag": "POL",
+      "sourceTag": "POL",
+      "historyFile": "history/countries/POL - Poland.txt",
+      "ownedStates": [
+        "10 - Warsaw.txt",
+        "1088 - Chelm.txt",
+        "87 - Kalisz.txt",
+        "90 - Kielce.txt",
+        "92 - Lublin.txt",
+        "98 - Plock.txt"
+      ],
+      "capitalState": "10"
+    },
+    {
+      "tag": "POR",
+      "sourceTag": "POR",
+      "historyFile": "history/countries/POR - Portugal.txt",
+      "ownedStates": [
+        "112 - Lisbon.txt",
+        "179 - Beja.txt",
+        "180 - Porto.txt",
+        "181 - Guarda.txt",
+        "296 - Bissau.txt",
+        "321 - Goa.txt",
+        "540 - Luanda.txt",
+        "544 - Mozambique.txt",
+        "697 - Madeira.txt",
+        "698 - Azores.txt",
+        "702 - Cape Verde.txt",
+        "705 - Sao Tome.txt",
+        "721 - East Timor.txt",
+        "729 - Macao.txt",
+        "914 - Cabinda.txt",
+        "916 - Old Congo.txt",
+        "917 - Southern Angola.txt",
+        "939 - Evora.txt",
+        "950 - Lourenco Marques.txt",
+        "954 - Tete.txt",
+        "959 - Eastern Angola.txt"
+      ],
+      "capitalState": "112"
+    },
+    {
+      "tag": "PRF",
+      "sourceTag": "PRF",
+      "historyFile": "history/countries/PRF - Princely Federation.txt",
+      "ownedStates": [
+        "1034 - Malabar Coast.txt",
+        "320 - Madras.txt",
+        "423 - Madura.txt",
+        "424 - Andhra.txt",
+        "425 - Mysore.txt",
+        "427 - Hyderabad.txt",
+        "429 - Bombay.txt",
+        "867 - Travancore.txt",
+        "868 - Kolhapur.txt",
+        "893 - Berar.txt"
+      ],
+      "capitalState": "427"
+    },
+    {
+      "tag": "PRU",
+      "sourceTag": "PRU",
+      "historyFile": "history/countries/PRU - Peru.txt",
+      "ownedStates": [
+        "303 - Lima.txt",
+        "491 - Loreto.txt",
+        "492 - Arequipa.txt",
+        "494 - Cuzco.txt",
+        "845 - Cajamarca.txt"
+      ],
+      "capitalState": "303"
+    },
+    {
+      "tag": "QIE",
+      "sourceTag": "QIE",
+      "historyFile": "history/countries/QIE - Qing Empire.txt",
+      "ownedStates": [
+        "1048 - Wuhan.txt",
+        "1058 - Xinyang.txt",
+        "1059 - Kaifeng.txt",
+        "1060 - Hebi.txt",
+        "1061 - Shimen.txt",
+        "1062 - Baoding.txt",
+        "1063 - Dezhou.txt",
+        "1068 - Qinhuangdao.txt",
+        "607 - Luoyang.txt",
+        "608 - Beijing.txt",
+        "611 - Zhangyuan.txt",
+        "614 - Tangshan.txt",
+        "615 - Datong.txt",
+        "620 - Xiangyang.txt",
+        "799 - Guanzhong.txt"
+      ],
+      "capitalState": "608"
+    },
+    {
+      "tag": "RAJ",
+      "sourceTag": "RAJ",
+      "historyFile": "history/countries/RAJ - Dominion of India.txt",
+      "ownedStates": [
+        "433 - Rajputana.txt",
+        "440 - East Punjab.txt",
+        "441 - Kashmir.txt",
+        "443 - Sind.txt",
+        "444 - Baluchistan.txt",
+        "445 - Quetta.txt",
+        "733 - Andaman & Nicobar.txt",
+        "890 - Simla.txt",
+        "891 - West Punjab.txt"
+      ],
+      "capitalState": "891"
+    },
+    {
+      "tag": "ROM",
+      "sourceTag": "ROM",
+      "historyFile": "history/countries/ROM - Romania.txt",
+      "ownedStates": [
+        "46 - Muntenia.txt",
+        "78 - Bessarabia.txt",
+        "79 - Moldavia.txt",
+        "81 - Oltenia.txt"
+      ],
+      "capitalState": "46"
+    },
+    {
+      "tag": "RUS",
+      "sourceTag": "RUS",
+      "historyFile": "history/countries/RUS - Russia.txt",
+      "ownedStates": [
+        "1006 - Novorossiysk.txt",
+        "195 - Petrograd.txt",
+        "205 - Kaluga.txt",
+        "208 - Luga.txt",
+        "209 - Pskov.txt",
+        "210 - Velikiye Luki.txt",
+        "213 - Murmansk.txt",
+        "214 - Archangelsk.txt",
+        "215 - White Karelia.txt",
+        "216 - Olonets.txt",
+        "217 - Tsaritsyn.txt",
+        "218 - Rostov.txt",
+        "219 - Moscow.txt",
+        "220 - Kursk.txt",
+        "222 - Orel.txt",
+        "223 - Tula.txt",
+        "224 - Bryansk.txt",
+        "232 - Dagestan.txt",
+        "233 - Vladikavkaz.txt",
+        "234 - Ekaterinodar.txt",
+        "235 - Stavropol.txt",
+        "236 - Astrakhan.txt",
+        "237 - Elista.txt",
+        "238 - Velikoknyazhesk.txt",
+        "239 - Saratov.txt",
+        "240 - Belgorod.txt",
+        "242 - Smolensk.txt",
+        "243 - Krichev.txt",
+        "244 - Zvansk.txt",
+        "245 - Millerovo.txt",
+        "246 - Rzhev.txt",
+        "247 - Tver.txt",
+        "248 - Yaroslavl.txt",
+        "249 - Kazan.txt",
+        "250 - Simbirsk.txt",
+        "251 - Samara.txt",
+        "252 - Nizhny Novgorod.txt",
+        "253 - Vladimir.txt",
+        "254 - Ryazan.txt",
+        "255 - Penza.txt",
+        "256 - Cheboksary.txt",
+        "257 - Tambov.txt",
+        "258 - Lipetsk.txt",
+        "260 - Voronezh.txt",
+        "262 - Pechora.txt",
+        "263 - Novgorod.txt",
+        "264 - Tikhvin.txt",
+        "265 - Kamyshin.txt",
+        "329 - Tuva.txt",
+        "351 - Vologda.txt",
+        "397 - Ust-Sysolsk.txt",
+        "398 - Perm.txt",
+        "399 - Izhevsk.txt",
+        "40 - Barnaul.txt",
+        "400 - Vyatka.txt",
+        "401 - Pokrovsk.txt",
+        "402 - Turgay.txt",
+        "403 - Tyumen.txt",
+        "404 - Karaganda.txt",
+        "406 - Guryev.txt",
+        "408 - Vladivostok.txt",
+        "409 - Khabarovsk.txt",
+        "516 - Taymyr.txt",
+        "560 - Nikolayevsk.txt",
+        "561 - Rukhlovo.txt",
+        "562 - Okhotsk.txt",
+        "563 - Chita.txt",
+        "564 - Verkhneudinsk.txt",
+        "565 - Bodaybo.txt",
+        "566 - Irkutsk.txt",
+        "567 - Nizhneudinsk.txt",
+        "568 - Krasnoyarsk.txt",
+        "569 - Shcheglovsk.txt",
+        "570 - Novonikolayevsk.txt",
+        "571 - Omsk.txt",
+        "572 - Chelyabinsk.txt",
+        "573 - Zlatoust.txt",
+        "574 - Yakutsk.txt",
+        "575 - Kirensk.txt",
+        "576 - Yeniseysk.txt",
+        "577 - North Sakhalin.txt",
+        "578 - Tomsk.txt",
+        "580 - Tobolsk.txt",
+        "581 - Uralsk.txt",
+        "582 - Orsk.txt",
+        "583 - Petropavlovsk.txt",
+        "587 - Mangyshlak.txt",
+        "588 - Pavlodar.txt",
+        "589 - Semireche.txt",
+        "590 - Akmolinsk.txt",
+        "637 - Kamchatka.txt",
+        "644 - Yana-Kolyma Lowlands.txt",
+        "651 - Ufa.txt",
+        "652 - Orenburg.txt",
+        "653 - Ekaterinburg.txt",
+        "654 - Ulala.txt",
+        "657 - Blagoveshchensk.txt",
+        "722 - Petsamo.txt",
+        "755 - Vitebsk.txt",
+        "787 - Terek.txt",
+        "810 - Alash-Kala.txt",
+        "811 - Minusinsk.txt",
+        "880 - Latgale.txt",
+        "961 - Chechnya.txt"
+      ],
+      "capitalState": "219"
+    },
+    {
+      "tag": "SAF",
+      "sourceTag": "SAF",
+      "historyFile": "history/countries/SAF - South Africa.txt",
+      "ownedStates": [
+        "275 - Transvaal.txt",
+        "542 - Bechuanaland.txt",
+        "545 - Rhodesia.txt",
+        "681 - Western Cape.txt",
+        "719 - Natal.txt",
+        "738 - Swaziland.txt",
+        "85 - Basutoland.txt",
+        "945 - Northern Cape.txt",
+        "946 - Eastern Cape.txt",
+        "947 - Orange Free State.txt"
+      ],
+      "capitalState": "275"
+    },
+    {
+      "tag": "SAU",
+      "sourceTag": "SAU",
+      "historyFile": "history/countries/SAU - Saudi Arabia.txt",
+      "ownedStates": [
+        "292 - Jabal Tuwaiq.txt",
+        "656 - Hasa.txt",
+        "675 - Qassim.txt",
+        "678 - Arabian Desert.txt",
+        "991 - Summan.txt"
+      ],
+      "capitalState": "292"
+    },
+    {
+      "tag": "SER",
+      "sourceTag": "SER",
+      "historyFile": "history/countries/SER - Serbia.txt",
+      "ownedStates": [
+        "105 - Montenegro.txt",
+        "107 - Belgrade.txt",
+        "108 - Kraljevo.txt",
+        "765 - Kosovo.txt"
+      ],
+      "capitalState": "107"
+    },
+    {
+      "tag": "SHD",
+      "sourceTag": "SHD",
+      "historyFile": "history/countries/SHD - Shandong.txt",
+      "ownedStates": [
+        "1064 - Linyi.txt",
+        "1065 - Weixian.txt",
+        "597 - Jinan.txt"
+      ],
+      "capitalState": "597"
+    },
+    {
+      "tag": "SHX",
+      "sourceTag": "SHX",
+      "historyFile": "history/countries/SHX - Shanxi.txt",
+      "ownedStates": [
+        "1072 - Taiyuan.txt",
+        "622 - Yulin.txt"
+      ],
+      "capitalState": "1072"
+    },
+    {
+      "tag": "SIA",
+      "sourceTag": "SIA",
+      "historyFile": "history/countries/SIA - Siam.txt",
+      "ownedStates": [
+        "289 - Siam.txt",
+        "724 - Kra Isthmus.txt",
+        "749 - Tenasserim.txt",
+        "750 - Phnom Penh.txt",
+        "751 - Kelantan-Terengganu.txt",
+        "756 - Lower Shan.txt",
+        "822 - Lan Na.txt",
+        "823 - Isan.txt",
+        "824 - Rayong.txt",
+        "825 - Battambang.txt",
+        "830 - Pattani.txt",
+        "831 - Moulmein.txt",
+        "882 - Samabuli.txt",
+        "999 - Kedah.txt"
+      ],
+      "capitalState": "289"
+    },
+    {
+      "tag": "SIC",
+      "sourceTag": "SIC",
+      "historyFile": "history/countries/SIC - Two Sicilies.txt",
+      "ownedStates": [
+        "115 - Sicily.txt",
+        "117 - Campania.txt",
+        "156 - Calabria.txt",
+        "742 - Abruzzo.txt",
+        "837 - Apulia.txt"
+      ],
+      "capitalState": "117"
+    },
+    {
+      "tag": "SIK",
+      "sourceTag": "SIK",
+      "historyFile": "history/countries/SIK - Xinjiang.txt",
+      "ownedStates": [
+        "1085 - Taklamakan Desert.txt",
+        "287 - Qiemo.txt",
+        "617 - Dihua.txt",
+        "618 - Fuyun.txt",
+        "619 - Kashgar.txt",
+        "897 - Aksai Chin.txt"
+      ],
+      "capitalState": "617"
+    },
+    {
+      "tag": "SOM",
+      "sourceTag": "SOM",
+      "historyFile": "history/countries/SOM - Somalia.txt",
+      "ownedStates": [
+        "269 - Hargeisa.txt",
+        "559 - Mogadishu.txt",
+        "906 - Ogaden.txt"
+      ],
+      "capitalState": "559"
+    },
+    {
+      "tag": "SPA",
+      "sourceTag": "SPA",
+      "historyFile": "history/countries/SPA - Spain.txt",
+      "ownedStates": [
+        "1070 - Basque Country.txt",
+        "1081 - Valladolid.txt",
+        "1082 - Guadalajara.txt",
+        "118 - Gibraltar.txt",
+        "165 - Catalonia.txt",
+        "166 - Upper Aragon.txt",
+        "167 - Valencia.txt",
+        "168 - Murcia.txt",
+        "169 - Seville.txt",
+        "170 - Extremadura.txt",
+        "171 - Galicia.txt",
+        "172 - Navarre.txt",
+        "173 - Malaga.txt",
+        "174 - Leon.txt",
+        "175 - Ciudad Real.txt",
+        "176 - Burgos.txt",
+        "177 - Balearic Islands.txt",
+        "178 - Canary Islands.txt",
+        "290 - The Rif.txt",
+        "297 - Rio Muni.txt",
+        "41 - Madrid.txt",
+        "699 - Rio de Oro.txt",
+        "793 - Asturias.txt",
+        "795 - Cordoba.txt",
+        "940 - Lower Aragon.txt",
+        "951 - Salamanca.txt",
+        "968 - Ifni.txt"
+      ],
+      "capitalState": "41"
+    },
+    {
+      "tag": "SRD",
+      "sourceTag": "SRD",
+      "historyFile": "history/countries/SRD - Sardinia.txt",
+      "ownedStates": [
+        "114 - Sardinia.txt"
+      ],
+      "capitalState": "114"
+    },
+    {
+      "tag": "SRI",
+      "sourceTag": "SRI",
+      "historyFile": "history/countries/SRI - Socialist Republic of Italy.txt",
+      "ownedStates": [
+        "1003 - Aosta Valley.txt",
+        "1004 - Emilia.txt",
+        "1005 - Umbria.txt",
+        "157 - Marches.txt",
+        "158 - Piedmont.txt",
+        "161 - Romagna.txt",
+        "162 - Tuscany.txt",
+        "764 - Viterbo.txt",
+        "838 - Liguria.txt"
+      ],
+      "capitalState": "158"
+    },
+    {
+      "tag": "SWE",
+      "sourceTag": "SWE",
+      "historyFile": "history/countries/SWE - Sweden.txt",
+      "ownedStates": [
+        "124 - Gotland.txt",
+        "138 - Skaneland.txt",
+        "139 - Smaland.txt",
+        "140 - Vastergotland.txt",
+        "141 - Svealand.txt",
+        "38 - Norrland.txt",
+        "666 - West Bothnia.txt",
+        "778 - Jamtland.txt",
+        "908 - Bohuslan.txt",
+        "909 - Haparanda.txt",
+        "960 - Lappland.txt"
+      ],
+      "capitalState": "141"
+    },
+    {
+      "tag": "SWI",
+      "sourceTag": "SWI",
+      "historyFile": "history/countries/SWI - Switzerland.txt",
+      "ownedStates": [
+        "151 - Eastern Switzerland.txt",
+        "3 - Swiss Plateau.txt",
+        "760 - Romandy.txt",
+        "761 - Ticino.txt",
+        "943 - Upper Savoy.txt"
+      ],
+      "capitalState": "3"
+    },
+    {
+      "tag": "SZC",
+      "sourceTag": "SZC",
+      "historyFile": "history/countries/SZC - Sichuan.txt",
+      "ownedStates": [
+        "1015 - Ya'an.txt",
+        "1049 - Shihe.txt",
+        "601 - Xikang.txt",
+        "605 - Chengdu.txt",
+        "650 - Chongqing.txt",
+        "661 - Daxian.txt",
+        "788 - Aba.txt"
+      ],
+      "capitalState": "605"
+    },
+    {
+      "tag": "TIB",
+      "sourceTag": "TIB",
+      "historyFile": "history/countries/TIB - Tibet.txt",
+      "ownedStates": [
+        "1086 - Gartok.txt",
+        "322 - Lhasa.txt",
+        "693 - Chamdo.txt",
+        "748 - Tsonyi.txt",
+        "858 - Tawang.txt"
+      ],
+      "capitalState": "322"
+    },
+    {
+      "tag": "TRK",
+      "sourceTag": "TRK",
+      "historyFile": "history/countries/TRK - Turkestan Republic.txt",
+      "ownedStates": [
+        "1042 - Badakhshan.txt",
+        "407 - Tashkent.txt",
+        "586 - Kokand.txt",
+        "712 - Kyzylkum.txt"
+      ],
+      "capitalState": "407"
+    },
+    {
+      "tag": "TUR",
+      "sourceTag": "TUR",
+      "historyFile": "history/countries/TUR - Ottoman Empire.txt",
+      "ownedStates": [
+        "1000 - Kars.txt",
+        "1001 - Lazistan.txt",
+        "164 - Dodecanese.txt",
+        "183 - Cyprus.txt",
+        "187 - Aegean Islands.txt",
+        "230 - Yerevan.txt",
+        "273 - Fezzan.txt",
+        "291 - Baghdad.txt",
+        "339 - Smyrna.txt",
+        "340 - Bursa.txt",
+        "341 - Adrianople.txt",
+        "342 - Mugla.txt",
+        "343 - Afyon.txt",
+        "344 - Adana.txt",
+        "345 - Sivas.txt",
+        "346 - Konya.txt",
+        "349 - Kirkuk.txt",
+        "350 - Diyarbekir.txt",
+        "352 - Van.txt",
+        "354 - Erzurum.txt",
+        "355 - Trebizond.txt",
+        "356 - Kastamonu.txt",
+        "448 - Tripoli.txt",
+        "450 - Benghazi.txt",
+        "455 - Karak.txt",
+        "49 - Ankara.txt",
+        "553 - Beirut.txt",
+        "554 - Damascus.txt",
+        "585 - Batumi.txt",
+        "658 - Abu Dhabi.txt",
+        "676 - Mosul.txt",
+        "677 - Aleppo.txt",
+        "679 - Mecca.txt",
+        "680 - Latakia.txt",
+        "754 - Medina.txt",
+        "773 - Constantinople.txt",
+        "812 - Basra.txt",
+        "819 - Sulaymaniyah.txt",
+        "907 - Bahrain.txt",
+        "992 - Haifa.txt",
+        "993 - Qatar.txt",
+        "995 - Homs.txt"
+      ],
+      "capitalState": "773"
+    },
+    {
+      "tag": "UKR",
+      "sourceTag": "UKR",
+      "historyFile": "history/countries/UKR - Ukraine.txt",
+      "ownedStates": [
+        "137 - Crimea.txt",
+        "192 - Odessa.txt",
+        "193 - Chernyhiv.txt",
+        "196 - Taurida.txt",
+        "197 - Kherson.txt",
+        "198 - Vinnytsia.txt",
+        "199 - Proskuriv.txt",
+        "200 - Alexandrivsk.txt",
+        "201 - Zhytomyr.txt",
+        "202 - Kyiv.txt",
+        "203 - Cherkasy.txt",
+        "221 - Kharkiv.txt",
+        "225 - Sumy.txt",
+        "226 - Katerinoslav.txt",
+        "227 - Yuzivka.txt",
+        "228 - Starobilsk.txt",
+        "241 - Homel.txt",
+        "259 - Poltava.txt",
+        "791 - Starodub.txt",
+        "792 - Volhynia.txt",
+        "821 - Pavlograd.txt",
+        "93 - Brest.txt",
+        "997 - Polesia.txt"
+      ],
+      "capitalState": "202"
+    },
+    {
+      "tag": "URG",
+      "sourceTag": "URG",
+      "historyFile": "history/countries/URG - Uruguay.txt",
+      "ownedStates": [
+        "300 - Uruguay.txt"
+      ],
+      "capitalState": "300"
+    },
+    {
+      "tag": "USA",
+      "sourceTag": "USA",
+      "historyFile": "history/countries/USA - United States.txt",
+      "ownedStates": [
+        "150 - Louisiana.txt",
+        "261 - Ohio.txt",
+        "357 - Maine.txt",
+        "358 - New York City.txt",
+        "359 - New Jersey.txt",
+        "360 - Philadelphia.txt",
+        "361 - Maryland.txt",
+        "362 - Virginia.txt",
+        "363 - North Carolina.txt",
+        "364 - South Carolina.txt",
+        "365 - Georgia.txt",
+        "366 - Florida.txt",
+        "367 - Alabama.txt",
+        "368 - Tennessee.txt",
+        "369 - Kentucky.txt",
+        "370 - Mississippi.txt",
+        "371 - New Orleans.txt",
+        "372 - Arkansas.txt",
+        "373 - Missouri.txt",
+        "374 - Oklahoma.txt",
+        "375 - Northern Texas.txt",
+        "376 - New Mexico.txt",
+        "377 - Arizona.txt",
+        "378 - Northern California.txt",
+        "379 - Nevada.txt",
+        "380 - Utah.txt",
+        "381 - Wyoming.txt",
+        "382 - Colorado.txt",
+        "383 - Kansas.txt",
+        "384 - Nebraska.txt",
+        "385 - Oregon.txt",
+        "386 - Washington.txt",
+        "387 - Idaho.txt",
+        "388 - Montana.txt",
+        "389 - North Dakota.txt",
+        "390 - South Dakota.txt",
+        "391 - Minnesota.txt",
+        "392 - Iowa.txt",
+        "393 - Michigan.txt",
+        "394 - Wisconsin.txt",
+        "395 - Illinois.txt",
+        "396 - Indiana.txt",
+        "463 - Alaska.txt",
+        "629 - Hawaii.txt",
+        "630 - Johnston Atoll.txt",
+        "631 - Midway Island.txt",
+        "632 - Wake Island.txt",
+        "638 - Guam.txt",
+        "642 - Phoenix Island.txt",
+        "685 - Panama Canal.txt",
+        "686 - Puerto Rico.txt",
+        "726 - Samoa.txt",
+        "727 - Line Islands.txt",
+        "796 - Albany.txt",
+        "797 - San Francisco.txt",
+        "798 - Los Angeles.txt",
+        "829 - Southern California.txt",
+        "833 - Southern Texas.txt",
+        "929 - West Virginia.txt",
+        "930 - Buffalo.txt",
+        "931 - Connecticut.txt",
+        "932 - Massachusetts.txt",
+        "933 - Vermont.txt",
+        "934 - New Hampshire.txt",
+        "935 - Rhode Island.txt",
+        "975 - Pittsburgh.txt"
+      ],
+      "capitalState": "361"
+    },
+    {
+      "tag": "VEN",
+      "sourceTag": "VEN",
+      "historyFile": "history/countries/VEN - Venezuela.txt",
+      "ownedStates": [
+        "1036 - Bolivar.txt",
+        "307 - Llanos.txt",
+        "489 - Zulia.txt",
+        "849 - Caracas.txt",
+        "850 - Sucre.txt",
+        "912 - Amacuro Delta.txt"
+      ],
+      "capitalState": "849"
+    },
+    {
+      "tag": "WIF",
+      "sourceTag": "WIF",
+      "historyFile": "history/countries/WIF - West Indies.txt",
+      "ownedStates": [
+        "1037 - Inini.txt",
+        "1039 - Berbice.txt",
+        "1078 - Barima.txt",
+        "1079 - Essequibo.txt",
+        "308 - Leeward Islands.txt",
+        "310 - Cayenne.txt",
+        "311 - Belize.txt",
+        "687 - Demerara.txt",
+        "689 - Jamaica.txt",
+        "690 - Bahamas.txt",
+        "691 - Trinidad & Tobago.txt",
+        "692 - Windward Islands.txt",
+        "694 - French Caribbean.txt",
+        "696 - Bermuda.txt"
+      ],
+      "capitalState": "689"
+    },
+    {
+      "tag": "XSM",
+      "sourceTag": "XSM",
+      "historyFile": "history/countries/XSM - Ma Clique.txt",
+      "ownedStates": [
+        "1045 - Xining.txt",
+        "1120 - Yinchuan.txt",
+        "283 - Lanzhou.txt",
+        "348 - Alxa.txt",
+        "353 - Yushu.txt",
+        "604 - Babao.txt",
+        "616 - Ordos.txt",
+        "621 - Guisui.txt",
+        "774 - Hexi Corridor.txt"
+      ],
+      "capitalState": "283"
+    },
+    {
+      "tag": "YEM",
+      "sourceTag": "YEM",
+      "historyFile": "history/countries/YEM - Yemen.txt",
+      "ownedStates": [
+        "293 - Yemen.txt",
+        "659 - Aden.txt",
+        "752 - Hadhramaut.txt",
+        "981 - Najran.txt",
+        "982 - Asir.txt"
+      ],
+      "capitalState": "293"
+    },
+    {
+      "tag": "YUN",
+      "sourceTag": "YUN",
+      "historyFile": "history/countries/YUN - Yunnan.txt",
+      "ownedStates": [
+        "1051 - Guiyang.txt",
+        "325 - Kunming.txt",
+        "603 - Zunyi.txt",
+        "816 - Dali.txt"
+      ],
+      "capitalState": "325"
+    }
+  ]
+}
