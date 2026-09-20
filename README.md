@@ -2,7 +2,7 @@
 
 A free, static country + political path randomizer and personal completion tracker for **Kaiserreich**, the Hearts of Iron IV mod.
 
-**Status: complete starting-country roster for the pinned source snapshot; incomplete political-path coverage.** The app lists **109 starting nations** and **788 source-backed political options across 96 of them**. The other **13 nations** are available for country discovery and clearly marked **Paths pending**. All ten ideologies are represented. It does not represent every path in these countries or the whole mod. The collection is checked against the official 1.6.4 source snapshot; it is not a guarantee of compatibility with every subsequent release.
+**Status: complete starting-country roster for the pinned snapshot; incomplete political coverage.** The app lists 109 starting nations and 94 later nations, with 3,294 source-backed political options. Forty-two nations have no catalogued outcome and remain available for country discovery. Options overlap and are conditional; see the scope and audit details below.
 
 ## Features
 
@@ -105,7 +105,7 @@ HANDOVER.md                   Original engineering brief
 npm test
 ```
 
-The 16 core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
+The core tests cover valid/invalid data, stable IDs, equal draw intervals, country relationships, combined filters, excluded statuses, empty pools, search, progress math, save compatibility, denied storage, reset and exact wheel landing angles. In restricted environments that block Node child processes, use `node --test --test-isolation=none`.
 
 Optional browser acceptance checks require Playwright as a **development-only** tool:
 
@@ -143,3 +143,11 @@ Full political-path coverage and cloud sync remain future work. The starting ros
 The repository’s existing [MIT License](LICENSE) is preserved for application code. Kaiserreich flags and ideology emblems are bundled at the owner's request and remain the property of their respective creators; they are **not** relicensed under MIT. See [asset attribution](assets/ATTRIBUTION.md) for exact upstream sources. Flags identify the starting nation rather than every later government. The interface uses system fonts and original CSS/SVG decoration.
 
 **This is an unofficial community project and is not affiliated with or endorsed by the Kaiserreich development team or Paradox Interactive.**
+
+## Expanded political catalogue (21 September 2026)
+
+The catalogue contains 203 nations: all 109 audited starting owners and 94 later nations. There are 3,294 political options: 1,039 game-rule options, 2,098 event choices, 149 focus outcomes and 8 decision outcomes. Use country availability and route-type filters to distinguish them. Options may overlap within a campaign; these are not 3,294 mutually exclusive focus trees.
+
+The source importer examines 545 event, focus and decision files, follows scripted effects and traces event recipients using triggers and country-scoped calls. The pinned upstream snapshot is `00f64443a8a3ec4ae0cc78179efade3cb41e1946`. `data/source-inputs.json` records required source paths and upstream blob identities; `data/source-branch-audit.json` records imports and exclusions. It currently leaves 66 events with unresolved recipients and seven dynamic country aliases for review. There are no unresolved display strings among imported options. Static analysis does not establish in-game reachability or exhaustive coverage. Forty-two listed nations have no catalogued political outcome and never receive placeholder completion entries.
+
+All 788 previously published route IDs remain valid for existing saves. Later nations have formation labels and their own bundled flags. Flag variants are references, not a claim that every government uses the same flag.

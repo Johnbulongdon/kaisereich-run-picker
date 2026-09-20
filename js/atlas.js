@@ -60,6 +60,7 @@ export class CampaignAtlas {
       const flag = document.createElement('img'); flag.src = country.flag; flag.alt = '';
       const label = document.createElement('span'); label.textContent = country.country;
       const status = document.createElement('small'); status.textContent = country.paths?.length ? `${country.paths.length} ${country.paths.length === 1 ? 'route' : 'routes'} · partial` : 'Paths pending';
+      if (!country.startingCountry) status.textContent += ' · forms during play';
       label.append(status);
       button.append(flag,label);
       button.addEventListener('click',()=>this.select(country.tag));

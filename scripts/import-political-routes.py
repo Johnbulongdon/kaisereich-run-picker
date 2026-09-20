@@ -35,15 +35,17 @@ codes = dict(zip(['TOTALIST','SYNDIE','RADSOC','SOCDEM','SOCLIB','MARLIB','SOCCO
                 ['Totalist','Syndicalist','Radical Socialist','Social Democrat','Social Liberal','Market Liberal','Social Conservative','Authoritarian Democrat','Paternal Autocrat','National Populist']))
 colors = dict(zip('tsrSlmcaPn', ['Totalist','Syndicalist','Radical Socialist','Social Democrat','Social Liberal','Market Liberal','Social Conservative','Authoritarian Democrat','Paternal Autocrat','National Populist']))
 # These groups describe domestic political outcomes despite lacking _path.
-extra = {'USA_election', 'USA_macarthur_path', 'POL_election', 'POL_revolts', 'AUS_election', 'AUS_ausgleich', 'GRE_election', 'GRE_referendum', 'IRE_election', 'SIA_constitution', 'SIA_civil_war', 'SIA_election', 'NFA_election'}
+extra = {'USA_election', 'USA_macarthur_path', 'POL_election', 'POL_revolts', 'AUS_election', 'AUS_ausgleich', 'GRE_election', 'GRE_referendum', 'IRE_election', 'SIA_constitution', 'SIA_civil_war', 'SIA_election', 'NFA_election', 'CAN_king', 'CAN_referendum', 'USA_civil_war', 'HAW_strike', 'MEX_revolt', 'PUE_election', 'NIR_revolt', 'RUS_aftermath', 'BAT_collapse', 'JBS_emir', 'JBS_unification', 'SAU_path', 'ASY_revolt', 'LBA_unification', 'INC_revolt', 'INS_revolt', 'NZL_succession', 'CHA_revolt', 'NGR_revolt', 'VOL_revolt', 'MLI_revolt', 'GNA_revolt', 'MRT_revolt', 'TUN_revolt', 'IVO_revolt'}
 by_tag = {c['tag']: c for c in data['countries']}
 groups = []
+excluded = []
 unresolved = []
 for group, pairs in parse((source / 'common/game_rules/game_rules_country_paths.txt').read_text(encoding='utf-8-sig')):
     tag = group.split('_')[0]
     if tag == 'OTT':
         tag = 'TUR'
     if tag not in by_tag or not (group.lower().endswith('_path') or group in extra):
+        excluded.append({'group':group,'reason':'No mapped campaign country' if tag not in by_tag else 'Diplomacy, war setup, cosmetic or non-political setting; not counted as a political route'})
         continue
     country = by_tag[tag]
     title = clean(resolve(dict(pairs)['name']))
@@ -71,7 +73,7 @@ for group, pairs in parse((source / 'common/game_rules/game_rules_country_paths.
             path['ideology'] = ideology
         path.update(sourceKey=key, ruleGroup=group, ruleGroupName=title,
                     category=title, notes=description, source=data['metadata']['source'],
-                    sourceStatus='Official game-rule option; not playtested',
+                    sourceStatus='Official game-rule option; not playtested', routeKind='game-rule',
                     objectives=[f'Follow the {name} political outcome. Consult the route conditions above before starting.'])
         if not existing:
             country['paths'].append(path)
@@ -84,5 +86,5 @@ for country in data['countries']:
     country['contentStatus'] = 'Political game-rule options imported; focus-tree coverage incomplete' if country['paths'] else 'No imported political game-rule options'
 data['metadata'].update(kaiserreichVersion='1.6.4 — political game-rule collection', notes='109 starting nations. Active domestic political game-rule options are imported from the pinned official source. Random choices, foreign policy and war plans are excluded. Independent rule groups are alternatives, not a fabricated cross-product. Options can be conditional; read their descriptions. Focus-tree-only routes and successor-country rules are not comprehensively covered.')
 target.write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-(root / 'data/political-rule-coverage.json').write_text(json.dumps({'upstreamCommit':data['metadata']['upstreamCommit'], 'groups':groups}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+(root / 'data/political-rule-coverage.json').write_text(json.dumps({'upstreamCommit':data['metadata']['upstreamCommit'], 'groups':groups,'excludedGroups':excluded}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 print(json.dumps({'routes':sum(len(c['paths']) for c in data['countries']), 'countriesWithRoutes':sum(bool(c['paths']) for c in data['countries']), 'groups':len(groups)}))

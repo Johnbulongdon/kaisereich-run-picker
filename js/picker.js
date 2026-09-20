@@ -20,7 +20,7 @@ export function readDataset(data) {
       }
       if (ids.has(path.id)) throw new Error(`Duplicate path ID: ${path.id}`);
       ids.add(path.id);
-      records.push({ ...path, tag: country.tag, country: country.country, region: country.region, flag: path.flag ?? country.flag, location: country.location, challenge: country.challenge });
+      records.push({ ...path, tag: country.tag, country: country.country, region: country.region, startingCountry: country.startingCountry, formationContext: country.formationContext, flag: path.flag ?? country.flag, location: country.location, challenge: country.challenge });
     }
   }
   if (!records.length) throw new Error('No valid paths in the database.');
@@ -31,15 +31,17 @@ export function readDataset(data) {
 // Path-specific filters require a real matching route, never a placeholder.
 export function eligibleCountries(countries, records, progress = {}, filters = {}) {
   const matching = new Set(eligiblePaths(records, progress, filters).map(path => path.tag));
-  const pathFilter = filters.ideology || filters.status || filters.excludeCompleted || filters.excludePlayed;
+  const pathFilter = filters.ideology || filters.status || filters.excludeCompleted || filters.excludePlayed || filters.routeKind;
   return countries.filter(country => (!filters.region || country.region === filters.region) &&
-    (!filters.country || country.tag === filters.country) && (!pathFilter || matching.has(country.tag)));
+    (!filters.country || country.tag === filters.country) && (!filters.availability || (filters.availability === 'starting') === country.startingCountry) && (!pathFilter || matching.has(country.tag)));
 }
 
 export function eligiblePaths(records, progress = {}, filters = {}) {
   return records.filter(path => {
     const status = progress[path.id] ?? 'unplayed';
     return (!filters.region || path.region === filters.region) &&
+      (!filters.availability || (filters.availability === 'starting') === path.startingCountry) &&
+      (!filters.routeKind || path.routeKind === filters.routeKind) &&
       (!filters.ideology || path.ideology === filters.ideology) &&
       (!filters.country || path.tag === filters.country) &&
       (!filters.status || status === filters.status) &&

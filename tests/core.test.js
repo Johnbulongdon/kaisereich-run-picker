@@ -10,8 +10,8 @@ const data = { ...fullData, countries: fullData.countries.slice(0, 3).map(c => (
 test('expanded collection has map anchors, goals and local heraldry for every route', () => {
   const { records, skipped } = readDataset(fullData);
   assert.equal(skipped, 0);
-  assert.equal(fullData.countries.length, 109);
-  assert.equal(records.length, 788);
+  assert.equal(fullData.countries.length, 203);
+  assert.equal(records.length, 3294);
   for (const path of records) {
     assert.ok(path.objectives.length && path.challenge && path.sourceKey);
     assert.ok(path.location.length === 2 && path.location.every(Number.isFinite));
@@ -27,7 +27,7 @@ test('every included political rule option is selectable once under its source c
   const manifest = JSON.parse(readFileSync(new URL('../data/political-rule-coverage.json', import.meta.url)));
   const { records: all } = readDataset(fullData);
   assert.equal(manifest.upstreamCommit, fullData.metadata.upstreamCommit);
-  assert.equal(manifest.groups.length, 115);
+  assert.equal(manifest.groups.length, 170);
   for (const group of manifest.groups) {
     for (const key of group.sourceKeys) {
       const matches = all.filter(path => path.sourceKey === key);
@@ -38,8 +38,8 @@ test('every included political rule option is selectable once under its source c
       assert.ok(eligiblePaths(all, {}, {country:group.country}).includes(matches[0]));
     }
   }
-  assert.equal(all.filter(path => path.tag === 'GXC').length, 27);
-  assert.equal(all.filter(path => path.tag === 'RUS').length, 26);
+  assert.equal(all.filter(path => path.tag === 'GXC' && path.routeKind === 'game-rule').length, 27);
+  assert.equal(all.filter(path => path.tag === 'RUS' && path.routeKind === 'game-rule').length, 32);
   assert.ok(all.find(path => path.sourceKey === 'RULE_OPTION_CAN_PATH_SOCDEM').notes.includes('Requires:'));
 });
 
@@ -150,10 +150,10 @@ test('storage denial, quota failure and corrupt saves are recoverable', () => {
 const manifest = JSON.parse(readFileSync(new URL('../data/starting-roster.json', import.meta.url)));
 test('every audited starting owner appears exactly once, with source and heraldry', () => {
  assert.equal(manifest.countries.length, 109);
- assert.deepEqual(fullData.countries.map(c => c.tag).sort(), manifest.countries.map(c => c.tag).sort());
+ assert.deepEqual(fullData.countries.filter(c => c.startingCountry).map(c => c.tag).sort(), manifest.countries.map(c => c.tag).sort());
  assert.equal(new Set(manifest.countries.map(c => c.sourceTag)).size, 109);
  assert.equal(manifest.countries.find(c => c.tag === 'CAN').sourceTag, 'IMP');
- for (const country of fullData.countries) {
+ for (const country of fullData.countries.filter(c => c.startingCountry)) {
   assert.ok(country.startingCountry && country.source && country.location);
   assert.ok(readFileSync(new URL('../' + country.flag.slice(2), import.meta.url)).length > 0);
   assert.equal(country.pathCoverage, country.paths.length ? 'partial' : 'pending');
@@ -161,12 +161,34 @@ test('every audited starting owner appears exactly once, with source and heraldr
 });
 test('unreviewed countries are discoverable but never become placeholder routes', () => {
  const { records, countries } = readDataset(fullData);
- assert.equal(eligibleCountries(countries, records).length, 109);
- assert.ok(eligibleCountries(countries, records, {}, { region: 'Central Asia' }).some(c => c.tag === 'AFG'));
- assert.equal(records.filter(p => p.tag === 'AFG').length, 0);
+ assert.equal(eligibleCountries(countries, records).length, 203);
+ assert.ok(eligibleCountries(countries, records, {}, { country: 'AZR' }).some(c => c.tag === 'AZR'));
+ assert.equal(records.filter(p => p.tag === 'AZR').length, 0);
  for (const filters of [{ideology:'Social Democrat'}, {status:'unplayed'}, {excludeCompleted:true}, {excludePlayed:true}]) {
-  assert.ok(!eligibleCountries(countries, records, {}, filters).some(c => c.tag === 'AFG'));
+  assert.ok(!eligibleCountries(countries, records, {}, filters).some(c => c.tag === 'AZR'));
  }
- assert.equal(summarize(records, {}).total, 788);
- assert.equal(countries.filter(c => c.pathCoverage === 'pending').length, 13);
+ assert.equal(summarize(records, {}).total, 3294);
+ assert.equal(countries.filter(c => c.pathCoverage === 'pending').length, 42);
+});
+
+
+test('source branches preserve ownership and compose with country availability filters', () => {
+ const { records, countries } = readDataset(fullData);
+ const audit = JSON.parse(readFileSync(new URL('../data/source-branch-audit.json', import.meta.url)));
+ assert.equal(new Set(records.map(p => p.id)).size, records.length);
+ for (const item of audit.imported) {
+  const matches = records.filter(p => p.id === item.id);
+  assert.equal(matches.length, 1, item.id);
+  assert.equal(matches[0].tag, item.country);
+  assert.equal(matches[0].sourceKey, item.sourceKey);
+ }
+ assert.equal(eligibleCountries(countries, records, {}, {availability:'starting'}).length, 109);
+ assert.equal(eligibleCountries(countries, records, {}, {availability:'later'}).length, 94);
+ for (const routeKind of ['game-rule','event-choice','focus-branch','decision-branch']) {
+  const pool = eligiblePaths(records, {}, {availability:'later',routeKind});
+  assert.ok(pool.length, routeKind);
+  assert.ok(pool.every(p => !p.startingCountry && p.routeKind === routeKind));
+ }
+ assert.ok(!records.some(p => p.tag === 'NEE' && p.source.includes('APG')));
+ assert.ok(!records.some(p => p.tag === 'GER' && p.name.includes('Germany Demands Regime Change')));
 });

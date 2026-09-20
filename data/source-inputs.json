@@ -1,0 +1,5457 @@
+{
+  "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
+  "files": [
+    {
+      "path": "common/country_tag_aliases/tag_aliases.txt",
+      "sha": "75284290f458ac2960e7b552107fc2b87a8df998"
+    },
+    {
+      "path": "common/decisions/00 Annexation decisions.txt",
+      "sha": "5eb5df9abe9ffbf02623d731269dc4a9aca281f6"
+    },
+    {
+      "path": "common/decisions/00 Generic decisions.txt",
+      "sha": "ae41ac299fce2f1726bba2ee11d2f3f8f2f52e55"
+    },
+    {
+      "path": "common/decisions/00 demobilization decisions.txt",
+      "sha": "0e0f570381f4fbed5248f2cb0bc3482404213f08"
+    },
+    {
+      "path": "common/decisions/00 exiled governments decisions.txt",
+      "sha": "2b608e0461996ff15a4ce5108438628d1cdb5d0e"
+    },
+    {
+      "path": "common/decisions/00 lar agent recruitment decisions.txt",
+      "sha": "cb77cc592b3550ddb568b8193c87975a8aaf4af4"
+    },
+    {
+      "path": "common/decisions/01 American Civil War decisions.txt",
+      "sha": "469139de0260e8d4c5b9c88b3620f40a8de6abd7"
+    },
+    {
+      "path": "common/decisions/01 Arabian decisions.txt",
+      "sha": "bf7cb7997a3ce12d935665466f664ad00d615e5e"
+    },
+    {
+      "path": "common/decisions/01 Axis decisions.txt",
+      "sha": "2ce0568f0bfc991166cd3ded3306c56a59477375"
+    },
+    {
+      "path": "common/decisions/01 Belgrade Pact decisions.txt",
+      "sha": "11e5dbf13ea7c4cb28d4d8486d64de6630a76cdf"
+    },
+    {
+      "path": "common/decisions/01 Central Asia decisions.txt",
+      "sha": "13e06ee164f04cf3ba04c60b8d9e5b2deb3ae713"
+    },
+    {
+      "path": "common/decisions/01 China decisions.txt",
+      "sha": "ad362ee80380272c6b94f04feed2a77e379303d4"
+    },
+    {
+      "path": "common/decisions/01 India decisions.txt",
+      "sha": "bf8ec5a580d026e58dfe660cd4bc7b3df386866b"
+    },
+    {
+      "path": "common/decisions/01 Intermarium decisions.txt",
+      "sha": "5d23c5883641c7b5acbb084cc2a906a8c4c0b8c0"
+    },
+    {
+      "path": "common/decisions/01 Italy decisions.txt",
+      "sha": "e5aea7e38bcbbc5adb3a9f5749eac36bb3861875"
+    },
+    {
+      "path": "common/decisions/01 KMT decisions.txt",
+      "sha": "b489e5b0198fd2b1c3ac4324f3281c596e4e4e05"
+    },
+    {
+      "path": "common/decisions/01 League of Arab States decisions.txt",
+      "sha": "3c1f1196f47a8fbed8bf83b2961565a8bdb43698"
+    },
+    {
+      "path": "common/decisions/02 Central America decisions.txt",
+      "sha": "e86eef2ab2b9df16ffc771cd1c2d2ba04b7226f1"
+    },
+    {
+      "path": "common/decisions/04 Levant Crisis missions.txt",
+      "sha": "af49a87bde9c490719030a210aeb88955881cae3"
+    },
+    {
+      "path": "common/decisions/05 Ogaden War missions.txt",
+      "sha": "6eea1f63b3f4f58eca57ebd901ad56ae1b75686e"
+    },
+    {
+      "path": "common/decisions/ALB decisions (Albania).txt",
+      "sha": "9efb52151d3534205a2d3f68f8b6d5838cfc8323"
+    },
+    {
+      "path": "common/decisions/ANQ decisions (Anqing Clique).txt",
+      "sha": "0c16d7792d823e3810041e7828859d7ac859299a"
+    },
+    {
+      "path": "common/decisions/APG decisions (American Peoples Government).txt",
+      "sha": "1f48b5d1b4923cdafbbe5a63282c28a4ff9dcd1d"
+    },
+    {
+      "path": "common/decisions/ARG decisions (Argentina).txt",
+      "sha": "b718c3a21b94297ccae30ff41c78bb9c13f68b28"
+    },
+    {
+      "path": "common/decisions/ARM decisions (Armenia).txt",
+      "sha": "55ccfd158e66199570545ca775d9c4b99670969d"
+    },
+    {
+      "path": "common/decisions/AST decisions (Australasia).txt",
+      "sha": "fe67a88baf9a2a6d0f543c10bb4bae4fb1deeccf"
+    },
+    {
+      "path": "common/decisions/ASY decisions (Assyria).txt",
+      "sha": "389f7c3c96d56bdf174b33338cd7c101915a3ba5"
+    },
+    {
+      "path": "common/decisions/AUS decisions (Austria).txt",
+      "sha": "5386577c3e83584c90bd46b7ae95c7015afb3aaf"
+    },
+    {
+      "path": "common/decisions/AZR decisions (Azerbaijan).txt",
+      "sha": "ca871e4a57bf19bceb5a3cbbfcd8407fc45fcb0b"
+    },
+    {
+      "path": "common/decisions/BAT decisions (Baltic Duchy).txt",
+      "sha": "b6010dea683289c71e55f3fd87e7e83a2c93d8a8"
+    },
+    {
+      "path": "common/decisions/BEL decisions (Belgium).txt",
+      "sha": "fb12e512a8a9e7029f40400d430c1337c0c2fecb"
+    },
+    {
+      "path": "common/decisions/BHU decisions (Bhutan).txt",
+      "sha": "d7c2d266bb8686739e02d8d1096f20e0bd49e328"
+    },
+    {
+      "path": "common/decisions/BLR decisions (White Ruthenia).txt",
+      "sha": "d96cd421edc21ea0c0536cd6a8b2f93bb7597d47"
+    },
+    {
+      "path": "common/decisions/BOL decisions (Bolivia).txt",
+      "sha": "06214514e48e9610c94d5d6fb0d339ba45562fa9"
+    },
+    {
+      "path": "common/decisions/BRA decisions (Brazil).txt",
+      "sha": "683a3f82896f25ff7e087b7a3ff69c8e1a0b1252"
+    },
+    {
+      "path": "common/decisions/BUK decisions (Bukhara).txt",
+      "sha": "ccb1347ab4d724fe88b903ab63ba6a7a452c948f"
+    },
+    {
+      "path": "common/decisions/BUL decisions (Bulgaria).txt",
+      "sha": "eb59567bce4e40eaa864b3a4bc998089f6722720"
+    },
+    {
+      "path": "common/decisions/CAN decisions (Canada).txt",
+      "sha": "6ede3a812f64df9d5d0b81dd9d66be110eda0ca7"
+    },
+    {
+      "path": "common/decisions/CEN decisions (Central America Democratic).txt",
+      "sha": "311166d1d81f8c92a2691538c8e4558f604c5d06"
+    },
+    {
+      "path": "common/decisions/CEN decisions (Central America Military).txt",
+      "sha": "fa9124b93cc1c9a90d99c7ddc5814df6a0106e20"
+    },
+    {
+      "path": "common/decisions/CEN decisions (Central America Socialist).txt",
+      "sha": "7b08adbe714f583b70cbbfe5c0943c2df8e5afab"
+    },
+    {
+      "path": "common/decisions/CHI decisions (Left Kuomintang).txt",
+      "sha": "d19d3e68023fecd6516dbbf6916a0995c2a1b2c1"
+    },
+    {
+      "path": "common/decisions/CHL decisions (Chile).txt",
+      "sha": "f5c34b0edec8cf27d4cd8bdf657d86e33e876a75"
+    },
+    {
+      "path": "common/decisions/COL decisions (Colombia).txt",
+      "sha": "5fba4b742eae6dad13c59cf10ad8ba35a54d0604"
+    },
+    {
+      "path": "common/decisions/COS decisions (Costa Rica).txt",
+      "sha": "5df958930d18282c98a23992f31ffde2a2deb01a"
+    },
+    {
+      "path": "common/decisions/CRO decisions (Croatia).txt",
+      "sha": "1c94aa6784df51a7c946ecac2026596cf1a853b4"
+    },
+    {
+      "path": "common/decisions/CUB decisions (Cuba).txt",
+      "sha": "8b4ec674f01cf3d4295fa178a5d56fac21db16b0"
+    },
+    {
+      "path": "common/decisions/DAH decisions (Dahomey).txt",
+      "sha": "2215ff36a7c51318b0f8cd69325412782a6a8208"
+    },
+    {
+      "path": "common/decisions/DEI decisions (Dutch East Indies).txt",
+      "sha": "685a8d37927882fc3b72e8f6165c177d05881402"
+    },
+    {
+      "path": "common/decisions/DEN decisions (Denmark).txt",
+      "sha": "fbbf8df312cabbee5591dec950767f9b0afacb39"
+    },
+    {
+      "path": "common/decisions/DOM decisions (Dominican Republic).txt",
+      "sha": "022d22c59dd7ecee8f786ef7f62a763b9644c958"
+    },
+    {
+      "path": "common/decisions/EGY decisions (Egyptian).txt",
+      "sha": "bd214b6f416fb712bdbc89508ba5727e02341779"
+    },
+    {
+      "path": "common/decisions/ELS decisions (El Salvador).txt",
+      "sha": "eb895009adc11be539e54054423c68bd8f896d24"
+    },
+    {
+      "path": "common/decisions/ENG decisions (Union of Britain).txt",
+      "sha": "e52f2007160f8c96c8afbacfde4f73d88dee8bb6"
+    },
+    {
+      "path": "common/decisions/EST decisions (Estonia).txt",
+      "sha": "7aa3e20887eddefbef6ca2851f7739682bc8de8c"
+    },
+    {
+      "path": "common/decisions/ETS decisions (East Turkestan).txt",
+      "sha": "17e1d94978d765144545ef7c4707400879288c35"
+    },
+    {
+      "path": "common/decisions/FER decisions (Far Eastern Army).txt",
+      "sha": "67ebcab77f7acc7799458d8c058eee0a2b359b84"
+    },
+    {
+      "path": "common/decisions/FIN decisions (Finland).txt",
+      "sha": "5ab9beb6717ec499cf65bd408e64c5360b587578"
+    },
+    {
+      "path": "common/decisions/FNG decisions (Fengtian).txt",
+      "sha": "e20857137354ca9e9013b022f61e1d47824366e0"
+    },
+    {
+      "path": "common/decisions/FOP decisions (Patagonia).txt",
+      "sha": "c148b1627ef774b9b9fdc982111324e246ff05af"
+    },
+    {
+      "path": "common/decisions/FRA decisions (Commune of France).txt",
+      "sha": "0d27c89aba8b09aedc58fc3e17fd6c978dd0157d"
+    },
+    {
+      "path": "common/decisions/GBR decisions (United Kingdom).txt",
+      "sha": "97f9c80af34773dc594caf48b4c3f6ab0e73215c"
+    },
+    {
+      "path": "common/decisions/GEA decisions (German East Asia).txt",
+      "sha": "b141eae7e9b22d1432070946a032c00c4db5bc0a"
+    },
+    {
+      "path": "common/decisions/GEO decisions (Georgia).txt",
+      "sha": "4ce0fb55bf88c27c431533fa30d12d88db6ea976"
+    },
+    {
+      "path": "common/decisions/GER decisions (Germany).txt",
+      "sha": "0d3495d5e8af51533d307cd379b8b8422c6d4978"
+    },
+    {
+      "path": "common/decisions/GRE decisions (Greece).txt",
+      "sha": "3b740a4ef43c9e0f8573d557daab1b89b107635c"
+    },
+    {
+      "path": "common/decisions/GXC decisions (Liangguang).txt",
+      "sha": "bf0439e0181062964a9d473368f1c0665a7b4f5d"
+    },
+    {
+      "path": "common/decisions/HAI decisions (Haiti).txt",
+      "sha": "0d18eb4781d1a59c06e6bcba63baa9927b1626b4"
+    },
+    {
+      "path": "common/decisions/HAW decisions (Hawaii).txt",
+      "sha": "c4f734ddd4df99ba3481e806729edb195bc03714"
+    },
+    {
+      "path": "common/decisions/HND decisions (Bharatiya Peoples Republic).txt",
+      "sha": "7a9bb8d5d3e70264cf8f55f0ad3cca2f56dcec2b"
+    },
+    {
+      "path": "common/decisions/HNN decisions (Hunan).txt",
+      "sha": "07448bbb8a5033510c67fbf81e5a9f0331548f1b"
+    },
+    {
+      "path": "common/decisions/HOL decisions (Netherlands).txt",
+      "sha": "243697dee75f481f26e815db3a1ebf9b046ae6bb"
+    },
+    {
+      "path": "common/decisions/ICE decisions (Iceland).txt",
+      "sha": "ecfd288e811fd411c22aa2b4d1cd0f317bd23091"
+    },
+    {
+      "path": "common/decisions/INC decisions (Indochina).txt",
+      "sha": "7dc03220e0983146fc36bf2168a5fd973de706d2"
+    },
+    {
+      "path": "common/decisions/INS decisions (Indonesia).txt",
+      "sha": "932fb4b6cd466d9a3920c64e1c922709b4cd56ba"
+    },
+    {
+      "path": "common/decisions/IRE decisions (Ireland).txt",
+      "sha": "2bd09eca84f51732cbfa9220ca27227a83de264d"
+    },
+    {
+      "path": "common/decisions/JAP decisions (Japan).txt",
+      "sha": "77f87850b0df19c47551ddcbb141b447a3c6a0f2"
+    },
+    {
+      "path": "common/decisions/KEN decisions (Kenya).txt",
+      "sha": "618825d08809e83b7b10c19219d649ef70f5a37b"
+    },
+    {
+      "path": "common/decisions/KHI decisions (Khiva).txt",
+      "sha": "8029682a8deb927d2196efb3a6855f805a1b4573"
+    },
+    {
+      "path": "common/decisions/KUM decisions (Kumul).txt",
+      "sha": "ad779a15776775db180684c296d602853ede4b13"
+    },
+    {
+      "path": "common/decisions/LAT decisions (Latvia).txt",
+      "sha": "3848793f0930794fcba8f6ba1dc03aa8afb26df5"
+    },
+    {
+      "path": "common/decisions/LBA decisions (Cyrenaica).txt",
+      "sha": "843d29050a2de45ce84ca5d0c6581996f74096b9"
+    },
+    {
+      "path": "common/decisions/LEB decisions (Lebanon).txt",
+      "sha": "f510cce425c9e3cc3ae96b26a4b64f2b943c2de9"
+    },
+    {
+      "path": "common/decisions/LEC decisions (Legation Cities).txt",
+      "sha": "2d3fb6a370f6f0eed0f7ddc9c400bce69c353b0f"
+    },
+    {
+      "path": "common/decisions/LEP decisions (League of Eight Provinces).txt",
+      "sha": "0cfdf35f14745093e31a3aee426c2d500a9dc268"
+    },
+    {
+      "path": "common/decisions/LIB decisions (Liberia).txt",
+      "sha": "648c1926ad1dd3533c6a36b7a966914a2265eb6b"
+    },
+    {
+      "path": "common/decisions/LIT decisions (Lithuania).txt",
+      "sha": "b947243d1b20ef8e43f0f70732f97883bbc10e11"
+    },
+    {
+      "path": "common/decisions/MAF decisions (Mittelafrika).txt",
+      "sha": "d535a6c72da77dca4e8f6476155d1171b0c68bd6"
+    },
+    {
+      "path": "common/decisions/MEX decisions (Mexico).txt",
+      "sha": "6cca1e446bc800954511b4b7b83190ed11de5f4e"
+    },
+    {
+      "path": "common/decisions/MNT decisions (Montenegro).txt",
+      "sha": "c5444949852d21c2e265be47728a455d903ca777"
+    },
+    {
+      "path": "common/decisions/MON decisions (Mongolia).txt",
+      "sha": "26882af97a1a888dee05161fb520807f5ca77d20"
+    },
+    {
+      "path": "common/decisions/NEE decisions (New England).txt",
+      "sha": "a6c2748f4bdcbd10134770f6e8551d5fe2ee0831"
+    },
+    {
+      "path": "common/decisions/NEP decisions (Nepal).txt",
+      "sha": "f06ebbe8112ecc7b2555bfbb764dbad1a22cff3a"
+    },
+    {
+      "path": "common/decisions/NFA decisions (NatFrance).txt",
+      "sha": "b8bb2a13b2ee24774ae6fb7b92ac6877296b8654"
+    },
+    {
+      "path": "common/decisions/NIC decisions (Nicaragua).txt",
+      "sha": "07bc0398de2efc24aa5b5ced71e7fa159ada51a0"
+    },
+    {
+      "path": "common/decisions/NIR decisions (Northern Ireland).txt",
+      "sha": "c739e086cc7f6ed8dc0bd1dfa5b25fef2ebfc185"
+    },
+    {
+      "path": "common/decisions/NOR decisions (Norway).txt",
+      "sha": "5f25b13b833ebbe93adc644b6600168001748b5f"
+    },
+    {
+      "path": "common/decisions/PAN decisions (Panama).txt",
+      "sha": "2a167862634f3f5df51c2a427b3a561352ebac30"
+    },
+    {
+      "path": "common/decisions/PAR decisions (Paraguay).txt",
+      "sha": "34983770eaca78bd68380af3ff733a54bd1b4408"
+    },
+    {
+      "path": "common/decisions/PER decisions (Iran).txt",
+      "sha": "a394eaebae858eed656b59ea1bd2d52ce1d39f5e"
+    },
+    {
+      "path": "common/decisions/PHI decisions (Philippines).txt",
+      "sha": "c9039a9f558d866d66e492ae409edd30de549990"
+    },
+    {
+      "path": "common/decisions/POL decisions (Poland).txt",
+      "sha": "9bdee469e04fb73212bab41d0d2c4cdf2de17652"
+    },
+    {
+      "path": "common/decisions/POR decisions (Portugal).txt",
+      "sha": "067e0a150427913e689b47628c18f5e30bf9125f"
+    },
+    {
+      "path": "common/decisions/PRF decisions (Princely Federation).txt",
+      "sha": "6eadd38ad18bba1b77ea5d269068c709801b1110"
+    },
+    {
+      "path": "common/decisions/PRU decisions (Peru).txt",
+      "sha": "02de04f4275865173ca8b432006df60da84fd7da"
+    },
+    {
+      "path": "common/decisions/QIE decisions (Qing).txt",
+      "sha": "905c200235690292fef71e071c8dc32001ff69c5"
+    },
+    {
+      "path": "common/decisions/RAJ decisions (Dominion of India).txt",
+      "sha": "6bcc7aac4b21cd73be47ca45041b05b5a4f272f6"
+    },
+    {
+      "path": "common/decisions/ROM decisions (Romania).txt",
+      "sha": "2919e61f5ccb7418f4b21015c76bb3c6e15896b0"
+    },
+    {
+      "path": "common/decisions/RSA decisions (Free Russian Army).txt",
+      "sha": "01d1c31cd4223538b755d7015bc5a0f8378e444d"
+    },
+    {
+      "path": "common/decisions/RUS decisions (Russia).txt",
+      "sha": "59e729c33dfdab8b6e8179a4920dbf5b966feee8"
+    },
+    {
+      "path": "common/decisions/SAF decisions (South Africa).txt",
+      "sha": "7ba82b287637e306f47f4ea00cb2151eb4c1b4b2"
+    },
+    {
+      "path": "common/decisions/SCA decisions (Scandinavia).txt",
+      "sha": "9b7c9772ee5311f7cdf5eaec7c0e1567356276a2"
+    },
+    {
+      "path": "common/decisions/SER decisions (Serbia).txt",
+      "sha": "28256395a28864c2dc96aead8858e18b9b3e487e"
+    },
+    {
+      "path": "common/decisions/SHD decisions (Shandong).txt",
+      "sha": "869d1fe794ce3688e2ce096e72d496dcfa9e088f"
+    },
+    {
+      "path": "common/decisions/SHX decisions (Shanxi).txt",
+      "sha": "ed01923970a18953afac242670c596da30aeee19"
+    },
+    {
+      "path": "common/decisions/SIA decisions (Siam).txt",
+      "sha": "469ab6a15b57d958c0543bf4fa815dce4350a532"
+    },
+    {
+      "path": "common/decisions/SIK decisions (Xinjiang).txt",
+      "sha": "8123ee49fe18a841500e35f550e073fdc5d44781"
+    },
+    {
+      "path": "common/decisions/SPA decisions (Spain).txt",
+      "sha": "cf8d16250d64ad6218885a4d59cfc565e4878eb1"
+    },
+    {
+      "path": "common/decisions/SPR decisions (Spain).txt",
+      "sha": "ba8dbafdbea72a7c83cf0534c295ba442641a282"
+    },
+    {
+      "path": "common/decisions/SWE decisions (Sweden).txt",
+      "sha": "76b478ccf83720e5dae25530f2fb68353198bf19"
+    },
+    {
+      "path": "common/decisions/SWI decisions (Switzerland).txt",
+      "sha": "e7baa8eb3c815d2d56fce44b9400391f864aadf9"
+    },
+    {
+      "path": "common/decisions/SYR decisions (Syria).txt",
+      "sha": "86ef18608c89c678d19cd3a98a7dc58a91ebcc01"
+    },
+    {
+      "path": "common/decisions/SZC decisions (Sichuan).txt",
+      "sha": "060da35d13107f9f944b5fbec44853cbd82075eb"
+    },
+    {
+      "path": "common/decisions/TIB decisions (Tibet).txt",
+      "sha": "a0f55963b71cb9d0b05b26e83672c4d115aba3aa"
+    },
+    {
+      "path": "common/decisions/TRK decisions (Turkestan).txt",
+      "sha": "28b9753e10a049eb72a96dbfa1c7c00888bffb23"
+    },
+    {
+      "path": "common/decisions/TUR decisions (Ottoman).txt",
+      "sha": "3c5ace8c3287b7179fbe16827994fd67735082f6"
+    },
+    {
+      "path": "common/decisions/TUR decisions (Turkey).txt",
+      "sha": "198fbf5c609bd15ef534238d2b30b032400b21bd"
+    },
+    {
+      "path": "common/decisions/UKR decisions (Ukraine).txt",
+      "sha": "e076db0319fd3b2a9504e83f395ce60cb7d02c82"
+    },
+    {
+      "path": "common/decisions/UPC decisions (Federalist China).txt",
+      "sha": "d469459d2bf813dc6e78bd898136fdcc41ed7b6c"
+    },
+    {
+      "path": "common/decisions/URG decisions (Uruguay).txt",
+      "sha": "8a48c0c06d1670799e9dd92598759778d78ef244"
+    },
+    {
+      "path": "common/decisions/USA decisions (United States of America).txt",
+      "sha": "1b7947d598874dce679ee6324a3d33e82abf6ba0"
+    },
+    {
+      "path": "common/decisions/VEN decisions (Venezuela).txt",
+      "sha": "b7d72b6ee7c117b0811a1201361eff4d12c7c586"
+    },
+    {
+      "path": "common/decisions/WCA decisions (Workers Congress of America).txt",
+      "sha": "394b2878aa2bc517081baac52a53534e36a8b625"
+    },
+    {
+      "path": "common/decisions/WIF decisions (West Indies).txt",
+      "sha": "08ac13542c71990e549d8b0a384bf19edfc72222"
+    },
+    {
+      "path": "common/decisions/XSM decisions (Ma Clique).txt",
+      "sha": "a94a80e114b8174b11e59666a03f59a8897f4f01"
+    },
+    {
+      "path": "common/decisions/YEM decisions (Yemen).txt",
+      "sha": "2281c4961b88a24c4b2def4ba4a080304640d045"
+    },
+    {
+      "path": "common/decisions/YUN decisions (Yunnan).txt",
+      "sha": "472b55f33327b80c025b14192388a0f3a6c76849"
+    },
+    {
+      "path": "common/decisions/ZIM decisions (Rhodesia).txt",
+      "sha": "7c77c75951f4929808ef1685da8ef76518b76563"
+    },
+    {
+      "path": "common/decisions/ZZ debug decisions.txt",
+      "sha": "2e3f6efce4bbc06c273f373366f23d843367162f"
+    },
+    {
+      "path": "common/national_focus/00 Default focus.txt",
+      "sha": "b6986067217e1df482bb16b42a85b3ae20638897"
+    },
+    {
+      "path": "common/national_focus/00_titlebar_styles.txt",
+      "sha": "2184d9402b7f1baf3fbdffd77797ded29cae67c6"
+    },
+    {
+      "path": "common/national_focus/01 Central Asia recovery focus.txt",
+      "sha": "d49ca327750d93e1a8e56a60cb398e8f3df325ad"
+    },
+    {
+      "path": "common/national_focus/01 Scandinavian joint focus.txt",
+      "sha": "8a615f631f206d2af6ae77b7f0198464d750a692"
+    },
+    {
+      "path": "common/national_focus/ACC focus (American Constitutional Coalition).txt",
+      "sha": "96decc16bb3c0ce3282233c1435678ddad72720d"
+    },
+    {
+      "path": "common/national_focus/AFR focus (African Minors Shared).txt",
+      "sha": "bdd8d408f8016ed8ca1548164ac3dbdc611e110f"
+    },
+    {
+      "path": "common/national_focus/ALB focus (Albania).txt",
+      "sha": "56f6ff958ee5f64bddf8c9ff107fba19715fdf81"
+    },
+    {
+      "path": "common/national_focus/AMA focus (Amazonas).txt",
+      "sha": "655640ec93dcc7094d42cb24504a8fc81c09cb4b"
+    },
+    {
+      "path": "common/national_focus/ANQ focus (Anqing Clique).txt",
+      "sha": "5ef996a9fcd4a965548f541bff35a11e61b45474"
+    },
+    {
+      "path": "common/national_focus/APG focus (American Peoples Government).txt",
+      "sha": "e2fc7b08ab5263c6410d08ae499034a4372f58fa"
+    },
+    {
+      "path": "common/national_focus/ARG focus (Argentina Carles).txt",
+      "sha": "04725d1f4f73848bc2e6e13c82dce415a0658b7e"
+    },
+    {
+      "path": "common/national_focus/ARG focus (Argentina Democratic).txt",
+      "sha": "2377784f9254f8d9925154fea5377fe71c4f8c44"
+    },
+    {
+      "path": "common/national_focus/ARG focus (Argentina Shared).txt",
+      "sha": "da3f6a46c65f7bc2294826f54c53ea70ddf482a4"
+    },
+    {
+      "path": "common/national_focus/ARM focus (Armenia).txt",
+      "sha": "475c383f752eb555a866cb1be843b8c074568e15"
+    },
+    {
+      "path": "common/national_focus/AST focus (Australasia).txt",
+      "sha": "cabd2030f989f51980bea5355ba9b52878aa3787"
+    },
+    {
+      "path": "common/national_focus/ASY focus (Assyria).txt",
+      "sha": "bbcace7683579421b33c448612d4a48ae1c76c8b"
+    },
+    {
+      "path": "common/national_focus/AUS focus (Austria).txt",
+      "sha": "0c9001dbeb1b8f6d7f874393ec205fb869635dc4"
+    },
+    {
+      "path": "common/national_focus/BAH focus (Bahia).txt",
+      "sha": "44d51feb56345635872a673fc18818f76d15536c"
+    },
+    {
+      "path": "common/national_focus/BAT focus (Baltic Duchy NatPop).txt",
+      "sha": "4a31b384a4294c4d0a7601aab665a6ed068e67e8"
+    },
+    {
+      "path": "common/national_focus/BAT focus (Baltic Duchy PatAut).txt",
+      "sha": "ba1a0f89b1bbc8dcc0e2a23c6a7b1b8882fadba5"
+    },
+    {
+      "path": "common/national_focus/BAT focus (Baltic Duchy Riga).txt",
+      "sha": "54a54330a0b9935d5771e7f4612eaa32c8268dfc"
+    },
+    {
+      "path": "common/national_focus/BAT focus (Baltic Duchy Shared).txt",
+      "sha": "fb2f6e915af79ab523b1fb12cc32b769e09e1a78"
+    },
+    {
+      "path": "common/national_focus/BAT focus (Baltic Duchy SocLib).txt",
+      "sha": "38282e9c3442cd8ec5f8fc8b90402898bfc235bc"
+    },
+    {
+      "path": "common/national_focus/BAT focus (Baltic Union).txt",
+      "sha": "d8e099c95d6330fb09eb0188f158e51f1f021844"
+    },
+    {
+      "path": "common/national_focus/BAY focus (South Germany).txt",
+      "sha": "abe316d74d0dfe8af586962e9d803b8e79525b7d"
+    },
+    {
+      "path": "common/national_focus/BEL focus (Belgium).txt",
+      "sha": "8531e9af776f67ebee54d95fdb45a20efdc355dd"
+    },
+    {
+      "path": "common/national_focus/BHU focus (Bhutan).txt",
+      "sha": "256c791061d1d93ad8a9ee0f111eda108ae7af5a"
+    },
+    {
+      "path": "common/national_focus/BLR focus (White Ruthenia).txt",
+      "sha": "3873640f2937b520e7233af258353db126cf8f5f"
+    },
+    {
+      "path": "common/national_focus/BNG focus (Bengal).txt",
+      "sha": "c81795ed5381f5a310fff35c9bf91b1f741c883a"
+    },
+    {
+      "path": "common/national_focus/BOL focus (Bolivia).txt",
+      "sha": "1fd3a5b48415e85f782891b6846b0b6ede2f0c52"
+    },
+    {
+      "path": "common/national_focus/BRA focus (Brazil).txt",
+      "sha": "d838fc864c09c6697a7219a5253e898e670a4b17"
+    },
+    {
+      "path": "common/national_focus/BUK focus (Bukhara).txt",
+      "sha": "e17995b9fd87c48d776162ae8b3dae350ab3610a"
+    },
+    {
+      "path": "common/national_focus/BUL focus (Bulgaria).txt",
+      "sha": "9b4c0c80a043044cc31dc8190615365468fc484d"
+    },
+    {
+      "path": "common/national_focus/CAN focus (Canada).txt",
+      "sha": "3c82f5b0647f1d4b74afab4e7d6cd4bdee13c2ef"
+    },
+    {
+      "path": "common/national_focus/CEN focus (Central America Democratic).txt",
+      "sha": "5971d5a94ce3b277def6f768325282f1cd564519"
+    },
+    {
+      "path": "common/national_focus/CEN focus (Central America Military).txt",
+      "sha": "eaa01fc80ac842a9cee5e2778585dbcd3babdede"
+    },
+    {
+      "path": "common/national_focus/CEN focus (Central America Socialist).txt",
+      "sha": "79106c6707b5e3fef852098b990654aaf18bf29c"
+    },
+    {
+      "path": "common/national_focus/CHI focus (Left Kuomintang shared).txt",
+      "sha": "0077bee94233267f7bf77df85934d09173aeeed4"
+    },
+    {
+      "path": "common/national_focus/CHL focus (Chile).txt",
+      "sha": "af73c93a6a29e46bff64d6ea2a5191a3fc590bbc"
+    },
+    {
+      "path": "common/national_focus/COL focus (Colombia).txt",
+      "sha": "61eab31de7bd7ab2502f22e6e0fb6ade7659373d"
+    },
+    {
+      "path": "common/national_focus/COS focus (Costa Rica).txt",
+      "sha": "cdc7a367abb8794c90eb24557f6c22043aa6816f"
+    },
+    {
+      "path": "common/national_focus/CUB focus (Cuba).txt",
+      "sha": "f2a1160c5b2a82c3c2bbfffcc972766b76bd861f"
+    },
+    {
+      "path": "common/national_focus/DAH focus (Dahomey).txt",
+      "sha": "bf174ea7c6058e68c2d519b7c3b75ee6afedb855"
+    },
+    {
+      "path": "common/national_focus/DEI focus (Dutch East Indies).txt",
+      "sha": "59613bc0e5ec37ffa33c46e9295a4475b3ea6d15"
+    },
+    {
+      "path": "common/national_focus/DEN focus (Denmark).txt",
+      "sha": "06576e22c351c4c7e0b554ae63ea2722e3ca7e90"
+    },
+    {
+      "path": "common/national_focus/DOM focus (Dominican Republic).txt",
+      "sha": "de2d2c9da5a870656d844254d95e6872d0fe7fcd"
+    },
+    {
+      "path": "common/national_focus/ECU focus (Ecuador).txt",
+      "sha": "71c1d71dec82b5c68ff892eb48070af90032ab7a"
+    },
+    {
+      "path": "common/national_focus/EGY focus (Egypt).txt",
+      "sha": "b4b5d4056ced69b70f1db0e42fa2f7bef415f96e"
+    },
+    {
+      "path": "common/national_focus/ELS focus (El Salvador).txt",
+      "sha": "63080834f474e5c50071d5ebc490eaa61d9ff314"
+    },
+    {
+      "path": "common/national_focus/EMI focus (Modena-Parma).txt",
+      "sha": "ea9aa97fcf9342aca0df3fc05ede0b6f6810a0b6"
+    },
+    {
+      "path": "common/national_focus/ENG focus (Union of Britain).txt",
+      "sha": "923ec8288642ddda7e7611789eb4cfdd7b9ce0ec"
+    },
+    {
+      "path": "common/national_focus/EST focus (Estonia).txt",
+      "sha": "4bff4c65c51fb748bfdd1c7c0b608a357958bddb"
+    },
+    {
+      "path": "common/national_focus/ETH focus (Ethiopia).txt",
+      "sha": "e012732f80dfb45687d7cc1c2bc4da7e3f339e5a"
+    },
+    {
+      "path": "common/national_focus/ETS focus (East Turkestan).txt",
+      "sha": "39cd0e61dea4fb23af41e8536c24189fa1d4b287"
+    },
+    {
+      "path": "common/national_focus/FER focus (Far Eastern Army).txt",
+      "sha": "376d7a8d646bf79a2b2bd9d72024f1328e8be7ae"
+    },
+    {
+      "path": "common/national_focus/FIN focus (Finland).txt",
+      "sha": "5b39f85b1fff18e882eaef953e3183273715ae6e"
+    },
+    {
+      "path": "common/national_focus/FLA focus (Flanders).txt",
+      "sha": "b7d47d8beb71a04a422f0f47af7aa870b204cf8a"
+    },
+    {
+      "path": "common/national_focus/FNG focus (Fengtian).txt",
+      "sha": "ae3f9f4010ac0a1776a89975bc50494805172cef"
+    },
+    {
+      "path": "common/national_focus/FOP focus (Patagonia).txt",
+      "sha": "24720562351f36540de79cde89fa0730d4bbbadf"
+    },
+    {
+      "path": "common/national_focus/FRA focus (Commune of France).txt",
+      "sha": "d1a2100d4a1f8d5e329ab7ef9d1701a9090662e8"
+    },
+    {
+      "path": "common/national_focus/GAB focus (Gabon).txt",
+      "sha": "a1c30ecf42941246a8a32db2c52f5d715947d43e"
+    },
+    {
+      "path": "common/national_focus/GBP focus (Northumbria).txt",
+      "sha": "29d7242f47e871fcf744f5c39266079abff37c7a"
+    },
+    {
+      "path": "common/national_focus/GBR focus (United Kingdom).txt",
+      "sha": "f5c769640a105b4df2ca853b43a88b995c02f123"
+    },
+    {
+      "path": "common/national_focus/GEA focus (German East Asia).txt",
+      "sha": "86b814a45fd79d87898e3fa7d741a9adeb074331"
+    },
+    {
+      "path": "common/national_focus/GEO focus (Georgia).txt",
+      "sha": "ccf30ddccf71f452d0fc3e58141b3a4d8b08c44f"
+    },
+    {
+      "path": "common/national_focus/GER focus (German Empire).txt",
+      "sha": "b3ec3da3e3292e1614d1b7434bb63eb08b82d93d"
+    },
+    {
+      "path": "common/national_focus/GOY focus (Goyaz).txt",
+      "sha": "184038108ff725ecf9d3acb7236204989d04adda"
+    },
+    {
+      "path": "common/national_focus/GRE focus (Greece).txt",
+      "sha": "b1de5188b9872c9feb12a971160092db76608302"
+    },
+    {
+      "path": "common/national_focus/GRP focus (Guararapes).txt",
+      "sha": "7d1c507e347191b7c49e11e2652aeb9cfcd52a9f"
+    },
+    {
+      "path": "common/national_focus/GRU focus (German Republic).txt",
+      "sha": "37f3ee997a766026320c2398cbcbb9bccb334d1e"
+    },
+    {
+      "path": "common/national_focus/GUA focus (Guatemala).txt",
+      "sha": "1016cedbeb53a3b7759e42d18b55ae6516afa7c5"
+    },
+    {
+      "path": "common/national_focus/GXC focus (Liangguang).txt",
+      "sha": "ed92741e88871fa6e75272e87b6f69656db82fc7"
+    },
+    {
+      "path": "common/national_focus/HAI focus (Haiti).txt",
+      "sha": "ea651990b03ba2cc41f62650d5fcd97c2bcf8e0b"
+    },
+    {
+      "path": "common/national_focus/HAW focus (Hawaii).txt",
+      "sha": "9ca3a9ebbf1316e76bd59769e66f286263f82381"
+    },
+    {
+      "path": "common/national_focus/HEJ focus (Hejaz).txt",
+      "sha": "56ec9e72285685f2a9cad89ae513edca22d9f7ee"
+    },
+    {
+      "path": "common/national_focus/HND focus (Bharatiya Peoples Republic).txt",
+      "sha": "24ef54c34d1ad64e42716351df51b49d5cfd4ed9"
+    },
+    {
+      "path": "common/national_focus/HNN focus (Hunan).txt",
+      "sha": "fd798fee97c69a9eee8a41d1d19050fc9ca32c5a"
+    },
+    {
+      "path": "common/national_focus/HOL focus (Netherlands).txt",
+      "sha": "0e9c567f4b7d3674fd5ea6a8026c27292f7cfc05"
+    },
+    {
+      "path": "common/national_focus/HON focus (Honduras).txt",
+      "sha": "f64d43da735ef6798de8b4e8b2d1b40bba22ee08"
+    },
+    {
+      "path": "common/national_focus/ICE focus (Iceland).txt",
+      "sha": "2030b74aefc376f6d3d2e6dcdaf330f602e124bd"
+    },
+    {
+      "path": "common/national_focus/INC focus (Indochina).txt",
+      "sha": "6681369da7030e23aea489ded7b729bcff6d0017"
+    },
+    {
+      "path": "common/national_focus/INS focus (Indonesia).txt",
+      "sha": "ebe7ba43d49e6fd45856835322c3dba1bdb062e4"
+    },
+    {
+      "path": "common/national_focus/IRE focus (Ireland).txt",
+      "sha": "b44a5829460c36387acd266a9fde3df537177b31"
+    },
+    {
+      "path": "common/national_focus/IRQ focus (Iraq).txt",
+      "sha": "b7ab298d213005206b7f0c9a1eb09504b42e667e"
+    },
+    {
+      "path": "common/national_focus/ITA focus (Republic of Italy).txt",
+      "sha": "4c737905298524e7b78794b85713ec94dcafc050"
+    },
+    {
+      "path": "common/national_focus/JAP focus (Japan base).txt",
+      "sha": "e1c5742884119c7afb7fab89a46a888ddeeb0dd5"
+    },
+    {
+      "path": "common/national_focus/JAP focus (Japan subject).txt",
+      "sha": "6f6da919d0d11cce7fa1c5dcfe81d7abc312520f"
+    },
+    {
+      "path": "common/national_focus/JBS focus (Jabal Shammar).txt",
+      "sha": "4839594c4a1f8002b524f0b49531bcea33312b6f"
+    },
+    {
+      "path": "common/national_focus/KAC focus (State of Kachin).txt",
+      "sha": "a2c27700b63db4bcf32923add5fb8b885efdc015"
+    },
+    {
+      "path": "common/national_focus/KAZ focus (Kazakhstan).txt",
+      "sha": "64f2edd3c19c74310d26ef8d01a92166f03527b8"
+    },
+    {
+      "path": "common/national_focus/KDR focus (Anatolian Kurdistan).txt",
+      "sha": "81a2bf9362a2b8a9ea99a57034c49d9f7a45dd4a"
+    },
+    {
+      "path": "common/national_focus/KHI focus (Khiva).txt",
+      "sha": "390b788ab2758c97a187b2c09966d972709d1b2d"
+    },
+    {
+      "path": "common/national_focus/KMT focus (Generic KMT Unification).txt",
+      "sha": "2dc82b5a8b46745abc40c97f07cf6bff704da1e4"
+    },
+    {
+      "path": "common/national_focus/KOR focus (Korea).txt",
+      "sha": "4924fdf46a499a47680dbe2984f7e8727793bdb3"
+    },
+    {
+      "path": "common/national_focus/KTG focus (Katanga).txt",
+      "sha": "e85aa179faad21499bb7db4d98f85f3e4ed7a02d"
+    },
+    {
+      "path": "common/national_focus/KUM focus (Kumul Shared).txt",
+      "sha": "59da07358ba1bcb7dbc0a6bd8f4b81d7fd1f27a4"
+    },
+    {
+      "path": "common/national_focus/KUM focus (Kumul base).txt",
+      "sha": "b0b905fdb69f93f4f92fd31370ffb9e847288a4d"
+    },
+    {
+      "path": "common/national_focus/LAT focus (Latvia).txt",
+      "sha": "ba107359a030485750f81fd7496cf6e66764b1b8"
+    },
+    {
+      "path": "common/national_focus/LBA focus (Cyrenaica).txt",
+      "sha": "4b68eca7675e00ba3552baf60810c39c68b701db"
+    },
+    {
+      "path": "common/national_focus/LEB focus (Lebanon).txt",
+      "sha": "14514ff72d014d60470a5ae5a9ff6c82c87683d5"
+    },
+    {
+      "path": "common/national_focus/LEC focus (Legation Cities).txt",
+      "sha": "ed513287921005e6ce507ee4578799f99ecf2fb3"
+    },
+    {
+      "path": "common/national_focus/LEP focus (League of Eight Provinces).txt",
+      "sha": "3094eef1519a44d63a068e36e143d2e7a50715e1"
+    },
+    {
+      "path": "common/national_focus/LIB focus (Liberia).txt",
+      "sha": "5f9fa0fcf30d291755562bca9da467ea5fedd758"
+    },
+    {
+      "path": "common/national_focus/LIT focus (Lithuania).txt",
+      "sha": "34b79d1e284a034f2d0f6f35621e9178135bb8a5"
+    },
+    {
+      "path": "common/national_focus/LOM focus (Lombardy).txt",
+      "sha": "cac0c7cb38be7830944f0191675c40073f3022b9"
+    },
+    {
+      "path": "common/national_focus/MAC focus (IMRO).txt",
+      "sha": "8554c7cd2259427140a5d3cf8cfc270a68c09c84"
+    },
+    {
+      "path": "common/national_focus/MAF focus (Mittelafrika).txt",
+      "sha": "e63d98efb259d850c8dfd1c325b7ebfb785c42d2"
+    },
+    {
+      "path": "common/national_focus/MAF.SWA focus (South West Africa).txt",
+      "sha": "70371ebabddc9930adf2a3dbe677a39c3e33f083"
+    },
+    {
+      "path": "common/national_focus/MAL focus (Malaya).txt",
+      "sha": "706f42d0c2e63e2b6b3ad904db80a83f132770e0"
+    },
+    {
+      "path": "common/national_focus/MAN focus (Manchuria).txt",
+      "sha": "0d99bfb2f92f7e28b97e9c7909f3bd07b47a7bb8"
+    },
+    {
+      "path": "common/national_focus/MEX focus (Mexico).txt",
+      "sha": "db9dfe7331f17d12c40306d72273ba973800a3bf"
+    },
+    {
+      "path": "common/national_focus/MNT focus (Montenegro).txt",
+      "sha": "d31ec8efce40906c337fbd6521951ab724a41cd8"
+    },
+    {
+      "path": "common/national_focus/MON focus (Mongolia).txt",
+      "sha": "fd550f7859e599897771c2caab4b36e0bb95e6ac"
+    },
+    {
+      "path": "common/national_focus/MOR focus (Morocco).txt",
+      "sha": "488c76b25ebb4e03aa450b7b9ebbd2891d9942fc"
+    },
+    {
+      "path": "common/national_focus/NAT focus (Natal).txt",
+      "sha": "1fe3bb7ab7d792c6a3db8327b4d975e15c4b775e"
+    },
+    {
+      "path": "common/national_focus/NEE focus (New England).txt",
+      "sha": "e8a3b585b39c3417d88c4785faeecea5a647c3cc"
+    },
+    {
+      "path": "common/national_focus/NEP focus (Nepal).txt",
+      "sha": "2813474c5243c5ad3fe0416f519da853f6efeb0c"
+    },
+    {
+      "path": "common/national_focus/NFA focus (NatFrance).txt",
+      "sha": "1bd692f98356eea0f5b08f2a77a34e5c998aa02f"
+    },
+    {
+      "path": "common/national_focus/NGF focus (North Germany).txt",
+      "sha": "61850a17a788ac925d4b0a0410a0a17343a27b67"
+    },
+    {
+      "path": "common/national_focus/NIC focus (Nicaragua).txt",
+      "sha": "d2745754f9b7c87b5334533ace0c33d848621bc8"
+    },
+    {
+      "path": "common/national_focus/NIR focus (Northern Ireland.txt",
+      "sha": "e6d9d6e94991c68bb5c3e51ddd33a421c6815f69"
+    },
+    {
+      "path": "common/national_focus/NMB focus (Namibia).txt",
+      "sha": "2d4935969b59d92b3bea9d722538c71112a2269f"
+    },
+    {
+      "path": "common/national_focus/NOR focus (Norway).txt",
+      "sha": "c9fd615fed848a27a28f5def5e96df632fac98e2"
+    },
+    {
+      "path": "common/national_focus/NPA focus (National Protection Alliance).txt",
+      "sha": "5dbe97ab7ec460d2c14e6bff7c493d504eaff4fb"
+    },
+    {
+      "path": "common/national_focus/OMA focus (Oman).txt",
+      "sha": "7b29366a74dc999663be18beacf1101223f4f705"
+    },
+    {
+      "path": "common/national_focus/PAL focus (Jerusalem).txt",
+      "sha": "1589270f67ee0f0508b3515cb3e199928ffcfdd7"
+    },
+    {
+      "path": "common/national_focus/PAL focus (Suez).txt",
+      "sha": "e9a5a4a9ddf23fb60f9834266fe3f0fffed8e9ee"
+    },
+    {
+      "path": "common/national_focus/PAN focus (Panama 1940).txt",
+      "sha": "7dda5b602d418f3d6e8b411d68d61ce4287a856b"
+    },
+    {
+      "path": "common/national_focus/PAN focus (Panama).txt",
+      "sha": "76cbb67f3f8ed93afa47cb4480d7149603cdd496"
+    },
+    {
+      "path": "common/national_focus/PAP focus (Papal States).txt",
+      "sha": "de217c8bc3701f800c18111a7a00b69018166a21"
+    },
+    {
+      "path": "common/national_focus/PAR focus (Paraguay).txt",
+      "sha": "1abd8bac910755f379f58859ae5e23d8d59a3d14"
+    },
+    {
+      "path": "common/national_focus/PER focus (Persia).txt",
+      "sha": "39b0d2de2ffbbd4c7cc8b7b700dfad8123f528c9"
+    },
+    {
+      "path": "common/national_focus/PHI focus (Philippines).txt",
+      "sha": "6c5e96318c9ef7eee180c44f3f5f36e4cebc0e87"
+    },
+    {
+      "path": "common/national_focus/PIR focus (Piratini).txt",
+      "sha": "ad9da8f2d792f0aad851ba202253588ea154db18"
+    },
+    {
+      "path": "common/national_focus/PJB focus (Punjab).txt",
+      "sha": "fb1956c45cfa4108a987bb4c6d8641243c5c0447"
+    },
+    {
+      "path": "common/national_focus/POL focus (Poland).txt",
+      "sha": "0d3e23956938e0611ee301f1d190dd22632657a9"
+    },
+    {
+      "path": "common/national_focus/POR focus (Portugal).txt",
+      "sha": "b804348e06356f66864b538887f51611dd6a39bf"
+    },
+    {
+      "path": "common/national_focus/PRE focus (East Germany).txt",
+      "sha": "923ed716942e35ce6a9e5ba5d58228fd23932db1"
+    },
+    {
+      "path": "common/national_focus/PRF focus (Princely States).txt",
+      "sha": "07b7d0726688d6b74362747a7f717d5ece7775c0"
+    },
+    {
+      "path": "common/national_focus/PRU focus (Peru).txt",
+      "sha": "c2cc90772ff9faa274227446bb67464b9e420e01"
+    },
+    {
+      "path": "common/national_focus/PUE focus (Puerto Rico Shared).txt",
+      "sha": "c1618f3d766fb2971d3d9f31852bf7655ca006d4"
+    },
+    {
+      "path": "common/national_focus/PUE focus (Puerto Rico).txt",
+      "sha": "4f484d96e0276efbc28d2c3c5d2e3d3209dc4b3f"
+    },
+    {
+      "path": "common/national_focus/QIE focus (Qing Manchu).txt",
+      "sha": "559ccc5d8d81f7832fac873aff60723640f841aa"
+    },
+    {
+      "path": "common/national_focus/QIE focus (Qing Zhili).txt",
+      "sha": "3a2d0225e357bfad49083ca26e2cf59180253b00"
+    },
+    {
+      "path": "common/national_focus/RAJ focus (Dominion of India).txt",
+      "sha": "40fb21e67e31b1d4a0480b6f1388efd051545d89"
+    },
+    {
+      "path": "common/national_focus/RHI focus (Rhineland).txt",
+      "sha": "e7da600b2425e8fe3ce1e6350eceb8224f6275e0"
+    },
+    {
+      "path": "common/national_focus/ROM focus (Romania).txt",
+      "sha": "98fdb5a8e165cd2d21dc71387fa7211259afcd37"
+    },
+    {
+      "path": "common/national_focus/RSA focus (Free Russian Army).txt",
+      "sha": "ffe3ce9aeda8ea0f3fc30ab963ca11417e29493a"
+    },
+    {
+      "path": "common/national_focus/RUS focus (Russia).txt",
+      "sha": "d7e224d6376f8213df7fb9764ed740b6f8318623"
+    },
+    {
+      "path": "common/national_focus/SAF focus (South Africa Federation).txt",
+      "sha": "70921afb94542c9b2fab58a46d06a2f51c0dc6b6"
+    },
+    {
+      "path": "common/national_focus/SAF focus (South Africa Shared).txt",
+      "sha": "30653759b14cc5920dabfa8e555be425849db032"
+    },
+    {
+      "path": "common/national_focus/SAF focus (South Africa Socialist).txt",
+      "sha": "a20baa2aa5a6461a9356a913b2aed88b0df5c8fa"
+    },
+    {
+      "path": "common/national_focus/SAF focus (South Africa Standard).txt",
+      "sha": "d643058a5fa7c0737b9c98efbfc384535d2c3655"
+    },
+    {
+      "path": "common/national_focus/SAR focus (Sarawak).txt",
+      "sha": "1f3f3bc2fa4729cadb361976d2504bdb9dab0646"
+    },
+    {
+      "path": "common/national_focus/SAU focus (Najd).txt",
+      "sha": "968523820baca330e5a583d7b127e0d329e0be6c"
+    },
+    {
+      "path": "common/national_focus/SCA focus (Scandinavia).txt",
+      "sha": "76301b7626ca9999ca4f262ffe84cac45620b5a5"
+    },
+    {
+      "path": "common/national_focus/SCO focus (Scotland).txt",
+      "sha": "e3738bff363b1ad74ee62c193648eba9d4414c94"
+    },
+    {
+      "path": "common/national_focus/SER focus (Serbia).txt",
+      "sha": "2b6278c940f4466c9432ae1eecb0c57b430cd8c0"
+    },
+    {
+      "path": "common/national_focus/SHA focus (Shan Confederacy).txt",
+      "sha": "7e1708b71bca8e49af60cb9c8394a8d69213a059"
+    },
+    {
+      "path": "common/national_focus/SHD focus (Shandong Clique).txt",
+      "sha": "092fab2e234ea07610a0fcf2f3071e770cefb2e7"
+    },
+    {
+      "path": "common/national_focus/SHX focus (Shanxi).txt",
+      "sha": "0bb5e8bd6cd75bdea3df59bb4fc8b908401af916"
+    },
+    {
+      "path": "common/national_focus/SIA focus (Siam).txt",
+      "sha": "c85209fd04280b618c137c7c651c1736127f6279"
+    },
+    {
+      "path": "common/national_focus/SIC focus (Two Sicilies).txt",
+      "sha": "4061e763a5d9af2fed8d27c5d2664d099994e275"
+    },
+    {
+      "path": "common/national_focus/SIK focus (Xinjiang).txt",
+      "sha": "7118c57a31a36aacb8e9edbbeda6fef48741c992"
+    },
+    {
+      "path": "common/national_focus/SOM focus (Somalia).txt",
+      "sha": "6952d4d9b4a5d8cd45110bdfbbf351fecd46cece"
+    },
+    {
+      "path": "common/national_focus/SPA focus (Spain Kingdom).txt",
+      "sha": "62e794ab0668d6efa98d0097a26d2612e3afa3d9"
+    },
+    {
+      "path": "common/national_focus/SPO focus (Sao Paulo).txt",
+      "sha": "819d4f188692d30db9161a6ec5ba2a89214476bd"
+    },
+    {
+      "path": "common/national_focus/SPR focus (Spain Carlist).txt",
+      "sha": "7e5734c82bad2e90f9a576909cdcccd469e72e2e"
+    },
+    {
+      "path": "common/national_focus/SRD focus (Sardinia).txt",
+      "sha": "6e90f405db258b2f2adc3bb1ac1aa3d97aa82d5e"
+    },
+    {
+      "path": "common/national_focus/SRI focus (Socialist Republic of Italy).txt",
+      "sha": "9d4d789e8f2ebdb464f21216792eb84c1574aea6"
+    },
+    {
+      "path": "common/national_focus/SWE focus (Sweden).txt",
+      "sha": "1bc582f90a3ded7a436abe68778b8ad1e7998741"
+    },
+    {
+      "path": "common/national_focus/SWF focus (Spain FAI).txt",
+      "sha": "5390ca4546b0886b7fd67b65d8f6bb566d3f9357"
+    },
+    {
+      "path": "common/national_focus/SWI focus (Switzerland).txt",
+      "sha": "e3fdd70a5449205f0010e80cd1c1b20bc163682d"
+    },
+    {
+      "path": "common/national_focus/SYR focus (Syria).txt",
+      "sha": "d5008e536349e8714804b4a8a2cb52db6d555474"
+    },
+    {
+      "path": "common/national_focus/SZC focus (Sichuan).txt",
+      "sha": "9640710f35d385af5d30e61e6ac2dfacaeb1f16f"
+    },
+    {
+      "path": "common/national_focus/TIB focus (Tibet).txt",
+      "sha": "fafcc04402624d671e4679cda8c0ec6901ff60bf"
+    },
+    {
+      "path": "common/national_focus/TRK focus (Turkestan).txt",
+      "sha": "8f7f62fe0421281d7968961bff0d6a793c66a57d"
+    },
+    {
+      "path": "common/national_focus/TRP focus (Tripolitania).txt",
+      "sha": "5beba40b9e1350a9ee146ff361da149e2c220774"
+    },
+    {
+      "path": "common/national_focus/TUR focus (Ottoman).txt",
+      "sha": "c55a8d961f075de98b7694b2cb8052a829e8de9c"
+    },
+    {
+      "path": "common/national_focus/TUR focus (Turkey).txt",
+      "sha": "331772d2f4cddd8bdee4b8bd86b63dbed3c457cf"
+    },
+    {
+      "path": "common/national_focus/TUS focus (Tuscany).txt",
+      "sha": "20a0392fc42cf7723eb0cec56d2d4317f493426d"
+    },
+    {
+      "path": "common/national_focus/UKR focus (Ukraine).txt",
+      "sha": "fa57ff0031e9780ecb30f4da0d879265bf7f2aef"
+    },
+    {
+      "path": "common/national_focus/UPC focus (Federalist China).txt",
+      "sha": "60cd87c125b90e838b100b17dfb4641a111c5cc6"
+    },
+    {
+      "path": "common/national_focus/URG focus (Uruguay).txt",
+      "sha": "43ba14a6e575ac259a35f612b2388ae0ca082481"
+    },
+    {
+      "path": "common/national_focus/USA focus (United States).txt",
+      "sha": "490954991dd4a3770d9ebb16155436758960b389"
+    },
+    {
+      "path": "common/national_focus/VCR focus (Vera Cruz).txt",
+      "sha": "fa74410b91a0095ecd9169aea8212222532c81dc"
+    },
+    {
+      "path": "common/national_focus/VEN focus (Venezuela).txt",
+      "sha": "bb7f5b319f88dd3e8335ddf59bb9f34f0fd04c11"
+    },
+    {
+      "path": "common/national_focus/VNC focus (Venice).txt",
+      "sha": "f15ec57fa804d12bca1d4186f8cdbc08dcc60fbd"
+    },
+    {
+      "path": "common/national_focus/WAL focus (Wallonia).txt",
+      "sha": "1e172ad12d0fa61a3938ee1ba446a896f40046e5"
+    },
+    {
+      "path": "common/national_focus/WCA focus (Workers Congress of America).txt",
+      "sha": "1f90ad8f49247d543df630611c10c365f2e4ac34"
+    },
+    {
+      "path": "common/national_focus/WIF focus (West Indies).txt",
+      "sha": "e5a4b9d8a5defda3af9311665842707ad12e9705"
+    },
+    {
+      "path": "common/national_focus/WLS focus (Wales).txt",
+      "sha": "78a5c8289a8b5d57f1dc8745325ffa37093a1dba"
+    },
+    {
+      "path": "common/national_focus/XSM focus (Ma Clique).txt",
+      "sha": "bfef4d6651da8c6024a785c544b13a39a24879b2"
+    },
+    {
+      "path": "common/national_focus/YEM focus (Yemen).txt",
+      "sha": "0a76fd95204dd1e19310ab621bc5e262cb127931"
+    },
+    {
+      "path": "common/national_focus/YUC focus (Yucatan).txt",
+      "sha": "0df7a35f4c392aaf6fb5377157604b375f7302eb"
+    },
+    {
+      "path": "common/national_focus/YUN focus (Yunnan).txt",
+      "sha": "477d2581764f63bddbf77a9eb9d984cf227c3f6e"
+    },
+    {
+      "path": "common/national_focus/ZIM focus (Rhodesia).txt",
+      "sha": "5da5154e59a4f06005990939149223624b640aee"
+    },
+    {
+      "path": "common/on_actions/00_on_actions_arrays.txt",
+      "sha": "879f865948b603498e523ad7df051c27ff5d0989"
+    },
+    {
+      "path": "common/on_actions/00_on_actions_global.txt",
+      "sha": "ab9905691465962181569087e1e4cd95c5275c5d"
+    },
+    {
+      "path": "common/on_actions/01_on_actions_annexations.txt",
+      "sha": "86f1f6fc8eb4ddea8b9a822964162c6e93229b71"
+    },
+    {
+      "path": "common/on_actions/on_actions_Achievements.txt",
+      "sha": "374f60742273e7ebbc3dd48e03decdf06de5d90b"
+    },
+    {
+      "path": "common/on_actions/on_actions_Africa.txt",
+      "sha": "1b70703f66946310dded702ce4979598f4f0f550"
+    },
+    {
+      "path": "common/on_actions/on_actions_Anqing.txt",
+      "sha": "916e8f507e2deef646f685188898641d327f978c"
+    },
+    {
+      "path": "common/on_actions/on_actions_Armenia.txt",
+      "sha": "8ecd01c2b0ef2fbf1be5b1693b003c87258b7b85"
+    },
+    {
+      "path": "common/on_actions/on_actions_Austria.txt",
+      "sha": "11ba7a61683de07939409decc6a5260c248ffdd7"
+    },
+    {
+      "path": "common/on_actions/on_actions_Balkans.txt",
+      "sha": "9f559b523aaa630c9e99c3e6ed0edde98bad672f"
+    },
+    {
+      "path": "common/on_actions/on_actions_Caribbean.txt",
+      "sha": "36dc76aa4746309fcaa38a8df666892b683a629b"
+    },
+    {
+      "path": "common/on_actions/on_actions_Central_America.txt",
+      "sha": "cc0984f4155f0729e08147c3de28aa2f956efd4a"
+    },
+    {
+      "path": "common/on_actions/on_actions_Central_Asia.txt",
+      "sha": "b9aa2b0f42aea600084247014a51d567808cc00f"
+    },
+    {
+      "path": "common/on_actions/on_actions_China.txt",
+      "sha": "1aa8d779d631cb5a35b9e99615e2073b0ddeccbd"
+    },
+    {
+      "path": "common/on_actions/on_actions_Eastern_Europe.txt",
+      "sha": "c488aa4890ad43506693992bc5dd6df9c4f400d0"
+    },
+    {
+      "path": "common/on_actions/on_actions_Entente.txt",
+      "sha": "6df775dace9f55723d3aaff33530721fcf6803b8"
+    },
+    {
+      "path": "common/on_actions/on_actions_Federalist_China.txt",
+      "sha": "1b56028f6943ed1ac005f603ef111ba7ed58ab4c"
+    },
+    {
+      "path": "common/on_actions/on_actions_French_Exiles.txt",
+      "sha": "dd819e754c3c1a686453d16cec0266206277e1c7"
+    },
+    {
+      "path": "common/on_actions/on_actions_Germany.txt",
+      "sha": "4af0fa694ef83550894c56511c874e1f0628f38b"
+    },
+    {
+      "path": "common/on_actions/on_actions_Greece.txt",
+      "sha": "cc8220ba0bb354c5c62ebb5c96728ff537036a42"
+    },
+    {
+      "path": "common/on_actions/on_actions_Hunan.txt",
+      "sha": "7090de5d1b215f646985d56a74758a24ba92c3d6"
+    },
+    {
+      "path": "common/on_actions/on_actions_India.txt",
+      "sha": "0663cd8e1e6eb10b7de64d5723e97aed716e2408"
+    },
+    {
+      "path": "common/on_actions/on_actions_Internationale.txt",
+      "sha": "9f43a6a2ac42e526d6924b63622dcb59ab73e634"
+    },
+    {
+      "path": "common/on_actions/on_actions_Ireland.txt",
+      "sha": "7d269cc1281f600a71c91de9294887d2e83d7308"
+    },
+    {
+      "path": "common/on_actions/on_actions_Italy.txt",
+      "sha": "6863f941d9abe290f8db8d1c4bb8df8f5eb1d3bc"
+    },
+    {
+      "path": "common/on_actions/on_actions_Japan.txt",
+      "sha": "07b15c37959f3741afba968960e838af8b94110b"
+    },
+    {
+      "path": "common/on_actions/on_actions_Korea.txt",
+      "sha": "76038881e684a1fb2a04103d73975c41d8432c03"
+    },
+    {
+      "path": "common/on_actions/on_actions_Latin_America.txt",
+      "sha": "c08b5befc07cb00cb89b28c00bf4943ae4ac868b"
+    },
+    {
+      "path": "common/on_actions/on_actions_Left_Kuomintang.txt",
+      "sha": "5025aef38ae9d15e17292b0e48c5ecb757dbb6e1"
+    },
+    {
+      "path": "common/on_actions/on_actions_Liangguang.txt",
+      "sha": "62bc13ecd8fd0ce1d8896b7d3a9f12a56ce8dfe8"
+    },
+    {
+      "path": "common/on_actions/on_actions_Middle_East.txt",
+      "sha": "dc98d04e1216378df320cbc056d3b9dacc310e6d"
+    },
+    {
+      "path": "common/on_actions/on_actions_Nepal.txt",
+      "sha": "097f0abffed48691722007d278b856258a05d361"
+    },
+    {
+      "path": "common/on_actions/on_actions_Netherlands_and_Belgium.txt",
+      "sha": "38002db974a2f8c0be7fc6cb788132cb3c2f1c2b"
+    },
+    {
+      "path": "common/on_actions/on_actions_New_England.txt",
+      "sha": "a9e9e5138d1805a798109bfdc7b127382fe45053"
+    },
+    {
+      "path": "common/on_actions/on_actions_Oceania.txt",
+      "sha": "5b9a7b2edb2dfca40ad3a2afa99af95fac5ebdeb"
+    },
+    {
+      "path": "common/on_actions/on_actions_Ottomans.txt",
+      "sha": "2053f298154f984897642e8ef93c3dffb97e6362"
+    },
+    {
+      "path": "common/on_actions/on_actions_Papua_New_Guinea.txt",
+      "sha": "8f2b10fed4eb016739372782c1883b1298cd2384"
+    },
+    {
+      "path": "common/on_actions/on_actions_Philippines.txt",
+      "sha": "cdaae3588862d710aaa4d6858f56e2ec5fd00745"
+    },
+    {
+      "path": "common/on_actions/on_actions_Poland.txt",
+      "sha": "7fd2d64515e8de4e6e53ce72f45f4fbc21d7160a"
+    },
+    {
+      "path": "common/on_actions/on_actions_Portugal.txt",
+      "sha": "062b23cfb57447c89cd25a8d8832a84126e8df67"
+    },
+    {
+      "path": "common/on_actions/on_actions_Russia.txt",
+      "sha": "355b4b75008825558b52552527b20195c8946782"
+    },
+    {
+      "path": "common/on_actions/on_actions_Scandinavia.txt",
+      "sha": "c8a47aba9462101bdd9d4aaf61a248095672846c"
+    },
+    {
+      "path": "common/on_actions/on_actions_Siam.txt",
+      "sha": "8460c082a09540f84d085c601dbcfaaf8f050b8c"
+    },
+    {
+      "path": "common/on_actions/on_actions_Sichuan.txt",
+      "sha": "16ea20f70bc3d35d18cc92db010dd8248437d455"
+    },
+    {
+      "path": "common/on_actions/on_actions_South_Africa.txt",
+      "sha": "62184b913f6fb75519d58731be53cddec9c9d694"
+    },
+    {
+      "path": "common/on_actions/on_actions_South_East_Asia.txt",
+      "sha": "4a9f98b2df28ceefb487edfbb1ce54235ef0a434"
+    },
+    {
+      "path": "common/on_actions/on_actions_Spain.txt",
+      "sha": "c897dc476a3423d6cbeba61f2e3bfaeab49e1bf8"
+    },
+    {
+      "path": "common/on_actions/on_actions_Switzerland.txt",
+      "sha": "e8a6c031ab392003e89a905172a5794de6c8bd7e"
+    },
+    {
+      "path": "common/on_actions/on_actions_Treaty_Territory.txt",
+      "sha": "99e0820f8b5cb56f0cf1c97129c745db4be79ee7"
+    },
+    {
+      "path": "common/on_actions/on_actions_Treaty_of_Budapest.txt",
+      "sha": "68fde2dda07649cd1de49fec67e86cf1cc2f9f1a"
+    },
+    {
+      "path": "common/on_actions/on_actions_Ukraine.txt",
+      "sha": "a964854fe48841259d41b3087bb7a371092e42eb"
+    },
+    {
+      "path": "common/on_actions/on_actions_United_States_of_America.txt",
+      "sha": "f8bbba3831e3eb20f27e6ca3c8c2fc85d8c145ec"
+    },
+    {
+      "path": "common/on_actions/on_actions_White_Ruthenia.txt",
+      "sha": "cc38f17c3019146270a45586181588a27b220c8f"
+    },
+    {
+      "path": "common/on_actions/on_actions_Yunnan.txt",
+      "sha": "16712ebe62aeb889f1580f103ccad8f6fda7a7b3"
+    },
+    {
+      "path": "common/on_actions/on_actions_city_capture.txt",
+      "sha": "d95b7d8958c4627624d5b87c3ba0af320fe0a241"
+    },
+    {
+      "path": "common/on_actions/zz_on_actions_models_warning.txt",
+      "sha": "cdee3ae8bc2ecd214deca65f9d49366973461d91"
+    },
+    {
+      "path": "common/scripted_effects/00_Post_War_effects.txt",
+      "sha": "90a20c86902b32f20b8b45215aa292f892fcbd32"
+    },
+    {
+      "path": "common/scripted_effects/00_alert_scripted_effects.txt",
+      "sha": "a15fdf63aac243fa3bdb680266acd670cbad65dc"
+    },
+    {
+      "path": "common/scripted_effects/00_ambient_object_effects.txt",
+      "sha": "b532670095763ccf14559df55ede86c06349d9dc"
+    },
+    {
+      "path": "common/scripted_effects/00_ambition_areas.txt",
+      "sha": "2725b90c0c2d1bb068f38d184911071a3a0807b2"
+    },
+    {
+      "path": "common/scripted_effects/00_character_scripted_effects.txt",
+      "sha": "1223ad95c32975c6c0d4dfb525a7627163b7319b"
+    },
+    {
+      "path": "common/scripted_effects/00_collaboration_scripted_effects.txt",
+      "sha": "f491095c43b7be3fd97df61526daa70657c5f192"
+    },
+    {
+      "path": "common/scripted_effects/00_construction_scripted_effects.txt",
+      "sha": "3bb6348813c003ec2fc0829e4a40c4d52ddbac27"
+    },
+    {
+      "path": "common/scripted_effects/00_dummy_scripted_effects.txt",
+      "sha": "8ef5be8fa0369806a1cb81c8a49d22eea8308203"
+    },
+    {
+      "path": "common/scripted_effects/00_economic_sphere_scripted_effects.txt",
+      "sha": "b548a4624f0a59ddbb851fd2df21df83f3efd4b5"
+    },
+    {
+      "path": "common/scripted_effects/00_equipment_scripted_effects.txt",
+      "sha": "2e30e3a5dd2acc9ef85a740337a6d78390a6d8fc"
+    },
+    {
+      "path": "common/scripted_effects/00_faction_scripted_effects.txt",
+      "sha": "485207d59666ade720f1c5811fa400487f34c3ec"
+    },
+    {
+      "path": "common/scripted_effects/00_government_scripted_effects.txt",
+      "sha": "7732aa497db69d81dd46536026496ae702e2a251"
+    },
+    {
+      "path": "common/scripted_effects/00_hidden_tech_effects.txt",
+      "sha": "73a887d8c3bd648830d8ffb6f1dc847efcff4f72"
+    },
+    {
+      "path": "common/scripted_effects/00_initialize_templates_from_techs.txt",
+      "sha": "d00e44f20ef95946652f79b4263f4a1f5bd2693b"
+    },
+    {
+      "path": "common/scripted_effects/00_integration_scripted_effects.txt",
+      "sha": "fb076bbd36d9ba67f105a57325ba861863a81f39"
+    },
+    {
+      "path": "common/scripted_effects/00_laws_scripted_effects.txt",
+      "sha": "b35ca9ddcda7d17ff95aa5287a4fae5c9fb134a1"
+    },
+    {
+      "path": "common/scripted_effects/00_mobilisation_effects.txt",
+      "sha": "b108410c023f4086362710243fafd6fbe1f268f0"
+    },
+    {
+      "path": "common/scripted_effects/00_operation_strat_effects.txt",
+      "sha": "7423520d17afc237a84d8d597bd758e916c55f5a"
+    },
+    {
+      "path": "common/scripted_effects/00_operative_scripted_effects.txt",
+      "sha": "23dfbd21513a0ea83aa2340732da2fa0c1d8c46f"
+    },
+    {
+      "path": "common/scripted_effects/00_party_popularity_effects.txt",
+      "sha": "59558faaeea83f224cdc875ef9ddc4cbe54578dd"
+    },
+    {
+      "path": "common/scripted_effects/00_rename_scripted_effects.txt",
+      "sha": "991c98cdfabaea1cfc367016adb2ad587e1d4c88"
+    },
+    {
+      "path": "common/scripted_effects/00_special_forces_scripted_effects.txt",
+      "sha": "fb325510cb1d7cab63d61ef2ad2fb18262a2dfe9"
+    },
+    {
+      "path": "common/scripted_effects/00_special_projects_scripted_effects.txt",
+      "sha": "c7e8c58b258c3ede771f9a1d14e218eeb208fd13"
+    },
+    {
+      "path": "common/scripted_effects/00_transfer_intelligence_agency_upgrade_effects.txt",
+      "sha": "8a764d7a9beba127067c9aa49c4f2ce0a656ee2e"
+    },
+    {
+      "path": "common/scripted_effects/00_transfer_technology_effects.txt",
+      "sha": "9cb0ecd65fa300c72f8938d49508c879cfa271ef"
+    },
+    {
+      "path": "common/scripted_effects/00_useful_scripted_effects.txt",
+      "sha": "752d38e17b8a4409afbc9ffc71c017418a231e2d"
+    },
+    {
+      "path": "common/scripted_effects/00_white_peace_effects.txt",
+      "sha": "25b45b18ccd0f20a2b0fbf4b7a498f3f2f7893e7"
+    },
+    {
+      "path": "common/scripted_effects/00_wiki_scripted_effects.txt",
+      "sha": "5f57dfdbcb570475335efd11bc505ef4f1f70428"
+    },
+    {
+      "path": "common/scripted_effects/00_world_tension_effects.txt",
+      "sha": "35d0a44f85ba1c4f96810f3a1a7af40e842860db"
+    },
+    {
+      "path": "common/scripted_effects/01_AI effects.txt",
+      "sha": "f4060a144fc30c728590c02774650af182b3e14e"
+    },
+    {
+      "path": "common/scripted_effects/01_American Civil War effects.txt",
+      "sha": "8f128f31f63fbf53eb668bca0c39c39c77185d3b"
+    },
+    {
+      "path": "common/scripted_effects/01_Annexation GUI effects.txt",
+      "sha": "6a0dcbb8ac2a23bc8dbd6ab3cacb433e1e89acb3"
+    },
+    {
+      "path": "common/scripted_effects/01_Annexation effects.txt",
+      "sha": "a148d366b1ba75537d1086f28ebe7a0185070bee"
+    },
+    {
+      "path": "common/scripted_effects/01_Arabia effects.txt",
+      "sha": "c5c87c0d05619305e49106ea3d769cfed90d1005"
+    },
+    {
+      "path": "common/scripted_effects/01_Belgrade Pact effects.txt",
+      "sha": "0d148437c9b39bd8f9f978c16b54d05c3b02f657"
+    },
+    {
+      "path": "common/scripted_effects/01_Black Monday effects.txt",
+      "sha": "b0f0b5daa592e5675d42bbfa181758a2466ea64a"
+    },
+    {
+      "path": "common/scripted_effects/01_Central Asia effects.txt",
+      "sha": "2625cd234661ff466b341516aaae9b2562fea284"
+    },
+    {
+      "path": "common/scripted_effects/01_China effects.txt",
+      "sha": "7ca1b5989e5af756246e95e10940f81b7baf93c9"
+    },
+    {
+      "path": "common/scripted_effects/01_Danubia effects.txt",
+      "sha": "da2b55f27169d9e559e02d3e616e4a52da8c1d96"
+    },
+    {
+      "path": "common/scripted_effects/01_EE effects.txt",
+      "sha": "845ed8e7b8b3c8964d53e5ebb8ce5995eed0c9ea"
+    },
+    {
+      "path": "common/scripted_effects/01_Great Britain effects.txt",
+      "sha": "068c6b3a4bb416ef0f8f31e54f598c1930f932c0"
+    },
+    {
+      "path": "common/scripted_effects/01_India effects.txt",
+      "sha": "e46bb093600659d004352295cfbb508cbc7aed60"
+    },
+    {
+      "path": "common/scripted_effects/01_Italy effects.txt",
+      "sha": "f0746538a459f9733a3b4f6bdbfe00017db50a90"
+    },
+    {
+      "path": "common/scripted_effects/01_League of Arab States effects.txt",
+      "sha": "ab390c90e05983e79ab9bccad541ac4016b23a4d"
+    },
+    {
+      "path": "common/scripted_effects/01_Treaty Territory effects.txt",
+      "sha": "fe1c6ea2ca5b47f30ce16dbb62096ef89f3a1a0f"
+    },
+    {
+      "path": "common/scripted_effects/01_United States effects.txt",
+      "sha": "2035c99c4f2d6dff032bf7d6689cd24c53bdcf41"
+    },
+    {
+      "path": "common/scripted_effects/02_Central America effects.txt",
+      "sha": "df66afb71f2e0a62d3e2c3fd467719a1f1777803"
+    },
+    {
+      "path": "common/scripted_effects/04 Levant Crisis effects.txt",
+      "sha": "bb8a996398a4c25fddc47efe955ecad47f9a2b52"
+    },
+    {
+      "path": "common/scripted_effects/05 Ogaden War effects.txt",
+      "sha": "a9568af224d537920e067fe3331f631e620f3149"
+    },
+    {
+      "path": "common/scripted_effects/AFG effects (Afghanistan).txt",
+      "sha": "e00f37d9766a6b0ea49e31088b0634acb928a934"
+    },
+    {
+      "path": "common/scripted_effects/ALB effects (Albania).txt",
+      "sha": "0dfb9733ede8e29204be86193316dd2b5229b134"
+    },
+    {
+      "path": "common/scripted_effects/ANQ effects (Anqing).txt",
+      "sha": "e4996ded83da606e58a15e6220ab3877cd16ebd6"
+    },
+    {
+      "path": "common/scripted_effects/ARG effects (Argentina).txt",
+      "sha": "c2b67448cc90be3ee396030136d46f39a395db42"
+    },
+    {
+      "path": "common/scripted_effects/ARM effects (Armenia).txt",
+      "sha": "cf5260c8836d368b3d0d6e2698bcd379e2eb55d1"
+    },
+    {
+      "path": "common/scripted_effects/AST effects (Australasia).txt",
+      "sha": "66f51b624a2276c3536fe3716146342af83e1ae6"
+    },
+    {
+      "path": "common/scripted_effects/AUS effects (Austria, legacy).txt",
+      "sha": "98062a286b99a2b2cd752140e1cf14294070ac98"
+    },
+    {
+      "path": "common/scripted_effects/BAT effects (Baltic Duchy).txt",
+      "sha": "491073bdec84a89ee4fdc1f0b4040c3e087aa111"
+    },
+    {
+      "path": "common/scripted_effects/BEL effects (Belgium).txt",
+      "sha": "2dd6e0bef88dbcad992c3bea71a03871ff9b6212"
+    },
+    {
+      "path": "common/scripted_effects/BHU effects (Bhutan).txt",
+      "sha": "a5d45d09bd91137ec0ac6ca373d54ce32c63214b"
+    },
+    {
+      "path": "common/scripted_effects/BLR effects (White Ruthenia).txt",
+      "sha": "e0a4982658bfaf07e52bdf5bdc5626541274851b"
+    },
+    {
+      "path": "common/scripted_effects/BOL effects (Bolivia).txt",
+      "sha": "dc849d94386f2354e4e346048441940896bd6fe0"
+    },
+    {
+      "path": "common/scripted_effects/BRA effects (Brazil).txt",
+      "sha": "a9c40efd6d6037cbe62e8851c4f9b2e61b29628d"
+    },
+    {
+      "path": "common/scripted_effects/BRM effects (Burma).txt",
+      "sha": "903095fd8c4217e6100743213e09ee54884de8b6"
+    },
+    {
+      "path": "common/scripted_effects/BUK effects (Bukhara).txt",
+      "sha": "84ec8a7a067d4bd7397da3f1959988cba017f990"
+    },
+    {
+      "path": "common/scripted_effects/BUL effects (Bulgaria).txt",
+      "sha": "d8de3379469dc0d495b4884102ec76f9cec0bc19"
+    },
+    {
+      "path": "common/scripted_effects/CAM effects (Cambodia).txt",
+      "sha": "b2b44d15d9da419007ed2a81599898097c416949"
+    },
+    {
+      "path": "common/scripted_effects/CAN effects (Canada).txt",
+      "sha": "8bd6f8fc6ef1f33b4d11c088b0b92b8d4dbf949f"
+    },
+    {
+      "path": "common/scripted_effects/CHI effects (Left Kuomintang).txt",
+      "sha": "ca56f55a1f8a379d4a7f1e41a27f057b14af0da1"
+    },
+    {
+      "path": "common/scripted_effects/CHL effects (Chile).txt",
+      "sha": "5e7f4e393540acd6d1514af3f5b035bc2e4f2a5a"
+    },
+    {
+      "path": "common/scripted_effects/COL effects (Colombia).txt",
+      "sha": "a103e9985f8d38e5b518e10b3e3c362acec58e33"
+    },
+    {
+      "path": "common/scripted_effects/COS effects (Costa Rica).txt",
+      "sha": "e6c0f1f5fe26c459f3184296b1c2ca6ff66caceb"
+    },
+    {
+      "path": "common/scripted_effects/CRO effects (Croatia).txt",
+      "sha": "db96c85552a15f3ac63703e10895b4418ea65941"
+    },
+    {
+      "path": "common/scripted_effects/CUB effects (Cuba).txt",
+      "sha": "d0722d1a03c35cc52ae56650f22dbaed2e1cf976"
+    },
+    {
+      "path": "common/scripted_effects/CZE effects (Bohemia).txt",
+      "sha": "6a231ce599f483379cf812a836168dcc248d24eb"
+    },
+    {
+      "path": "common/scripted_effects/DEI effects (Dutch East Indies).txt",
+      "sha": "423cf06e3d31756855d75911e616dceb00eaf06c"
+    },
+    {
+      "path": "common/scripted_effects/DEN effects (Denmark).txt",
+      "sha": "6151417180a5ce7e33a76247a041160055b1989a"
+    },
+    {
+      "path": "common/scripted_effects/DOM effects (Dominican Republic).txt",
+      "sha": "abc3373dd4d3c6000c8f0954f6e9216d74479b4f"
+    },
+    {
+      "path": "common/scripted_effects/EGY effects (Egypt).txt",
+      "sha": "cad21104fb6824f11abe55edcdfe2b968d34f729"
+    },
+    {
+      "path": "common/scripted_effects/EMI effects (Emilia-Parma).txt",
+      "sha": "2afc5dce7946ad684c25f79b6f2b971f432872c5"
+    },
+    {
+      "path": "common/scripted_effects/ENG effects (Union of Britain).txt",
+      "sha": "9d911cef90271f5a1362b4265af8e99b8a90bc05"
+    },
+    {
+      "path": "common/scripted_effects/EST effects (Estonia).txt",
+      "sha": "262ce9cf872d08cbec2adb55da873e29cc66b6e0"
+    },
+    {
+      "path": "common/scripted_effects/ETH effects (Ethiopia).txt",
+      "sha": "fb9733468c5e38817bdffdc672b340a452d8cbc4"
+    },
+    {
+      "path": "common/scripted_effects/ETS effects (East Turkestan).txt",
+      "sha": "5f329a4982690fa67fa8728d4841be82b5b1398e"
+    },
+    {
+      "path": "common/scripted_effects/FER effects (Far Eastern Army).txt",
+      "sha": "48323bdb9d496089a15d1d46c666499363802807"
+    },
+    {
+      "path": "common/scripted_effects/FIN effects (Finland).txt",
+      "sha": "3a2d0f1b5d1c4befdd07efdd205ce68d2262d505"
+    },
+    {
+      "path": "common/scripted_effects/FNG effects (Fengtian).txt",
+      "sha": "181869b0f39b2656754ef373430ea6c82250619d"
+    },
+    {
+      "path": "common/scripted_effects/FOP effects (Patagonia).txt",
+      "sha": "52be938316941aa8be4dbed114eccdd662b6b4bc"
+    },
+    {
+      "path": "common/scripted_effects/FRA effects (Commune of France).txt",
+      "sha": "bc95045073a5d457ea3f0cd5e700742260c924be"
+    },
+    {
+      "path": "common/scripted_effects/FRP effects (France Puppet).txt",
+      "sha": "5de8730f1d5cb66f020e1b4ec0a87c0cf6c7843e"
+    },
+    {
+      "path": "common/scripted_effects/GAL effects (Galicia).txt",
+      "sha": "b25c13fcc3171e5c6d1487a2db221a2ff9901d24"
+    },
+    {
+      "path": "common/scripted_effects/GBR effects (United Kingdom).txt",
+      "sha": "8359e2a873a9f4d9d3d90b1706b22b602f55274a"
+    },
+    {
+      "path": "common/scripted_effects/GEA effects (German East Asia).txt",
+      "sha": "6addb17649993768878ccd02f8e262cf37f6da5f"
+    },
+    {
+      "path": "common/scripted_effects/GEO effects (Georgia).txt",
+      "sha": "ebd2a150718657632813726d7474450bec0bbbe9"
+    },
+    {
+      "path": "common/scripted_effects/GER effects (Germany).txt",
+      "sha": "a5e103fab1d319868ca9f9663984073baddb6046"
+    },
+    {
+      "path": "common/scripted_effects/GRE effects (Greece).txt",
+      "sha": "e85a072d13648b361eb5bd8f9487c8c0ba32bb00"
+    },
+    {
+      "path": "common/scripted_effects/GRU effects (Germany, puppet).txt",
+      "sha": "6ac96f59e3661273881a399657311f1411f39f67"
+    },
+    {
+      "path": "common/scripted_effects/GXC effects (Liangguang).txt",
+      "sha": "01b1de44dc82f1916f7e57aa4beb4ef24d5ac4b7"
+    },
+    {
+      "path": "common/scripted_effects/GYA effects (Guyana).txt",
+      "sha": "d7216aa25a3180f44164bbe0969d55b0f762e2ca"
+    },
+    {
+      "path": "common/scripted_effects/HAI effects (Haiti).txt",
+      "sha": "05a3119a290afb543c774a838bea563a223cb23f"
+    },
+    {
+      "path": "common/scripted_effects/HAW effects (Hawaii).txt",
+      "sha": "723667f70e96f4ce423dee18725c1a938bf51ce3"
+    },
+    {
+      "path": "common/scripted_effects/HEJ effects (Hejaz).txt",
+      "sha": "a3fe0cec450e1b53fc85fe2602120f17df5e57b6"
+    },
+    {
+      "path": "common/scripted_effects/HND effects (Bharatiya Peoples Republic).txt",
+      "sha": "9cdafa923c70ee75ab519156e6ccb08ebc64a0e2"
+    },
+    {
+      "path": "common/scripted_effects/HNN effects (Hunan).txt",
+      "sha": "efac4983ee916a29832d4dc92306e3cd2fdea105"
+    },
+    {
+      "path": "common/scripted_effects/HOL effects (Netherlands).txt",
+      "sha": "c6fc476bd57a542b3609419104e325de345a5486"
+    },
+    {
+      "path": "common/scripted_effects/HUN effects (Hungary).txt",
+      "sha": "9d636c9e14c0fc12185318e2a6fb0a28026fbd37"
+    },
+    {
+      "path": "common/scripted_effects/ICE effects (Iceland).txt",
+      "sha": "b12ddb0a65511a3462b203ecdaa1786169b572b5"
+    },
+    {
+      "path": "common/scripted_effects/INC effects (Indochina).txt",
+      "sha": "b655420738677b71e641cc98b99e2b46eaf5e03e"
+    },
+    {
+      "path": "common/scripted_effects/INS effects (Indonesia).txt",
+      "sha": "2b833f21db2f3b23c90b5a1db63aa4b370772444"
+    },
+    {
+      "path": "common/scripted_effects/IRE effects (Ireland).txt",
+      "sha": "7f1500e12527c1fa097d603e511503c9eeb578d0"
+    },
+    {
+      "path": "common/scripted_effects/IRQ effects (Iraq).txt",
+      "sha": "c41f32e848d1b1fde30b2a9eb630bc9284b8fb1e"
+    },
+    {
+      "path": "common/scripted_effects/JAP effects (Japan).txt",
+      "sha": "e2fc93ad35e9b5abaea73730758cfb4934044f13"
+    },
+    {
+      "path": "common/scripted_effects/KAZ effects (Kazakhstan).txt",
+      "sha": "cd420b0da5744c7abe7f1bf58554617bb136d307"
+    },
+    {
+      "path": "common/scripted_effects/KDR effects (Anatolian Kurdistan).txt",
+      "sha": "a134180d4ecd9ebfc90d75a43d3eaeb61bddcaaf"
+    },
+    {
+      "path": "common/scripted_effects/KMT effects (Kuomintang Shared).txt",
+      "sha": "e86bb1a283ebe18ba77c2f998036892360542e7b"
+    },
+    {
+      "path": "common/scripted_effects/KOR effects (Korea).txt",
+      "sha": "f45ff4a5a9a40acf973cfeba91034e2a18a70f1b"
+    },
+    {
+      "path": "common/scripted_effects/KUM effects (Kumul).txt",
+      "sha": "8407c329a52b54e1ebd2981f3351045f16570948"
+    },
+    {
+      "path": "common/scripted_effects/LAT effects (Latvia).txt",
+      "sha": "a1f8ca310f2b1e9774b9b11d7aeba50d42ef4ede"
+    },
+    {
+      "path": "common/scripted_effects/LBA effects (Cyrenaica).txt",
+      "sha": "e3df85643f2cb6accf4184487402879555b2c9e4"
+    },
+    {
+      "path": "common/scripted_effects/LEB effects (Lebanon).txt",
+      "sha": "752c38ebf63c866d4c8c070b34a3bf477af5a481"
+    },
+    {
+      "path": "common/scripted_effects/LEC effects (Legation Cities).txt",
+      "sha": "919459af9a8aeb8c06ada3f6c40fd705ff1022b7"
+    },
+    {
+      "path": "common/scripted_effects/LEP effects (League of Eight Provinces).txt",
+      "sha": "ca268665fae4d88b95b0062ac8a1f2d0b6e625b3"
+    },
+    {
+      "path": "common/scripted_effects/LIB effects (Liberia).txt",
+      "sha": "0bd756b21ea5ba48e62f0489fe16b3920dac16d4"
+    },
+    {
+      "path": "common/scripted_effects/LIT effects (Lithuania).txt",
+      "sha": "ffdf8122de2a2bec232cd57cb50ae320674f8e53"
+    },
+    {
+      "path": "common/scripted_effects/MAD effects (Madagascar).txt",
+      "sha": "ff4fba1a9b0b4c248ebe47b6c85863b6f3cd851d"
+    },
+    {
+      "path": "common/scripted_effects/MAF effects (Mittelafrika).txt",
+      "sha": "61f5320683132d4af29d8a94e431207efcacaf10"
+    },
+    {
+      "path": "common/scripted_effects/MAL effects (Malaya).txt",
+      "sha": "574f2af129a722e83d2c70f0719c4f789cdac9ed"
+    },
+    {
+      "path": "common/scripted_effects/MAN effects (Manchuria).txt",
+      "sha": "82993b5654b24fa1055fa7e91bb3fb95f0daa0d8"
+    },
+    {
+      "path": "common/scripted_effects/MEX effects (Mexico).txt",
+      "sha": "bc225d78df9debcd432caa0bf0c30b3f8b532efc"
+    },
+    {
+      "path": "common/scripted_effects/MIT effects (Mitteleuropa).txt",
+      "sha": "a50b7abffd9ff220ec7a861878ebc8d13028454a"
+    },
+    {
+      "path": "common/scripted_effects/MNT effects (Montenegro).txt",
+      "sha": "e3d1093ab31e45bffc1e88c36e8e7f8ec7c797c7"
+    },
+    {
+      "path": "common/scripted_effects/MON effects (Mongolia).txt",
+      "sha": "2f9c430b97d85751f71eae3741ac78960e614567"
+    },
+    {
+      "path": "common/scripted_effects/MOR effects (Morocco).txt",
+      "sha": "519c663f1efc6a71b8d8fe249b8043ebda4a932f"
+    },
+    {
+      "path": "common/scripted_effects/NEE effects (New England).txt",
+      "sha": "5fb6c4cadcb2f8ab15d214e334292dc29215ee05"
+    },
+    {
+      "path": "common/scripted_effects/NEP effects (Nepal).txt",
+      "sha": "8b565f063ba20bc009cfc5a5be0770b700c83b95"
+    },
+    {
+      "path": "common/scripted_effects/NFA effects (NatFrance).txt",
+      "sha": "1179545fb47c97a0b37b0068fbf418612d958c4d"
+    },
+    {
+      "path": "common/scripted_effects/NIC effects (Nicaragua).txt",
+      "sha": "59be7c969ea8990a1d3fe23b784c387b510d8de6"
+    },
+    {
+      "path": "common/scripted_effects/NMB effects (Namibia).txt",
+      "sha": "6b32dafe44e83e46f6ff87286e4ed9f51c2007e3"
+    },
+    {
+      "path": "common/scripted_effects/NOR effects (Norway).txt",
+      "sha": "884bbc582f7eed404479b87478d9b6a14d56fe48"
+    },
+    {
+      "path": "common/scripted_effects/NZL effects (New Zealand).txt",
+      "sha": "e2774e362ec234256071903edc7694c953f81b0d"
+    },
+    {
+      "path": "common/scripted_effects/OMA effects (Oman).txt",
+      "sha": "3393264855d1736989b92999f7da697e8af803b0"
+    },
+    {
+      "path": "common/scripted_effects/PAR effects (Paraguay).txt",
+      "sha": "bd6fe6d801c9ef1f0170b0fd3ec861399c105aa0"
+    },
+    {
+      "path": "common/scripted_effects/PER effects (Persia).txt",
+      "sha": "e4ccdfb7b41278059ff5176c169555752671f7f4"
+    },
+    {
+      "path": "common/scripted_effects/PHI effects (Philippines).txt",
+      "sha": "e08d9fee59feae8d87409eaed020faeb1214446b"
+    },
+    {
+      "path": "common/scripted_effects/POL effects (Poland).txt",
+      "sha": "5d4075bddf1cd8adf08526149b6195c610b6afd1"
+    },
+    {
+      "path": "common/scripted_effects/POR effects (Portugal).txt",
+      "sha": "a4538ba65d54655438cb83405228eb4650d6bd72"
+    },
+    {
+      "path": "common/scripted_effects/PRF effects (Princely Federation).txt",
+      "sha": "f325bf43c101be3e6f98b6952661f46a4c63a349"
+    },
+    {
+      "path": "common/scripted_effects/PRU effects (Peru).txt",
+      "sha": "0b6b9b47a23be2db09d97aedb39ec76b460c74db"
+    },
+    {
+      "path": "common/scripted_effects/PUE effects (Puerto Rico).txt",
+      "sha": "1aa70ccfae12aa02dd7404d5abf9bbda67e859b1"
+    },
+    {
+      "path": "common/scripted_effects/QIE effects (Qing).txt",
+      "sha": "b3c9845ad6b6909b650316fc5f924a9cd00461fd"
+    },
+    {
+      "path": "common/scripted_effects/RAJ effects (Dominion of India).txt",
+      "sha": "4b55a9cf0bfeca656af5611ecf53cf3d81f2d8c4"
+    },
+    {
+      "path": "common/scripted_effects/ROM effects (Romania).txt",
+      "sha": "8fd811accec85ac5e978a6413c44542458cda21d"
+    },
+    {
+      "path": "common/scripted_effects/RSA effects (Free Russian Army).txt",
+      "sha": "a0e1b154e0cbd12bd5174c0f4f22f0b44e3b782e"
+    },
+    {
+      "path": "common/scripted_effects/RUS effects (Russia).txt",
+      "sha": "cf8947ec629c44775a42007607a866a857fa1b6f"
+    },
+    {
+      "path": "common/scripted_effects/RUS equipment effects (Russia).txt",
+      "sha": "d94f28839b05fdb3d4f42c384388c94bbc24afc3"
+    },
+    {
+      "path": "common/scripted_effects/SAF effects (South Africa).txt",
+      "sha": "44b4c202857beeab819e28e75b0db3aa823d074e"
+    },
+    {
+      "path": "common/scripted_effects/SAR effects (Sarawak).txt",
+      "sha": "89299bfd272362bacd17171c92652fd096382d72"
+    },
+    {
+      "path": "common/scripted_effects/SCA effects (Scandinavian).txt",
+      "sha": "c96513467775780656379d9c7ab91baa22a8313b"
+    },
+    {
+      "path": "common/scripted_effects/SER effects (Serbia).txt",
+      "sha": "25f50443eeededc20bb343ced8413eaae0f58ad1"
+    },
+    {
+      "path": "common/scripted_effects/SHD effects (Shandong).txt",
+      "sha": "da770f9ed926a29c143d9bd161f3cdfe4ef243ae"
+    },
+    {
+      "path": "common/scripted_effects/SHX effects (Shanxi).txt",
+      "sha": "325fc33356d586ec7ea619834a64f4a5d69c91cd"
+    },
+    {
+      "path": "common/scripted_effects/SIA effects (Siam).txt",
+      "sha": "280ae0793ae9207c448d86098eca4aa17a1ad56e"
+    },
+    {
+      "path": "common/scripted_effects/SIK effects (Xinjiang).txt",
+      "sha": "18911ef0b02994d7dde460a42cd31591993b250a"
+    },
+    {
+      "path": "common/scripted_effects/SKM effects (Sikkim).txt",
+      "sha": "1f6a0bb34d5cbf686c2af2ca9ac5e46da95c6675"
+    },
+    {
+      "path": "common/scripted_effects/SLV effects (Slovenia).txt",
+      "sha": "9c0b59d6ced067b0e4cb3edf361d8dd32d47eb42"
+    },
+    {
+      "path": "common/scripted_effects/SPA effects (Spain, legacy).txt",
+      "sha": "442686f825e0bc574ba845b96c3aaec55270f593"
+    },
+    {
+      "path": "common/scripted_effects/SRD effects (Sardinia).txt",
+      "sha": "0252b280c7c8af454a2dd3cac4cbcb157d3b40fa"
+    },
+    {
+      "path": "common/scripted_effects/SWE effects (Sweden).txt",
+      "sha": "97d4cc2d671575a44075573b774273b1fa8ccff9"
+    },
+    {
+      "path": "common/scripted_effects/SYR effects (Syria).txt",
+      "sha": "fbeb2835d25d0836c8220a21e74453baa519778d"
+    },
+    {
+      "path": "common/scripted_effects/SZC effects (Sichuan).txt",
+      "sha": "a8ae2a7842848f274c401067d647d0eb997841ee"
+    },
+    {
+      "path": "common/scripted_effects/TIB effects (Tibet).txt",
+      "sha": "5582baad985eb78d550ac75026b286435289caf8"
+    },
+    {
+      "path": "common/scripted_effects/TRK effects (Turkestan).txt",
+      "sha": "51decce4b508f224afe2dca1bfead43ce9e31224"
+    },
+    {
+      "path": "common/scripted_effects/TUR effects (Ottoman).txt",
+      "sha": "625ff9223944f9ab6054608e394f9a51ea3d9628"
+    },
+    {
+      "path": "common/scripted_effects/TUR effects (Turkey).txt",
+      "sha": "83b688f010a5b3fc0708b54230b7d1e15a11b47e"
+    },
+    {
+      "path": "common/scripted_effects/UKR effects (Ukraine).txt",
+      "sha": "852da4be9b36c8a0aeebcdb546072087ae7672f2"
+    },
+    {
+      "path": "common/scripted_effects/UPC effects (Federalist China).txt",
+      "sha": "dd6b89b2356fd04c87767194b18298a39c05805f"
+    },
+    {
+      "path": "common/scripted_effects/URG effects (Uruguay).txt",
+      "sha": "a98686559ee995c084ffcb46e1b7225a1f2c024f"
+    },
+    {
+      "path": "common/scripted_effects/VEN effects (Venezuela).txt",
+      "sha": "9bc62f216dcdf8dbc1100fa09c6354804b08c15d"
+    },
+    {
+      "path": "common/scripted_effects/WIF effects (West Indies).txt",
+      "sha": "ab7341da6bd0d630dcd609d0f5bd7873e959bd44"
+    },
+    {
+      "path": "common/scripted_effects/XSM effects (Ma Clique).txt",
+      "sha": "04755a7fb8acf05668687e7651be5f969546927c"
+    },
+    {
+      "path": "common/scripted_effects/YEM effects (Yemen).txt",
+      "sha": "91348a481bf8bc889d5b508aa8587df048ae2992"
+    },
+    {
+      "path": "common/scripted_effects/YUN effects (Yunnan).txt",
+      "sha": "99ae697cfd31ccadb4f75d40dc9d355664036e33"
+    },
+    {
+      "path": "common/scripted_effects/ZIM effects (Rhodesia).txt",
+      "sha": "edb7e0ad763a5b8e3dd3ad87d53cd291bee75dc2"
+    },
+    {
+      "path": "common/scripted_localisation/01 - Federalist_China_scripted_localisation.txt",
+      "sha": "de46fb70ade44ab2859e5ce14f9791f4e4866dd1"
+    },
+    {
+      "path": "common/scripted_localisation/BEL scripted_loc (Belgium).txt",
+      "sha": "700bdfb331e00133541ca33e4048323b3353da4e"
+    },
+    {
+      "path": "common/scripted_localisation/DEN scripted_loc (Denmark).txt",
+      "sha": "2c903bf49f3d01c1c602b086a3a2003174755cfc"
+    },
+    {
+      "path": "common/scripted_localisation/HND scripted_loc (Bharatiya Peoples Republic).txt",
+      "sha": "d7c24b995b4c1d8ee88e3f1c92248e7847f637e2"
+    },
+    {
+      "path": "common/scripted_localisation/HOL scripted_loc (Netherlands).txt",
+      "sha": "c8e0c055c502f85b5e0c0e262b29132decae47ba"
+    },
+    {
+      "path": "common/scripted_localisation/IRE scripted_loc (Ireland).txt",
+      "sha": "5a4f5a9c15a979013d23c0a766c5c6d606215239"
+    },
+    {
+      "path": "common/scripted_localisation/NEE scripted_loc (New_England).txt",
+      "sha": "fa57bb89d37ac3918de3a666e0671402c2c741f1"
+    },
+    {
+      "path": "common/scripted_localisation/QIE scripted_loc (Qing).txt",
+      "sha": "5c6c9d121a9a357529a6ab1c33b2c99b080a9a02"
+    },
+    {
+      "path": "common/scripted_localisation/SAF scripted_loc (South_Africa).txt",
+      "sha": "637778fed90dabaec8f3adacaa80cd11a92b85e6"
+    },
+    {
+      "path": "common/scripted_localisation/TUR scripted_loc (Ottoman).txt",
+      "sha": "b900c427be28bc1870c8dd0b618368b592be5ffd"
+    },
+    {
+      "path": "common/scripted_localisation/WCA scripted_loc (Workers Congress of America).txt",
+      "sha": "7345059d459e79fa1d4733cbd8f6698689814cbd"
+    },
+    {
+      "path": "common/scripted_localisation/YUN scripted_loc (Yunnan).txt",
+      "sha": "ad3a8de152d000938f6779efc2624ad789c75f96"
+    },
+    {
+      "path": "events/00 AI events.txt",
+      "sha": "87aa7017d654b7230559a32de0890c79c0db0eb2"
+    },
+    {
+      "path": "events/00 Annexation events 0 - Core.txt",
+      "sha": "b5684c1d2d52ea19e44f6a13f1bdfe233b300147"
+    },
+    {
+      "path": "events/00 Annexation events 1 - Europe.txt",
+      "sha": "61d13e915e26a4b99cc45a9423768378dfe931d1"
+    },
+    {
+      "path": "events/00 Annexation events 2 - Americas.txt",
+      "sha": "262f4aa60afcda40df70676552453207a7a0ee8b"
+    },
+    {
+      "path": "events/00 Annexation events 3 - Asia & Oceania.txt",
+      "sha": "191a11768f67972263c4c62a95daa364e4b0b9a0"
+    },
+    {
+      "path": "events/00 Annexation events 4 - Middle East.txt",
+      "sha": "28fba2a49e51ed219f2aa3a5a4da20ad038ea0bb"
+    },
+    {
+      "path": "events/00 Annexation events 5 - Africa.txt",
+      "sha": "72575b5ef7123f34f10c619c6c6274d824274b1e"
+    },
+    {
+      "path": "events/00 Capitulation events 1.txt",
+      "sha": "2f3bd5b77c0a53aef4c1aa8cd090caaa372f8cfa"
+    },
+    {
+      "path": "events/00 Capitulation events 2 - Vanilla.txt",
+      "sha": "6b35561208d61ee7ac99e6b3630ccfe1372ff6b0"
+    },
+    {
+      "path": "events/00 City Capture events.txt",
+      "sha": "fb553d4348fbc932023c240d309893a61724386d"
+    },
+    {
+      "path": "events/00 Government In Exile events.txt",
+      "sha": "ac03d71db02a5feefc383a4aa245a28ab9fa7cc6"
+    },
+    {
+      "path": "events/00 LaR agent events.txt",
+      "sha": "5d373a5a5d070cb7055700b7e902746988660361"
+    },
+    {
+      "path": "events/00 LaR espionage operation events.txt",
+      "sha": "d1aa2a26f4eb103ad3fb476b0f36c70bb97478dd"
+    },
+    {
+      "path": "events/00 League Collapse events.txt",
+      "sha": "7c178e6340b399e72cb2a388a37bab88253fcadf"
+    },
+    {
+      "path": "events/00 Nuke events.txt",
+      "sha": "e3bec110b919bca415624b41f4db1e889a4f2d55"
+    },
+    {
+      "path": "events/00 Political events.txt",
+      "sha": "13b60809fcf6b47d51d9ae10b460585ee2152e3e"
+    },
+    {
+      "path": "events/00 Pre-War events.txt",
+      "sha": "09cc7a4a9a2930a636175b5495e60849bf1f8679"
+    },
+    {
+      "path": "events/00 Special Project events.txt",
+      "sha": "da1aa684dfaa2bedf4521a56f4fbe7744fac3e17"
+    },
+    {
+      "path": "events/00 World News events.txt",
+      "sha": "36935515fd974c472919e1064e7874d12351d961"
+    },
+    {
+      "path": "events/01 African Minor events.txt",
+      "sha": "8ddcded7f51400f311e2c64468fb5b10db4eacb4"
+    },
+    {
+      "path": "events/01 American Civil War events.txt",
+      "sha": "d0c52303ad55216179b07c85e2ee29f892b21e30"
+    },
+    {
+      "path": "events/01 Belgrade Pact events.txt",
+      "sha": "9dc5dc44a564d6fd073757124b4fba93c1731928"
+    },
+    {
+      "path": "events/01 Central Asian Crisis events.txt",
+      "sha": "244cf5f50db65cc219d18ec15c0735bd5629c467"
+    },
+    {
+      "path": "events/01 China events.txt",
+      "sha": "c92a2c98037bd24e24d761aab336b4b4202b14d6"
+    },
+    {
+      "path": "events/01 East Asia Peace events.txt",
+      "sha": "11ee4c9ca80d022a356d87850e3ed0278155791e"
+    },
+    {
+      "path": "events/01 India shared events.txt",
+      "sha": "40cdadd9c7e3a3dda24f9d6ed5af9ffc574a73fc"
+    },
+    {
+      "path": "events/01 Internationale flavour events.txt",
+      "sha": "66067f6e21663435d81b80f59e1a1341ef15007d"
+    },
+    {
+      "path": "events/01 Treaty Territory events.txt",
+      "sha": "06759611668d5d0c1af1d3719f4598c4b450372b"
+    },
+    {
+      "path": "events/01 Treaty of Budapest events.txt",
+      "sha": "d502cb1943bbd95779ed6c14741ba3c15ef542d6"
+    },
+    {
+      "path": "events/01 War in the Southern Cone events.txt",
+      "sha": "efa1bf59cc516622dd3ec442ce74ee8b34246352"
+    },
+    {
+      "path": "events/02 Central America events.txt",
+      "sha": "ce8256db354c571259fb5a2a331d6dec21ae81ab"
+    },
+    {
+      "path": "events/04 Levant Crisis Post-War events.txt",
+      "sha": "526ad652650214aa00deeef909974f8c5092a464"
+    },
+    {
+      "path": "events/04 Levant Crisis events.txt",
+      "sha": "d9e4993ebbe4aad2f2c1a3a26b87b6b25976f9ea"
+    },
+    {
+      "path": "events/05 Bush War events.txt",
+      "sha": "fe0ae64b80b50eddbf976e45cff7b533f79c58b1"
+    },
+    {
+      "path": "events/05 Ogaden War events.txt",
+      "sha": "ae8f96427104abab73edccdaf0d829ded39e16a9"
+    },
+    {
+      "path": "events/ACC events (American Constitutional Coalition).txt",
+      "sha": "3dbc84ccf0dc09f895e3e3309ce8f974d2644f5d"
+    },
+    {
+      "path": "events/AFG events (Afghanistan).txt",
+      "sha": "93316caa38434c27d6073496895f8e4c9e84a0c1"
+    },
+    {
+      "path": "events/ALB events (Albania).txt",
+      "sha": "ee53f851894232be5ee4a16cdb0b5c431c39d9d6"
+    },
+    {
+      "path": "events/ANQ events (Anqing Clique).txt",
+      "sha": "5d2b4786287c82affc593b20853aed81c250316c"
+    },
+    {
+      "path": "events/APG events (American Peoples Government).txt",
+      "sha": "501b9c61e60f997e5c732e4cdbf9ddfd8d936474"
+    },
+    {
+      "path": "events/ARG events (Argentina).txt",
+      "sha": "9f5cd386a2797919417af8a8119389f7a695c516"
+    },
+    {
+      "path": "events/ARG events (Argentinian flavour).txt",
+      "sha": "7541275c571e96c357bbac7eddf87f3cce2fbea3"
+    },
+    {
+      "path": "events/ARM events (Armenia).txt",
+      "sha": "13b3f4d1b30711e3d36db7b396038141adfa8e3f"
+    },
+    {
+      "path": "events/AST events (Australasia).txt",
+      "sha": "15377706cc5e87f524050d069b6a8318c0788556"
+    },
+    {
+      "path": "events/ASY events (Assyria).txt",
+      "sha": "955517765a640d557c0bdacc2923eb5978fce07b"
+    },
+    {
+      "path": "events/AUS events (Austria).txt",
+      "sha": "7def9f7a338b699518356ac4e473e0fc78956ade"
+    },
+    {
+      "path": "events/AUS events (Austrian Ausgleich).txt",
+      "sha": "64b8296ef5556456b3406d78c15c4dd3de37c8c9"
+    },
+    {
+      "path": "events/AZR events (Azerbaijan).txt",
+      "sha": "18462b7930911f06f8730a359f25eb554c14a321"
+    },
+    {
+      "path": "events/BAT events (Baltic Duchy).txt",
+      "sha": "0741198a67601d4509d1c2fe87b4120085289b23"
+    },
+    {
+      "path": "events/BEL events (Belgium).txt",
+      "sha": "9c157f0cde7ed6a7318aaff84d26a97210fa81e2"
+    },
+    {
+      "path": "events/BHU events (Bhutan).txt",
+      "sha": "fd87cf6accd7eccb24aaf05f2053c66b76e002ec"
+    },
+    {
+      "path": "events/BLR events (White Ruthenia).txt",
+      "sha": "51d14c7beaa09f8aaad4c179c2ef7f50e6bea51a"
+    },
+    {
+      "path": "events/BOL events (Bolivia).txt",
+      "sha": "97f5fe7e267d092094b667bf68e9ec605c9b35c8"
+    },
+    {
+      "path": "events/BRA events (Brazil).txt",
+      "sha": "75a3e33d06c896bc296818546afc8925281468bf"
+    },
+    {
+      "path": "events/BRM events (Burma).txt",
+      "sha": "07ea0584f5258cd3731bb3a888d5e8b3aa8f9d37"
+    },
+    {
+      "path": "events/BUK events (Bukhara).txt",
+      "sha": "d1f9e000c641169528289a300071d5be2750c50f"
+    },
+    {
+      "path": "events/BUL events (Bulgaria).txt",
+      "sha": "48da6fc13dcc846017423aec90ed80926f197159"
+    },
+    {
+      "path": "events/CAM events (Cambodia).txt",
+      "sha": "376f3fbe10c6f04d91ea5c733c234701fd039838"
+    },
+    {
+      "path": "events/CAN events (Canada).txt",
+      "sha": "f2cc602fceaaa972846cd999e908fecc85b0555e"
+    },
+    {
+      "path": "events/CAR events (Ubangi-Shari).txt",
+      "sha": "7a661ac75ebe5bb548ce5ce667189e02c4cf7d39"
+    },
+    {
+      "path": "events/CEN events (Central America Democratic).txt",
+      "sha": "3ca00148af57fd127eabd7ccadd995603d5c05a0"
+    },
+    {
+      "path": "events/CEN events (Central America Military).txt",
+      "sha": "3feb77ecdf5c43ccce0aae4bc58948149fd2a7cd"
+    },
+    {
+      "path": "events/CEN events (Central America Socialist).txt",
+      "sha": "72382439e5e743fc39ef09b35916aa1007c47740"
+    },
+    {
+      "path": "events/CEN events (Central America Unification).txt",
+      "sha": "fc35090d692f373b5d12645e286d3b23b5c5823a"
+    },
+    {
+      "path": "events/CHI events (Left Kuomintang).txt",
+      "sha": "b556432d7fc5aac751dfb50e12f8f8abacb7bfbb"
+    },
+    {
+      "path": "events/CHL events (Chile).txt",
+      "sha": "e68a932ed88b01f645b373648f49552cb8e3778f"
+    },
+    {
+      "path": "events/COG events (Congo).txt",
+      "sha": "26ae96ce1af4958c2de831b7dca6e0826f85cb45"
+    },
+    {
+      "path": "events/COL events (Colombia).txt",
+      "sha": "6de549bd613af1ed6fdd4ba89862825e131375e3"
+    },
+    {
+      "path": "events/COS events (Costa Rica).txt",
+      "sha": "9420037c25f58e8624d6f84beee2759d842c1959"
+    },
+    {
+      "path": "events/CRO events (Croatia-Illyria).txt",
+      "sha": "e57dcc71b7b8b2e226d785d99f7514ae8a83eba3"
+    },
+    {
+      "path": "events/CUB events (Cuba).txt",
+      "sha": "0a9845c7901519811d19f5d6e17f7c5c39c0fd23"
+    },
+    {
+      "path": "events/CYP events (Cyprus).txt",
+      "sha": "4e7e3b1ef4b607a6c94852ea5cce4c898e1c0cc5"
+    },
+    {
+      "path": "events/DAH events (Dahomey).txt",
+      "sha": "39dba92a7998e86535c967f7149b36071e391e8b"
+    },
+    {
+      "path": "events/DEI events (Dutch East Indies).txt",
+      "sha": "d6f330a64ac652b0c7863add0ade6586ecfe6e46"
+    },
+    {
+      "path": "events/DEN events (Denmark).txt",
+      "sha": "b97249eacd1723edee3e6a1d46e3b2a410352933"
+    },
+    {
+      "path": "events/DOM events (Dominican Republic).txt",
+      "sha": "be34739e32e993a3105b9cf7a3a355cd71d38f7e"
+    },
+    {
+      "path": "events/ECU events (Ecuador).txt",
+      "sha": "e5116f796023bf495cf9d14124527db4f31cc380"
+    },
+    {
+      "path": "events/EGY events (Egypt).txt",
+      "sha": "364604e2387abd79a268765b8c0de1dbe38cb745"
+    },
+    {
+      "path": "events/ELS events (El Salvador).txt",
+      "sha": "c11086e65aa6551fac1a9081872c625cb0d75a8d"
+    },
+    {
+      "path": "events/EMI events (Modena-Parma).txt",
+      "sha": "844e68e3328aac3c034f7c50944a07f6bbf16994"
+    },
+    {
+      "path": "events/ENG events (Union of Britain).txt",
+      "sha": "3385d8a7c08588bbc3dfcf962fe4999fa450cc13"
+    },
+    {
+      "path": "events/ENT events (Entente).txt",
+      "sha": "49dcefde19a898433b46b5a5eaf2ca67f2fcf717"
+    },
+    {
+      "path": "events/EST events (Estonia).txt",
+      "sha": "f6d29662511df58bbf51c2ffcb24c60b8665ea46"
+    },
+    {
+      "path": "events/ETH events (Ethiopia).txt",
+      "sha": "6e6d1007e0f7893f24d5c000a405044d65688799"
+    },
+    {
+      "path": "events/ETS events (East Turkestan).txt",
+      "sha": "065f89e006915efd9fb616c9681395b2b55ebffb"
+    },
+    {
+      "path": "events/FER events (Far Eastern Army).txt",
+      "sha": "0f41f9fe80e0115072eca45900a8c99cd231d84c"
+    },
+    {
+      "path": "events/FIN events (Finland).txt",
+      "sha": "6ced0182895a0e6106c221ce887c07f0995f9fd9"
+    },
+    {
+      "path": "events/FLA events (Flanders).txt",
+      "sha": "1a2873964b426d04fde57d739347d44504259046"
+    },
+    {
+      "path": "events/FNG events (Fengtian Unification).txt",
+      "sha": "6b8c21d37f11aa6aa45219baa034be1ffab8bf40"
+    },
+    {
+      "path": "events/FNG events (Fengtian).txt",
+      "sha": "4e478fd2a6e3306eb2e59cadc2d69cbe8b304843"
+    },
+    {
+      "path": "events/FOP events (Patagonia).txt",
+      "sha": "25d9f103b76eaba59054b785043fcd2236ac0efd"
+    },
+    {
+      "path": "events/FRA events (Commune of France).txt",
+      "sha": "091722fa0e319b12623126dbfa8bb27d56101143"
+    },
+    {
+      "path": "events/FRP events (France Puppet).txt",
+      "sha": "3a6fcab6894aa4171ba28db6dfee7020201db27c"
+    },
+    {
+      "path": "events/GAB events (Gabon).txt",
+      "sha": "2f4950eacf96efaecadb482b97d899aa185f0f57"
+    },
+    {
+      "path": "events/GAL events (Galicia).txt",
+      "sha": "0ef3dbe5b7fb4403abd91fda89493770d747c34e"
+    },
+    {
+      "path": "events/GBR events (United Kingdom).txt",
+      "sha": "5cbcb8b6fc45e4bb65defed35e341c23f919a48e"
+    },
+    {
+      "path": "events/GEA events (German East Asia).txt",
+      "sha": "a641bd7281c641ea1f618d4286c4a2953067f0bc"
+    },
+    {
+      "path": "events/GEO events (Georgia).txt",
+      "sha": "c2c10d36a5d5582285b3a6e17fc85ffb1f24b024"
+    },
+    {
+      "path": "events/GER events (Germany Domestic).txt",
+      "sha": "5a15a78bddd870cb1b957e9e6058813a68bdc3a5"
+    },
+    {
+      "path": "events/GER events (Germany Foreign).txt",
+      "sha": "071593c8b813dc55c7021b2a071d57825dd41c63"
+    },
+    {
+      "path": "events/GRE events (Greece).txt",
+      "sha": "2758c745cea4cfc522436f981562f72e12a062b3"
+    },
+    {
+      "path": "events/GRU events (German Republic).txt",
+      "sha": "42ad8c474d7a5ad4176efabe6ec59a3029ea20b1"
+    },
+    {
+      "path": "events/GUA events (Guatemala).txt",
+      "sha": "ca4001335e8fce753b4df1fa8f270c23f014197a"
+    },
+    {
+      "path": "events/GXC events (Liangguang).txt",
+      "sha": "1a70fc9a88bb466ca813c2e9423ac5f0ae9c4573"
+    },
+    {
+      "path": "events/HAI events (Haiti).txt",
+      "sha": "cb3f675e2ee450a699bd428d4c87be8dcfe6200d"
+    },
+    {
+      "path": "events/HAW events (Hawaii).txt",
+      "sha": "f4379dabc83cfda3d1e370668e1cfd536e6c0365"
+    },
+    {
+      "path": "events/HEJ events (Hejaz).txt",
+      "sha": "fc5a03af0fedc8db48fd643f5dc0e9bb94648ce0"
+    },
+    {
+      "path": "events/HND events (Bharatiya Peoples Republic).txt",
+      "sha": "6343180b94a011cc594cc1ddee522929ce1ebc43"
+    },
+    {
+      "path": "events/HNN events (Hunan).txt",
+      "sha": "ce80527a0630a66e5e2975ecfa2e3fe61b157fd8"
+    },
+    {
+      "path": "events/HOL events (Netherlands).txt",
+      "sha": "58483a9ec9b8fd05fdc5247a215a5590947159b8"
+    },
+    {
+      "path": "events/HON events (Honduras).txt",
+      "sha": "ec183b1824b50a207b0a2a87c0d9fe69d3e9dba7"
+    },
+    {
+      "path": "events/ICE events (Iceland).txt",
+      "sha": "39ca6c2cb0b177f516c91f71dedcdc3636743974"
+    },
+    {
+      "path": "events/INC events (Indochina).txt",
+      "sha": "b6349874c396f52f2f4798fecafd8147118e401c"
+    },
+    {
+      "path": "events/INS events (Indonesia).txt",
+      "sha": "5af6104af8b888fe218b2b320a49ee5d73687250"
+    },
+    {
+      "path": "events/IRE events (Ireland).txt",
+      "sha": "3ea5632603a76edc085062d6b54c3ac998a97d34"
+    },
+    {
+      "path": "events/IRQ events (Iraq).txt",
+      "sha": "ded9f876d7ed8f904ea349e4a20187eaa47d1f08"
+    },
+    {
+      "path": "events/ITA events (Republic of Italy).txt",
+      "sha": "f321be0f301f222926fec0324cf2c27347a9f712"
+    },
+    {
+      "path": "events/JAP events (Japan).txt",
+      "sha": "6c6674045c0dfc227ae4fc88f88ea52582134982"
+    },
+    {
+      "path": "events/JBS events (Jabal Shammar).txt",
+      "sha": "65f565bb02c1f96b10681395967be716caab242c"
+    },
+    {
+      "path": "events/KAZ events (Kazakhstan).txt",
+      "sha": "629b2747c758cdaa1f9fb17a2e6018f5d5f41127"
+    },
+    {
+      "path": "events/KDR events (Anatolian Kurdistan).txt",
+      "sha": "7785e71e400ede6e13623ee818fd02ece0931ad5"
+    },
+    {
+      "path": "events/KHI events (Khiva).txt",
+      "sha": "333b3beaffe9ea66d22ed5f58ad8860271bac40b"
+    },
+    {
+      "path": "events/KOR events (Korea).txt",
+      "sha": "a71927f91670643b86e454a599a7ec75cad9b854"
+    },
+    {
+      "path": "events/KTG events (Katanga).txt",
+      "sha": "0e600fcca3f31597b4f4f1aa369615f45fb332a6"
+    },
+    {
+      "path": "events/KUM events (Kumul).txt",
+      "sha": "daf28e9db178d9c5d916b9afa5263e5b521c375a"
+    },
+    {
+      "path": "events/KUR events (Kurdistan).txt",
+      "sha": "3f76639ef596e643d32ebe5fe106e622f7636b8d"
+    },
+    {
+      "path": "events/LAT events (Latvia).txt",
+      "sha": "816a7549313dd363ecca7b5e265342e590b8d5b5"
+    },
+    {
+      "path": "events/LBA events (Cyrenaica).txt",
+      "sha": "9ab577c2621a011aae73a09c6fba1573c28601ac"
+    },
+    {
+      "path": "events/LEB events (Lebanon).txt",
+      "sha": "4c2d5c7dd7eafc63e7e52443ec4710ec62dff0ce"
+    },
+    {
+      "path": "events/LEC events (Legation Cities).txt",
+      "sha": "b5aa0812550cfcee524b9cdb9b5c210ee411e009"
+    },
+    {
+      "path": "events/LEP events (League of Eight Provinces).txt",
+      "sha": "636e842adbbc736cf35eb7649a4ea528c80958ff"
+    },
+    {
+      "path": "events/LIB events (Liberia).txt",
+      "sha": "da2a236c9cc3cec07c28c497148fd5841943214a"
+    },
+    {
+      "path": "events/LIT events (Lithuania).txt",
+      "sha": "871414c2973bd3e2d6ed91d1bcb028993898b999"
+    },
+    {
+      "path": "events/LOM events (Lombardy).txt",
+      "sha": "4316cb7b7df560de97696de738f89e80a2eb8b8b"
+    },
+    {
+      "path": "events/MAF events (Mittelafrika Domestic).txt",
+      "sha": "c958fe0e98648bd5d4c01b5eab3d606e368c6cbc"
+    },
+    {
+      "path": "events/MAF.SWA events (South West Africa).txt",
+      "sha": "c443b00f126c45bd8ebbb78e2e3135fd3948b061"
+    },
+    {
+      "path": "events/MEX events (Mexico).txt",
+      "sha": "89941aba68a4bfdaff6bcdfd13f5db33eb61ea08"
+    },
+    {
+      "path": "events/MIE events (Intermarium).txt",
+      "sha": "42821560e2ddbe6493e20e4dc537df37acaa8dc4"
+    },
+    {
+      "path": "events/MIT events (Mitteleuropa).txt",
+      "sha": "1d0eb7f2633734436127e47cff39b3d46525926f"
+    },
+    {
+      "path": "events/MLT events (Malta).txt",
+      "sha": "666547c7717a9df59635aca49f0963495d584d38"
+    },
+    {
+      "path": "events/MNT events (Montenegro).txt",
+      "sha": "3cd33c500f20f68244f54cf8af466d70d74c9cb8"
+    },
+    {
+      "path": "events/MON events (Mongolia).txt",
+      "sha": "7d5bbf33494376e9baa583127e936e637ea66f16"
+    },
+    {
+      "path": "events/MOR events (Morocco).txt",
+      "sha": "4720f98bdb8ee3d9f6cbeef463e1cf3ef7db24d7"
+    },
+    {
+      "path": "events/Model Warning events.txt",
+      "sha": "39e360fceea292ae4638d1be3b0a5e49ab51e81a"
+    },
+    {
+      "path": "events/NAT events (Natal).txt",
+      "sha": "6fc977b6641b949c3357a9ff978a8868212e9833"
+    },
+    {
+      "path": "events/NEE events (New England).txt",
+      "sha": "ec20ef128b082b3b519f8a45c8797f9cd38b04a8"
+    },
+    {
+      "path": "events/NEP events (Nepal).txt",
+      "sha": "a6c752c589d8eb23c258565414c5246e978f9afd"
+    },
+    {
+      "path": "events/NFA events (NatFrance).txt",
+      "sha": "32acc6198f5087778da08bf56d5d3bd76e3f1702"
+    },
+    {
+      "path": "events/NIC events (Nicaragua).txt",
+      "sha": "18fd8e93d7ad988d6b40a4e177f4d5c9935c40b2"
+    },
+    {
+      "path": "events/NIR events (Northern Ireland).txt",
+      "sha": "23aa7665b3843f05056f75aae2db604483b19bbe"
+    },
+    {
+      "path": "events/NMB events (Namibia).txt",
+      "sha": "0fcc36893ad5a79128db3e8bbda60bdab42487c4"
+    },
+    {
+      "path": "events/NOR events (Norway).txt",
+      "sha": "ffdb03e36f26e05495cfb2db6d32490e98e29cc6"
+    },
+    {
+      "path": "events/NPA events (National Protection Alliance).txt",
+      "sha": "a7b9bbba390b953859e49445fbe78fd03496cbbd"
+    },
+    {
+      "path": "events/NZL events (New Zealand).txt",
+      "sha": "2445ce4ed26ef6d5655679be2dd99028c516caaf"
+    },
+    {
+      "path": "events/OMA events (Oman).txt",
+      "sha": "dc3d3a3c0dfce3e1235f6f1b90b5ce726a63c0dd"
+    },
+    {
+      "path": "events/PAL events (Jerusalem).txt",
+      "sha": "b6f7f9fcf69860c16cf038c1bafc9167a960aeab"
+    },
+    {
+      "path": "events/PAN events (Panama).txt",
+      "sha": "421d8405eb686f257d21ec433cbc670389d09b6a"
+    },
+    {
+      "path": "events/PAP events (Papal State).txt",
+      "sha": "0b716d030e6dda490d175807f5627e5186dc62d8"
+    },
+    {
+      "path": "events/PAR events (Paraguay).txt",
+      "sha": "800045c88954f9290ebc5bdc73f5816042698c49"
+    },
+    {
+      "path": "events/PER events (Persia).txt",
+      "sha": "5cdebd527405fb4d38b9ddbde369df9418ba7221"
+    },
+    {
+      "path": "events/PHI events (Philippines).txt",
+      "sha": "b7a50dcbcbb3e09f46ee5b61d41667dbc3447a32"
+    },
+    {
+      "path": "events/POL events (Poland).txt",
+      "sha": "b99af7c62b8610fba94dd8d9d83eb186a6ccd938"
+    },
+    {
+      "path": "events/POR events (Portugal in Exile).txt",
+      "sha": "f0e49b26229355b3fb6a2e070e6aeaaa3751e5d9"
+    },
+    {
+      "path": "events/POR events (Portugal).txt",
+      "sha": "5a3adb539fb64c24c1aeb8a7fd3353828a9ed004"
+    },
+    {
+      "path": "events/PRF events (Princely Federation).txt",
+      "sha": "2f0657fd79d9cec7c8d109943421ef02cd99493c"
+    },
+    {
+      "path": "events/PRU events (Peru).txt",
+      "sha": "2e0a0d94299b4c0cb7e8c058acaa8b10f635a6e7"
+    },
+    {
+      "path": "events/PUE events (Puerto Rico).txt",
+      "sha": "08f6e3ae7a7932a4f4ab086a93a52b53fbd5d9a8"
+    },
+    {
+      "path": "events/QIE events (Qing).txt",
+      "sha": "b00b22013e46597c88ca193242efa4eb6f3d332c"
+    },
+    {
+      "path": "events/RAJ events (Dominion of India).txt",
+      "sha": "82e95e1f141733ae2a40f3576fbef5e96ad1201e"
+    },
+    {
+      "path": "events/ROM events (Romania).txt",
+      "sha": "1b685e8f621f3b53be517b59368c13d94a3d920a"
+    },
+    {
+      "path": "events/RSA events (Free Russian Army).txt",
+      "sha": "94e7d9379a0cf59f8a31db0041971b0309863dac"
+    },
+    {
+      "path": "events/RUS events (Russia).txt",
+      "sha": "748b834487baf38f2ba3cf2813ba2abf970afa45"
+    },
+    {
+      "path": "events/SAF events (South Africa).txt",
+      "sha": "9a2cb6d5be13c13571a7a95fd273e039fa6f9479"
+    },
+    {
+      "path": "events/SAR events (Sarawak).txt",
+      "sha": "7cd4523ab8c8e4c66337a367835193fa90bbe1ce"
+    },
+    {
+      "path": "events/SAU events (Najd).txt",
+      "sha": "70c5e0e23f125267d14859b938071b0aabc4e6ca"
+    },
+    {
+      "path": "events/SCA events (Scandinavia).txt",
+      "sha": "c7b009c1355d69a11f1b3c7e89ce86553e1ffd2d"
+    },
+    {
+      "path": "events/SER events (Serbia).txt",
+      "sha": "924cb5e74693257d5a2538fd6f73920c2edbc502"
+    },
+    {
+      "path": "events/SHD events (Shandong Clique).txt",
+      "sha": "3a9ffa7ec5fe5fedfb5d3e4c542e2e508864a1ce"
+    },
+    {
+      "path": "events/SHX events (Shanxi).txt",
+      "sha": "89ffc338c5e7d56cb1c48eb616ab843aa2207936"
+    },
+    {
+      "path": "events/SIA events (Siam).txt",
+      "sha": "3662f04d534e50e0af792052e8544a3e9de37c8e"
+    },
+    {
+      "path": "events/SIC events (Two Sicilies).txt",
+      "sha": "729d5c13be0f594f815f68f78286cb35e0da2127"
+    },
+    {
+      "path": "events/SIK events (Xinjiang).txt",
+      "sha": "672be914bfc2cdda98d090c9bd7243a129fe15bd"
+    },
+    {
+      "path": "events/SOM events (Somalia).txt",
+      "sha": "9424370dc7b753778d9fbe9d3108b30b62c5a35d"
+    },
+    {
+      "path": "events/SPA events (Spain).txt",
+      "sha": "a5e95eaac7d58883c3f16479e1d3b09680197b57"
+    },
+    {
+      "path": "events/SRD events (Sardinia).txt",
+      "sha": "fa1585d26201f91f346c835c19b70066a516fcd6"
+    },
+    {
+      "path": "events/SRI events (Socialist Republic of Italy).txt",
+      "sha": "8c7e69c1bbf38db0b31af2f24364b42d38f44abc"
+    },
+    {
+      "path": "events/SWE events (Sweden).txt",
+      "sha": "f8b65581414879aa8b9bdf9afda1be7092a97d48"
+    },
+    {
+      "path": "events/SWI events (Switzerland).txt",
+      "sha": "df78e5ec1d6f1ec684497c512e24b34244850962"
+    },
+    {
+      "path": "events/SYR events (Syria).txt",
+      "sha": "280b6529c7e9730e31f24949b816d4e0ab320cf0"
+    },
+    {
+      "path": "events/SZC events (Sichuan).txt",
+      "sha": "ad8ef8e753a895b1f677bed8678921ad65ea000b"
+    },
+    {
+      "path": "events/TAI events (Taiwan).txt",
+      "sha": "eccb03639591f921cb2692b2df3b98547c32dcb0"
+    },
+    {
+      "path": "events/TIB events (Tibet).txt",
+      "sha": "030a57215e87ed6387c066f80d0c0f7732a27aae"
+    },
+    {
+      "path": "events/TRK events (Turkestan Republic).txt",
+      "sha": "575c6646f9b4e2a3b3de711da3a669906a871e13"
+    },
+    {
+      "path": "events/TRS events (Transylvania).txt",
+      "sha": "28f396511fa2c60e6585bd6f3f16cd3b749627cf"
+    },
+    {
+      "path": "events/TUR events (Ottoman Empire).txt",
+      "sha": "64d8331d5819098e37fb33e53561f5e1da9f8e57"
+    },
+    {
+      "path": "events/TUR events (Turkey).txt",
+      "sha": "28a1495c44ca1964766f9aedf3fd264ce5a72286"
+    },
+    {
+      "path": "events/UKR events (Ukraine).txt",
+      "sha": "b33e2bf0b53f0c8bace81c8412aff7c70f94ab1d"
+    },
+    {
+      "path": "events/UPC events (Federalist China).txt",
+      "sha": "e8d0674523c946342a3db281e7c291fd9200e71a"
+    },
+    {
+      "path": "events/URG events (Uruguay).txt",
+      "sha": "7819140eba3fcefae56a2cc06402810974bfd0d5"
+    },
+    {
+      "path": "events/USA events (United States).txt",
+      "sha": "e245f8ce26ba4af54c23c3664a0d9c1399d2bb9f"
+    },
+    {
+      "path": "events/VEN events (Venezuela).txt",
+      "sha": "416c24442c3a76c9298260040ac4113654126ed6"
+    },
+    {
+      "path": "events/VNC events (Venice).txt",
+      "sha": "1cb00a701cbf28503c67f2c0e8cff0c35bf73c90"
+    },
+    {
+      "path": "events/WAL events (Wallonia).txt",
+      "sha": "69529e246723a3d0dee5f374ad409410395abb63"
+    },
+    {
+      "path": "events/WCA events (Workers Congress of America).txt",
+      "sha": "c48564674693ee5fa16c26f8e00235d5f9df4139"
+    },
+    {
+      "path": "events/WIF events (West Indies).txt",
+      "sha": "094981e7111d24bca885511e5d4e7143ea57448f"
+    },
+    {
+      "path": "events/XSM events (Ma Clique).txt",
+      "sha": "86b37e699f8fdd7d773a9ac9907fa9b5c9dd9dce"
+    },
+    {
+      "path": "events/YEM events (Yemen).txt",
+      "sha": "0a16d1e5ae3c6cc612493d535a4a0b864eced450"
+    },
+    {
+      "path": "events/YUC events (Yucatan).txt",
+      "sha": "69fe67b56b656c801e95a5be988c67b7634eac85"
+    },
+    {
+      "path": "events/YUN events (Yunnan Clique).txt",
+      "sha": "a523ded69d82147436522d9287b3dd25b7250c64"
+    },
+    {
+      "path": "events/ZIM events (Rhodesia).txt",
+      "sha": "88e7672a20ffdbf3354e104c586643fdac2bcc03"
+    },
+    {
+      "path": "history/countries/AAA - SYSTEM.txt",
+      "sha": "2135a9a3676ef673cef23bc0af5021508088156b"
+    },
+    {
+      "path": "history/countries/ACC - American Constitutional Coalition.txt",
+      "sha": "7ff7adcc8e1edd70fc6a368bd04cd6b4f593fc1c"
+    },
+    {
+      "path": "history/countries/ADA - Adamawa.txt",
+      "sha": "6d55ddde5e6001fdbe2dd27a4e70b19a6c7d8ea0"
+    },
+    {
+      "path": "history/countries/AFG - Afghanistan.txt",
+      "sha": "3bc023ddfbb78b35540116090b8318d4ba430fb0"
+    },
+    {
+      "path": "history/countries/ALB - Albania.txt",
+      "sha": "efb67a2a41ad5eb42901f1dc4bb62a0b4b0bbbc5"
+    },
+    {
+      "path": "history/countries/ALG - Algeria.txt",
+      "sha": "37ea6f1e0e8301df3f08dfb0acf9c56cd0e427d8"
+    },
+    {
+      "path": "history/countries/AMA - Amazonas.txt",
+      "sha": "2886ed459a6e5d3633d5f91dc119d27ba2566373"
+    },
+    {
+      "path": "history/countries/ANG - Angola.txt",
+      "sha": "af662ec87cbee7345f9dd86928a2e5a213988bb5"
+    },
+    {
+      "path": "history/countries/ANQ - Anqing.txt",
+      "sha": "694ba652814a6e005f1ea808d41bfb3fad8d3066"
+    },
+    {
+      "path": "history/countries/ANT - Antilles-Guyana.txt",
+      "sha": "9e7ee9b7e3fa3054a108835ba326ed31b63c078e"
+    },
+    {
+      "path": "history/countries/APG - American Peoples Government.txt",
+      "sha": "5bc6476e05a1b7441e2e5a75ccec72c061750f8b"
+    },
+    {
+      "path": "history/countries/ARG - Argentina.txt",
+      "sha": "48bc965f97ec13b91d2a5c3d3978b0af4022ee7d"
+    },
+    {
+      "path": "history/countries/ARM - Armenia.txt",
+      "sha": "87363398e4992245ecd99d3adef8a29fb3c829e4"
+    },
+    {
+      "path": "history/countries/ASM - Assam.txt",
+      "sha": "266d7fbdc7ac0b86c2d9129eb7aa95ea55aa3394"
+    },
+    {
+      "path": "history/countries/AST - Australia.txt",
+      "sha": "b163a522c30a64f9c80d3db62fb9d4870bbe0223"
+    },
+    {
+      "path": "history/countries/ASY - Assyria.txt",
+      "sha": "3762f0e7254ea9ef583609427be4fd13cc706c07"
+    },
+    {
+      "path": "history/countries/AUS - Austria.txt",
+      "sha": "d9d57cd8c1abbc1a97caa8d6e94a81c3695bb136"
+    },
+    {
+      "path": "history/countries/AZR - Azerbaijan.txt",
+      "sha": "ffdaca13cd73c17b6e8fa8cb927479d382c8d8c2"
+    },
+    {
+      "path": "history/countries/BAH - Bahia.txt",
+      "sha": "18fff3022e91f65b07f92911e54330c8bb67632a"
+    },
+    {
+      "path": "history/countries/BAS - Basque Country.txt",
+      "sha": "7e536a0c8cf9a2256db548a6d1a0c9340a012960"
+    },
+    {
+      "path": "history/countries/BAT - United Baltic Duchy.txt",
+      "sha": "e1fbd91b9838eddd728c8233f49e5fd28441c2e5"
+    },
+    {
+      "path": "history/countries/BAY - Bavaria.txt",
+      "sha": "7cd61fc8a4c3d5495d1f2fa6bce1735468f73782"
+    },
+    {
+      "path": "history/countries/BEL - Belgium.txt",
+      "sha": "7833ba316b497e715ad728d872ca9dc1d9b21a23"
+    },
+    {
+      "path": "history/countries/BHU - Bhutan.txt",
+      "sha": "06167363b27443475b66a0aba491bbff44e1c6ba"
+    },
+    {
+      "path": "history/countries/BLR - White Ruthenia.txt",
+      "sha": "d582a3d0b6a8f4c29831c9fbea7d3885988a598d"
+    },
+    {
+      "path": "history/countries/BNG - Bengal.txt",
+      "sha": "eb00d4d2a4b304a512341e3a32367c41fe023e28"
+    },
+    {
+      "path": "history/countries/BOL - Bolivia.txt",
+      "sha": "ec03589254785706c2d7147648de829bacf1c675"
+    },
+    {
+      "path": "history/countries/BOM - Maharashtra.txt",
+      "sha": "4faeba30100193f6ac42ab69718788ab0212ce64"
+    },
+    {
+      "path": "history/countries/BOS - Bosnia.txt",
+      "sha": "1e27ee618cbf896a7204bd1f30d4359451f5b8bf"
+    },
+    {
+      "path": "history/countries/BOT - Botswana.txt",
+      "sha": "33af1d4a3589d70fb4cd6a2ea788c611d5932952"
+    },
+    {
+      "path": "history/countries/BRA - Brazil.txt",
+      "sha": "aa1e91819b1e15e3d448f63f4e85df9b1981b97e"
+    },
+    {
+      "path": "history/countries/BRD - Urundi.txt",
+      "sha": "e43678e673ed00e019a39f9ccadd82b1460c6a3f"
+    },
+    {
+      "path": "history/countries/BRI - Britanny.txt",
+      "sha": "06812933c48b8acd1297f75420adfea9688b40b8"
+    },
+    {
+      "path": "history/countries/BRM - Burma.txt",
+      "sha": "d1b8ed39cf707ecf6e843cbf4c61f78982da07d6"
+    },
+    {
+      "path": "history/countries/BRT - Barotseland.txt",
+      "sha": "158d3d6fe42e9b9be10032018853f7d66b51bfb3"
+    },
+    {
+      "path": "history/countries/BUK - Bukhara.txt",
+      "sha": "637411d621fd9dc04c43e87c82a4cfb73b9646c9"
+    },
+    {
+      "path": "history/countries/BUL - Bulgaria.txt",
+      "sha": "2fdffb9522c21255b07c6cdd78db9b10d9298be5"
+    },
+    {
+      "path": "history/countries/CAM - Cambodia.txt",
+      "sha": "9d3d4738149f42763698d56d16caf02713e9225e"
+    },
+    {
+      "path": "history/countries/CAR - Ubangi-Shari.txt",
+      "sha": "318ceb53032b238f79deb643f6262cedbc6d14b7"
+    },
+    {
+      "path": "history/countries/CAT - Catalonia.txt",
+      "sha": "05ad94b240c9eca48291ac1e672bb5ec05edddff"
+    },
+    {
+      "path": "history/countries/CEN - Central America.txt",
+      "sha": "889ad595b8be6647c9c6e0040e4fe86061c5c592"
+    },
+    {
+      "path": "history/countries/CEY - Ceylon.txt",
+      "sha": "a05bab3281575521200b04eab396634fbd490c1d"
+    },
+    {
+      "path": "history/countries/CHA - Chad.txt",
+      "sha": "fcc5a39b29babbf79fb7a02625c410a46539e6de"
+    },
+    {
+      "path": "history/countries/CHI - Left Kuomintang.txt",
+      "sha": "656edd4c4ae25781b758209e0b407071885ddaaf"
+    },
+    {
+      "path": "history/countries/CHL - Chile.txt",
+      "sha": "04ddd505b7851ccc99cb1ab150e3073b409f5363"
+    },
+    {
+      "path": "history/countries/CMR - Cameroon.txt",
+      "sha": "afb3a3df7c339c68ec28ad740f1da4fe53e3e146"
+    },
+    {
+      "path": "history/countries/COG - Congo.txt",
+      "sha": "14f503c5fbd02996198bec864685324ebb8b71d2"
+    },
+    {
+      "path": "history/countries/COL - Colombia.txt",
+      "sha": "3644d1379fe180181f821b631e8270f3554a3b3f"
+    },
+    {
+      "path": "history/countries/COS - Costa Rica.txt",
+      "sha": "0c7f835d4f4ea1a03d58cc8cca4131f0f27ba1fe"
+    },
+    {
+      "path": "history/countries/CRO - Croatia.txt",
+      "sha": "4daf74a3da15b9028b28dfd7d388ed15b05f57b8"
+    },
+    {
+      "path": "history/countries/CUB - Cuba.txt",
+      "sha": "f621e7562d1a69c09edafbd0181e2bcfe2d79f1d"
+    },
+    {
+      "path": "history/countries/CUR - Curacao.txt",
+      "sha": "05c6ad7d2f63de36d022dc77a4f2650d43e47245"
+    },
+    {
+      "path": "history/countries/CYP - Cyprus.txt",
+      "sha": "5d429a9949cbe850a9245e2e79b6bf41aabdf352"
+    },
+    {
+      "path": "history/countries/CZE - Bohemia.txt",
+      "sha": "9a90ab49965a46062b83c25ffe128d5fee1cdb10"
+    },
+    {
+      "path": "history/countries/DAH - Dahomey.txt",
+      "sha": "eec4bdce9ac5614accb5f0f4771b79f415856ea4"
+    },
+    {
+      "path": "history/countries/DEI - Dutch East Indies.txt",
+      "sha": "717439b0abb2bbb15fcfd953a9fc54af85f2af5b"
+    },
+    {
+      "path": "history/countries/DEN - Denmark.txt",
+      "sha": "b2bc1c364f2967bda920aa4f58bd1bdf4a609ddb"
+    },
+    {
+      "path": "history/countries/DOM - Dominican Republic.txt",
+      "sha": "05daeda403e31710809ae771ca85ff4e1c547543"
+    },
+    {
+      "path": "history/countries/ECU - Ecuador.txt",
+      "sha": "66686eb58f749e6451db04fcef720cc0c4120efe"
+    },
+    {
+      "path": "history/countries/EGY - Egypt.txt",
+      "sha": "090846308872f0acacd45dc9cb3648d858abf33a"
+    },
+    {
+      "path": "history/countries/ELS - El Salvador.txt",
+      "sha": "b2d9238093db425352df70ba50516217c39ce60b"
+    },
+    {
+      "path": "history/countries/EMI - Modena-Parma.txt",
+      "sha": "b605c6beeb453391bd458d06f792baeb27b9fca1"
+    },
+    {
+      "path": "history/countries/ENG - Union of Britain.txt",
+      "sha": "bb9ae714802ff938cf3393c91ded7951006b2ae0"
+    },
+    {
+      "path": "history/countries/EPR - East Prussia.txt",
+      "sha": "16f951f254ef04090b4a0e10cffeef27cf339922"
+    },
+    {
+      "path": "history/countries/EQG - Equatorial Guinea.txt",
+      "sha": "dadf51a6ede17bb89bbbf14de37b3adb1805b09c"
+    },
+    {
+      "path": "history/countries/ERI - Eritrea.txt",
+      "sha": "30fba83e9163f6d66408dc811278257d26b2635a"
+    },
+    {
+      "path": "history/countries/EST - Estonia.txt",
+      "sha": "e64bc18f4f66e5f5a76174ba104e77e88ea24fd4"
+    },
+    {
+      "path": "history/countries/ETH - Ethiopia.txt",
+      "sha": "7b518ca29c5b68bf9a3fff2a4d83902642a89654"
+    },
+    {
+      "path": "history/countries/ETS - East Turkestan.txt",
+      "sha": "9238aaefd7d06606b874e001968d167c27b137a0"
+    },
+    {
+      "path": "history/countries/FER - Far Eastern Army.txt",
+      "sha": "e05d6de15b940d976c7fb572b5d027b7a06713da"
+    },
+    {
+      "path": "history/countries/FIN - Finland.txt",
+      "sha": "bfa20abbc796e193b7d61f195d5b04df98b92222"
+    },
+    {
+      "path": "history/countries/FLA - Flanders.txt",
+      "sha": "1f1f33ec84e51b6a0b226502e325c5e6b3d7ea08"
+    },
+    {
+      "path": "history/countries/FNG - Fengtian.txt",
+      "sha": "0f344892442c7de0c7eda31da1fbfde0ba3af16d"
+    },
+    {
+      "path": "history/countries/FOP - Patagonia.txt",
+      "sha": "befcb3751a13e4c667726adcc38fa59aed9560fb"
+    },
+    {
+      "path": "history/countries/FRA - Communard France.txt",
+      "sha": "64bea55f586beaa613f707baed450941dfa6aa96"
+    },
+    {
+      "path": "history/countries/FRP - France Puppet.txt",
+      "sha": "c61e1daed274957a6aebc9a479d1a2aa482244f2"
+    },
+    {
+      "path": "history/countries/GAB - Gabon.txt",
+      "sha": "9dc2b92b92c344ac17dfd6c8fec4a3573a3a9da5"
+    },
+    {
+      "path": "history/countries/GAL - Galicia-Lodomeria.txt",
+      "sha": "36f9fd1b96b54ab76dfd9c601453b578042cb7ea"
+    },
+    {
+      "path": "history/countries/GBP - Great britain puppet.txt",
+      "sha": "f6c81c958639cee281f97d2eab5aea73f0096650"
+    },
+    {
+      "path": "history/countries/GEA - German East Asia.txt",
+      "sha": "a1b91de8884d340c5abcab64043869be5909fd2f"
+    },
+    {
+      "path": "history/countries/GEO - Georgia.txt",
+      "sha": "33cc0a0816655fff1927cc8a1ced024b30321a63"
+    },
+    {
+      "path": "history/countries/GER - Germany.txt",
+      "sha": "5359ebc324c6701a8c9e571904950f5c60ad432c"
+    },
+    {
+      "path": "history/countries/GHA - Ghana.txt",
+      "sha": "ccb35fed2e51666b4ede6cb767f57d2cd8cfd078"
+    },
+    {
+      "path": "history/countries/GLC - Galicia.txt",
+      "sha": "63b56afea860d704b48ce2bfd66a8552d12be910"
+    },
+    {
+      "path": "history/countries/GNA - Guinea.txt",
+      "sha": "f68b9c919e436499e278a5b875af2fb85615d133"
+    },
+    {
+      "path": "history/countries/GNB - Guinea-Bissau.txt",
+      "sha": "44231a986f859f0a5fe19a3e703895bdedb9f566"
+    },
+    {
+      "path": "history/countries/GOY - Goyaz.txt",
+      "sha": "f91cc8db8c803e470ae89346ece89f06b5992562"
+    },
+    {
+      "path": "history/countries/GRE - Greece.txt",
+      "sha": "912cf67f89ed6e2569686b4718fe3a5b1db31ea2"
+    },
+    {
+      "path": "history/countries/GRP - Guararapes.txt",
+      "sha": "0db2d902ed1a2116ce52a2924dd832eb484086cf"
+    },
+    {
+      "path": "history/countries/GRU - German Republic.txt",
+      "sha": "5f1d3a34b03d95cf0f24c9105975021f1fa15d76"
+    },
+    {
+      "path": "history/countries/GUA - Guatemala.txt",
+      "sha": "7cc77ff9208f84b393d928a292c7603894fb32b2"
+    },
+    {
+      "path": "history/countries/GUJ - Baroda.txt",
+      "sha": "ccd5e7a8c981b991af67a895156660ed34383c77"
+    },
+    {
+      "path": "history/countries/GXC - Liangguang.txt",
+      "sha": "47dca59dda6ac25d50074fd4a2a9296f7b486d82"
+    },
+    {
+      "path": "history/countries/GYA - Guyana.txt",
+      "sha": "2c277de712d08bf178d86d88f8dbd20c3b3df096"
+    },
+    {
+      "path": "history/countries/HAI - Haiti.txt",
+      "sha": "e51e6697011c632673833c965de07bdf8d9312fc"
+    },
+    {
+      "path": "history/countries/HAU - Hausaland.txt",
+      "sha": "af2c38df6d9d4808ac9383d8d9ba1a1385beaf55"
+    },
+    {
+      "path": "history/countries/HAW - Hawaii.txt",
+      "sha": "1369ee5cc43cfb81ee27f362e6488bef97952080"
+    },
+    {
+      "path": "history/countries/HEJ - Hejaz.txt",
+      "sha": "d8e73d282c2f7fad479cf71f1cf1f20ef64278fe"
+    },
+    {
+      "path": "history/countries/HIN - Ganga Federation.txt",
+      "sha": "f2a7199deb2257f7928f0d30ae7c26ea6d080a72"
+    },
+    {
+      "path": "history/countries/HND - Bharatiya Peoples Republic.txt",
+      "sha": "150eb60f9613e58be073a97c188cfc79fa785890"
+    },
+    {
+      "path": "history/countries/HNN - Hunan.txt",
+      "sha": "38642fb7ddb1ef13cff9d9023f9e601f2207eae4"
+    },
+    {
+      "path": "history/countries/HOL - Netherlands.txt",
+      "sha": "3bf2dc4a49e4bbc3e2ea9076f20d085a77a73696"
+    },
+    {
+      "path": "history/countries/HON - Honduras.txt",
+      "sha": "152be6e091177841939753d9f1746a506674630c"
+    },
+    {
+      "path": "history/countries/HUN - Hungary.txt",
+      "sha": "9855c87dcb2b74204dc4225561dbfaf6046a48d1"
+    },
+    {
+      "path": "history/countries/HYD - Hyderabad.txt",
+      "sha": "1be3a1271daee115b4185ddb634a35f4711b41a2"
+    },
+    {
+      "path": "history/countries/ICE - Iceland.txt",
+      "sha": "1797d431548dde321835870a7f47f0bcc96885f5"
+    },
+    {
+      "path": "history/countries/IKH - Ikhwan Revolt.txt",
+      "sha": "cb4af631c6516761dc865676f4049a7c260f2dc5"
+    },
+    {
+      "path": "history/countries/IMP - Canada and UK.txt",
+      "sha": "8d60ee9c0e144f4248ad228d9ee0fdca25154769"
+    },
+    {
+      "path": "history/countries/INC - Indochina.txt",
+      "sha": "382eb4abf0de912daed5f8b8735536652daa8651"
+    },
+    {
+      "path": "history/countries/INS - Indonesia.txt",
+      "sha": "fd0d91fba90ca5fc81bdfc753af183ad9901d76e"
+    },
+    {
+      "path": "history/countries/IRE - Ireland.txt",
+      "sha": "41b235e096cdff079cb7b2dd502228d1ac32017a"
+    },
+    {
+      "path": "history/countries/IRQ - Iraq.txt",
+      "sha": "01880f5e7e334dca48e61c0af987bad27b2a08c4"
+    },
+    {
+      "path": "history/countries/ITA - Italy.txt",
+      "sha": "1333263532198ccc3ba22945a1ff6131ed8f9924"
+    },
+    {
+      "path": "history/countries/IVO - Ivory Coast.txt",
+      "sha": "ff6af5b8c375691e4c4e26117da052d0d6ccef2c"
+    },
+    {
+      "path": "history/countries/JAM - Jamaica.txt",
+      "sha": "a012ea724f6079839e39f30c25fc7dfa1e377ca2"
+    },
+    {
+      "path": "history/countries/JAP - Japan.txt",
+      "sha": "78247ca611c5df9d1020c8d2300981f5732c83cc"
+    },
+    {
+      "path": "history/countries/JBS - Jabal Shammar.txt",
+      "sha": "bb1f83801426931f2c517156095021709355a2b9"
+    },
+    {
+      "path": "history/countries/KAC - Kachin State.txt",
+      "sha": "05a4cce5bc841d19110e097490dcbf2294a3ffdc"
+    },
+    {
+      "path": "history/countries/KAS - Kashmir.txt",
+      "sha": "39c10b2c242e2e8eb6de2bb0a2d9521db20563ee"
+    },
+    {
+      "path": "history/countries/KAZ - Kazakhstan.txt",
+      "sha": "802d5f7e4465aa525437fdf966cd8fe60f4be4d1"
+    },
+    {
+      "path": "history/countries/KBR - Borno.txt",
+      "sha": "fc30d2e1fe006bf6347619af8bd186f435b7a1d4"
+    },
+    {
+      "path": "history/countries/KDR - Anatolian Revolt.txt",
+      "sha": "22488f116c827079271626a4f0979355b4183a51"
+    },
+    {
+      "path": "history/countries/KEN - Kenya.txt",
+      "sha": "49d87096bf4021d18fc52dde426a89d1264e3ed5"
+    },
+    {
+      "path": "history/countries/KHA - Khalistan.txt",
+      "sha": "fd8a8bc295929733c21c8b47d9e1c10ce7995823"
+    },
+    {
+      "path": "history/countries/KHI - Khiva.txt",
+      "sha": "f6120cbd5f35bb4556cdea8fbe152fb3d5ecede3"
+    },
+    {
+      "path": "history/countries/KIV - Kivu Clique.txt",
+      "sha": "7fbc7326646a7c33c8601cd1ed4fed9043baddec"
+    },
+    {
+      "path": "history/countries/KOR - Korea.txt",
+      "sha": "bae577058ccfb18853ee4254a772d7b80da9afbf"
+    },
+    {
+      "path": "history/countries/KTG - Katanga.txt",
+      "sha": "667cd594eaf8ebda2ab2c120235623b885df7757"
+    },
+    {
+      "path": "history/countries/KUM - Kumul.txt",
+      "sha": "b56ff1ae95134d3180632c7a8a86186ff779d7df"
+    },
+    {
+      "path": "history/countries/KUR - Kurdistan.txt",
+      "sha": "cb55e1370378c8615709a3e4417ccc2ebab1c5c5"
+    },
+    {
+      "path": "history/countries/LAO - Laos.txt",
+      "sha": "011bbc3674f3a1a3dee84128e590b04244de2c19"
+    },
+    {
+      "path": "history/countries/LAT - Latvia.txt",
+      "sha": "294918cece5f836e42f47dee575f1aa89e21f891"
+    },
+    {
+      "path": "history/countries/LBA - Cyrenaica.txt",
+      "sha": "9348cdcc50534e526ff87b6244b4b7c18adc624f"
+    },
+    {
+      "path": "history/countries/LEB - Lebanon.txt",
+      "sha": "542c411491794650673a80e202bddf0841033e4d"
+    },
+    {
+      "path": "history/countries/LEC - Legation Cities.txt",
+      "sha": "c0b05c0e1cfb374fb0edbe18795b8c2e27b6c018"
+    },
+    {
+      "path": "history/countries/LEP - League of Eight Provinces.txt",
+      "sha": "b13bd3646a107a98bf5abeda6658cb3733f100fc"
+    },
+    {
+      "path": "history/countries/LIB - Liberia.txt",
+      "sha": "151f4f928dab1d6a538a1d58b5ad94756aff204a"
+    },
+    {
+      "path": "history/countries/LIL - Lilleland.txt",
+      "sha": "5bd086b2aa7ac01cf436bb4e507a2e6fd87d3b1f"
+    },
+    {
+      "path": "history/countries/LIT - Lithuania.txt",
+      "sha": "20720020247b5b2ad8b99f1bf8e3087862041c83"
+    },
+    {
+      "path": "history/countries/LOM - Lombardia.txt",
+      "sha": "b39acf7663733b39469475ab829de967f1a23eea"
+    },
+    {
+      "path": "history/countries/MAC - IMRO.txt",
+      "sha": "f43566c0e0d28fb453f4b17d4dbb806eecafa4fc"
+    },
+    {
+      "path": "history/countries/MAD - Madagascar.txt",
+      "sha": "eb3759b1d6c41b6def24597c1134f907049191b6"
+    },
+    {
+      "path": "history/countries/MAF - Mittelafrika.txt",
+      "sha": "f823e4264f7d1b3dfbd3daa00f0b782357b1a13a"
+    },
+    {
+      "path": "history/countries/MAL - Malaysia.txt",
+      "sha": "6d9bcb91fd320a5eb75a11a33ff1f1de9f7f2c48"
+    },
+    {
+      "path": "history/countries/MAN - Manchuria.txt",
+      "sha": "4397a40e2d7ef6eadc448713b5fb88936089ba48"
+    },
+    {
+      "path": "history/countries/MDR - Madras Republic.txt",
+      "sha": "7e405888efb44b5f6be2d7c22ca0b371f57361ec"
+    },
+    {
+      "path": "history/countries/MEX - Mexico.txt",
+      "sha": "c1fe6649c648107359f5deaec786f84e43bb39ed"
+    },
+    {
+      "path": "history/countries/MLI - Mali.txt",
+      "sha": "7cf82b50647ea502068c3a00310a392df32d09ba"
+    },
+    {
+      "path": "history/countries/MLT - Malta.txt",
+      "sha": "9626f1d5edfe6cf338ec6ba03da9620e8ccbdbf7"
+    },
+    {
+      "path": "history/countries/MLW - Nyasaland.txt",
+      "sha": "85d9c3118ba1b25dba443273e391d31e3ef39d40"
+    },
+    {
+      "path": "history/countries/MNR - Mountain Republic.txt",
+      "sha": "34d71a11ca67cc5d0a054291e2c0f656066aa3d4"
+    },
+    {
+      "path": "history/countries/MNT - Montenegro.txt",
+      "sha": "f9df2b4ddce91241b22fcd370c995a8954dd37ac"
+    },
+    {
+      "path": "history/countries/MON - Mongolia.txt",
+      "sha": "497c28917aae4b5a9764ea886cfbf6aed4e05caa"
+    },
+    {
+      "path": "history/countries/MOR - Morocco.txt",
+      "sha": "fe02ab466a3abdd798dde51c15b87e0bcb087975"
+    },
+    {
+      "path": "history/countries/MRT - Mauritania.txt",
+      "sha": "48c48c163d0205d97287bed698dca003ed91b148"
+    },
+    {
+      "path": "history/countries/MYS - Mysore.txt",
+      "sha": "a51ed1653389174bb648eceac42a515506f1456f"
+    },
+    {
+      "path": "history/countries/MZB - Mozambique.txt",
+      "sha": "05bf1ffd05ba0246bde7e70a4919d05f173ac514"
+    },
+    {
+      "path": "history/countries/NEE - New England.txt",
+      "sha": "f1fc214e293bc8cbdeec28a00d7bda880ada0e40"
+    },
+    {
+      "path": "history/countries/NEP - Nepal.txt",
+      "sha": "38619a2a906249634945f11112108862e775da13"
+    },
+    {
+      "path": "history/countries/NFA - NatFrance.txt",
+      "sha": "0ea981fae341c9cfff84dcb4f37184c2034c96c5"
+    },
+    {
+      "path": "history/countries/NGA - Nigeria.txt",
+      "sha": "ea4bfc5aa4f6d419b845fcb3f14110ecef80fd26"
+    },
+    {
+      "path": "history/countries/NGF - North Germany.txt",
+      "sha": "bd0e369eaf0aea9eeaf7e2f136a03c1320b65ec5"
+    },
+    {
+      "path": "history/countries/NGR - Niger.txt",
+      "sha": "df750a6342dbeeadbbf92eed022b4c022c897b93"
+    },
+    {
+      "path": "history/countries/NIC - Nicaragua.txt",
+      "sha": "2d19e1acaef91978e546f05d887714a011781b97"
+    },
+    {
+      "path": "history/countries/NIR - Northern Ireland.txt",
+      "sha": "8c7715e27570bb9dd9dd80f0fe51b1f56947f82a"
+    },
+    {
+      "path": "history/countries/NMB - Namibia.txt",
+      "sha": "9c811bfa9a473e116b300b4583f73fb62f228ede"
+    },
+    {
+      "path": "history/countries/NOR - Norway.txt",
+      "sha": "3fe15b37ef9bb5a391e24909d727768aa03cb0a5"
+    },
+    {
+      "path": "history/countries/NZL - New Zealand.txt",
+      "sha": "1745165db189e3df95887f6d6c4d129b836b2e6f"
+    },
+    {
+      "path": "history/countries/OMA - Oman.txt",
+      "sha": "d6cb8ae4baf8924100676d6782b39b5b42d8b074"
+    },
+    {
+      "path": "history/countries/ORI - Orissa.txt",
+      "sha": "a02f0e652098fbf6d4fe04ca9c6ece22288dc4e7"
+    },
+    {
+      "path": "history/countries/PAL - Jerusalem.txt",
+      "sha": "3b0b9c637069aed70861a848ebb36fa429ecc0ad"
+    },
+    {
+      "path": "history/countries/PAN - Panama.txt",
+      "sha": "6acbbb16c95260b98736cfdd8ad19bc1edda6dd4"
+    },
+    {
+      "path": "history/countries/PAP - The Papal State.txt",
+      "sha": "10b8e275e5387b0ac7801a16ee6de2c2972e34c6"
+    },
+    {
+      "path": "history/countries/PAR - Paraguay.txt",
+      "sha": "73f0630e5c53bd78bbe5a45b4345cf8f209d0fd6"
+    },
+    {
+      "path": "history/countries/PER - Persia.txt",
+      "sha": "3997f0f87a67858fa8f7f6a1c96a235c780f6f8a"
+    },
+    {
+      "path": "history/countries/PHI - Philippines.txt",
+      "sha": "434b59b30a6a7434edd199ad037a74e4f7b2dccb"
+    },
+    {
+      "path": "history/countries/PIR - Piratini.txt",
+      "sha": "c180ef034a28da1d1f11374a4afd7104aaa4ad0d"
+    },
+    {
+      "path": "history/countries/PJB - Punjab.txt",
+      "sha": "c338c66df0ab5fc1514d1eaee15bdc6e12212e2a"
+    },
+    {
+      "path": "history/countries/PNG - Papua New Guinea.txt",
+      "sha": "9723f631471b7d344fccf325b2427565bde90862"
+    },
+    {
+      "path": "history/countries/POL - Poland.txt",
+      "sha": "f60d0e4e4a10522c7b2c50e863fd84f0442a5161"
+    },
+    {
+      "path": "history/countries/POR - Portugal.txt",
+      "sha": "18e9d30e5cb32c262be7ebfa80a892c529f68751"
+    },
+    {
+      "path": "history/countries/PRE - Prussia.txt",
+      "sha": "d40f0c8978e77b9ee2dcfc85d92e44e7ef93dd03"
+    },
+    {
+      "path": "history/countries/PRF - Princely Federation.txt",
+      "sha": "7145466be8ba9bfafbb5bb1cb39c48127df69dbb"
+    },
+    {
+      "path": "history/countries/PRU - Peru.txt",
+      "sha": "a0d30dd2793eca7c17d3bcd61657dc1b46f78a60"
+    },
+    {
+      "path": "history/countries/PUE - Puerto Rico.txt",
+      "sha": "2e072096dc8213ca7aa41e3d05c3838c88e56100"
+    },
+    {
+      "path": "history/countries/QIE - Qing Empire.txt",
+      "sha": "37b7c311eb64c8bee6f811b0d9085e148b9d809e"
+    },
+    {
+      "path": "history/countries/QUE - Quebec.txt",
+      "sha": "5c74e46b13ee6fdb1c905e00e842b4a54d90a38d"
+    },
+    {
+      "path": "history/countries/RAJ - Dominion of India.txt",
+      "sha": "6b63f73ecc1aa6ad44dd7da6a1d6cc51c021221d"
+    },
+    {
+      "path": "history/countries/RHI - Rhineland.txt",
+      "sha": "85ee387f4d3fc4a577b88a1389e6c4e5c2d3cb5d"
+    },
+    {
+      "path": "history/countries/RJS - Rajputana.txt",
+      "sha": "6facf1b905ea07e813bdaff1862fc12907330ccc"
+    },
+    {
+      "path": "history/countries/ROM - Romania.txt",
+      "sha": "89bb348459692a2c7e6bd8aae9a2bdf5b90be3b3"
+    },
+    {
+      "path": "history/countries/RSA - Free Russian Army.txt",
+      "sha": "919704d310c91061ccc50c62c1030090397695bd"
+    },
+    {
+      "path": "history/countries/RUS - Russia.txt",
+      "sha": "0926ac2c1eb1af66a186e1b0a525f299c847f1a6"
+    },
+    {
+      "path": "history/countries/RWA - Rwanda.txt",
+      "sha": "2c687c447672654b9543a74352dc2c1d15c9c507"
+    },
+    {
+      "path": "history/countries/SAF - South Africa.txt",
+      "sha": "4e760213fc8a1578a14a131e7be51abe351be9be"
+    },
+    {
+      "path": "history/countries/SAR - Sarawak.txt",
+      "sha": "767f4b00732c8315d63c87be4f484bbb609ae0ac"
+    },
+    {
+      "path": "history/countries/SAU - Saudi Arabia.txt",
+      "sha": "4c2ec0cd188c9080a3e5e0c15ec15145e41afd36"
+    },
+    {
+      "path": "history/countries/SCA - Scandinavia.txt",
+      "sha": "7cdb1e7bcb1d7e9dd08ed576418096f90d976825"
+    },
+    {
+      "path": "history/countries/SCO - Scotland.txt",
+      "sha": "e094aab40de344236c059da6f2bc03682e01084b"
+    },
+    {
+      "path": "history/countries/SEN - Senegal.txt",
+      "sha": "f51b4009fb228e7e2e747beee6927470d22050bb"
+    },
+    {
+      "path": "history/countries/SER - Serbia.txt",
+      "sha": "99f1c4509599362f17005db0a54cef01c333e8ba"
+    },
+    {
+      "path": "history/countries/SHA - Shan Confederation.txt",
+      "sha": "470cd3562b18e4ddc045cfa594043d6ba2ecc834"
+    },
+    {
+      "path": "history/countries/SHD - Shandong.txt",
+      "sha": "430094f0292a4d93e421a1ad8f8dd249f773a965"
+    },
+    {
+      "path": "history/countries/SHX - Shanxi.txt",
+      "sha": "190a334209e6eba7c0dc173e2419c7a0cd82a3a9"
+    },
+    {
+      "path": "history/countries/SIA - Siam.txt",
+      "sha": "e9ee0853f4ec747fc1672cf1a85549fee90cc429"
+    },
+    {
+      "path": "history/countries/SIC - Two Sicilies.txt",
+      "sha": "0d66493de1173b641a4c3615de209afc07b7e33e"
+    },
+    {
+      "path": "history/countries/SIE - Sierra Leone.txt",
+      "sha": "6b8aa446947933531a008dd89881465bfb1b5f71"
+    },
+    {
+      "path": "history/countries/SIK - Xinjiang.txt",
+      "sha": "72ff12320544f187220c815ca681a123d3b83bbe"
+    },
+    {
+      "path": "history/countries/SKM - Sikkim.txt",
+      "sha": "d8b616cd533a21da9d686449e0b50cc8026e3fae"
+    },
+    {
+      "path": "history/countries/SLO - Slovakia.txt",
+      "sha": "463f692b87dd46df3fbffa08ee63e95552f51319"
+    },
+    {
+      "path": "history/countries/SLV - Slovenia.txt",
+      "sha": "d04eff2698296e7021ad3756e8ad5741022fdd12"
+    },
+    {
+      "path": "history/countries/SOM - Somalia.txt",
+      "sha": "19bf283105aada86f963734ae472666d0c855773"
+    },
+    {
+      "path": "history/countries/SPA - Spain.txt",
+      "sha": "2286dded287eeba3fab49fd1af8fc927739a6f91"
+    },
+    {
+      "path": "history/countries/SPO - Sao Paulo.txt",
+      "sha": "6c222e315c28c4498feb3f1b90efb975ecb61524"
+    },
+    {
+      "path": "history/countries/SRD - Sardinia.txt",
+      "sha": "f1ad9deb0cc727f9a9965aa49c7f39a5566401a2"
+    },
+    {
+      "path": "history/countries/SRI - Socialist Republic of Italy.txt",
+      "sha": "03c519feca36ddf387d7b2f25a95425b2bdd5dc7"
+    },
+    {
+      "path": "history/countries/SSI - South Seas Islands.txt",
+      "sha": "ee14579deffedff99003688fc2c98a045a7bc2eb"
+    },
+    {
+      "path": "history/countries/SUD - Sudan.txt",
+      "sha": "1abd14cbead07b0157641208d5f41615529ab50a"
+    },
+    {
+      "path": "history/countries/SUR - Suriname.txt",
+      "sha": "48abb15a8780c5bf0274bd598cc9440944c13293"
+    },
+    {
+      "path": "history/countries/SWE - Sweden.txt",
+      "sha": "f58f6a8c583c8636ce04e45b1c40dee12d04635d"
+    },
+    {
+      "path": "history/countries/SWI - Switzerland.txt",
+      "sha": "1579c59e61bec3550669ba54483d94b495bf3663"
+    },
+    {
+      "path": "history/countries/SYR - Syria.txt",
+      "sha": "dbf92bd20d2d6fcfd15aa8c4f81629eabf7f8dfe"
+    },
+    {
+      "path": "history/countries/SZC - Sichuan.txt",
+      "sha": "eee7ccf029ecd691dd9ae25b2456ef5a733fa9a8"
+    },
+    {
+      "path": "history/countries/TAI - Taiwan.txt",
+      "sha": "21fd304f9a46ead6b1cacef6ea601a696ec997ac"
+    },
+    {
+      "path": "history/countries/TIB - Tibet.txt",
+      "sha": "10fdec57cf8a383d447de5c66551b32f5569087d"
+    },
+    {
+      "path": "history/countries/TKE - Tshuapa.txt",
+      "sha": "096908e0a933172b41e36b301c431b87ca7ecd04"
+    },
+    {
+      "path": "history/countries/TOG - Togoland.txt",
+      "sha": "142deba6a5040cd949a05177aca069f86625de90"
+    },
+    {
+      "path": "history/countries/TRI - Trinidad.txt",
+      "sha": "d72cdaa70bfc5a68d86bc4f2ac17ea40974a78e6"
+    },
+    {
+      "path": "history/countries/TRK - Turkestan Republic.txt",
+      "sha": "8bfce644b4567719300d6d03848caedddb8c5425"
+    },
+    {
+      "path": "history/countries/TRP - Tripolitania.txt",
+      "sha": "54b5dbe5fbab40f947c7b945e15b0a76600c6f0d"
+    },
+    {
+      "path": "history/countries/TRS - Transylvania.txt",
+      "sha": "c8db4fea5b0cb979b7699dc4e24f5f72f89b031f"
+    },
+    {
+      "path": "history/countries/TRU - Trucial States.txt",
+      "sha": "fb449918f9927b2e09d0439ec8232c55eefa9d5b"
+    },
+    {
+      "path": "history/countries/TRV - Travancore.txt",
+      "sha": "424eecfd23857b9e111c67327a1d6d0a7177ab97"
+    },
+    {
+      "path": "history/countries/TUN - Tunisia.txt",
+      "sha": "367d568d6af8d9f7f01e4e04b21f0ffa0230a754"
+    },
+    {
+      "path": "history/countries/TUR - Ottoman Empire.txt",
+      "sha": "7300265281106e899b910f576b63c7cc53119194"
+    },
+    {
+      "path": "history/countries/TUS - Tuscany.txt",
+      "sha": "3e34dbc86f28b60cae0f92cb9cc5ead7a8ab05f4"
+    },
+    {
+      "path": "history/countries/TZN - East Africa.txt",
+      "sha": "c8eee0a2304d7182660aeec41993ed09901cf0c0"
+    },
+    {
+      "path": "history/countries/UGA - Uganda.txt",
+      "sha": "c48684b0ca519336df33516bc50633d50d85fa47"
+    },
+    {
+      "path": "history/countries/UKR - Ukraine.txt",
+      "sha": "a5c1a013eff798dde927de6e871d4f7435c852aa"
+    },
+    {
+      "path": "history/countries/URG - Uruguay.txt",
+      "sha": "2c522438f4543fef4f60785baf4760a1b4147610"
+    },
+    {
+      "path": "history/countries/USA - United States.txt",
+      "sha": "dcb778c7a44fdc82cef1b87dafbdf90976fbbaec"
+    },
+    {
+      "path": "history/countries/VCR - Vera Cruz.txt",
+      "sha": "64fbe027e53dc05c877e9f3c50d3772033204099"
+    },
+    {
+      "path": "history/countries/VEN - Venezuela.txt",
+      "sha": "f774403c2d0acf1cad98b21a36f1d0d449297bee"
+    },
+    {
+      "path": "history/countries/VIN - Vietnam.txt",
+      "sha": "dd073a78708b9de78b7e3d2369e947a84ae8b86e"
+    },
+    {
+      "path": "history/countries/VNC - Venice.txt",
+      "sha": "ef3278c17eae6d417c83c31f68e76e4ca016df98"
+    },
+    {
+      "path": "history/countries/VOL - Mossiland.txt",
+      "sha": "6415fa486c231bf8b7ae4d16efe5bd78fbfb7cfc"
+    },
+    {
+      "path": "history/countries/WAL - Wallonia.txt",
+      "sha": "4dbaf809d4285fe66159a23da11017598ce638db"
+    },
+    {
+      "path": "history/countries/WCA - Workers Congress of America.txt",
+      "sha": "a437a4ad8de379287162c70d19d8dcd0b801ff79"
+    },
+    {
+      "path": "history/countries/WIF - West Indies.txt",
+      "sha": "87b881f984a951da0fcde4bf474eb6a815567657"
+    },
+    {
+      "path": "history/countries/WLS - Wales.txt",
+      "sha": "bda096c0cffb7ea8f99e498e3748d91975c2503e"
+    },
+    {
+      "path": "history/countries/XSM - Ma Clique.txt",
+      "sha": "bf9d1b8982a0b2945827e98b8b6010dc6b99dc5f"
+    },
+    {
+      "path": "history/countries/YEM - Yemen.txt",
+      "sha": "6b23b8319cdc5a91cfd407d5277b3e91c407bc26"
+    },
+    {
+      "path": "history/countries/YUC - Yucatan.txt",
+      "sha": "ce341e330484e6f5333a6f39676b6c4df60766f2"
+    },
+    {
+      "path": "history/countries/YUN - Yunnan.txt",
+      "sha": "463201bb00d24642decf56c903a359f5892711c1"
+    },
+    {
+      "path": "history/countries/ZAM - Zambesia.txt",
+      "sha": "0eae0968951b49f31eb350c76a4923912e0d190e"
+    },
+    {
+      "path": "history/countries/ZAN - Zanzibar.txt",
+      "sha": "2c279e054108425908ccd2a8c92c19dbf5b0a507"
+    },
+    {
+      "path": "history/countries/ZIM - Rhodesia.txt",
+      "sha": "6cc56abc162d9bc49ef61d281e980a3109e8aa1e"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Bookmarks l_english.yml",
+      "sha": "60bea2729abc427df24aa428fe1aa51cc6ad7fa9"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Collections l_english.yml",
+      "sha": "f8dee94f550cb03e1b2c3d9e42de0dbfe3641ee6"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Commonly Used l_english.yml",
+      "sha": "248bb0bef3e051862f77c4d293cc4eed46d07f55"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Landmarks l_english.yml",
+      "sha": "0f388420283d9bfc4b95fe137dca2533280dae73"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Main l_english.yml",
+      "sha": "d5145f31037b1e2cd1fdb6f1c5a6a25385f5de14"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Map Modes l_english.yml",
+      "sha": "374448413a37ec169b0b266078e7dae443fdf6f8"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Map State Categories l_english.yml",
+      "sha": "36c5449726c57001a0b168090860ef6b1c7a6ba5"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Map States l_english.yml",
+      "sha": "4901c2b2ea86d14f70709c6581cd27bba72be958"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Map Victory Points l_english.yml",
+      "sha": "0f50c34113c7bb39343a4ae5c52eef0941040ff7"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Political l_english.yml",
+      "sha": "4600a52d5330fd79a37f3844e1dd6d2515322323"
+    },
+    {
+      "path": "localisation/english/KR_common/00 Strategic Regions l_english.yml",
+      "sha": "d6de107e548a8d92d0f52ba4d8d3adf496674f57"
+    },
+    {
+      "path": "localisation/english/KR_common/01 Belgrade pact l_english.yml",
+      "sha": "e4ee2d0f1c6ce778ad401221350c8e8df8dbdc62"
+    },
+    {
+      "path": "localisation/english/KR_common/01 Intermarium l_english.yml",
+      "sha": "820a271d77311f860a8f37281356fb6d6d4398dd"
+    },
+    {
+      "path": "localisation/english/KR_common/01 Western Europe l_english.yml",
+      "sha": "936bcf7bf6c53845cca3a62637c39462c6ec5504"
+    },
+    {
+      "path": "localisation/english/KR_common/02 American Civil War l_english.yml",
+      "sha": "17e94343e394644e72dfb0dbed56b01f61cfd699"
+    },
+    {
+      "path": "localisation/english/KR_common/03 Caribbean l_english.yml",
+      "sha": "5bf3423da38a0a69592b09372fa66798022da830"
+    },
+    {
+      "path": "localisation/english/KR_common/03 Central Asia l_english.yml",
+      "sha": "a319ef03f54152f9277094344abe0cf31831c8b0"
+    },
+    {
+      "path": "localisation/english/KR_common/03 China l_english.yml",
+      "sha": "7876c44726530701043ff27c008ff74fe1645edd"
+    },
+    {
+      "path": "localisation/english/KR_common/03 East Asia Peace l_english.yml",
+      "sha": "3308d2e2eca8869ad75bf20a908bf8926ec198be"
+    },
+    {
+      "path": "localisation/english/KR_common/03 Federalist China l_english.yml",
+      "sha": "d0a144cf868af1edaf9e1b79dd9d0c9c45b8dac9"
+    },
+    {
+      "path": "localisation/english/KR_common/03 India l_english.yml",
+      "sha": "d310bf22479510d598f73353030f9b83c2bc74b5"
+    },
+    {
+      "path": "localisation/english/KR_common/03 KMT Generic Unification l_english.yml",
+      "sha": "2bc6e7af0a5930801c27c9cccabfc7707f79e069"
+    },
+    {
+      "path": "localisation/english/KR_common/03 League Collapse l_english.yml",
+      "sha": "8f3cdac309760578bc9b3e2c44242db93f299f22"
+    },
+    {
+      "path": "localisation/english/KR_common/03 National Protection Alliance l_english.yml",
+      "sha": "052a4d3580449da0a889d0af5453ec958aaff3a1"
+    },
+    {
+      "path": "localisation/english/KR_common/03 Treaty of Budapest l_english.yml",
+      "sha": "8cb285998aea74779ed20eb4d5f9a4807a50a97e"
+    },
+    {
+      "path": "localisation/english/KR_common/04 League of Arab States l_english.yml",
+      "sha": "a3070bdb78cb95c342d40be2637f78b32ae4e558"
+    },
+    {
+      "path": "localisation/english/KR_common/04 Levant Crisis Post-War l_english.yml",
+      "sha": "40bdc0db70a868d06e39c5ac84d51607a9b7444f"
+    },
+    {
+      "path": "localisation/english/KR_common/04 Levant Crisis l_english.yml",
+      "sha": "662dfb67ff6e7825c53f9ae20f2e9fd133f910a5"
+    },
+    {
+      "path": "localisation/english/KR_common/05 (French) West Africa l_english.yml",
+      "sha": "5ce0297c27d033d074a68e7d3332b6bc99c47415"
+    },
+    {
+      "path": "localisation/english/KR_common/05 African Minors Shared l_english.yml",
+      "sha": "33094d29e9a46eff8764a2e6bafe822e6bb6d574"
+    },
+    {
+      "path": "localisation/english/KR_common/05 Ogaden War l_english.yml",
+      "sha": "5b003724cc5c7740885cc6ee3f0a00c81f2a8806"
+    },
+    {
+      "path": "localisation/english/KR_common/Achievements l_english.yml",
+      "sha": "86a4de912194b282409c2ba682583c7ba79ed871"
+    },
+    {
+      "path": "localisation/english/KR_common/Advisor Traits l_english.yml",
+      "sha": "59679ab8d6da50403d616afb381a1a8c6210a25e"
+    },
+    {
+      "path": "localisation/english/KR_common/Alerts l_english.yml",
+      "sha": "9a5cca21d984c04b2869bc64050ec2a8e518befe"
+    },
+    {
+      "path": "localisation/english/KR_common/Annexations l_english.yml",
+      "sha": "014c88727e003b9c81874016fef8232b82b5678d"
+    },
+    {
+      "path": "localisation/english/KR_common/Battleplan codenames l_english.yml",
+      "sha": "aca285ea4e9865d40448bbbc5562e875d8914c7d"
+    },
+    {
+      "path": "localisation/english/KR_common/Capitulations l_english.yml",
+      "sha": "b6c23e481009ab0256fc6a09440ad4d9ffc06ad0"
+    },
+    {
+      "path": "localisation/english/KR_common/City Capture l_english.yml",
+      "sha": "3f858c7828f6622bd0d52f1422de55b04a951ee8"
+    },
+    {
+      "path": "localisation/english/KR_common/Companies l_english.yml",
+      "sha": "1fe86be7d258a54da26b4e4fee775993721e0d74"
+    },
+    {
+      "path": "localisation/english/KR_common/Equip Air l_english.yml",
+      "sha": "30285713553e54f110a61a56da041c7b762c9608"
+    },
+    {
+      "path": "localisation/english/KR_common/Equip Naval l_english.yml",
+      "sha": "9571fb4a1fe8d03fd3c591ee7fd24fe94eaff740"
+    },
+    {
+      "path": "localisation/english/KR_common/Equip Tanks l_english.yml",
+      "sha": "6255a8c2a4d7b0882c5eb19dbf1bb63ca390263f"
+    },
+    {
+      "path": "localisation/english/KR_common/Equipment l_english.yml",
+      "sha": "72bc9ab08766e21aea3d608abf798c65e913bfa0"
+    },
+    {
+      "path": "localisation/english/KR_common/Events l_english.yml",
+      "sha": "501c68618d1fc62ef36e77db4cd6ac0519e1aece"
+    },
+    {
+      "path": "localisation/english/KR_common/Game Rules l_english.yml",
+      "sha": "e7b8ac7de5fcf2c154d9bb26d29d1a895937b5f5"
+    },
+    {
+      "path": "localisation/english/KR_common/Generic Focus Tree l_english.yml",
+      "sha": "e48370325432c92a8a1c163a67364c7cf2e102b0"
+    },
+    {
+      "path": "localisation/english/KR_common/Internationale flavour l_english.yml",
+      "sha": "813f326156f66cc98366ea018b0df038155d97bf"
+    },
+    {
+      "path": "localisation/english/KR_common/Loading Tips l_english.yml",
+      "sha": "da2764a61290273962f14c5bf8198f2a2c7ac463"
+    },
+    {
+      "path": "localisation/english/KR_common/Military_industrial_organization_l_english.yml",
+      "sha": "13ee8866c78722b04c59cd22c8e3b653ecc805a6"
+    },
+    {
+      "path": "localisation/english/KR_common/Models Warning Events l_english.yml",
+      "sha": "3fdc3826d1c40e1394932de22d188b15f56e058d"
+    },
+    {
+      "path": "localisation/english/KR_common/Prewar l_english.yml",
+      "sha": "93d0c2e168683359b5b98d07ac5e4afffd51f362"
+    },
+    {
+      "path": "localisation/english/KR_common/Traits l_english.yml",
+      "sha": "fe63e2722b79245f75970a545c37e5f7ec6ddcf4"
+    },
+    {
+      "path": "localisation/english/KR_common/Treaty Territory l_english.yml",
+      "sha": "ec49b43111f6deb30a2571cdddb69cd9ca09e10e"
+    },
+    {
+      "path": "localisation/english/KR_common/War l_english.yml",
+      "sha": "6709b249d31193c5f238636502db59fc6168cbc0"
+    },
+    {
+      "path": "localisation/english/KR_common/World News l_english.yml",
+      "sha": "5370d3bb6a2997a1735259368787d0b8ba82050b"
+    },
+    {
+      "path": "localisation/english/KR_common/division namelists l_english.yml",
+      "sha": "770224c3a89846dea762c8a9a1678306165deb44"
+    },
+    {
+      "path": "localisation/english/KR_common/nsb ideas l_english.yml",
+      "sha": "09bd391fa8beb643a2fa4e34405d2637d4b2de5c"
+    },
+    {
+      "path": "localisation/english/KR_common/st manager l_english.yml",
+      "sha": "4b64c3ca3024f2a1aaea85a4f8b827acc4197e7d"
+    },
+    {
+      "path": "localisation/english/KR_common/stability events l_english.yml",
+      "sha": "747903a01c5ac22edf411c47f7c5120963aaef59"
+    },
+    {
+      "path": "localisation/english/KR_common/temp stuff l_english.yml",
+      "sha": "df6d3d9cc2afac56e502b4de8ffcf9a76e871c2b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ACC - American Constitutional Coalition l_english.yml",
+      "sha": "602333fde10546ec022ac5f17cbf0da6a71982b4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ADA - Adamawa l_english.yml",
+      "sha": "13fa1f60cf41de17e0fc35458f4cdad01eeb5f4a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/AFG - Afghanistan l_english.yml",
+      "sha": "3461ef90c1c2140b596566fe0dd38a0fcad9703a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ALB - Albania l_english.yml",
+      "sha": "a149049bd9aaa003b8ff4f076ce250ff79c37187"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ALG - Algeria l_english.yml",
+      "sha": "1f8a1991b38c65b029ac96e56089d8ae3b1fb130"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/AMA - Amazonas l_english.yml",
+      "sha": "2c0f93f08f225fc6273f139633c68a652083b5ef"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ANG - Angola l_english.yml",
+      "sha": "ad0a3507e118574e3fd1028a186952515e29d415"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ANQ - Anqing Clique l_english.yml",
+      "sha": "b48b11595260624a717d8a2741f411e5e8045a95"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/APG - American Peoples Government l_english.yml",
+      "sha": "0550f1e021e829ee9c5492eb88d40e87cae46b7b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ARG - Argentina l_english.yml",
+      "sha": "daf183095db4540260306e2ea96c8e77510bd820"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ARG - Argentinian flavour l_english.yml",
+      "sha": "fb70d935548e3868884bcb13365c2e985e09af8e"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ARM - Armenia l_english.yml",
+      "sha": "6e33421e2c8ff57e0d333505dc504c8b8525111d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/AST - Australasia l_english.yml",
+      "sha": "a813cdc186894cf648f3281bc6770bdd839b24be"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ASY - Assyria l_english.yml",
+      "sha": "9ae2c0321b3ad9f0fbfca3628a465285a971fe39"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/AUS - Austria l_english.yml",
+      "sha": "493e8f2deeec94197cbf1790f7039c471dcece42"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/AZR - Azerbaijan l_english.yml",
+      "sha": "dcae1e6d03042e7a5dae4fb9982412b64a01a637"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BAH - Bahia l_english.yml",
+      "sha": "825b096ffb808c5a89d391b606be7237b828bfad"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BAS - Euskadi l_english.yml",
+      "sha": "ed6e0d4769d87ac5e7e29aee34b628517620ceb8"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BAT - United Baltic Duchy l_english.yml",
+      "sha": "3a8cfe5e1a8e34daa69baf299f067c535404dcc4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BAY - Bavaria l_english.yml",
+      "sha": "e69a860c13229a15624687374e1611f2545dc939"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BEL - Belgium l_english.yml",
+      "sha": "f1c13e18eeee60c6433b48f25b562b2eaba52b65"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BHU - Bhutan l_english.yml",
+      "sha": "d691b87c22355040c5e3cfc24edf7fb3ed8635b9"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BLR - White Ruthenia l_english.yml",
+      "sha": "a9569fe46519808bb05ffbb479b6470ea9a732bd"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BNG - Bengal l_english.yml",
+      "sha": "c5562e5261a8fd5d9e4f6140eb29310079de0c8c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BOL - Bolivia l_english.yml",
+      "sha": "50ffed9d7c16a641bf3e97dd820dcd388c2fdbfe"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BOS - Bosnia l_english.yml",
+      "sha": "9d729cd1e7ecd8fa3a5cab73046f06c28d287829"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BOT - Bechuanaland l_english.yml",
+      "sha": "3e8ae890f1bc47831ce822eca795de8489beeddd"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BRA - Brazil l_english.yml",
+      "sha": "d8083888d394b3da442121fab99e7e66ceaf2308"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BRD - Urundi l_english.yml",
+      "sha": "8ae6a49b12ac64fa61c59b34cdf13b4d468234e6"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BRM - Burma l_english.yml",
+      "sha": "8e277a972d1060f35c75a7a82b38560120a4de62"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BRT - Barotseland l_english.yml",
+      "sha": "d1a32a038574eb17194260f91f3b5c17066643f8"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BUK - Bukhara l_english.yml",
+      "sha": "ca2a175605e037b4413ae22569549ec8d55bfc2d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/BUL - Bulgaria l_english.yml",
+      "sha": "2c87d01e7063694403f7d2d75194fc4186829a7c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CAM - Cambodia l_english.yml",
+      "sha": "20412bbf4409e2b0b4ddcbd4d01170278617165a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CAN - Canada l_english.yml",
+      "sha": "d76135d28fcf09e407e0e09de734f81d144e9fe4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CAR - Ubangi-Shari l_english.yml",
+      "sha": "cd5311fe28a5d515d4cf31e2ad129b03d9e084c1"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CAT - Catalonia l_english.yml",
+      "sha": "9f31134ea8bf7af3ec26c5a8d291e3b1c187ca8b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CEN - Central America l_english.yml",
+      "sha": "a6d2696e59b3571972ef97f78d1969201caabb71"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CEY - Ceylon l_english.yml",
+      "sha": "d2e7cb0ccfe51d2063fee3272d77d25fdcde5718"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CHA - Chad l_english.yml",
+      "sha": "70ab8f2d1699d0c6b977dea9d4d098f99f301730"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CHI - Left Kuomintang l_english.yml",
+      "sha": "3e0a896c43bf5a176ce2904ed454a09d329f0d62"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CHL - Chile l_english.yml",
+      "sha": "d0ca172afcc1ec9969dbb96320bb1d0f90dddbbf"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CMR - Cameroon l_english.yml",
+      "sha": "96da725fd188e59395ab77115c8fb14156d5235f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/COG - Congo l_english.yml",
+      "sha": "3ed304889bcbd12c3533c4a80befe055033e0417"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/COL - Colombia l_english.yml",
+      "sha": "2530ed177cba7211975b79f9d05e64fea06303c2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/COS - Costa Rica l_english.yml",
+      "sha": "4968de657024bc79515ab3eee585e3b8d735d5d6"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CRO - Croatia l_english.yml",
+      "sha": "4061d86bbcf142c4bf6cf4103a10c81c69e7cf82"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CUB - Cuba l_english.yml",
+      "sha": "fbde7b838f124f92ce5411ee226aafd01705410b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CYP - Cyprus l_english.yml",
+      "sha": "35517818852e5511a076f707836ba68fcd2ee3c4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/CZE - Bohemia l_english.yml",
+      "sha": "e64bcad1a7ad8558d566d9d5674d337b6c3cc815"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/DAH - Dahomey l_english.yml",
+      "sha": "6c7f88444e3f65609fed8c78ec437b7e793ad974"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/DEI - Dutch East Indies l_english.yml",
+      "sha": "300511dd1b1cbda660c8b07b78f58a383020b429"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/DEN - Denmark l_english.yml",
+      "sha": "a12821a88a1d1a34f98942123d6a5d086b569c54"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/DOM - Dominican Republic l_english.yml",
+      "sha": "f18525abe413099f5febd410d13d628d55ce3cee"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ECU - Ecuador l_english.yml",
+      "sha": "b1876614d7dd69a45e6e91336d748d4e1f7c0060"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/EGY - Egypt l_english.yml",
+      "sha": "1f4402fe8f7ca6f0005803ef09564c083f5982e2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ELS - El Salvador l_english.yml",
+      "sha": "88c5847b6a19039a96c982ed005cac1a31823610"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/EMI - Modena-Parma l_english.yml",
+      "sha": "fab939b608706207d9a38b5fa7125b99ec75eb0a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ENG - Union of Britain l_english.yml",
+      "sha": "0cf40e0475ce77d8e03a7c5eb095f020a867be83"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/EPR - East Prussia l_english.yml",
+      "sha": "4ac84ec4c1162aa61e0184fe8631f3adce46f33d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/EQG - Equatorial Guinea l_english.yml",
+      "sha": "306feb903aacd94911b8e04ca0bbf1ce0c575381"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ERI - Eritrea l_english.yml",
+      "sha": "b9c4617c199428449ae5d7347de57d240eee033d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/EST - Estonia l_english.yml",
+      "sha": "e2980b23516c1040a97802f4d25c688954275395"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ETH - Ethiopia l_english.yml",
+      "sha": "73996fc76ed4b98f551d9a3df34cf0939bd16321"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ETS - East Turkestan l_english.yml",
+      "sha": "4e7a3e04c75042c771849dd78525c65aca571f45"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FER - Far_Eastern_Army l_english.yml",
+      "sha": "95858cd468dac62739530b88d5317199e623f727"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FIN - Finland l_english.yml",
+      "sha": "91ffd46fc5782a9973934ba22c3a1928c0efc882"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FLA - Flanders l_english.yml",
+      "sha": "77ed42acf670a13b1d12a880204da4a4ac02206b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FNG - Fengtian l_english.yml",
+      "sha": "6f9f7c576b2c8a80aece1319e7009f4cbe87e257"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FOP - Patagonia l_english.yml",
+      "sha": "bd9b96c3f61300cb80f8a2bff9b4554473bd9088"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FRA - Commune of France l_english.yml",
+      "sha": "d2956138569dd2aa0a3c8e7fa74a37ca71ead177"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/FRP - Puppet France l_english.yml",
+      "sha": "9c13fdb3f989c3da86e486735887549456d91262"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GAB - Gabon l_english.yml",
+      "sha": "ae38e817e664a54b5e26e1b8df67e2bc51201452"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GAL - Galicia l_english.yml",
+      "sha": "f2e447840d5ec5c659b35f5daa2e019f53fb5394"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GBP - Great Britain l_english.yml",
+      "sha": "4b22ab0fac31d91c98e60df7c23e9a19deb4b01f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GBR - United Kingdom l_english.yml",
+      "sha": "79b70c3efe40b785ed893b21dd236bb55a5bb448"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GEA - Germany East Asia l_english.yml",
+      "sha": "0c08cbde2fd3dcd2ecd166fbf4ffea2bb0b15314"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GEO - Georgia l_english.yml",
+      "sha": "d81022d7d384a9a2856acb7bea099801168b216f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GER - Germany l_english.yml",
+      "sha": "60ff9fd3bde8f32a9b5e94b0ab06524ff19430a4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GHA - Gold Coast l_english.yml",
+      "sha": "6907c5946cdc4109ca44d9eb900d4ebe7a4424e1"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GNB - Guinea-Bissau l_english.yml",
+      "sha": "8a779092f3d4eb9dbfc6a5747bb0317763714cb4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GOY - Goyaz l_english.yml",
+      "sha": "707c065cc75f41e34c0e89b51a6077aeefead468"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GRE - Greece l_english.yml",
+      "sha": "73ae2519d2ee138441cf2147fa0bab1ee419de59"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GRP - Guararapes l_english.yml",
+      "sha": "16068db076aaf6c9ef2c62e80cd1f27de1caf890"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GRU - German Republic l_english.yml",
+      "sha": "423f832fc1b1a108a42102d9cc3d8231f3a24007"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GUA - Guatemala l_english.yml",
+      "sha": "63122ea524d292b4655e9c9501ef2f2a02ec95d1"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/GXC - Liangguang l_english.yml",
+      "sha": "b34fe201d69014997d11014a619086dd72efd4de"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HAI - Haiti l_english.yml",
+      "sha": "ab4aa7dfd941c144c008b6778c41ff370a94acbb"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HAU - Hausa l_english.yml",
+      "sha": "0179077464bdd1f78b590102b176716392765e9b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HAW - Hawaii l_english.yml",
+      "sha": "a3de3ce17c67e8c373ce6ed79c8eb9b0b9ba05ca"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HEJ - Hejaz l_english.yml",
+      "sha": "51137d83ade97907621bcc0309198281ea144c21"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HND - Bharatiya Peoples Republic l_english.yml",
+      "sha": "da2e22b2dda38533adbd5fb1fbb6f88d331a71d2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HNN - Hunan l_english.yml",
+      "sha": "0a93ac6de2b1b926a92c638381afc6a87e981da3"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HOL - Netherlands l_english.yml",
+      "sha": "4832a91afeb3ebf9c7b47f55e7e143fecf4ccc6a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HON - Honduras l_english.yml",
+      "sha": "cee88c9eb133231f0be49613ebd12baf652f52c4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HUN - Hungary l_english.yml",
+      "sha": "eb4edf65503f710e7bfc6957aa0c4be42cf645d2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/HYD - Hyderabad l_english.yml",
+      "sha": "92dfc90a8aef928ee23e17fb5dc903a247640e63"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ICE - Iceland l_english.yml",
+      "sha": "4e0b780339700ab71902f948a08f9a586371bc61"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/IKH - Ikhwan l_english.yml",
+      "sha": "75cead258397f5539d999c7b52a51b8abb190906"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/INC - Indochinese Union l_english.yml",
+      "sha": "c88e825b9aaf8a2936b11070a3c1c2abd80c8322"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/INS - Indonesia l_english.yml",
+      "sha": "31812e9ec3ffbe1206b6a580f3066c8a0a3f3606"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/IRE - Ireland l_english.yml",
+      "sha": "b70e0710631e99608b09c513c6c73b11c3f0101c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/IRQ - Iraq l_english.yml",
+      "sha": "a1000a2de0e29b9d1a24e17f263058efd4355f19"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ITA - Republic of Italy l_english.yml",
+      "sha": "bc41bcdaacb5674dfcdf238ff4f18397b4eddc07"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/JAP - Japan l_english.yml",
+      "sha": "6cd236e166fb151924bfba2836d646cc075156a5"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/JBS - Jabal Shammar l_english.yml",
+      "sha": "8da47ba41b12cd282840a9b9ca87478f0963c2ee"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KAC - Kachin l_english.yml",
+      "sha": "2bedbc180030e4cded3c5f0ed3149f448f190e8f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KAZ - Kazakhstan l_english.yml",
+      "sha": "1fc78aceabab394f423a1c41a08d3578084d4908"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KDR - Anatolian Kurdistan l_english.yml",
+      "sha": "cfe2e44446a4e7e902d4c1c86cdba0908faff039"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KEN - Kenya l_english.yml",
+      "sha": "70e1ea0fbbc7ff853ead652057490f19ff436cf4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KHI - Khiva l_english.yml",
+      "sha": "9a98465ca109fcb2a73095f1dd7f4098b8e8bb06"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KIV - Kivu l_english.yml",
+      "sha": "fee90fd7b1425e29364fd32d5ba7fec00c47efc8"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KOR - Korea l_english.yml",
+      "sha": "a903821384d0bfde5e8d5e6245d281b712de8afe"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KTG - Katanga l_english.yml",
+      "sha": "8bc5e327244a2fb0466e1b5e023373367779ece3"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KUM - Kumul Khanate l_english.yml",
+      "sha": "9274c4501f0c8f9da026f10964e936ce55a64bb0"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/KUR - Kurdistan l_english.yml",
+      "sha": "8f656ca69f4793d589e03e3af043776d186c9293"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LAT - Latvia l_english.yml",
+      "sha": "29e8ac25b4621cb98cd90513baf530345863ba85"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LBA - Cyrenaica l_english.yml",
+      "sha": "a6b65323e756c132d4db477fe448d49aa3176a75"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LEB - Lebanon l_english.yml",
+      "sha": "a4ed9678e7581496c494b541119f8f32f259a663"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LEC - Legation Cities l_english.yml",
+      "sha": "d15393a2b0e75a02c5f35ed2edf55408f9012186"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LEP - League of Eight Provinces l_english.yml",
+      "sha": "26539c733bc6af49382c133818a41c4e81e89253"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LIB - Liberia l_english.yml",
+      "sha": "3ecba5be52bd51efebca74baba6fa456003d7b36"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LIT - Lithuania l_english.yml",
+      "sha": "b9f5cef7d34a044cdb2e242a95a7055b6421b079"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/LOM - Lombardy l_english.yml",
+      "sha": "b18b7b41d8e440946b5eaf63b24f08ffe35bec19"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MAD - Madagascar l_english.yml",
+      "sha": "d7ac4715c370ebb25c7525d85237a86d7033dc51"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MAF - Mittelafrika l_english.yml",
+      "sha": "d8dfde010187a6bc3fb5315716efd8482156418d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MAF.SWA - South West Africa l_english.yml",
+      "sha": "85dbfad4032ffe96f9f4c7f71dda470881b96647"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MAL - Malaya l_english.yml",
+      "sha": "d5fd2520a7a1aa789e4fc178f601cdc06314addb"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MAN - Manchuria l_english.yml",
+      "sha": "4b426e453a201e56ec2784dde7cc37046a833b48"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MDR - Madras l_english.yml",
+      "sha": "c26bd95e287414dbac7ae71bce8603eff57c3753"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MEX - Mexico l_english.yml",
+      "sha": "941054955acff87681b4c00c930def8cecb2ca31"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MIT - Mitteleuropa l_english.yml",
+      "sha": "b070865e563c82739d4fa57247ed10791919b634"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MLT - Malta l_english.yml",
+      "sha": "e06e5285e226072169d39cac0d2598d504cb540c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MLW - Nyasaland l_english.yml",
+      "sha": "2965523efd28d476e98074e8785e8a2c081a970c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MNR - Mountain Republic l_english.yml",
+      "sha": "1fb3b175f8ca53468f81a86be08f5afe5ae08e7a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MNT - Montenegro l_english.yml",
+      "sha": "0b4ae02634a10ed6dbce506d26a83737dea59ad9"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MON - Mongolia l_english.yml",
+      "sha": "f87b690ce887ca2137037f25fb3b79eb4fe9fe0f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MOR - Morocco l_english.yml",
+      "sha": "0f2c717980438eb4e9ff18a7a9b652223ef19f72"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MYS - Mysore l_english.yml",
+      "sha": "6c2821b26da033e1b2a88d7c7746c03a90e72fbd"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/MZB - Mozambique l_english.yml",
+      "sha": "be431f42b7213ee0c7f5157bfa1449bb1831ac99"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NAT - Natal l_english.yml",
+      "sha": "b11e91a9f7abc878608177843545143e77326fd1"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NEE - New England l_english.yml",
+      "sha": "7a6f6cdd422c30856a557a6d3c502a4fd4602ebb"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NEP - Nepal l_english.yml",
+      "sha": "82bea1f79651ba8880bde910a29439cb3b8b87f7"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NFA - NatFrance l_english.yml",
+      "sha": "3c16ef0bccd18894798b6081afafc0ed40618b09"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NGA - Nigeria l_english.yml",
+      "sha": "1b1d68c2229184d8cff891042c5d4f4f0cf65e55"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NGF - North German Federation l_english.yml",
+      "sha": "b945f71aec14efcbc619d95b3a5742c9d057f54f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NIC - Nicaragua l_english.yml",
+      "sha": "3f762795ae921b3b61339c46f1b479e7eefd8ebc"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NIR - Northern Ireland l_english.yml",
+      "sha": "f63c63e34f66b3db710768c1d6ec5d1a9961fe2a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NMB - Namibia l_english.yml",
+      "sha": "0afd142cf2ccccb5af8acefae15e229640c12e0a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NOR - Norway l_english.yml",
+      "sha": "de53474cd2d094f6afd4f2602fff64bfbbed2943"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/NZL - New Zealand l_english.yml",
+      "sha": "af560e3b2028ded4aa15d5910d7666f5d5915d23"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/OMA - Oman l_english.yml",
+      "sha": "03a513c044444eba8bd95649c213665068f06d57"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PAL - Jerusalem l_english.yml",
+      "sha": "5416de5f2aa5424350caf0c06500b175b13ae588"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PAN - Panama l_english.yml",
+      "sha": "396990afbafb18a0dacde84813c918df1a9c0b92"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PAP - Papal State l_english.yml",
+      "sha": "f17e1c88e370bb64f0499e3c9d71dad9d180e1c0"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PAR - Paraguay l_english.yml",
+      "sha": "5b1ec383ced8b7f1db61516b65a0670f8abcef27"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PER - Persia l_english.yml",
+      "sha": "7693b1caa165cd44f3cbf8f28226bd13389fc77f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PHI - Philippines l_english.yml",
+      "sha": "b760ca954b5d8cc0e764156bc2969f442f727977"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PIR - Piratini l_english.yml",
+      "sha": "055b06cdca1a768a5990b6141943859d1717791f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PJB - Punjab l_english.yml",
+      "sha": "5cea7e2bbb7b70637f3634cab58cf2070cc9516b"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PNG - Papua l_english.yml",
+      "sha": "66f50ff36ae5d647669f33f77bdde8918adabcfe"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/POL - Poland l_english.yml",
+      "sha": "e80b7f3a7d68cf7e9082cc479652d4f994874ec0"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/POR - Portugal in Exile l_english.yml",
+      "sha": "bc4d579e4a79911074f1ac855eb17b84151424c1"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/POR - Portugal l_english.yml",
+      "sha": "4418d651909e0e901e56efc0b2736384e207c553"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PRE - Prussia l_english.yml",
+      "sha": "4898322010bfd937f0a3e85425a3cced3257ffc2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PRF - Princely Federation l_english.yml",
+      "sha": "93e9bf0f186f4b2f7d90b3c8fff21216eb22e58c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PRU - Peru l_english.yml",
+      "sha": "590188e3895c56e1a5382cec56f1b7e33e6faf0f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/PUE - Puerto Rico l_english.yml",
+      "sha": "0b715cd8d396867e17dfee26d3a23d9fa67ed9d2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/QIE - Qing l_english.yml",
+      "sha": "2f5ae5f24b8be3dd18f75cadde9e9927d15e09ad"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/QUE - Quebec l_english.yml",
+      "sha": "c0348b65a45c84716607d9afb332967b749b2cfb"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/RAJ - Dominion of India l_english.yml",
+      "sha": "36e751c8e317cea9c31a0b04ee288e9febe3c814"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/RHI - Rhineland l_english.yml",
+      "sha": "bc729acb9d2e5adbbecb3ea159472f2f15757819"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ROM - Romania l_english.yml",
+      "sha": "0150cb753dcc9ccdded639b5fa1e0b83e9c92e26"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/RSA - Free Russian Army l_english.yml",
+      "sha": "ebd41866a06dbcbe70ca09d28f7d2e30c510e0c3"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/RUS - Russia l_english.yml",
+      "sha": "60ca0cfa4a134f89591cfd579d9f2c4102a90e8d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/RWA - Ruanda l_english.yml",
+      "sha": "ba1e8254e96f425ec10ce16f81da6518a4674af0"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SAF - South Africa l_english.yml",
+      "sha": "1f9e363fca185b48eb6aa09ebb2dadbd36a301ee"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SAR - Sarawak l_english.yml",
+      "sha": "bc68783c9d065777678b9318602420d799f59c80"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SAU - Najd l_english.yml",
+      "sha": "f46c35da192cfe18eda03fe04830d0f64d852467"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SCA - Scandinavia l_english.yml",
+      "sha": "2c4cab033fe366211c5942c7db66d154a9f363b5"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SCO - Scotland l_english.yml",
+      "sha": "62f6b4a67f3b71aab340d27878427bc8aa8d9dd7"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SEN - Senegal l_english.yml",
+      "sha": "e4a65f127f44cdec7959870e088088c0a6362f93"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SER - Serbia l_english.yml",
+      "sha": "129f7faa9887382aa35f608eaa5a6c1e1bef6e4e"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SHA - Shan Confederacy l_english.yml",
+      "sha": "b45ba727ce4327ddddca88727497e90bcc0851c5"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SHD - Shandong l_english.yml",
+      "sha": "39384b70f02b22a922470a1021ed27fe4196e667"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SHX - Shanxi l_english.yml",
+      "sha": "eb8323fd8c3b86f8a9822b7481cbb96b4b38936f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SIA - Siam l_english.yml",
+      "sha": "7a1301d20b956025b4818d17d32039ba7cb5e064"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SIC - Two Sicilies l_english.yml",
+      "sha": "8d5409481ccf0db95f1e84967a5f10aa073142df"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SIK - Xinjiang l_english.yml",
+      "sha": "35b42b70b7bf31a7d02bc4fe5adb18f8c6cbff20"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SLO - Slovakia l_english.yml",
+      "sha": "d2cce451c7ce49e329226a30422f4347f0eadcb2"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SLV - Slovenia l_english.yml",
+      "sha": "581b0603adbe2e4315bafb8f8f4e670f2d5269eb"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SOM - Somalia l_english.yml",
+      "sha": "f209b6f87ec68107f374ea5b632551469d6f9df5"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SPA - Spain l_english.yml",
+      "sha": "61471b623021c4fde463b1e23aecc639b77e8e76"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SPO - Sao Paulo l_english.yml",
+      "sha": "cd512f6f0de87c9361f2ba23a5c113ebb7b1674d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SPR - Spain Carlist l_english.yml",
+      "sha": "da14f3b7b85c6a4d6b35614e7c32d64fa4d0ffbc"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SRD - Sardinia l_english.yml",
+      "sha": "a405a9e31460723a8cc596bc6abdba8d14f7b04f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SRI - Socialist Republic of Italy l_english.yml",
+      "sha": "bfe7456c5a6d2f0840272d7b6710ed269ffc3259"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SSI - South Seas Islands l_english.yml",
+      "sha": "911165ff2a5fc3a86efd5ca784d783624e7a806a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SUR - Suriname l_english.yml",
+      "sha": "1962debe886077a0f1238549292727465c8dc68f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SWE - Sweden l_english.yml",
+      "sha": "60778ada5c6361367ad8da22ae686076fe9992ad"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SWF - Spain FAI l_english.yml",
+      "sha": "801af20aafde3e735da1db925458f6549e8b4ec4"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SWI - Switzerland l_english.yml",
+      "sha": "30ffec4a4481b7260d54b4b49d165f9da9649b05"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SYR - Syria l_english.yml",
+      "sha": "48a88fd2a0f98fa8ee16fd60d4651987b3dcb87a"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/SZC - Sichuan l_english.yml",
+      "sha": "6f8222e57545e1f0d5800248936fee4804eafe00"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TAI - Taiwan l_english.yml",
+      "sha": "76c44e2cc4b816997b7693cc20e5df4e43081f0f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TIB - Tibet l_english.yml",
+      "sha": "d167ea78f1f7be652ef9f5106f399195ffc2bcfe"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TKE - Tshuapa l_english.yml",
+      "sha": "f5196891e4023bc2fe0a65620ca4ec09a08c00c0"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TOG - Togoland l_english.yml",
+      "sha": "6c5c8fdea5c3ed73b3b89d6ff37c0658a5b7baca"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TRK - Turkestan l_english.yml",
+      "sha": "368546d21ea9a2e2e064d02b6a9d1757b4ba5690"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TRS - Transylvania l_english.yml",
+      "sha": "e39d8fc7c5dd1dce821097de09e76619402518be"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TRU - Trucial States l_english.yml",
+      "sha": "17b20b429b9c1d6df9fb11f09c7ec483a7c9a07c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TUN - Tunisia l_english.yml",
+      "sha": "948ee650855ff5553ca2ff4868adb4667663aace"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TUR - Ottoman l_english.yml",
+      "sha": "c26a2e83199dbb4a666ee8397dee2daebeabb074"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TUR - Turkey l_english.yml",
+      "sha": "0477dc86ead2a2b8584ae7cf52314d490ea43be6"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TUS - Tuscany l_english.yml",
+      "sha": "8241f4c227fce8e0d39df0bc78ce5d7d020562ae"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/TZN - East Africa l_english.yml",
+      "sha": "60e50d57cd50bb02447d99389accba4edbe005d5"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/UGA - Uganda l_english.yml",
+      "sha": "75a50cc84ca6d8e9a69365a9c3f58a33e4e1067e"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/UKR - Ukraine l_english.yml",
+      "sha": "b4c886d7363d203b7da93ad15cea95af5f64d209"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/URG - Uruguay l_english.yml",
+      "sha": "9c630eac2a13b501fc201389c219d9e5067c8eee"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/USA - United States l_english.yml",
+      "sha": "e15ad8f4ede77bd07791461608f17709864a9b27"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/VCR - Vera Cruz l_english.yml",
+      "sha": "8e115b652b5d72bb714129cfa88afd7433a98f49"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/VEN - Venezuela l_english.yml",
+      "sha": "ed22c4e554acbdae2948f9727284bf68153b7548"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/VIN - Vietnam l_english.yml",
+      "sha": "3274f60a7d72f4ea6e5f06754d25849e5512ecdc"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/VNC - Venice l_english.yml",
+      "sha": "80a7f95fa4006308412ebf7c90688a2d0e7a400d"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/VOL - Haute-Volta l_english.yml",
+      "sha": "72cf7eeab5e0eee011dab3be6442b46915236ddc"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/WAL - Wallonia l_english.yml",
+      "sha": "3bad62db720af26553d007896ef590a94cf7750c"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/WCA - Workers Congress of America l_english.yml",
+      "sha": "e9fbdab3cd62d79d06cfb8156f44c711a06025c9"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/WIF - West Indies l_english.yml",
+      "sha": "54f23fd81d38ea9d7478a4d826ebe62e1a7e5a76"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/WLS - Wales l_english.yml",
+      "sha": "93e3c10e260735570fdc2fb03704e36d622b9b05"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/XSM - Ma Clique l_english.yml",
+      "sha": "fdd86986bfe32abe1200e72797faa99c50c59417"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/YEM - Yemen l_english.yml",
+      "sha": "3434555233046994a62fc60ac13098d3f1d787e7"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/YUC - Yucatan l_english.yml",
+      "sha": "dff4303c318b5b2eea5fa77eebb3b1d273716499"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/YUN - Yunnan l_english.yml",
+      "sha": "fccb59e2b28c24ac10d10174da40a5431fe20b1f"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ZAM - Zambesia l_english.yml",
+      "sha": "a0af8c14108c0180af62fe73e853fecade2e29a6"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ZAN - Zanzibar l_english.yml",
+      "sha": "346fee700011c7796670dd59a764f7c926850776"
+    },
+    {
+      "path": "localisation/english/KR_country_specific/ZIM - Rhodesia l_english.yml",
+      "sha": "09c114ac5c9a95452d88130635ba1448d478e75f"
+    },
+    {
+      "path": "localisation/english/KR_factions/00_generic_factions_l_english.yml",
+      "sha": "1d1b1c8e4505954c93f4860374524152c2c3748b"
+    },
+    {
+      "path": "localisation/english/KR_factions/00_rules_l_english.yml",
+      "sha": "858e024128f85ba3e04043dc124ac50b4f87d97d"
+    },
+    {
+      "path": "localisation/english/KR_factions/01_minor_factions_l_english.yml",
+      "sha": "ad5a367d8a8015591818e19be483a5597dee2c03"
+    },
+    {
+      "path": "localisation/english/KR_factions/_ai_faction_theatres_l_english.yml",
+      "sha": "96eef156b35c0a4ec6c9431fa500f304a84077fe"
+    },
+    {
+      "path": "localisation/english/KR_factions/american_factions_l_english.yml",
+      "sha": "f91140a0ebd4440c715d97574cd771c5da786ed5"
+    },
+    {
+      "path": "localisation/english/KR_factions/belgrade_pact_l_english.yml",
+      "sha": "74ebc313962c9bb12f29c9df3571ca1e977dca7c"
+    },
+    {
+      "path": "localisation/english/KR_factions/cairo_pact_l_english.yml",
+      "sha": "6c647498a62a809b1100a2b3aba43b43729a3bb2"
+    },
+    {
+      "path": "localisation/english/KR_factions/chinese_factions_l_english.yml",
+      "sha": "56422dd584f288d7b1458b612a4af61ad07269de"
+    },
+    {
+      "path": "localisation/english/KR_factions/chinese_united_front_l_english.yml",
+      "sha": "0bc985fa99f4cf67e883203bce4735152e889a4e"
+    },
+    {
+      "path": "localisation/english/KR_factions/co_prosperity_sphere_l_english.yml",
+      "sha": "cec75f6c274625862e2b0f76f7a2ae6f82dcc7c5"
+    },
+    {
+      "path": "localisation/english/KR_factions/donau_adriabund_l_english.yml",
+      "sha": "dcda49b4fc94c010e53b28c8bcb7edeb9b4ec646"
+    },
+    {
+      "path": "localisation/english/KR_factions/entente_l_english.yml",
+      "sha": "0eae33c8fb0a07a3e8343e6736d3a80c158df3bf"
+    },
+    {
+      "path": "localisation/english/KR_factions/internationale_l_english.yml",
+      "sha": "7b61bba93d6e4dc11ead384bf0daaeb59aa3e47c"
+    },
+    {
+      "path": "localisation/english/KR_factions/moscow_accord_l_english.yml",
+      "sha": "fbdc1d49ec0f2887238969da63ca53ef66f51d26"
+    },
+    {
+      "path": "localisation/english/KR_factions/reichspakt_l_english.yml",
+      "sha": "5e49344fbcc16c8870f24924972cefe36c8b474e"
+    }
+  ]
+}

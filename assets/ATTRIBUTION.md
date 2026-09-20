@@ -15,3 +15,5 @@ These third-party assets remain the property of their respective creators. The a
 `world-land.svg` is a local equirectangular conversion of Natural Earth’s 1:110m land geometry, rounded to one SVG decimal place. [Source GeoJSON](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson), retrieved 2026-09-19. Made with Natural Earth; this geometry is [public domain](https://www.naturalearthdata.com/about/terms-of-use/). The map shows geographic coastlines only and does not represent Kaiserreich political borders.
 
 Roster expansion: all 109 nation flags use the same pinned source snapshot. `flagSource` records cosmetic and ideology overrides (for example, `CAN_entente.tga`). CAN retains its stable display/save identity; the ownership manifest records the corresponding IMP source country.
+
+The catalogue now bundles flags for 94 later nations in addition to the 109 starting nations. Each country’s `flagSource` in `data/paths.json` records its official upstream flag asset at the pinned commit. TGA originals were converted to PNG for browser display; government-specific variants may differ.

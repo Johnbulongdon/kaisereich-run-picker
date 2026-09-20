@@ -28,6 +28,8 @@ def parse(text):
                 value = tokens[index]
                 index += 1
                 pairs.append((key, block() if value == '{' else value))
+            else:
+                pairs.append(('$value', key))
         return pairs
 
     return block()
