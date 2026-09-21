@@ -120,6 +120,7 @@ try {
   check(Object.values(await saved(page)).includes('played'), 'Start run saves Played');
   check((await page.locator('#selection-wheel').getAttribute('data-selected-id')).includes('_'), 'saving run status keeps the wheel aligned with the selected path');
   await page.reload();
+  await page.locator('#application').waitFor({ state: 'visible' });
   await go(page, 'checklist');
   check(await page.locator('.path-row').count() === optionCount, 'checklist displays every active path');
   check((await page.locator('[data-path-id]').evaluateAll(elements => elements.map(element => element.value))).includes('played'), 'progress survives refresh');
@@ -185,6 +186,7 @@ try {
   await page.locator('#application').waitFor({ state: 'visible' });
   check(await page.locator('#completion-percent').innerText() === completion, 'localStorage survives an actual browser restart');
   await page.reload();
+  await page.locator('#application').waitFor({ state: 'visible' });
   check(await page.locator('#progress').isVisible(), 'hash navigation survives refresh under the project subpath');
   await go(page, 'picker');
   await page.locator('#country').selectOption('ARG');
