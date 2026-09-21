@@ -17,3 +17,7 @@ These third-party assets remain the property of their respective creators. The a
 Roster expansion: all 109 nation flags use the same pinned source snapshot. `flagSource` records cosmetic and ideology overrides (for example, `CAN_entente.tga`). CAN retains its stable display/save identity; the ownership manifest records the corresponding IMP source country.
 
 The catalogue now bundles flags for 94 later nations in addition to the 109 starting nations. Each country’s `flagSource` in `data/paths.json` records its official upstream flag asset at the pinned commit. TGA originals were converted to PNG for browser display; government-specific variants may differ.
+
+## Ideology and path flag variants
+
+`flags/variants/<upstream-blob-sha>.png` contains 95 additional lossless conversions from the same pinned source. `data/flag-variants.json` maps each asset to its exact upstream TGA path and SHA, with 116 ideology mappings across 57 nations and 14 explicit path overrides. Identical upstream assets share one PNG. `scripts/import-flag-variants.py` uses exact ideology filenames and unconditional same-country cosmetic effects; conditional branches are not guessed. Path overrides take precedence, followed by ideology variants and the country reference flag. These assets remain under the upstream artwork terms above.

@@ -153,3 +153,5 @@ The source importer examines 545 event, focus and decision files, follows script
 All 788 previously published route IDs remain valid for existing saves. Later nations have formation labels and their own bundled flags. Flag variants are references, not a claim that every government uses the same flag.
 
 The default picker follows **Country → Ideology → Path**. Choose or spin each numbered layer; each ideology appears once and contains its eligible paths. The register uses collapsible ideology groups under each country, and searching opens matching groups. Fully random keeps equal odds per eligible path. Existing route IDs and saved statuses are unchanged.
+
+Flags update with ideology and path selection: a confirmed path cosmetic flag takes priority over an available ideology variant, then the country reference flag. The result card, ideology/path wheel, checklist rows and selected map nation share these assets. The manifest records 116 ideology mappings across 57 nations and 14 explicit path overrides; missing or ambiguous variants retain the country flag.

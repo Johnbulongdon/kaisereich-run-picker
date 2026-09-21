@@ -1,3 +1,4 @@
+import { resolveFlag } from './flags.js';
 import { readDataset, eligiblePaths, eligibleCountries, choose, countriesIn, searchPaths, groupByIdeology } from './picker.js';
 import { setStatus, summarize, STATUSES, STATUS_LABELS } from './tracker.js';
 import { createStorage, parseSave, exportSave, MAX_SAVE_BYTES, STORAGE_KEY } from './storage.js';
@@ -8,6 +9,7 @@ import { VIEWS } from './atlas.js';
 const $ = id => document.getElementById(id);
 const storage = createStorage();
 let countries = [];
+let flagVariants = {};
 let records = [], progress = {}, result = null, selectedCountry = '', selectedIdeology = '', mode = 'country';
 let protectCorruptSave = false;
 const wheel = new SelectionWheel($('selection-wheel'), $('wheel-entries'));
@@ -23,8 +25,8 @@ const atlas = new CampaignAtlas($('campaign-map'), $('atlas-countries'), tag => 
 function wheelItems(kind) {
   const eligible = pool();
   if (kind === 'country') return countryPool().map(country => ({ ...country, id: country.tag, color: '#30373e', label: country.country, shortLabel: country.country.length > 14 ? country.tag : country.country }));
-  if (kind === 'ideology') return groupByIdeology(eligible.filter(path => path.tag === selectedCountry)).map(group => ({ ...group, id: group.ideology, label: `${group.ideology} · ${group.paths.length} ${group.paths.length === 1 ? 'path' : 'paths'}`, shortLabel: group.ideology }));
-  return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry && path.ideology === selectedIdeology && path.ideology === selectedIdeology) : eligible)
+  if (kind === 'ideology') return groupByIdeology(eligible.filter(path => path.tag === selectedCountry)).map(group => ({ ...group, flag: resolveFlag(countries.find(country => country.tag === selectedCountry), group.ideology, null, flagVariants).flag, id: group.ideology, label: `${group.ideology} · ${group.paths.length} ${group.paths.length === 1 ? 'path' : 'paths'}`, shortLabel: group.ideology }));
+  return (kind === 'path' ? eligible.filter(path => path.tag === selectedCountry && path.ideology === selectedIdeology) : eligible)
     .map(path => ({ ...path, label: `${path.country} — ${path.name}`, shortLabel: path.shortName || path.tag }));
 }
 function assetUrl(path) { return /^\.\/assets\/[\w/-]+\.png$/.test(path ?? '') ? new URL('../' + path.slice(2), import.meta.url).href : ''; }
@@ -114,14 +116,19 @@ function refreshEligibility(preserveWheel = false) {
 }
 
 function renderResult() {
-  atlas.render(countries, countryPool(), result?.tag || selectedCountry);
   renderBriefing();
   const nation = countries.find(country => country.tag === (result?.tag || selectedCountry));
   const ideologyDisplay = result || records.find(path => path.tag === selectedCountry && path.ideology === selectedIdeology);
+  const selectedFlag = resolveFlag(nation, ideologyDisplay?.ideology, result?.id, flagVariants);
+  atlas.render(countries.map(country => country.tag === nation?.tag ? { ...country, flag: selectedFlag.flag } : country), countryPool(), result?.tag || selectedCountry);
   $('result-coverage').hidden = !nation;
   $('result-coverage').textContent = nation ? coverage(nation) : '';
   $('result-heraldry').hidden = !nation?.flag;
-  if (nation?.flag) { $('result-flag').src = nation.flag; $('result-flag').alt = `${nation.country} country flag`; }
+  if (selectedFlag.flag) {
+    $('result-flag').src = selectedFlag.flag;
+    $('result-flag').alt = selectedFlag.kind === 'path' ? `${nation.country} — ${result.name} flag` : selectedFlag.kind === 'ideology' ? `${nation.country} — ${ideologyDisplay.ideology} flag` : `${nation.country} reference flag`;
+    $('result-flag').title = selectedFlag.kind === 'country' && ideologyDisplay ? 'Country reference flag; no confirmed variant for this selection.' : $('result-flag').alt;
+  }
   $('result-emblem').hidden = !ideologyDisplay?.icon;
   if (ideologyDisplay?.icon) { $('result-emblem').src = ideologyDisplay.icon; $('result-emblem').alt = `${ideologyDisplay.ideology} emblem`; }
   $('result-ideology').style.borderColor = ideologyDisplay?.color || '';
@@ -309,7 +316,12 @@ async function init() {
     const response = await fetch(new URL('../data/paths.json', import.meta.url));
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     const data = readDataset(await response.json());
-    records = data.records.map(path => ({ ...path, flag: assetUrl(path.flag), icon: assetUrl(data.ideologies[path.ideology]?.icon), color: /^#[0-9a-f]{6}$/i.test(data.ideologies[path.ideology]?.color ?? '') ? data.ideologies[path.ideology].color : '#30373e' }));
+    const flagResponse = await fetch(new URL('../data/flag-variants.json', import.meta.url));
+    if (!flagResponse.ok) throw new Error(`Flag data request failed: ${flagResponse.status}`);
+    flagVariants = await flagResponse.json();
+    for (const mapping of Object.values(flagVariants.countries)) for (const ideology of Object.keys(mapping)) mapping[ideology] = assetUrl(mapping[ideology]);
+    for (const variant of Object.values(flagVariants.paths)) variant.flag = assetUrl(variant.flag);
+    records = data.records.map(path => ({ ...path, flag: resolveFlag({ tag: path.tag, flag: assetUrl(path.flag) }, path.ideology, path.id, flagVariants).flag, icon: assetUrl(data.ideologies[path.ideology]?.icon), color: /^#[0-9a-f]{6}$/i.test(data.ideologies[path.ideology]?.color ?? '') ? data.ideologies[path.ideology].color : '#30373e' }));
     countries = data.countries.map(country => ({ ...country, flag: assetUrl(country.flag) }));
     const saved = storage.load();
     progress = saved.progress;
@@ -333,7 +345,7 @@ async function init() {
 }
 
 function bindEvents() {
-  $('atlas-view').addEventListener('change', event => { atlas.view = event.target.value; atlas.render(countries, countryPool(), result?.tag || selectedCountry); });
+  $('atlas-view').addEventListener('change', event => { atlas.view = event.target.value; renderResult(); });
   $('spin-motion').addEventListener('change', () => { if (spinning) { cancelSpin(); refreshEligibility(); renderResult(); announce('Animation setting changed. Spin again when ready.'); } });
   window.addEventListener('hashchange', () => route(true));
   for (const id of ['region', 'ideology', 'status-filter', 'availability', 'route-kind', 'exclude-completed', 'exclude-played']) {
