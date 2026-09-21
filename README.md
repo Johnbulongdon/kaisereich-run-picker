@@ -1,5 +1,7 @@
 # Kaiserreich Run Picker
 
+**Version 1.0.0** · [Open the app](https://johnbulongdon.github.io/kaisereich-run-picker/) · [Release notes](RELEASE_NOTES.md)
+
 A free, static country + political path randomizer and personal completion tracker for **Kaiserreich**, the Hearts of Iron IV mod.
 
 **Status: complete starting-country roster for the pinned snapshot; incomplete political coverage.** The app lists 109 starting nations and 94 later nations, with 3,294 source-backed political options. Forty-two nations have no catalogued outcome and remain available for country discovery. Options overlap and are conditional; see the scope and audit details below.
