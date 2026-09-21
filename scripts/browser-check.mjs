@@ -42,6 +42,31 @@ try {
   for (const asset of ['/css/style.css', '/js/app.js', '/data/paths.json']) check(responses.some(item => item.url.endsWith(asset) && item.status === 200), `${asset} loads`);
   check(await page.locator('#wheel-entries li').count() === countryCount, 'wheel initially contains one equal slice per country');
   check(await page.locator('#atlas-countries button').count() === countryCount, 'atlas lists every country');
+  await page.locator('#country').selectOption('SWE');
+  check(await page.locator('#path-choice').isDisabled(), 'path layer waits for ideology selection');
+  const swedishReference = await page.locator('#result-flag').getAttribute('src');
+  await page.locator('#country-ideology').selectOption('National Populist');
+  check(await page.locator('#result-flag').getAttribute('src') !== swedishReference, 'ideology selection changes the nation flag');
+  await page.waitForFunction(() => { const image = document.getElementById('result-flag'); return image.complete && image.naturalWidth > 0; });
+  await page.locator('#country').selectOption('RUS');
+  check(await page.locator('#country-ideology').inputValue() === '' && await page.locator('#path-choice').isDisabled(), 'country change clears dependent selections');
+  await page.locator('#country-ideology').selectOption('National Populist');
+  const russianReference = await page.locator('#result-flag').getAttribute('src');
+  await page.locator('#path-choice').selectOption('RUS_FOCUS_RUS_DECLARE_RUSSIAN_STATE_RUS_DECLARE_RUSSIAN_STATE_0');
+  const russianPath = await page.locator('#result-flag').getAttribute('src');
+  check(russianPath !== russianReference, 'explicit path cosmetic flag overrides the reference flag');
+  check(await page.locator('#atlas-countries [data-map-tag="RUS"] img').getAttribute('src') === russianPath, 'selected map nation uses the path flag');
+  await page.locator('#country-ideology').selectOption('Varies by branch');
+  check(await page.locator('#result-flag').getAttribute('src') === russianReference, 'ambiguous ideology restores the country reference flag');
+  await go(page, 'checklist');
+  check(await page.locator('.ideology-group[open]').count() === 0, 'register begins with collapsed ideology groups');
+  await page.locator('[data-group-key="ARG:National Populist"] > summary').click();
+  check(await page.locator('#status-ARG_CARLES').isVisible(), 'expanding ideology reveals its paths');
+  await page.locator('#search').fill('Carles');
+  check(await page.locator('#status-ARG_CARLES').isVisible(), 'search automatically reveals matching paths');
+  await page.locator('#search').fill('');
+  await go(page, 'picker');
+  await page.locator('#clear-filters').click();
   await page.locator('#atlas-view').selectOption('Europe');
   check(await page.locator('#campaign-map').getAttribute('viewBox') === '490 35 210 145', 'regional map zoom works');
   await page.locator('#campaign-map [data-map-tag="GER"]').focus();
@@ -121,13 +146,13 @@ try {
   await page.locator('#region').selectOption('South America');
   await page.locator('#spin-both').click();
   await waitForSpin(page);
-  check(await page.locator('#result-ideology').innerText() === 'Social Liberal' && await page.locator('#result-region').innerText() === 'South America', 'Path to Country respects the ideology and region');
+  check(await page.locator('#result-ideology').textContent() === 'Social Liberal' && await page.locator('#result-region').textContent() === 'South America', 'Path to Country respects the ideology and region');
   await page.locator('input[value="random"]').check();
   await page.locator('#ideology').selectOption('Social Conservative');
   await page.locator('#region').selectOption('North America');
   await page.locator('#spin-both').click();
   await waitForSpin(page);
-  check(await page.locator('#result-ideology').innerText() === 'Social Conservative' && await page.locator('#result-region').innerText() === 'North America', 'Fully Random honors combined region and ideology filters');
+  check(await page.locator('#result-ideology').textContent() === 'Social Conservative' && await page.locator('#result-region').textContent() === 'North America', 'Fully Random honors combined region and ideology filters');
   await go(page, 'progress');
   const downloadPromise = page.waitForEvent('download');
   await page.locator('#export').click();
@@ -208,6 +233,10 @@ try {
   await broken.close();
   check(errors.length === 0, `no console or uncaught errors in normal use (${errors.join(', ')})`);
   console.log(`All ${checks} browser checks passed. Screenshots: ${output}. Temporary QA profile: ${profile}`);
+} catch (error) {
+  const failedPage = context?.pages()[0];
+  if (failedPage) await failedPage.screenshot({path:join(output,'failure.png'),fullPage:true}).catch(() => {});
+  throw error;
 } finally {
   await context?.close();
   await browser?.close();
