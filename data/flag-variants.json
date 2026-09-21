@@ -1,0 +1,690 @@
+{
+  "upstreamCommit": "00f64443a8a3ec4ae0cc78179efade3cb41e1946",
+  "method": "Exact official ideology filename matches, plus unconditional same-country cosmetic-tag effects for individual source outcomes. Conditional or unresolved cosmetic changes retain the ideology or country fallback. These are reference flags, not a simulation of campaign state.",
+  "countries": {
+    "GXC": {
+      "Social Conservative": "./assets/flags/variants/0f6195c1fc561ea008dae0c3b3e55f285f66d2c3.png"
+    },
+    "MEX": {
+      "National Populist": "./assets/flags/variants/a6d7516cbc5eb1ac7ee6e7f13650dbd4cdaef0fe.png"
+    },
+    "BRA": {
+      "National Populist": "./assets/flags/variants/efbe2f63e0c9c675dc9f92f3fee75bd2683b1f22.png",
+      "Radical Socialist": "./assets/flags/variants/e9bedd98ad4a3845e3dbe0413c4f38ab5a708046.png",
+      "Syndicalist": "./assets/flags/variants/7f1dc079f9984194eab02b715b7160efcc1865ce.png",
+      "Totalist": "./assets/flags/variants/e9bedd98ad4a3845e3dbe0413c4f38ab5a708046.png"
+    },
+    "AST": {
+      "Radical Socialist": "./assets/flags/variants/b4efa59d7264fd876e3ce47fb64746e75d0f9f98.png",
+      "Syndicalist": "./assets/flags/variants/b4efa59d7264fd876e3ce47fb64746e75d0f9f98.png",
+      "Totalist": "./assets/flags/variants/b4efa59d7264fd876e3ce47fb64746e75d0f9f98.png"
+    },
+    "NOR": {
+      "Paternal Autocrat": "./assets/flags/variants/671554b849905dfc9505849336e7371456fd1025.png",
+      "Radical Socialist": "./assets/flags/variants/964635b9a6ef540dcd0da8173047739cf61b1dc1.png",
+      "Syndicalist": "./assets/flags/variants/620d20fa3185a9e67cce682dd51b75f48655b356.png",
+      "Totalist": "./assets/flags/variants/620d20fa3185a9e67cce682dd51b75f48655b356.png"
+    },
+    "SWE": {
+      "National Populist": "./assets/flags/variants/d13dabe06cc0a3bd7f248498fe577727e9e07b97.png",
+      "Radical Socialist": "./assets/flags/variants/2b774287d61a3f405d28b0244580d09ddd3fe681.png",
+      "Syndicalist": "./assets/flags/variants/2b774287d61a3f405d28b0244580d09ddd3fe681.png",
+      "Totalist": "./assets/flags/variants/2b774287d61a3f405d28b0244580d09ddd3fe681.png"
+    },
+    "FIN": {
+      "National Populist": "./assets/flags/variants/307dd6de89aa94b3e5469b1b3d998ee125a5e09d.png",
+      "Syndicalist": "./assets/flags/variants/838bc6027c82e66b107aafb0fa0960673d97e53e.png",
+      "Totalist": "./assets/flags/variants/617c9a5dc86a7df7f534bb5673d6d47b6293d1dd.png"
+    },
+    "SER": {
+      "Radical Socialist": "./assets/flags/variants/aa209ff259aba7a823a9f18e422f9ce5a14c193c.png",
+      "Syndicalist": "./assets/flags/variants/aa209ff259aba7a823a9f18e422f9ce5a14c193c.png"
+    },
+    "BUL": {
+      "Radical Socialist": "./assets/flags/variants/31a4b73dd4c1c9e945fb35f0afaf2e486d4cf756.png",
+      "Syndicalist": "./assets/flags/variants/31a4b73dd4c1c9e945fb35f0afaf2e486d4cf756.png",
+      "Totalist": "./assets/flags/variants/31a4b73dd4c1c9e945fb35f0afaf2e486d4cf756.png"
+    },
+    "PER": {
+      "Radical Socialist": "./assets/flags/variants/7193ce0fed571c495ca25a0c53643444d75cd454.png"
+    },
+    "SWI": {
+      "Syndicalist": "./assets/flags/variants/e20fbf6044737de6cc62e87514fe351f81db2e43.png",
+      "Totalist": "./assets/flags/variants/e20fbf6044737de6cc62e87514fe351f81db2e43.png"
+    },
+    "ALB": {
+      "Radical Socialist": "./assets/flags/variants/bc4a77ad3d652be697000b815320891ec24161eb.png"
+    },
+    "BOL": {
+      "National Populist": "./assets/flags/variants/ebae1cf13c0238fe7a9db6c37eb369cce94f5c70.png"
+    },
+    "BRM": {
+      "Radical Socialist": "./assets/flags/variants/58d590be1a394353204f20dd8a52955f2ea977bc.png"
+    },
+    "COL": {
+      "Syndicalist": "./assets/flags/variants/85c468bbd3089a0ab1ee9049cabbc5e43a729d89.png"
+    },
+    "DEN": {
+      "Radical Socialist": "./assets/flags/variants/5eae2beb5b90ed2a1abd0d739175ed6c29e5e5d0.png",
+      "Syndicalist": "./assets/flags/variants/5eae2beb5b90ed2a1abd0d739175ed6c29e5e5d0.png",
+      "Totalist": "./assets/flags/variants/5eae2beb5b90ed2a1abd0d739175ed6c29e5e5d0.png"
+    },
+    "ELS": {
+      "Syndicalist": "./assets/flags/variants/31417b6165cb7da1d1fe6caaa8880504bb34a6a4.png"
+    },
+    "BEL": {
+      "Syndicalist": "./assets/flags/variants/9eabd73d3568eb508b0d66cf3e7e6825be997394.png",
+      "Totalist": "./assets/flags/variants/9eabd73d3568eb508b0d66cf3e7e6825be997394.png"
+    },
+    "GRE": {
+      "Radical Socialist": "./assets/flags/variants/930f7dfb9bc94d77dacb7adeec6236fcb65db5e6.png",
+      "Syndicalist": "./assets/flags/variants/b77c85c9aa1f75555e82de7c515024708ff5c6ac.png",
+      "Totalist": "./assets/flags/variants/b77c85c9aa1f75555e82de7c515024708ff5c6ac.png"
+    },
+    "GUA": {
+      "Radical Socialist": "./assets/flags/variants/a7de9545a936452b7a938648708970f2dbbdf723.png"
+    },
+    "HON": {
+      "Totalist": "./assets/flags/variants/e16e76ab60207153909bbcd297433c8340c51125.png"
+    },
+    "ICE": {
+      "Radical Socialist": "./assets/flags/variants/833df6507a481d375538e4f57e1bbe72fe152c63.png",
+      "Syndicalist": "./assets/flags/variants/833df6507a481d375538e4f57e1bbe72fe152c63.png"
+    },
+    "ITA": {
+      "National Populist": "./assets/flags/variants/8813838cb0b052384997be1f9ddec8c8d9449835.png"
+    },
+    "CHI": {
+      "Syndicalist": "./assets/flags/variants/195d86515e760736bac0d5f191e73e9c249eb33b.png"
+    },
+    "LIB": {
+      "Totalist": "./assets/flags/variants/0921afc5a5a10064f451d97fa0532e8058db8d6f.png"
+    },
+    "LIT": {
+      "National Populist": "./assets/flags/variants/ba34f6876214d634d85624a24d5294c71c483adc.png",
+      "Radical Socialist": "./assets/flags/variants/1a64257d25b073e2ef29bfa7849a4d7a5c8b8793.png"
+    },
+    "MON": {
+      "National Populist": "./assets/flags/variants/d5d0f44c808bff65238095aceeab019cb660cac1.png"
+    },
+    "NEP": {
+      "Radical Socialist": "./assets/flags/variants/2b901a430966e3f0c69420d89dab634acfce1ab2.png"
+    },
+    "HOL": {
+      "National Populist": "./assets/flags/variants/14e61c9a75a13acfa1f146e97ab751c026ec7c2c.png",
+      "Paternal Autocrat": "./assets/flags/variants/14e61c9a75a13acfa1f146e97ab751c026ec7c2c.png",
+      "Radical Socialist": "./assets/flags/variants/6929b2222c3a8133cf2447f303d794a30bea7117.png",
+      "Syndicalist": "./assets/flags/variants/6929b2222c3a8133cf2447f303d794a30bea7117.png",
+      "Totalist": "./assets/flags/variants/6929b2222c3a8133cf2447f303d794a30bea7117.png"
+    },
+    "NIC": {
+      "Radical Socialist": "./assets/flags/variants/a9723eea5124aa7228a17a1e553c0f496e3463aa.png",
+      "Syndicalist": "./assets/flags/variants/a9723eea5124aa7228a17a1e553c0f496e3463aa.png"
+    },
+    "FOP": {
+      "Market Liberal": "./assets/flags/variants/5f19b926476fb3865720267cf85444ff4837e972.png",
+      "Radical Socialist": "./assets/flags/variants/5f19b926476fb3865720267cf85444ff4837e972.png",
+      "Social Liberal": "./assets/flags/variants/5f19b926476fb3865720267cf85444ff4837e972.png",
+      "Totalist": "./assets/flags/variants/6749bd882858949cbf6eac2f35e9b6e6c616f996.png"
+    },
+    "PRU": {
+      "National Populist": "./assets/flags/variants/43b06098b4bd54758cb3d1f7630e82dac2cef1bc.png",
+      "Radical Socialist": "./assets/flags/variants/f526e0f731c0b5fad93789713065ebc7cfb976d8.png",
+      "Totalist": "./assets/flags/variants/8748cf150c9585f5d074e61f1dd2e62d13fa2555.png"
+    },
+    "PHI": {
+      "Syndicalist": "./assets/flags/variants/e9003760c74cd2d0b8944aa7d651143fba8fd0ad.png"
+    },
+    "POL": {
+      "Radical Socialist": "./assets/flags/variants/602f7e94e921a2550d6e7be222253bf3153ad2a0.png",
+      "Syndicalist": "./assets/flags/variants/ebc0a2e87574542c80419f39809cfd8fbd621bab.png",
+      "Totalist": "./assets/flags/variants/7d8007f00531171ec4848ba0f618dfaf5b65f52a.png"
+    },
+    "SHD": {
+      "Authoritarian Democrat": "./assets/flags/variants/4d97f21f9874ba763e362a94649d380fd81801ce.png",
+      "National Populist": "./assets/flags/variants/a8fa7e0def3333a02806174a2d6e736f898565b4.png"
+    },
+    "SHX": {
+      "Authoritarian Democrat": "./assets/flags/variants/4818457af686a7a6d707070e206f7c2f62c39f81.png",
+      "Radical Socialist": "./assets/flags/variants/4818457af686a7a6d707070e206f7c2f62c39f81.png"
+    },
+    "SIA": {
+      "National Populist": "./assets/flags/variants/0aae569e82da33b658967dc7865ef8b8c9752260.png",
+      "Radical Socialist": "./assets/flags/variants/56ea3815288f2f7b2feb3115d0ea52374594bc54.png"
+    },
+    "SOM": {
+      "National Populist": "./assets/flags/variants/253092466484f1ea6a97661eca2e6135cc9a8788.png"
+    },
+    "SAF": {
+      "National Populist": "./assets/flags/variants/18316d3ef5fa6b48d485ca51b069e82190fafb96.png",
+      "Radical Socialist": "./assets/flags/variants/04bbf6d8273f9cc85b98e95e4cbbef2dc327f7c9.png",
+      "Syndicalist": "./assets/flags/variants/22401dc0a9171b97c82e8b97d87900a3f23c8bd1.png",
+      "Totalist": "./assets/flags/variants/b8394d976cfddafec043d741386ce1123e04dfe4.png"
+    },
+    "SPA": {
+      "Authoritarian Democrat": "./assets/flags/variants/1c7f010d614892922f25194f3ba073d7ffd84873.png",
+      "Paternal Autocrat": "./assets/flags/variants/1c7f010d614892922f25194f3ba073d7ffd84873.png",
+      "Social Conservative": "./assets/flags/variants/1c7f010d614892922f25194f3ba073d7ffd84873.png"
+    },
+    "TIB": {
+      "Totalist": "./assets/flags/variants/01ebff19d210d19b8360914a34e7f506756ed354.png"
+    },
+    "UKR": {
+      "Syndicalist": "./assets/flags/variants/21649ef6b129d02d3254d7380399fae3b2f1d174.png"
+    },
+    "BAT": {
+      "Syndicalist": "./assets/flags/variants/79c2f9e9cb83ce4263a4d4cbdd82f37931fdc46f.png",
+      "Totalist": "./assets/flags/variants/79c2f9e9cb83ce4263a4d4cbdd82f37931fdc46f.png"
+    },
+    "WIF": {
+      "Radical Socialist": "./assets/flags/variants/1eb32836746ae42b97b5796eaac62f6292e0bee3.png",
+      "Syndicalist": "./assets/flags/variants/1eb32836746ae42b97b5796eaac62f6292e0bee3.png"
+    },
+    "BLR": {
+      "Authoritarian Democrat": "./assets/flags/variants/3d4c7bb049635325c1f532e150ffeb7e4bb84c62.png",
+      "National Populist": "./assets/flags/variants/e07322bd314f027bbc9e652a80a11bb419f52e23.png",
+      "Paternal Autocrat": "./assets/flags/variants/3d4c7bb049635325c1f532e150ffeb7e4bb84c62.png",
+      "Radical Socialist": "./assets/flags/variants/c94e60acf82f17d831c40fbb9ee93491c3306244.png"
+    },
+    "HAW": {
+      "Radical Socialist": "./assets/flags/variants/099f1a0833bb44d2d1ba075ef2f18d488bbb3cf8.png",
+      "Syndicalist": "./assets/flags/variants/099f1a0833bb44d2d1ba075ef2f18d488bbb3cf8.png",
+      "Totalist": "./assets/flags/variants/099f1a0833bb44d2d1ba075ef2f18d488bbb3cf8.png"
+    },
+    "PUE": {
+      "National Populist": "./assets/flags/variants/a2eae269e401d6d6d3dede1013fcbfefa87825df.png"
+    },
+    "CEN": {
+      "Radical Socialist": "./assets/flags/variants/76b917bf82ecf4566e91bdf5565e5d16970df18b.png",
+      "Syndicalist": "./assets/flags/variants/4e645ffde9101d5e9a7d565f7325fc6f06cb0a22.png",
+      "Totalist": "./assets/flags/variants/2f4a10fa4201c0ecd51f662cad22c716b06d0a4a.png"
+    },
+    "WAL": {
+      "National Populist": "./assets/flags/variants/63fd85b53e7555f123967d8ac79364ec1937a239.png"
+    },
+    "LAT": {
+      "Radical Socialist": "./assets/flags/variants/c46a58b0643531a4633ec05352a8b1b98b2454ef.png",
+      "Totalist": "./assets/flags/variants/c46a58b0643531a4633ec05352a8b1b98b2454ef.png"
+    },
+    "GAB": {
+      "Radical Socialist": "./assets/flags/variants/c1fef8438a222de11c3e483da1570e757e5d6d2a.png",
+      "Syndicalist": "./assets/flags/variants/d50e1616ae38421d0cff6b280f62586bb49ef4ae.png",
+      "Totalist": "./assets/flags/variants/4883672bb2bdfaceb3a4811fe7d6ea75cb9f7d5d.png"
+    },
+    "ARM": {
+      "Radical Socialist": "./assets/flags/variants/46d188c744132575fa0841acc0f3d76d2bd1ccbc.png",
+      "Totalist": "./assets/flags/variants/46d188c744132575fa0841acc0f3d76d2bd1ccbc.png"
+    },
+    "SYR": {
+      "National Populist": "./assets/flags/variants/ca1fb8fd62e5a7c1cb21b46cbbc90dffc9539cb4.png"
+    },
+    "LEB": {
+      "National Populist": "./assets/flags/variants/3d8f7a26ff96e2a8bd3c4254f92982714f34dbb5.png"
+    },
+    "ANQ": {
+      "Authoritarian Democrat": "./assets/flags/variants/ee1fc87566c2e819d97930431816a09d2f756d61.png"
+    },
+    "INC": {
+      "Radical Socialist": "./assets/flags/variants/ac13ccffe389a5ea1c3d2713706e88ea273e7898.png",
+      "Syndicalist": "./assets/flags/variants/ac13ccffe389a5ea1c3d2713706e88ea273e7898.png",
+      "Totalist": "./assets/flags/variants/ac13ccffe389a5ea1c3d2713706e88ea273e7898.png"
+    },
+    "INS": {
+      "Paternal Autocrat": "./assets/flags/variants/a609ca8064c6bcb1151ec9e1fdd2eca5673ca186.png"
+    }
+  },
+  "paths": {
+    "BRA_COUNTRY_EVENT_BRAZIL_EVENTS_750_BRAZIL_EVENTS_750_A_5": {
+      "flag": "./assets/flags/variants/a57791f63e4708c3ad2d33f14be5fa70dce6438a.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/BRA%20events%20%28Brazil%29.txt",
+      "cosmeticTag": "BRA_empire"
+    },
+    "GER_COUNTRY_EVENT_GERMANY_EASTER_EGG_EVENTS_4_GERMANY_EASTER_EGG_EVENTS_4_A_5": {
+      "flag": "./assets/flags/variants/e89fdf45baa857d5cfab108a46e762486036a920.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/GER%20events%20%28Germany%20Domestic%29.txt",
+      "cosmeticTag": "GER_rep"
+    },
+    "RUS_FOCUS_RUS_DECLARE_RUSSIAN_STATE_RUS_DECLARE_RUSSIAN_STATE_0": {
+      "flag": "./assets/flags/variants/49353d3abdab3291745d38432618b91ed49312ef.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/common/national_focus/RUS%20focus%20%28Russia%29.txt",
+      "cosmeticTag": "RUS_state"
+    },
+    "RUS_COUNTRY_EVENT_RUSSIA_SOCIALIST_EVENTS_399_RUSSIA_SOCIALIST_EVENTS_399_A_6": {
+      "flag": "./assets/flags/variants/750694dc5ccae24b3809b480a5a60860f6faa467.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/RUS%20events%20%28Russia%29.txt",
+      "cosmeticTag": "RUS_confederation"
+    },
+    "BUL_COUNTRY_EVENT_BULGARIA_EVENTS_39_BULGARIA_EVENTS_39_A_6": {
+      "flag": "./assets/flags/variants/d6d8c904c19164a37fe2b6becd07df3365af8a2f.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/BUL%20events%20%28Bulgaria%29.txt",
+      "cosmeticTag": "BUL_rep"
+    },
+    "BUL_COUNTRY_EVENT_BULGARIA_EVENTS_61_BULGARIA_EVENTS_61_A_6": {
+      "flag": "./assets/flags/variants/d6d8c904c19164a37fe2b6becd07df3365af8a2f.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/BUL%20events%20%28Bulgaria%29.txt",
+      "cosmeticTag": "BUL_rep"
+    },
+    "IRE_COUNTRY_EVENT_IRELAND_EVENTS_3210_IRELAND_EVENTS_3210_A_6": {
+      "flag": "./assets/flags/variants/2b295f7c24de7b433085db9c8f4b0a914c155b31.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/IRE%20events%20%28Ireland%29.txt",
+      "cosmeticTag": "IRE_monarchist"
+    },
+    "QIE_COUNTRY_EVENT_QING_FOCUS_EVENTS_9_QING_FOCUS_EVENTS_9_A_6": {
+      "flag": "./assets/flags/variants/35a7cf80a3f8a2e5aeb249131ef4173061a07538.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/QIE%20events%20%28Qing%29.txt",
+      "cosmeticTag": "QIE_government"
+    },
+    "SHX_COUNTRY_EVENT_SHANXI_ENDGAME_EVENTS_25_SHANXI_ENDGAME_EVENTS_25_A_6": {
+      "flag": "./assets/flags/variants/ca05c1e715f154968e3bbb870f204dcc1f1e6fa6.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/SHX%20events%20%28Shanxi%29.txt",
+      "cosmeticTag": "LKT_united_china"
+    },
+    "SAF_COUNTRY_EVENT_SOUTH_AFRICA_EVENTS_51_SOUTH_AFRICA_EVENTS_51_A_6": {
+      "flag": "./assets/flags/variants/098828ac3d86cff25aaf4d01a64a27632e1f47d2.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/SAF%20events%20%28South%20Africa%29.txt",
+      "cosmeticTag": "SAF_republic"
+    },
+    "SAF_COUNTRY_EVENT_SOUTH_AFRICA_EVENTS_86_SOUTH_AFRICA_EVENTS_86_A_6": {
+      "flag": "./assets/flags/variants/098828ac3d86cff25aaf4d01a64a27632e1f47d2.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/SAF%20events%20%28South%20Africa%29.txt",
+      "cosmeticTag": "SAF_republic"
+    },
+    "BLR_COUNTRY_EVENT_BELARUS_POLITICAL_EVENTS_29_BELARUS_POLITICAL_EVENTS_29_A_6": {
+      "flag": "./assets/flags/variants/271432259f3835899fdf9ebd969bc94557e5495c.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/events/BLR%20events%20%28White%20Ruthenia%29.txt",
+      "cosmeticTag": "BLR_gengov"
+    },
+    "FER_FOCUS_FER_SAVIOUR_OF_REPUBLIC_FER_SAVIOUR_OF_REPUBLIC_0": {
+      "flag": "./assets/flags/variants/37e379c1ec82b3f917843e3d2d58e51aca030bac.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/common/national_focus/FER%20focus%20%28Far%20Eastern%20Army%29.txt",
+      "cosmeticTag": "RUS"
+    },
+    "INS_FOCUS_INS_NEGARA_BURUH_TANI_DAN_PEKERJA_INS_NEGARA_BURUH_TANI_DAN_PEKERJA_0": {
+      "flag": "./assets/flags/variants/074be5495e1dedd1173fc7fd322e68f82e128bab.png",
+      "effectSource": "https://github.com/Kaiserreich/Kaiserreich-HOI4/blob/00f64443a8a3ec4ae0cc78179efade3cb41e1946/common/national_focus/INS%20focus%20%28Indonesia%29.txt",
+      "cosmeticTag": "NUSCOM"
+    }
+  },
+  "assets": {
+    "./assets/flags/variants/0f6195c1fc561ea008dae0c3b3e55f285f66d2c3.png": {
+      "source": "gfx/flags/GXC_social_conservative.tga",
+      "sha": "0f6195c1fc561ea008dae0c3b3e55f285f66d2c3"
+    },
+    "./assets/flags/variants/a6d7516cbc5eb1ac7ee6e7f13650dbd4cdaef0fe.png": {
+      "source": "gfx/flags/MEX_national_populist.tga",
+      "sha": "a6d7516cbc5eb1ac7ee6e7f13650dbd4cdaef0fe"
+    },
+    "./assets/flags/variants/efbe2f63e0c9c675dc9f92f3fee75bd2683b1f22.png": {
+      "source": "gfx/flags/BRA_national_populist.tga",
+      "sha": "efbe2f63e0c9c675dc9f92f3fee75bd2683b1f22"
+    },
+    "./assets/flags/variants/e9bedd98ad4a3845e3dbe0413c4f38ab5a708046.png": {
+      "source": "gfx/flags/BRA_totalist.tga",
+      "sha": "e9bedd98ad4a3845e3dbe0413c4f38ab5a708046"
+    },
+    "./assets/flags/variants/7f1dc079f9984194eab02b715b7160efcc1865ce.png": {
+      "source": "gfx/flags/BRA_syndicalist.tga",
+      "sha": "7f1dc079f9984194eab02b715b7160efcc1865ce"
+    },
+    "./assets/flags/variants/a57791f63e4708c3ad2d33f14be5fa70dce6438a.png": {
+      "source": "gfx/flags/BRA_empire.tga",
+      "sha": "a57791f63e4708c3ad2d33f14be5fa70dce6438a"
+    },
+    "./assets/flags/variants/e89fdf45baa857d5cfab108a46e762486036a920.png": {
+      "source": "gfx/flags/GER_rep.tga",
+      "sha": "e89fdf45baa857d5cfab108a46e762486036a920"
+    },
+    "./assets/flags/variants/49353d3abdab3291745d38432618b91ed49312ef.png": {
+      "source": "gfx/flags/RUS_state.tga",
+      "sha": "49353d3abdab3291745d38432618b91ed49312ef"
+    },
+    "./assets/flags/variants/750694dc5ccae24b3809b480a5a60860f6faa467.png": {
+      "source": "gfx/flags/RUS_confederation.tga",
+      "sha": "750694dc5ccae24b3809b480a5a60860f6faa467"
+    },
+    "./assets/flags/variants/b4efa59d7264fd876e3ce47fb64746e75d0f9f98.png": {
+      "source": "gfx/flags/AST_totalist.tga",
+      "sha": "b4efa59d7264fd876e3ce47fb64746e75d0f9f98"
+    },
+    "./assets/flags/variants/671554b849905dfc9505849336e7371456fd1025.png": {
+      "source": "gfx/flags/NOR_paternal_autocrat.tga",
+      "sha": "671554b849905dfc9505849336e7371456fd1025"
+    },
+    "./assets/flags/variants/964635b9a6ef540dcd0da8173047739cf61b1dc1.png": {
+      "source": "gfx/flags/NOR_radical_socialist.tga",
+      "sha": "964635b9a6ef540dcd0da8173047739cf61b1dc1"
+    },
+    "./assets/flags/variants/620d20fa3185a9e67cce682dd51b75f48655b356.png": {
+      "source": "gfx/flags/NOR_totalist.tga",
+      "sha": "620d20fa3185a9e67cce682dd51b75f48655b356"
+    },
+    "./assets/flags/variants/d13dabe06cc0a3bd7f248498fe577727e9e07b97.png": {
+      "source": "gfx/flags/SWE_national_populist.tga",
+      "sha": "d13dabe06cc0a3bd7f248498fe577727e9e07b97"
+    },
+    "./assets/flags/variants/2b774287d61a3f405d28b0244580d09ddd3fe681.png": {
+      "source": "gfx/flags/SWE_totalist.tga",
+      "sha": "2b774287d61a3f405d28b0244580d09ddd3fe681"
+    },
+    "./assets/flags/variants/307dd6de89aa94b3e5469b1b3d998ee125a5e09d.png": {
+      "source": "gfx/flags/FIN_national_populist.tga",
+      "sha": "307dd6de89aa94b3e5469b1b3d998ee125a5e09d"
+    },
+    "./assets/flags/variants/838bc6027c82e66b107aafb0fa0960673d97e53e.png": {
+      "source": "gfx/flags/FIN_syndicalist.tga",
+      "sha": "838bc6027c82e66b107aafb0fa0960673d97e53e"
+    },
+    "./assets/flags/variants/617c9a5dc86a7df7f534bb5673d6d47b6293d1dd.png": {
+      "source": "gfx/flags/FIN_totalist.tga",
+      "sha": "617c9a5dc86a7df7f534bb5673d6d47b6293d1dd"
+    },
+    "./assets/flags/variants/aa209ff259aba7a823a9f18e422f9ce5a14c193c.png": {
+      "source": "gfx/flags/SER_syndicalist.tga",
+      "sha": "aa209ff259aba7a823a9f18e422f9ce5a14c193c"
+    },
+    "./assets/flags/variants/31a4b73dd4c1c9e945fb35f0afaf2e486d4cf756.png": {
+      "source": "gfx/flags/BUL_totalist.tga",
+      "sha": "31a4b73dd4c1c9e945fb35f0afaf2e486d4cf756"
+    },
+    "./assets/flags/variants/d6d8c904c19164a37fe2b6becd07df3365af8a2f.png": {
+      "source": "gfx/flags/BUL_rep.tga",
+      "sha": "d6d8c904c19164a37fe2b6becd07df3365af8a2f"
+    },
+    "./assets/flags/variants/7193ce0fed571c495ca25a0c53643444d75cd454.png": {
+      "source": "gfx/flags/PER_radical_socialist.tga",
+      "sha": "7193ce0fed571c495ca25a0c53643444d75cd454"
+    },
+    "./assets/flags/variants/2b295f7c24de7b433085db9c8f4b0a914c155b31.png": {
+      "source": "gfx/flags/IRE_monarchist.tga",
+      "sha": "2b295f7c24de7b433085db9c8f4b0a914c155b31"
+    },
+    "./assets/flags/variants/e20fbf6044737de6cc62e87514fe351f81db2e43.png": {
+      "source": "gfx/flags/SWI_totalist.tga",
+      "sha": "e20fbf6044737de6cc62e87514fe351f81db2e43"
+    },
+    "./assets/flags/variants/bc4a77ad3d652be697000b815320891ec24161eb.png": {
+      "source": "gfx/flags/ALB_radical_socialist.tga",
+      "sha": "bc4a77ad3d652be697000b815320891ec24161eb"
+    },
+    "./assets/flags/variants/ebae1cf13c0238fe7a9db6c37eb369cce94f5c70.png": {
+      "source": "gfx/flags/BOL_national_populist.tga",
+      "sha": "ebae1cf13c0238fe7a9db6c37eb369cce94f5c70"
+    },
+    "./assets/flags/variants/58d590be1a394353204f20dd8a52955f2ea977bc.png": {
+      "source": "gfx/flags/BRM_radical_socialist.tga",
+      "sha": "58d590be1a394353204f20dd8a52955f2ea977bc"
+    },
+    "./assets/flags/variants/85c468bbd3089a0ab1ee9049cabbc5e43a729d89.png": {
+      "source": "gfx/flags/COL_syndicalist.tga",
+      "sha": "85c468bbd3089a0ab1ee9049cabbc5e43a729d89"
+    },
+    "./assets/flags/variants/5eae2beb5b90ed2a1abd0d739175ed6c29e5e5d0.png": {
+      "source": "gfx/flags/DEN_totalist.tga",
+      "sha": "5eae2beb5b90ed2a1abd0d739175ed6c29e5e5d0"
+    },
+    "./assets/flags/variants/31417b6165cb7da1d1fe6caaa8880504bb34a6a4.png": {
+      "source": "gfx/flags/ELS_syndicalist.tga",
+      "sha": "31417b6165cb7da1d1fe6caaa8880504bb34a6a4"
+    },
+    "./assets/flags/variants/9eabd73d3568eb508b0d66cf3e7e6825be997394.png": {
+      "source": "gfx/flags/BEL_totalist.tga",
+      "sha": "9eabd73d3568eb508b0d66cf3e7e6825be997394"
+    },
+    "./assets/flags/variants/930f7dfb9bc94d77dacb7adeec6236fcb65db5e6.png": {
+      "source": "gfx/flags/GRE_radical_socialist.tga",
+      "sha": "930f7dfb9bc94d77dacb7adeec6236fcb65db5e6"
+    },
+    "./assets/flags/variants/b77c85c9aa1f75555e82de7c515024708ff5c6ac.png": {
+      "source": "gfx/flags/GRE_totalist.tga",
+      "sha": "b77c85c9aa1f75555e82de7c515024708ff5c6ac"
+    },
+    "./assets/flags/variants/a7de9545a936452b7a938648708970f2dbbdf723.png": {
+      "source": "gfx/flags/GUA_radical_socialist.tga",
+      "sha": "a7de9545a936452b7a938648708970f2dbbdf723"
+    },
+    "./assets/flags/variants/e16e76ab60207153909bbcd297433c8340c51125.png": {
+      "source": "gfx/flags/HON_totalist.tga",
+      "sha": "e16e76ab60207153909bbcd297433c8340c51125"
+    },
+    "./assets/flags/variants/833df6507a481d375538e4f57e1bbe72fe152c63.png": {
+      "source": "gfx/flags/ICE_syndicalist.tga",
+      "sha": "833df6507a481d375538e4f57e1bbe72fe152c63"
+    },
+    "./assets/flags/variants/8813838cb0b052384997be1f9ddec8c8d9449835.png": {
+      "source": "gfx/flags/ITA_national_populist.tga",
+      "sha": "8813838cb0b052384997be1f9ddec8c8d9449835"
+    },
+    "./assets/flags/variants/195d86515e760736bac0d5f191e73e9c249eb33b.png": {
+      "source": "gfx/flags/CHI_insurgency_syndicalist.tga",
+      "sha": "195d86515e760736bac0d5f191e73e9c249eb33b"
+    },
+    "./assets/flags/variants/0921afc5a5a10064f451d97fa0532e8058db8d6f.png": {
+      "source": "gfx/flags/LIB_totalist.tga",
+      "sha": "0921afc5a5a10064f451d97fa0532e8058db8d6f"
+    },
+    "./assets/flags/variants/ba34f6876214d634d85624a24d5294c71c483adc.png": {
+      "source": "gfx/flags/LIT_national_populist.tga",
+      "sha": "ba34f6876214d634d85624a24d5294c71c483adc"
+    },
+    "./assets/flags/variants/1a64257d25b073e2ef29bfa7849a4d7a5c8b8793.png": {
+      "source": "gfx/flags/LIT_radical_socialist.tga",
+      "sha": "1a64257d25b073e2ef29bfa7849a4d7a5c8b8793"
+    },
+    "./assets/flags/variants/d5d0f44c808bff65238095aceeab019cb660cac1.png": {
+      "source": "gfx/flags/MON_national_populist.tga",
+      "sha": "d5d0f44c808bff65238095aceeab019cb660cac1"
+    },
+    "./assets/flags/variants/2b901a430966e3f0c69420d89dab634acfce1ab2.png": {
+      "source": "gfx/flags/NEP_radical_socialist.tga",
+      "sha": "2b901a430966e3f0c69420d89dab634acfce1ab2"
+    },
+    "./assets/flags/variants/14e61c9a75a13acfa1f146e97ab751c026ec7c2c.png": {
+      "source": "gfx/flags/HOL_paternal_autocrat.tga",
+      "sha": "14e61c9a75a13acfa1f146e97ab751c026ec7c2c"
+    },
+    "./assets/flags/variants/6929b2222c3a8133cf2447f303d794a30bea7117.png": {
+      "source": "gfx/flags/HOL_totalist.tga",
+      "sha": "6929b2222c3a8133cf2447f303d794a30bea7117"
+    },
+    "./assets/flags/variants/a9723eea5124aa7228a17a1e553c0f496e3463aa.png": {
+      "source": "gfx/flags/NIC_syndicalist.tga",
+      "sha": "a9723eea5124aa7228a17a1e553c0f496e3463aa"
+    },
+    "./assets/flags/variants/5f19b926476fb3865720267cf85444ff4837e972.png": {
+      "source": "gfx/flags/FOP_social_liberal.tga",
+      "sha": "5f19b926476fb3865720267cf85444ff4837e972"
+    },
+    "./assets/flags/variants/6749bd882858949cbf6eac2f35e9b6e6c616f996.png": {
+      "source": "gfx/flags/FOP_totalist.tga",
+      "sha": "6749bd882858949cbf6eac2f35e9b6e6c616f996"
+    },
+    "./assets/flags/variants/43b06098b4bd54758cb3d1f7630e82dac2cef1bc.png": {
+      "source": "gfx/flags/PRU_national_populist.tga",
+      "sha": "43b06098b4bd54758cb3d1f7630e82dac2cef1bc"
+    },
+    "./assets/flags/variants/f526e0f731c0b5fad93789713065ebc7cfb976d8.png": {
+      "source": "gfx/flags/PRU_radical_socialist.tga",
+      "sha": "f526e0f731c0b5fad93789713065ebc7cfb976d8"
+    },
+    "./assets/flags/variants/8748cf150c9585f5d074e61f1dd2e62d13fa2555.png": {
+      "source": "gfx/flags/PRU_totalist.tga",
+      "sha": "8748cf150c9585f5d074e61f1dd2e62d13fa2555"
+    },
+    "./assets/flags/variants/e9003760c74cd2d0b8944aa7d651143fba8fd0ad.png": {
+      "source": "gfx/flags/PHI_syndicalist.tga",
+      "sha": "e9003760c74cd2d0b8944aa7d651143fba8fd0ad"
+    },
+    "./assets/flags/variants/602f7e94e921a2550d6e7be222253bf3153ad2a0.png": {
+      "source": "gfx/flags/POL_radical_socialist.tga",
+      "sha": "602f7e94e921a2550d6e7be222253bf3153ad2a0"
+    },
+    "./assets/flags/variants/ebc0a2e87574542c80419f39809cfd8fbd621bab.png": {
+      "source": "gfx/flags/POL_syndicalist.tga",
+      "sha": "ebc0a2e87574542c80419f39809cfd8fbd621bab"
+    },
+    "./assets/flags/variants/7d8007f00531171ec4848ba0f618dfaf5b65f52a.png": {
+      "source": "gfx/flags/POL_totalist.tga",
+      "sha": "7d8007f00531171ec4848ba0f618dfaf5b65f52a"
+    },
+    "./assets/flags/variants/35a7cf80a3f8a2e5aeb249131ef4173061a07538.png": {
+      "source": "gfx/flags/QIE_government.tga",
+      "sha": "35a7cf80a3f8a2e5aeb249131ef4173061a07538"
+    },
+    "./assets/flags/variants/4d97f21f9874ba763e362a94649d380fd81801ce.png": {
+      "source": "gfx/flags/SHD_authoritarian_democrat.tga",
+      "sha": "4d97f21f9874ba763e362a94649d380fd81801ce"
+    },
+    "./assets/flags/variants/a8fa7e0def3333a02806174a2d6e736f898565b4.png": {
+      "source": "gfx/flags/SHD_national_populist.tga",
+      "sha": "a8fa7e0def3333a02806174a2d6e736f898565b4"
+    },
+    "./assets/flags/variants/4818457af686a7a6d707070e206f7c2f62c39f81.png": {
+      "source": "gfx/flags/SHX_radical_socialist.tga",
+      "sha": "4818457af686a7a6d707070e206f7c2f62c39f81"
+    },
+    "./assets/flags/variants/ca05c1e715f154968e3bbb870f204dcc1f1e6fa6.png": {
+      "source": "gfx/flags/LKT_united_china.tga",
+      "sha": "ca05c1e715f154968e3bbb870f204dcc1f1e6fa6"
+    },
+    "./assets/flags/variants/0aae569e82da33b658967dc7865ef8b8c9752260.png": {
+      "source": "gfx/flags/SIA_national_populist.tga",
+      "sha": "0aae569e82da33b658967dc7865ef8b8c9752260"
+    },
+    "./assets/flags/variants/56ea3815288f2f7b2feb3115d0ea52374594bc54.png": {
+      "source": "gfx/flags/SIA_radical_socialist.tga",
+      "sha": "56ea3815288f2f7b2feb3115d0ea52374594bc54"
+    },
+    "./assets/flags/variants/253092466484f1ea6a97661eca2e6135cc9a8788.png": {
+      "source": "gfx/flags/SOM_national_populist.tga",
+      "sha": "253092466484f1ea6a97661eca2e6135cc9a8788"
+    },
+    "./assets/flags/variants/18316d3ef5fa6b48d485ca51b069e82190fafb96.png": {
+      "source": "gfx/flags/SAF_union_national_populist.tga",
+      "sha": "18316d3ef5fa6b48d485ca51b069e82190fafb96"
+    },
+    "./assets/flags/variants/04bbf6d8273f9cc85b98e95e4cbbef2dc327f7c9.png": {
+      "source": "gfx/flags/SAF_radical_socialist.tga",
+      "sha": "04bbf6d8273f9cc85b98e95e4cbbef2dc327f7c9"
+    },
+    "./assets/flags/variants/22401dc0a9171b97c82e8b97d87900a3f23c8bd1.png": {
+      "source": "gfx/flags/SAF_syndicalist.tga",
+      "sha": "22401dc0a9171b97c82e8b97d87900a3f23c8bd1"
+    },
+    "./assets/flags/variants/b8394d976cfddafec043d741386ce1123e04dfe4.png": {
+      "source": "gfx/flags/SAF_totalist.tga",
+      "sha": "b8394d976cfddafec043d741386ce1123e04dfe4"
+    },
+    "./assets/flags/variants/098828ac3d86cff25aaf4d01a64a27632e1f47d2.png": {
+      "source": "gfx/flags/SAF_republic.tga",
+      "sha": "098828ac3d86cff25aaf4d01a64a27632e1f47d2"
+    },
+    "./assets/flags/variants/1c7f010d614892922f25194f3ba073d7ffd84873.png": {
+      "source": "gfx/flags/SPA_social_conservative.tga",
+      "sha": "1c7f010d614892922f25194f3ba073d7ffd84873"
+    },
+    "./assets/flags/variants/01ebff19d210d19b8360914a34e7f506756ed354.png": {
+      "source": "gfx/flags/TIB_totalist.tga",
+      "sha": "01ebff19d210d19b8360914a34e7f506756ed354"
+    },
+    "./assets/flags/variants/21649ef6b129d02d3254d7380399fae3b2f1d174.png": {
+      "source": "gfx/flags/UKR_syndicalist.tga",
+      "sha": "21649ef6b129d02d3254d7380399fae3b2f1d174"
+    },
+    "./assets/flags/variants/79c2f9e9cb83ce4263a4d4cbdd82f37931fdc46f.png": {
+      "source": "gfx/flags/BAT_totalist.tga",
+      "sha": "79c2f9e9cb83ce4263a4d4cbdd82f37931fdc46f"
+    },
+    "./assets/flags/variants/1eb32836746ae42b97b5796eaac62f6292e0bee3.png": {
+      "source": "gfx/flags/WIF_syndicalist.tga",
+      "sha": "1eb32836746ae42b97b5796eaac62f6292e0bee3"
+    },
+    "./assets/flags/variants/3d4c7bb049635325c1f532e150ffeb7e4bb84c62.png": {
+      "source": "gfx/flags/BLR_GER_paternal_autocrat.tga",
+      "sha": "3d4c7bb049635325c1f532e150ffeb7e4bb84c62"
+    },
+    "./assets/flags/variants/e07322bd314f027bbc9e652a80a11bb419f52e23.png": {
+      "source": "gfx/flags/BLR_GER_national_populist.tga",
+      "sha": "e07322bd314f027bbc9e652a80a11bb419f52e23"
+    },
+    "./assets/flags/variants/c94e60acf82f17d831c40fbb9ee93491c3306244.png": {
+      "source": "gfx/flags/BLR_radical_socialist.tga",
+      "sha": "c94e60acf82f17d831c40fbb9ee93491c3306244"
+    },
+    "./assets/flags/variants/271432259f3835899fdf9ebd969bc94557e5495c.png": {
+      "source": "gfx/flags/BLR_gengov.tga",
+      "sha": "271432259f3835899fdf9ebd969bc94557e5495c"
+    },
+    "./assets/flags/variants/099f1a0833bb44d2d1ba075ef2f18d488bbb3cf8.png": {
+      "source": "gfx/flags/HAW_totalist.tga",
+      "sha": "099f1a0833bb44d2d1ba075ef2f18d488bbb3cf8"
+    },
+    "./assets/flags/variants/a2eae269e401d6d6d3dede1013fcbfefa87825df.png": {
+      "source": "gfx/flags/PUE_national_populist.tga",
+      "sha": "a2eae269e401d6d6d3dede1013fcbfefa87825df"
+    },
+    "./assets/flags/variants/76b917bf82ecf4566e91bdf5565e5d16970df18b.png": {
+      "source": "gfx/flags/CEN_radical_socialist.tga",
+      "sha": "76b917bf82ecf4566e91bdf5565e5d16970df18b"
+    },
+    "./assets/flags/variants/4e645ffde9101d5e9a7d565f7325fc6f06cb0a22.png": {
+      "source": "gfx/flags/CEN_syndicalist.tga",
+      "sha": "4e645ffde9101d5e9a7d565f7325fc6f06cb0a22"
+    },
+    "./assets/flags/variants/2f4a10fa4201c0ecd51f662cad22c716b06d0a4a.png": {
+      "source": "gfx/flags/CEN_totalist.tga",
+      "sha": "2f4a10fa4201c0ecd51f662cad22c716b06d0a4a"
+    },
+    "./assets/flags/variants/63fd85b53e7555f123967d8ac79364ec1937a239.png": {
+      "source": "gfx/flags/WAL_national_populist.tga",
+      "sha": "63fd85b53e7555f123967d8ac79364ec1937a239"
+    },
+    "./assets/flags/variants/37e379c1ec82b3f917843e3d2d58e51aca030bac.png": {
+      "source": "gfx/flags/RUS.tga",
+      "sha": "37e379c1ec82b3f917843e3d2d58e51aca030bac"
+    },
+    "./assets/flags/variants/c46a58b0643531a4633ec05352a8b1b98b2454ef.png": {
+      "source": "gfx/flags/LAT_totalist.tga",
+      "sha": "c46a58b0643531a4633ec05352a8b1b98b2454ef"
+    },
+    "./assets/flags/variants/c1fef8438a222de11c3e483da1570e757e5d6d2a.png": {
+      "source": "gfx/flags/GAB_radical_socialist.tga",
+      "sha": "c1fef8438a222de11c3e483da1570e757e5d6d2a"
+    },
+    "./assets/flags/variants/d50e1616ae38421d0cff6b280f62586bb49ef4ae.png": {
+      "source": "gfx/flags/GAB_syndicalist.tga",
+      "sha": "d50e1616ae38421d0cff6b280f62586bb49ef4ae"
+    },
+    "./assets/flags/variants/4883672bb2bdfaceb3a4811fe7d6ea75cb9f7d5d.png": {
+      "source": "gfx/flags/GAB_totalist.tga",
+      "sha": "4883672bb2bdfaceb3a4811fe7d6ea75cb9f7d5d"
+    },
+    "./assets/flags/variants/46d188c744132575fa0841acc0f3d76d2bd1ccbc.png": {
+      "source": "gfx/flags/ARM_totalist.tga",
+      "sha": "46d188c744132575fa0841acc0f3d76d2bd1ccbc"
+    },
+    "./assets/flags/variants/ca1fb8fd62e5a7c1cb21b46cbbc90dffc9539cb4.png": {
+      "source": "gfx/flags/SYR_national_populist.tga",
+      "sha": "ca1fb8fd62e5a7c1cb21b46cbbc90dffc9539cb4"
+    },
+    "./assets/flags/variants/3d8f7a26ff96e2a8bd3c4254f92982714f34dbb5.png": {
+      "source": "gfx/flags/LEB_national_populist.tga",
+      "sha": "3d8f7a26ff96e2a8bd3c4254f92982714f34dbb5"
+    },
+    "./assets/flags/variants/ee1fc87566c2e819d97930431816a09d2f756d61.png": {
+      "source": "gfx/flags/ANQ_authoritarian_democrat.tga",
+      "sha": "ee1fc87566c2e819d97930431816a09d2f756d61"
+    },
+    "./assets/flags/variants/ac13ccffe389a5ea1c3d2713706e88ea273e7898.png": {
+      "source": "gfx/flags/INC_totalist.tga",
+      "sha": "ac13ccffe389a5ea1c3d2713706e88ea273e7898"
+    },
+    "./assets/flags/variants/a609ca8064c6bcb1151ec9e1fdd2eca5673ca186.png": {
+      "source": "gfx/flags/INS_paternal_autocrat.tga",
+      "sha": "a609ca8064c6bcb1151ec9e1fdd2eca5673ca186"
+    },
+    "./assets/flags/variants/074be5495e1dedd1173fc7fd322e68f82e128bab.png": {
+      "source": "gfx/flags/NUSCOM_radical_socialist.tga",
+      "sha": "074be5495e1dedd1173fc7fd322e68f82e128bab"
+    }
+  }
+}

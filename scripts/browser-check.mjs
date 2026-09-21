@@ -16,7 +16,7 @@ const key = 'kaiserreich-run-picker.progress';
 const dataset = JSON.parse(await readFile(new URL('../data/paths.json', import.meta.url), 'utf8'));
 const optionCount = dataset.countries.reduce((n, c) => n + c.paths.length, 0);
 const countryCount = dataset.countries.length;
-const completion = `${Math.round(1000 / optionCount) / 10}%`;
+const completion = `${(100 / optionCount).toFixed(1)}%`;
 const errors = [];
 let context;
 let browser;
@@ -49,6 +49,7 @@ try {
   check(await page.locator('#country').inputValue() === 'GER', 'keyboard map selection chooses Germany');
   check(await page.locator('#campaign-map [data-map-tag="GER"]').getAttribute('aria-pressed') === 'true', 'map highlights selected nation');
   await page.locator('#spin-motion').selectOption('off');
+  await page.locator('#country-ideology').selectOption({index:1});
   await page.locator('#spin-path').click(); await waitForSpin(page);
   check(await page.locator('#campaign-briefing').isVisible(), 'path result reveals campaign goals');
   check((await page.locator('#campaign-objectives').innerText()).length > 30, 'political objective contains route details');
@@ -73,7 +74,9 @@ try {
   await page.locator('#country').selectOption('GER');
   await page.locator('#wheel-spin').click();
   await waitForSpin(page);
-  check((await page.locator('#selection-wheel').getAttribute('data-selected-id')).includes('_'), 'wheel hub continues from country into a path draw');
+  check((await page.locator('#country-ideology').inputValue()).length > 0, 'wheel selects an ideology before a path');
+  await page.locator('#wheel-spin').click(); await waitForSpin(page);
+  check((await page.locator('#selection-wheel').getAttribute('data-selected-id')).includes('_'), 'wheel hub continues from ideology into a path draw');
   await page.locator('#spin-country').click();
   await page.locator('#region').selectOption('East Asia');
   await page.waitForTimeout(2300);
@@ -82,6 +85,7 @@ try {
   await page.locator('#clear-filters').click();
   await page.locator('#country').selectOption('ARG');
   await page.locator('#route-kind').selectOption('game-rule');
+  await page.locator('#country-ideology').selectOption({index:1});
   await page.locator('#spin-path').click();
   await waitForSpin(page);
   check(await page.locator('#result-country').innerText() === 'Argentina', 'country to path maintains the selected country');
@@ -103,6 +107,7 @@ try {
   await go(page, 'picker');
   await page.locator('#exclude-completed').check();
   await page.locator('#country').selectOption('ARG');
+  await page.locator('#country-ideology').selectOption({index:1});
   await page.locator('#spin-path').click();
   await waitForSpin(page);
   check(await page.locator('#selection-wheel').getAttribute('data-selected-id') !== 'ARG_CARLES', 'completed path is excluded from the draw');
@@ -158,6 +163,7 @@ try {
   check(await page.locator('#progress').isVisible(), 'hash navigation survives refresh under the project subpath');
   await go(page, 'picker');
   await page.locator('#country').selectOption('ARG');
+  await page.locator('#country-ideology').selectOption({index:1});
   await page.locator('#spin-path').click();
   await waitForSpin(page);
   await page.screenshot({ path: join(output, 'desktop.png'), fullPage: true, animations: 'disabled' });

@@ -1021,3 +1021,18 @@ button.primary:hover, .result-actions button.primary:hover { background: #d1b77f
 .result-notes { white-space: pre-line; }
 #path-choice { width: 100%; min-width: 0; margin-bottom: .75rem; }
 #country-control { min-width: 0; }
+
+/* Country → ideology → path hierarchy. */
+#country-control label { margin-top: 14px; }
+#country-control label:first-child { margin-top: 0; }
+#country-control select { width: 100%; min-width: 0; }
+.mode-controls > div { min-width: 0; }
+.ideology-group { border-top: 1px solid var(--line); }
+.ideology-group > summary { display: flex; align-items: center; gap: 12px; padding: 16px 22px; cursor: pointer; color: var(--gold, #d8bf83); }
+.ideology-group > summary::before { content: '▸'; }
+.ideology-group[open] > summary::before { content: '▾'; }
+.ideology-group > summary img { width: 32px; height: 32px; object-fit: contain; }
+.ideology-group > summary span { flex: 1; }
+.ideology-group > summary small { color: var(--muted); white-space: nowrap; }
+.ideology-group > .path-row { margin-left: 20px; border-left: 2px solid var(--line); }
+@media (max-width: 600px) { .ideology-group > .path-row { margin-left: 8px; } .ideology-group > summary { padding: 14px; } }

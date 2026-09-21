@@ -59,6 +59,16 @@ export function countriesIn(records) {
   return [...new Map(records.map(path => [path.tag, { tag: path.tag, country: path.country }])).values()];
 }
 
+// One second-level group per ideology; path identities remain unchanged.
+export function groupByIdeology(records) {
+  const groups = new Map();
+  for (const path of records) {
+    if (!groups.has(path.ideology)) groups.set(path.ideology, { ideology: path.ideology, icon: path.icon, color: path.color, paths: [] });
+    groups.get(path.ideology).paths.push(path);
+  }
+  return [...groups.values()].sort((a, b) => a.ideology === 'Varies by branch' ? 1 : b.ideology === 'Varies by branch' ? -1 : a.ideology.localeCompare(b.ideology));
+}
+
 export function searchPaths(records, query) {
   const normalize = value => value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
   const terms = normalize(query).trim().split(/\s+/);
