@@ -39,3 +39,25 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Verify deployed app
+        env:
+          APP_URL: https://johnbulongdon.github.io/kaisereich-run-picker/
+        run: node scripts/browser-check.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deployed-browser-screenshots
+          path: work/qa/
+          if-no-files-found: ignore

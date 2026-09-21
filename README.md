@@ -6,15 +6,16 @@ A free, static country + political path randomizer and personal completion track
 
 ## Features
 
-- **Clickable campaign atlas:** coastlines, geographic flag anchors, regional views and accessible country buttons. Selecting a country prepares its path wheel; filter-ineligible markers are disabled. This is a geographic locator, not a Kaiserreich political-border map.
+- **Clickable campaign atlas:** coastlines, geographic flag anchors, regional views and accessible country buttons. Selecting a country prepares its ideology wheel; filter-ineligible markers are disabled. This is a geographic locator, not a Kaiserreich political-border map.
 - **Campaign briefings:** a sourced political objective for each route and a separate optional country-specific challenge. These are suggestions for your run, not game achievements or automatic completion checks.
 
-- **Country → Path:** choose or spin an eligible country, then spin one of its paths.
-- **Path → Country:** choose an ideology, then draw a matching country–path record.
-- **Fully random / Randomize both:** equal probability for each eligible country–path combination.
+- **Country → Ideology → Path:** choose or spin a country, then one of its ideology groups, then a specific path. Each layer narrows the next.
+- **Ideology → Country:** choose an ideology, then draw a matching country–path record.
+- **Fully random / Randomize run:** equal probability for each eligible country–path combination.
 - **Interactive selection wheel:** nation flags and ideology emblems on equal eligible slices, a fixed pointer, and a visible 3.4-second slowing spin. The center button also works with the keyboard. Choose **Instant result · no motion** to skip the spin. Changing filters cancels a pending spin.
-- Region, ideology and progress filters; independent exclusions for Played and Completed.
-- Searchable checklist and manual Unplayed / Played / Completed statuses.
+- Region, starting/later-country availability, route-type, ideology and progress filters; independent exclusions for Played and Completed.
+- Searchable checklist with collapsible ideology groups under each country and manual Unplayed / Played / Completed statuses.
+- Flags follow confirmed path overrides, available ideology variants, then the country reference flag. Missing or ambiguous variants retain the reference flag.
 - Dynamic completion counts and percentage.
 - Browser-local persistence, JSON export/import, and confirmed reset.
 - Dark charcoal/muted-gold interface, official ideology colors, keyboard controls and visible focus states. Decorative reveals respect reduced motion; the explicit wheel animation selector controls the spin independently.
@@ -24,14 +25,14 @@ There is no build step, runtime dependency, account, backend, analytics, applica
 ## Use the app
 
 1. Open **Pick a run** and select a mode.
-2. Set any filters. In Path → Country, choose a political ideology first.
-3. Draw a result and read its notes: some political routes occur after unification or later elections.
+2. Set any filters. In Ideology → Country, choose a political ideology first.
+3. In the default mode, select or spin **1 · Country**, **2 · Ideology**, then **3 · Path**. Randomize run draws a complete result directly. Read the notes: some options require unification or later elections.
 4. Click **Start run** to mark the path **Played**. This never marks it Completed.
 5. Use the result’s status selector or **Checklist** to change status manually.
 
-Country-only draws include nations with no source-backed routes. Ideology and progress filters require an actual matching source-backed route, so they exclude pending nations. Fully Random and Path → Country draw only source-backed routes. Empty path lists never create placeholder completion entries. Picker filters affect draws only. The checklist has independent search/status controls; the Progress view always counts the entire active database. With no eligible paths, the app explains the empty result and offers **Clear filters**. An ideology appears in the filter only when the dataset includes a path of that ideology.
+Country-only draws include nations with no source-backed routes. Ideology and progress filters require an actual matching source-backed route, so they exclude pending nations. Fully Random and Ideology → Country draw only source-backed routes. Empty path lists never create placeholder completion entries. Picker filters affect draws only. The checklist has independent search/status controls; the Progress view always counts the entire active database. With no eligible paths, the app explains the empty result and offers **Clear filters**. An ideology appears in the filter only when the dataset includes a path of that ideology.
 
-**Randomization:** Spin country selects countries uniformly, and Spin path selects paths within the chosen country uniformly. Fully random, Randomize both and Path → Country select from a flat list of eligible path records. Countries with more paths therefore occupy more slots in those modes, while every path has equal probability.
+**Randomization:** Spin country selects countries uniformly. Spin ideology selects eligible ideology groups within that country uniformly. Spin path selects paths within the chosen country and ideology uniformly. This staged draw has different odds from drawing directly from the full list. Fully random, Randomize run and Ideology → Country select from a flat list of eligible path records. Countries with more paths therefore occupy more slots in those modes, while every path has equal probability.
 
 ## Local development
 
@@ -57,10 +58,10 @@ One-time repository setup:
 
 1. Open **Settings → Pages**.
 2. Set **Build and deployment → Source** to **GitHub Actions**.
-3. After reviewing and merging the MVP PR, the push to `main` runs the deployment automatically. Alternatively, use **Actions → Deploy GitHub Pages → Run workflow**, selecting `codex/mvp`, to preview the unmerged implementation. If the `github-pages` environment restricts branches, allow the intended preview branch first.
+3. Pushes to `main` run deployment automatically. To retry after changing Pages settings, use **Actions → Deploy GitHub Pages → Re-run failed jobs** on the latest run, or run the workflow manually on `main`.
 4. Read the deployed URL from the workflow’s `github-pages` environment. The expected project URL is `https://johnbulongdon.github.io/kaisereich-run-picker/`.
 
-The implementation PR is intentionally **not automatically merged**. Until Pages is enabled and a deployment succeeds, the expected URL should not be treated as a live deployment.
+A successful build is not a successful deployment: check the **deploy** job and open the public URL before considering a change live. A deployment 404 can indicate that Pages has not been enabled.
 
 Branch-based publishing also works: choose **Deploy from a branch**, the desired branch and `/ (root)`. Do not enable both approaches. Branch publishing exposes all non-hidden repository files, while the supplied workflow publishes just the app assets.
 
@@ -91,6 +92,8 @@ js/tracker.js                 Status transitions and progress summaries
 js/wheel.js                   SVG wheel rendering and exact result landing
 js/atlas.js                   Geographic map and country selection
 js/storage.js                 Versioned persistence and save validation
+js/flags.js                   Path/ideology flag resolution with fallback
+data/flag-variants.json       Exact variant mappings and upstream provenance
 data/paths.json               Curated game data and source metadata
 scripts/serve.mjs              Optional static preview server
 scripts/browser-check.mjs      Optional browser acceptance suite
@@ -118,9 +121,9 @@ npm start
 node scripts/browser-check.mjs
 ```
 
-Set `BROWSER_CHANNEL=msedge` or `chrome` to use an installed browser instead of downloading Chromium. `APP_URL` can point at a deployed URL, and `QA_OUTPUT` controls the screenshot directory. `PLAYWRIGHT_MODULE` can point to an existing Playwright installation. The suite uses a new temporary browser profile, leaves it available for inspection, and never touches your normal browser progress.
+Set `BROWSER_CHANNEL=msedge` or `chrome` to use an installed browser instead of downloading Chromium. `APP_URL` can point at a deployed URL, and `QA_OUTPUT` controls the screenshot directory. `PLAYWRIGHT_MODULE` can point to an existing Playwright installation. The suite uses a separate temporary browser profile and never touches your normal browser progress.
 
-The browser suite includes atlas selection, regional zoom, filtered markers, goal/source rendering and all three modes, persistence across an actual browser restart, searches, status updates, counts, downloads, imports, unknown IDs, malformed saves, reset cancellation/confirmation, subpath resources, navigation/refresh, reduced motion, storage failure and data-load errors. It checks all four views for horizontal overflow at 320, 390, 768 and 1440 pixels and checks 200% text size. Screenshots support visual review. Browser QA is optional locally; dependency-free core tests run in CI.
+The browser suite includes atlas selection, regional zoom, filtered markers, goal/source rendering and all three modes, persistence across an actual browser restart, searches, status updates, counts, downloads, imports, unknown IDs, malformed saves, reset cancellation/confirmation, subpath resources, navigation/refresh, reduced motion, storage failure and data-load errors. It checks all four views for horizontal overflow at 320, 390, 768 and 1440 pixels and checks 200% text size. Screenshots support visual review. Browser QA is optional locally. CI runs both the dependency-free tests and the Chromium acceptance suite, and uploads screenshots for review. The Pages workflow also runs the suite against the public site after deployment.
 
 ## Data accuracy and contribution
 
@@ -140,7 +143,7 @@ Full political-path coverage and cloud sync remain future work. The starting ros
 
 ## License and attribution
 
-The repository’s existing [MIT License](LICENSE) is preserved for application code. Kaiserreich flags and ideology emblems are bundled at the owner's request and remain the property of their respective creators; they are **not** relicensed under MIT. See [asset attribution](assets/ATTRIBUTION.md) for exact upstream sources. Flags identify the starting nation rather than every later government. The interface uses system fonts and original CSS/SVG decoration.
+The repository’s existing [MIT License](LICENSE) is preserved for application code. Kaiserreich flags and ideology emblems are bundled at the owner's request and remain the property of their respective creators; they are **not** relicensed under MIT. See [asset attribution](assets/ATTRIBUTION.md) for exact upstream sources. Flags use confirmed path and ideology variants where available; conditional campaign-specific variants may differ. The interface uses system fonts and original CSS/SVG decoration.
 
 **This is an unofficial community project and is not affiliated with or endorsed by the Kaiserreich development team or Paradox Interactive.**
 

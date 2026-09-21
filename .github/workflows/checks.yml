@@ -16,3 +16,28 @@ jobs:
       - run: npm test
       - name: Check JavaScript syntax
         run: for file in js/*.js scripts/*.mjs; do node --check "$file"; done
+
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Browser acceptance checks
+        run: |
+          node scripts/serve.mjs > /tmp/kr-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4173/kaisereich-run-picker/ > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/browser-check.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-screenshots
+          path: work/qa/
+          if-no-files-found: ignore
